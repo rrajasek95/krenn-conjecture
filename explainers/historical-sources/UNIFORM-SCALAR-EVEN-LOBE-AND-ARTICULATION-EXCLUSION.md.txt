@@ -1,0 +1,168 @@
+# Actual inverse cofactors exclude even one-vertex attachments and articulation points
+
+**Status.** Independently audited all-order research, 2026-09-20.
+[Complete independent audit PASS](../unaudited-codex-diagonal-continuation-2026-09-20/SCALAR-EVEN-LOBE-AND-ARTICULATION-EXCLUSION-NEW-SOURCE-AUDIT.md);
+the parent read the complete source and audit and accepted their stated scope.
+Frozen review objects are unchanged. The general conjecture remains open;
+formal certification status is unchanged.
+
+## 1. Scalar hypotheses and statements
+
+Let `M` be any complex symmetric zero-diagonal matrix of positive even
+order. Its support graph has edge `uv` exactly when `M[u,v]!=0`.
+Let `C(M)` be its ACTUAL deleted-pair hafnian cofactor matrix:
+
+    C(M)[u,v]=haf(M restricted off u,v) for u!=v,
+    C(M)[u,u]=0,
+    tau=haf(M)!=0,
+    M C(M)=tau I.                                         (1)
+
+Hafnians are unsigned perfect-matching sums. Empty hafnians are one;
+odd-cardinality sets have no perfect matching. These are mutually
+compatible cofactors of `M`, not separately chosen inverse entries.
+
+**Even-lobe theorem.** Let the vertex set be partitioned into nonempty
+even sets `E,B`. If all edges between `E` and `B` are incident to a
+single vertex `p` in `B`, there are in fact no edges between the sets.
+
+**Articulation corollary.** Every connected component of the support of
+`M` is either an isolated edge or has at least four vertices and no
+articulation vertex. Every bridge is therefore an isolated edge.
+
+In a full ordinary ternary source, the reviewed
+[global edge theorem](UNIFORM-GLOBAL-EDGE-MONOCHROMATICITY-AND-COFACTOR-INVERSE.md)
+supplies (1) for every original color matrix, regardless of density,
+support minima, or complex phases. Thus the statements apply separately
+to all three original color graphs. Combining them with the reviewed
+[scalar degree-two exclusion](UNIFORM-SCALAR-PENCIL-STAR-INVARIANCE-AND-DEGREE-STRUCTURE.md)
+makes every nonmatching color component 2-vertex-connected with minimum
+degree at least three. No cross-color hypothesis is used in this lemma.
+
+## 2. Exact block cofactors of a single-vertex attachment
+
+Write `P=M[E,E]`, `H=M[B,B]`, let `e_p` be the coordinate column of `p`
+inside `B`, and put `v_u=M[u,p]` for `u` in `E`. Then
+
+    M = [[ P,       v e_p^T ],
+         [ e_p v^T, H       ]].                           (2)
+
+Put `alpha=haf(P)`, `beta=haf(H)`, `C_E=C(P)`, and `C_B=C(H)`.
+These smaller cofactor matrices have their diagonals set to zero.
+No inverse identity is assumed for either smaller matrix.
+
+Every matching uses at most one crossing edge, because all such edges
+occupy `p`. But the number of crossing edges in a perfect matching has
+the parity of the size of `E`, which is even. Hence it uses none and
+
+    tau=alpha beta.                                      (3)
+
+Since `tau!=0`, both `alpha` and `beta` are nonzero. The same parity
+argument after deleting two vertices in just one block gives
+
+    C(M)[E,E]=beta C_E,
+    C(M)[B,B]=alpha C_B.                                 (4)
+
+This includes the defined diagonal zeros on both sides of each equality.
+
+Delete instead `u` in `E` and `r` in `B`. If `r=p`, the two remaining
+odd blocks cannot be matched, so the cofactor is zero. If `r!=p`, a
+contributing matching uses exactly one crossing edge `p,s`, with
+`s` in `E\{u}`. Removing that edge leaves independent matchings of
+`E\{u,s}` and `B\{p,r}`. Summing over `s` proves
+
+    C(M)[u,r]
+      = (sum_s C_E[u,s] v_s) C_B[p,r].
+
+For `r=p`, the same formula is zero by `C_B[p,p]=0`. Therefore the
+complete crossing block is
+
+    C(M)[E,B]=(C_E v)(C_B e_p)^T,
+    C(M)[B,E]=(C_B e_p)(C_E v)^T.                         (5)
+
+All displayed signs are positive because these are hafnian expansions.
+The proof permits arbitrary dense internal blocks, arbitrary zeros,
+and cancellations within every smaller hafnian. No termwise
+nonvanishing of a smaller cofactor was used.
+
+## 3. The two identical matrix terms force the attachment to vanish
+
+Compute the `E,E` block of `M C(M)` using (2), (4), and (5):
+
+    (M C(M))[E,E]
+       = beta P C_E + v e_p^T C_B e_p (C_E v)^T
+       = beta P C_E,                                    (6)
+
+because `C_B[p,p]=0` by definition. Equation (1) and (3) now imply
+
+    P C_E=alpha I_E.                                    (7)
+
+Thus `C_E` is invertible. This is deduced from the original matrix
+identity; it was not assumed as a property of an arbitrary restriction.
+
+Next compute row `p`, columns `E`, of the same product:
+
+    (M C(M))[p,E]
+       = beta v^T C_E + (H C_B)[p,p] v^T C_E
+       = 2 beta v^T C_E.                                (8)
+
+For the last equality, the ordinary hafnian expansion of `H` at `p`
+gives `(H C_B)[p,p]=haf(H)=beta`. This diagonal identity is true for
+every scalar `H`; no full equation `H C_B=beta I` is needed.
+The first term in (8) comes from retained vertices in `E`, and the
+second from retained vertices in `B`. They have the same sign and
+are both present, rather than a single term with a missing factor two.
+
+The target entry in (1) is zero since `p` is outside `E`. Over C,
+`2 beta!=0`, so (8) gives `v^T C_E=0`. Invertibility from (7) forces
+`v=0`, proving the even-lobe theorem. This argument also works over any
+field of characteristic different from two under the scalar hypotheses.
+No such extension of the preceding full-source global theorem is claimed.
+
+## 4. Application to all connected color components
+
+First, every connected component `K` of the support has even cardinality
+and nonzero `haf(M[K,K])`, because a full perfect matching cannot cross
+support components and the total hafnian is nonzero. Let `gamma` be the
+product of the hafnians of all other components, so `gamma!=0`.
+Then the actual cofactor restricted to `K,K` is
+`gamma C(M[K,K])`. Restricting (1) and dividing by `gamma` shows that
+the component matrix itself satisfies the same scalar hypotheses.
+
+Suppose a connected component `K` has an articulation vertex `p`.
+Every perfect matching of `K` must match `p` into exactly one component
+of `K\{p}`. That component has odd cardinality, and every other component
+has even cardinality. Since a perfect matching exists, there is exactly
+one odd component. Since `p` is an articulation, there is at least one
+other, nonempty even component `E`.
+
+All edges from this `E` to `B=K\E` are incident to `p`. Both `E` and
+`B` have even cardinality, so the even-lobe theorem forces all such edges
+to vanish. This contradicts connectedness of `K`. Thus no articulation
+vertex exists. Components have positive even order, so a two-vertex
+component is one nonzero matching edge; every other component has order
+at least four and is 2-vertex-connected. A bridge in a connected graph
+of at least three vertices has an articulation endpoint, proving the
+stated bridge corollary as well.
+
+## 5. Exact controls and remaining scope
+
+The companion checker verifies the unconditional block identities
+(3)--(6) and (8) on exact signed matrices, including dense internal
+blocks. It also checks matched internal blocks joined through one
+vertex: their hafnian remains nonzero, while every chosen nonzero
+attachment gives the predicted nonzero off-diagonal inverse-cofactor
+residual. These are convention checks, not a graph census or a proof
+by extrapolation. The general proof is the parity factorization and
+two-term identity above.
+
+This theorem excludes all one-vertex separators in nonmatching color
+components. It does not exclude two-vertex separators, give compatible
+bipartitions for different colors, produce a low-degree vertex, or force
+components to be matchings. The already reviewed scalar cubic conference
+example is a nonmatching connected component consistent with the lemma.
+Consequently this necessary separator restriction does not close the
+remaining general weighted diagonal-source problem.
+
+
+**Integration provenance.** Frozen [mathematical source](../unaudited-codex-diagonal-continuation-2026-09-20/SCALAR-EVEN-LOBE-AND-ARTICULATION-EXCLUSION-NEW-SOURCE.md), SHA256 `d6f1df5b1dd349524421958e57b86579cf84771c529ecef8b2f3ecd2fbad7807`. Only status, relative links, and this
+provenance paragraph changed in the research copy.

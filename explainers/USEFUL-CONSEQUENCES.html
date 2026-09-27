@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Useful consequences of the Krenn–Gu results</title>
+<style>
+:root{color-scheme:light;--ink:#202d3a;--muted:#526171;--blue:#2168af}
+*{box-sizing:border-box}body{margin:0;background:#f2f5f7;color:var(--ink);font:18px/1.65 system-ui,sans-serif}
+main{max-width:1060px;margin:auto;padding:38px 28px 70px}h1{font-size:clamp(32px,5vw,48px);line-height:1.15;letter-spacing:-.03em}
+h2{margin-top:2.4em;line-height:1.3;font-size:28px}p{max-width:850px}a{color:var(--blue)}nav{font-size:15px}
+.status{border-left:4px solid #977b3d;background:#fcf7e9;padding:14px 20px;border-radius:6px;font-size:16px}
+figure{margin:30px 0}figure .scroll{overflow-x:auto;border:1px solid #d8dedf;border-radius:16px;background:white}
+svg{display:block;width:100%;min-width:650px}figcaption{font-size:15px;color:var(--muted);margin:9px 2px}
+.formula{padding:18px 22px;background:white;border-radius:10px;overflow-x:auto;font-size:21px;white-space:nowrap}
+.calculator{background:white;border:1px solid #d8dedf;border-radius:16px;padding:26px;margin-top:24px}
+input[type=range]{width:100%;accent-color:var(--blue);margin:22px 0}.ends{display:flex;justify-content:space-between;font-size:14px;color:var(--muted)}
+.metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:25px 0}
+.metric{background:#edf4fc;padding:18px;border-radius:12px}.metric span{display:block;font-size:14px}.metric strong{display:block;font-size:26px;line-height:1.3;margin-top:7px}
+.settings{display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:16px;color:var(--muted)}
+small{font-size:14px;color:var(--muted)}code{background:#e6edf2;padding:3px 6px;border-radius:4px;font-size:14px}
+@media(max-width:620px){main{padding:24px 16px}.metrics{grid-template-columns:1fr}.settings{grid-template-columns:1fr}.metric strong{font-size:28px}}
+</style></head><body><main>
+<nav><a href="README.md">All explainers</a> · <a href="USEFUL-CONSEQUENCES.md">Full written explanation</a> · <a href="../notes/useful-consequences-2026-09-26.md">Proofs and assumptions</a></nav>
+<h1>What can we use the results for?</h1>
+<p>We can discard a whole family of exact-state designs, bound unwanted output in individual designs, and calculate an achievable fidelity–success tradeoff.</p>
+<p class="status"><strong>September 26, 2026 research follow-up.</strong> Written deductions and exact checks are available. These consequences have not received a separate independent audit or admission to the certified spine. The all-size exclusion uses certified inputs.</p>
+<h2>1. Exclude bipartite output-pair graphs at every size</h2>
+<p>If every pair connects opposite groups of output sites, an exact three-color GHZ state is impossible for every even number of sites at least four. Diagonality and binary cofactor nonvanishing force every edge of a chosen third color to disappear.</p>
+<figure><div class="scroll"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 460" role="img" aria-labelledby="01-bipartite-title 01-bipartite-desc">
+<title id="01-bipartite-title">A whole architecture class is excluded at every size</title>
+<desc id="01-bipartite-desc">Illustrative equal shores. Exact GHZ forces diagonal edges. Deleting opposite sites leaves a nonzero two-color cofactor. The unwanted slice factors as the third-color edge weight times that cofactor, forcing every third-color edge to zero.</desc>
+<rect width="1000" height="100%" fill="white" rx="16"/>
+<text x="30" y="30" font-family="system-ui,sans-serif" font-size="12" fill="#526171" text-anchor="start" font-weight="700">KRENN–GU / USEFUL CONSEQUENCES</text>
+<text x="30" y="66" font-family="system-ui,sans-serif" font-size="25" fill="#202d3a" text-anchor="start" font-weight="700">A whole architecture class is excluded at every size</text>
+<rect x="30" y="100" width="300" height="300" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<rect x="350" y="100" width="300" height="300" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<rect x="670" y="100" width="300" height="300" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="180" y="132" font-family="system-ui,sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">1. Two groups of output sites</text>
+<line x1="80" y1="190" x2="280" y2="190" stroke="#b9c3ca" stroke-width="1.3" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="80" y1="190" x2="280" y2="260" stroke="#b9c3ca" stroke-width="1.3" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="80" y1="190" x2="280" y2="330" stroke="#b9c3ca" stroke-width="1.3" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="80" y1="260" x2="280" y2="190" stroke="#b9c3ca" stroke-width="1.3" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="80" y1="260" x2="280" y2="260" stroke="#b9c3ca" stroke-width="1.3" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="80" y1="260" x2="280" y2="330" stroke="#b9c3ca" stroke-width="1.3" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="80" y1="330" x2="280" y2="190" stroke="#b9c3ca" stroke-width="1.3" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="80" y1="330" x2="280" y2="260" stroke="#b9c3ca" stroke-width="1.3" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="80" y1="330" x2="280" y2="330" stroke="#b9c3ca" stroke-width="1.3" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="80" y1="190" x2="280" y2="190" stroke="#bd3847" stroke-width="4" stroke-dasharray="" stroke-linecap="round"/>
+<circle cx="80" cy="190" r="15" fill="white" stroke="#bd3847" stroke-width="2"/>
+<text x="80" y="195" font-family="system-ui,sans-serif" font-size="14" fill="#bd3847" text-anchor="middle" font-weight="650">p</text>
+<circle cx="80" cy="260" r="15" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="80" y="265" font-family="system-ui,sans-serif" font-size="14" fill="#202d3a" text-anchor="middle" font-weight="650">u1</text>
+<circle cx="80" cy="330" r="15" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="80" y="335" font-family="system-ui,sans-serif" font-size="14" fill="#202d3a" text-anchor="middle" font-weight="650">u2</text>
+<circle cx="280" cy="190" r="15" fill="white" stroke="#bd3847" stroke-width="2"/>
+<text x="280" y="195" font-family="system-ui,sans-serif" font-size="14" fill="#bd3847" text-anchor="middle" font-weight="650">t</text>
+<circle cx="280" cy="260" r="15" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="280" y="265" font-family="system-ui,sans-serif" font-size="14" fill="#202d3a" text-anchor="middle" font-weight="650">v1</text>
+<circle cx="280" cy="330" r="15" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="280" y="335" font-family="system-ui,sans-serif" font-size="14" fill="#202d3a" text-anchor="middle" font-weight="650">v2</text>
+<text x="180" y="177" font-family="system-ui,sans-serif" font-size="15" fill="#bd3847" text-anchor="middle" font-weight="600">a-colored edge</text>
+<text x="180" y="379" font-family="system-ui,sans-serif" font-size="15" fill="#526171" text-anchor="middle" font-weight="400">Every source crosses the partition</text>
+<text x="500" y="132" font-family="system-ui,sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">2. Delete p,t; keep colors b,c</text>
+<line x1="400" y1="210" x2="600" y2="210" stroke="#2168af" stroke-width="3" stroke-dasharray="9 5" stroke-linecap="round"/>
+<line x1="400" y1="305" x2="600" y2="305" stroke="#2168af" stroke-width="3" stroke-dasharray="9 5" stroke-linecap="round"/>
+<line x1="400" y1="210" x2="600" y2="305" stroke="#237953" stroke-width="3" stroke-dasharray="2 5" stroke-linecap="round"/>
+<line x1="400" y1="305" x2="600" y2="210" stroke="#237953" stroke-width="3" stroke-dasharray="2 5" stroke-linecap="round"/>
+<circle cx="400" cy="210" r="15" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="400" y="215" font-family="system-ui,sans-serif" font-size="14" fill="#202d3a" text-anchor="middle" font-weight="650">u1</text>
+<circle cx="400" cy="305" r="15" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="400" y="310" font-family="system-ui,sans-serif" font-size="14" fill="#202d3a" text-anchor="middle" font-weight="650">u2</text>
+<circle cx="600" cy="210" r="15" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="600" y="215" font-family="system-ui,sans-serif" font-size="14" fill="#202d3a" text-anchor="middle" font-weight="650">v1</text>
+<circle cx="600" cy="305" r="15" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="600" y="310" font-family="system-ui,sans-serif" font-size="14" fill="#202d3a" text-anchor="middle" font-weight="650">v2</text>
+<text x="500" y="379" font-family="system-ui,sans-serif" font-size="16" fill="#526171" text-anchor="middle" font-weight="600">Whole remaining tensor: K ≠ 0</text>
+<text x="820" y="132" font-family="system-ui,sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">3. The mixed slice must vanish</text>
+<text x="820" y="215" font-family="system-ui,sans-serif" font-size="22" fill="#202d3a" text-anchor="middle" font-weight="650">a-edge weight × K = 0</text>
+<text x="820" y="260" font-family="system-ui,sans-serif" font-size="20" fill="#526171" text-anchor="middle" font-weight="400">K is nonzero</text>
+<text x="820" y="310" font-family="system-ui,sans-serif" font-size="19" fill="#bd3847" text-anchor="middle" font-weight="700">Every a-edge has weight 0</text>
+<text x="820" y="379" font-family="system-ui,sans-serif" font-size="16" fill="#526171" text-anchor="middle" font-weight="400">Contradiction: no all-a output</text>
+<text x="500" y="436" font-family="system-ui,sans-serif" font-size="18" fill="#526171" text-anchor="middle" font-weight="400">The proof uses whole cofactors, so complex cancellation is fully retained.</text>
+</svg>
+</div><figcaption>The six drawn sites illustrate an argument that works for any equal shore size of at least two. The middle graph represents the whole remaining two-color tensor.</figcaption></figure>
+<p>This excludes exact-state architectures even at sizes where the unrestricted conjecture remains open. It does not exclude approximate states or binary GHZ states.</p>
+<h2>2. Measure unavoidable leakage in a candidate design</h2>
+<p>For a diagonal bipartite source, let k<sub>pt</sub> be the norm of the blue/green output after deleting sites p,t, and q<sub>pt</sub> the pure red amplitude after that deletion. If every k<sub>pt</sub> is nonzero, set D<sub>p</sub> = Σ<sub>t</sub> |q<sub>pt</sub>|² / k<sub>pt</sub>². For equal phase-aligned pure amplitudes:</p>
+<div class="formula">Fidelity F ≤ 3D<sub>p</sub> / (3D<sub>p</sub> + 1).</div>
+<p>The bound follows from Cauchy–Schwarz and disjoint unwanted color patterns. It is a source-dependent diagnostic. Approximate sources must satisfy the stated diagonality assumption; exact diagonal reduction alone does not provide that assumption.</p>
+<h2>3. A six-site source with an exact tradeoff</h2>
+<p>The colored triangular prism has only four perfect matchings. Three give the desired pure-color outputs; one gives a mixed output. Set the six triangle amplitudes to t and the three connecting amplitudes to tω.</p>
+<figure><div class="scroll"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 690" role="img" aria-labelledby="02-prism-title 02-prism-desc">
+<title id="02-prism-title">Four matchings make the fidelity–rate tradeoff explicit</title>
+<desc id="02-prism-desc">The outer triangle is sites 0,1,2 and the inner triangle 3,4,5. Triangle edges have amplitude t; connecting edges have amplitude t omega. Three pure matchings have amplitude t cubed omega and the one mixed matching has amplitude t cubed omega cubed.</desc>
+<rect width="1000" height="100%" fill="white" rx="16"/>
+<text x="30" y="30" font-family="system-ui,sans-serif" font-size="12" fill="#526171" text-anchor="start" font-weight="700">KRENN–GU / USEFUL CONSEQUENCES</text>
+<text x="30" y="66" font-family="system-ui,sans-serif" font-size="25" fill="#202d3a" text-anchor="start" font-weight="700">Four matchings make the fidelity–rate tradeoff explicit</text>
+<rect x="30" y="110" width="350" height="490" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="205" y="145" font-family="system-ui,sans-serif" font-size="20" fill="#202d3a" text-anchor="middle" font-weight="650">Nine pair sources</text>
+<line x1="70" y1="200" x2="340" y2="200" stroke="#bd3847" stroke-width="4" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="130" y1="270" x2="280" y2="270" stroke="#bd3847" stroke-width="4" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="205" y1="465" x2="205" y2="380" stroke="#bd3847" stroke-width="4" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="340" y1="200" x2="205" y2="465" stroke="#2168af" stroke-width="4" stroke-dasharray="9 5" stroke-linecap="round"/>
+<line x1="280" y1="270" x2="205" y2="380" stroke="#2168af" stroke-width="4" stroke-dasharray="9 5" stroke-linecap="round"/>
+<line x1="70" y1="200" x2="130" y2="270" stroke="#2168af" stroke-width="4" stroke-dasharray="9 5" stroke-linecap="round"/>
+<line x1="70" y1="200" x2="205" y2="465" stroke="#237953" stroke-width="4" stroke-dasharray="2 5" stroke-linecap="round"/>
+<line x1="130" y1="270" x2="205" y2="380" stroke="#237953" stroke-width="4" stroke-dasharray="2 5" stroke-linecap="round"/>
+<line x1="340" y1="200" x2="280" y2="270" stroke="#237953" stroke-width="4" stroke-dasharray="2 5" stroke-linecap="round"/>
+<circle cx="70" cy="200" r="15" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="70" y="205" font-family="system-ui,sans-serif" font-size="14" fill="#202d3a" text-anchor="middle" font-weight="650">0</text>
+<circle cx="340" cy="200" r="15" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="340" y="205" font-family="system-ui,sans-serif" font-size="14" fill="#202d3a" text-anchor="middle" font-weight="650">1</text>
+<circle cx="205" cy="465" r="15" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="205" y="470" font-family="system-ui,sans-serif" font-size="14" fill="#202d3a" text-anchor="middle" font-weight="650">2</text>
+<circle cx="130" cy="270" r="15" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="130" y="275" font-family="system-ui,sans-serif" font-size="14" fill="#202d3a" text-anchor="middle" font-weight="650">3</text>
+<circle cx="280" cy="270" r="15" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="280" y="275" font-family="system-ui,sans-serif" font-size="14" fill="#202d3a" text-anchor="middle" font-weight="650">4</text>
+<circle cx="205" cy="380" r="15" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="205" y="385" font-family="system-ui,sans-serif" font-size="14" fill="#202d3a" text-anchor="middle" font-weight="650">5</text>
+<text x="82" y="250" font-family="system-ui,sans-serif" font-size="16" fill="#2168af" text-anchor="middle" font-weight="650">tω</text>
+<text x="329" y="250" font-family="system-ui,sans-serif" font-size="16" fill="#237953" text-anchor="middle" font-weight="650">tω</text>
+<text x="227" y="430" font-family="system-ui,sans-serif" font-size="16" fill="#bd3847" text-anchor="middle" font-weight="650">tω</text>
+<text x="205" y="520" font-family="system-ui,sans-serif" font-size="18" fill="#526171" text-anchor="middle" font-weight="400">Six triangle edges: t</text>
+<text x="205" y="550" font-family="system-ui,sans-serif" font-size="18" fill="#526171" text-anchor="middle" font-weight="400">Three connecting edges: tω</text>
+<text x="205" y="580" font-family="system-ui,sans-serif" font-size="15" fill="#526171" text-anchor="middle" font-weight="400">a: red     b: blue     c: green</text>
+<rect x="410" y="110" width="270" height="235" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="545" y="140" font-family="system-ui,sans-serif" font-size="20" fill="#bd3847" text-anchor="middle" font-weight="650">aaaaaa · t³ω</text>
+<line x1="460" y1="173" x2="630" y2="173" stroke="#d5dce1" stroke-width="1.2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="500" y1="210" x2="590" y2="210" stroke="#d5dce1" stroke-width="1.2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="545" y1="317" x2="545" y2="267" stroke="#d5dce1" stroke-width="1.2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="630" y1="173" x2="545" y2="317" stroke="#d5dce1" stroke-width="1.2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="590" y1="210" x2="545" y2="267" stroke="#d5dce1" stroke-width="1.2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="460" y1="173" x2="500" y2="210" stroke="#d5dce1" stroke-width="1.2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="460" y1="173" x2="545" y2="317" stroke="#d5dce1" stroke-width="1.2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="500" y1="210" x2="545" y2="267" stroke="#d5dce1" stroke-width="1.2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="630" y1="173" x2="590" y2="210" stroke="#d5dce1" stroke-width="1.2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="460" y1="173" x2="630" y2="173" stroke="#bd3847" stroke-width="4" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="500" y1="210" x2="590" y2="210" stroke="#bd3847" stroke-width="4" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="545" y1="317" x2="545" y2="267" stroke="#bd3847" stroke-width="4" stroke-dasharray="" stroke-linecap="round"/>
+<circle cx="460" cy="173" r="10" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="460" y="178" font-family="system-ui,sans-serif" font-size="11" fill="#202d3a" text-anchor="middle" font-weight="650">0</text>
+<circle cx="630" cy="173" r="10" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="630" y="178" font-family="system-ui,sans-serif" font-size="11" fill="#202d3a" text-anchor="middle" font-weight="650">1</text>
+<circle cx="545" cy="317" r="10" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="545" y="322" font-family="system-ui,sans-serif" font-size="11" fill="#202d3a" text-anchor="middle" font-weight="650">2</text>
+<circle cx="500" cy="210" r="10" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="500" y="215" font-family="system-ui,sans-serif" font-size="11" fill="#202d3a" text-anchor="middle" font-weight="650">3</text>
+<circle cx="590" cy="210" r="10" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="590" y="215" font-family="system-ui,sans-serif" font-size="11" fill="#202d3a" text-anchor="middle" font-weight="650">4</text>
+<circle cx="545" cy="267" r="10" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="545" y="272" font-family="system-ui,sans-serif" font-size="11" fill="#202d3a" text-anchor="middle" font-weight="650">5</text>
+<rect x="700" y="110" width="270" height="235" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="835" y="140" font-family="system-ui,sans-serif" font-size="20" fill="#2168af" text-anchor="middle" font-weight="650">bbbbbb · t³ω</text>
+<line x1="750" y1="173" x2="920" y2="173" stroke="#d5dce1" stroke-width="1.2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="790" y1="210" x2="880" y2="210" stroke="#d5dce1" stroke-width="1.2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="835" y1="317" x2="835" y2="267" stroke="#d5dce1" stroke-width="1.2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="920" y1="173" x2="835" y2="317" stroke="#d5dce1" stroke-width="1.2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="880" y1="210" x2="835" y2="267" stroke="#d5dce1" stroke-width="1.2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="750" y1="173" x2="790" y2="210" stroke="#d5dce1" stroke-width="1.2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="750" y1="173" x2="835" y2="317" stroke="#d5dce1" stroke-width="1.2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="790" y1="210" x2="835" y2="267" stroke="#d5dce1" stroke-width="1.2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="920" y1="173" x2="880" y2="210" stroke="#d5dce1" stroke-width="1.2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="920" y1="173" x2="835" y2="317" stroke="#2168af" stroke-width="4" stroke-dasharray="9 5" stroke-linecap="round"/>
+<line x1="880" y1="210" x2="835" y2="267" stroke="#2168af" stroke-width="4" stroke-dasharray="9 5" stroke-linecap="round"/>
+<line x1="750" y1="173" x2="790" y2="210" stroke="#2168af" stroke-width="4" stroke-dasharray="9 5" stroke-linecap="round"/>
+<circle cx="750" cy="173" r="10" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="750" y="178" font-family="system-ui,sans-serif" font-size="11" fill="#202d3a" text-anchor="middle" font-weight="650">0</text>
+<circle cx="920" cy="173" r="10" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="920" y="178" font-family="system-ui,sans-serif" font-size="11" fill="#202d3a" text-anchor="middle" font-weight="650">1</text>
+<circle cx="835" cy="317" r="10" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="835" y="322" font-family="system-ui,sans-serif" font-size="11" fill="#202d3a" text-anchor="middle" font-weight="650">2</text>
+<circle cx="790" cy="210" r="10" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="790" y="215" font-family="system-ui,sans-serif" font-size="11" fill="#202d3a" text-anchor="middle" font-weight="650">3</text>
+<circle cx="880" cy="210" r="10" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="880" y="215" font-family="system-ui,sans-serif" font-size="11" fill="#202d3a" text-anchor="middle" font-weight="650">4</text>
+<circle cx="835" cy="267" r="10" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="835" y="272" font-family="system-ui,sans-serif" font-size="11" fill="#202d3a" text-anchor="middle" font-weight="650">5</text>
+<rect x="410" y="365" width="270" height="235" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="545" y="395" font-family="system-ui,sans-serif" font-size="20" fill="#237953" text-anchor="middle" font-weight="650">cccccc · t³ω</text>
+<line x1="460" y1="428" x2="630" y2="428" stroke="#d5dce1" stroke-width="1.2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="500" y1="465" x2="590" y2="465" stroke="#d5dce1" stroke-width="1.2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="545" y1="572" x2="545" y2="522" stroke="#d5dce1" stroke-width="1.2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="630" y1="428" x2="545" y2="572" stroke="#d5dce1" stroke-width="1.2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="590" y1="465" x2="545" y2="522" stroke="#d5dce1" stroke-width="1.2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="460" y1="428" x2="500" y2="465" stroke="#d5dce1" stroke-width="1.2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="460" y1="428" x2="545" y2="572" stroke="#d5dce1" stroke-width="1.2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="500" y1="465" x2="545" y2="522" stroke="#d5dce1" stroke-width="1.2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="630" y1="428" x2="590" y2="465" stroke="#d5dce1" stroke-width="1.2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="460" y1="428" x2="545" y2="572" stroke="#237953" stroke-width="4" stroke-dasharray="2 5" stroke-linecap="round"/>
+<line x1="500" y1="465" x2="545" y2="522" stroke="#237953" stroke-width="4" stroke-dasharray="2 5" stroke-linecap="round"/>
+<line x1="630" y1="428" x2="590" y2="465" stroke="#237953" stroke-width="4" stroke-dasharray="2 5" stroke-linecap="round"/>
+<circle cx="460" cy="428" r="10" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="460" y="433" font-family="system-ui,sans-serif" font-size="11" fill="#202d3a" text-anchor="middle" font-weight="650">0</text>
+<circle cx="630" cy="428" r="10" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="630" y="433" font-family="system-ui,sans-serif" font-size="11" fill="#202d3a" text-anchor="middle" font-weight="650">1</text>
+<circle cx="545" cy="572" r="10" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="545" y="577" font-family="system-ui,sans-serif" font-size="11" fill="#202d3a" text-anchor="middle" font-weight="650">2</text>
+<circle cx="500" cy="465" r="10" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="500" y="470" font-family="system-ui,sans-serif" font-size="11" fill="#202d3a" text-anchor="middle" font-weight="650">3</text>
+<circle cx="590" cy="465" r="10" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="590" y="470" font-family="system-ui,sans-serif" font-size="11" fill="#202d3a" text-anchor="middle" font-weight="650">4</text>
+<circle cx="545" cy="522" r="10" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="545" y="527" font-family="system-ui,sans-serif" font-size="11" fill="#202d3a" text-anchor="middle" font-weight="650">5</text>
+<rect x="700" y="365" width="270" height="235" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="835" y="395" font-family="system-ui,sans-serif" font-size="20" fill="#202d3a" text-anchor="middle" font-weight="650">bcabca · t³ω³</text>
+<line x1="750" y1="428" x2="920" y2="428" stroke="#d5dce1" stroke-width="1.2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="790" y1="465" x2="880" y2="465" stroke="#d5dce1" stroke-width="1.2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="835" y1="572" x2="835" y2="522" stroke="#d5dce1" stroke-width="1.2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="920" y1="428" x2="835" y2="572" stroke="#d5dce1" stroke-width="1.2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="880" y1="465" x2="835" y2="522" stroke="#d5dce1" stroke-width="1.2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="750" y1="428" x2="790" y2="465" stroke="#d5dce1" stroke-width="1.2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="750" y1="428" x2="835" y2="572" stroke="#d5dce1" stroke-width="1.2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="790" y1="465" x2="835" y2="522" stroke="#d5dce1" stroke-width="1.2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="920" y1="428" x2="880" y2="465" stroke="#d5dce1" stroke-width="1.2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="835" y1="572" x2="835" y2="522" stroke="#bd3847" stroke-width="4" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="750" y1="428" x2="790" y2="465" stroke="#2168af" stroke-width="4" stroke-dasharray="9 5" stroke-linecap="round"/>
+<line x1="920" y1="428" x2="880" y2="465" stroke="#237953" stroke-width="4" stroke-dasharray="2 5" stroke-linecap="round"/>
+<circle cx="750" cy="428" r="10" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="750" y="433" font-family="system-ui,sans-serif" font-size="11" fill="#202d3a" text-anchor="middle" font-weight="650">0</text>
+<circle cx="920" cy="428" r="10" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="920" y="433" font-family="system-ui,sans-serif" font-size="11" fill="#202d3a" text-anchor="middle" font-weight="650">1</text>
+<circle cx="835" cy="572" r="10" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="835" y="577" font-family="system-ui,sans-serif" font-size="11" fill="#202d3a" text-anchor="middle" font-weight="650">2</text>
+<circle cx="790" cy="465" r="10" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="790" y="470" font-family="system-ui,sans-serif" font-size="11" fill="#202d3a" text-anchor="middle" font-weight="650">3</text>
+<circle cx="880" cy="465" r="10" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="880" y="470" font-family="system-ui,sans-serif" font-size="11" fill="#202d3a" text-anchor="middle" font-weight="650">4</text>
+<circle cx="835" cy="522" r="10" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="835" y="527" font-family="system-ui,sans-serif" font-size="11" fill="#202d3a" text-anchor="middle" font-weight="650">5</text>
+<text x="500" y="640" font-family="system-ui,sans-serif" font-size="23" fill="#202d3a" text-anchor="middle" font-weight="650">H / t³ = ω(aaaaaa + bbbbbb + cccccc) + ω³(bcabca)</text>
+<text x="500" y="674" font-family="system-ui,sans-serif" font-size="18" fill="#526171" text-anchor="middle" font-weight="400">Reducing ω suppresses the unwanted amplitude faster than the desired amplitudes.</text>
+</svg>
+</div><figcaption>Color and line pattern identify a, b, c. Each small panel shows one complete matching and its amplitude.</figcaption></figure>
+<div class="formula">F = 3 / (3 + ω⁴)</div>
+<p>Small ω makes the unwanted amplitude small faster than the desired amplitudes. The approach-to-unit-fidelity phenomenon is already known from <a href="https://arxiv.org/html/2005.06443">THESEUS</a>; this page supplies an exact benchmark and optimized source settings.</p>
+<section class="calculator" id="calculator" aria-labelledby="calculator-title">
+<h2 id="calculator-title" style="margin-top:0">Explore the best balanced prism settings</h2>
+<p>Adjust the target fidelity. The calculator chooses the source strengths that maximize the ideal probability among balanced sources on this colored prism.</p>
+<label for="precision">Target fidelity, from 90% to 99.9999%</label>
+<input id="precision" type="range" min="1" max="6" step="0.01" value="2" aria-describedby="scale-note">
+<div class="ends"><span>90%</span><span>99.9999%</span></div>
+<small id="scale-note">Logarithmic error scale: each full step divides infidelity by ten.</small>
+<div class="metrics" aria-live="polite" aria-atomic="true">
+<div class="metric"><span>Target fidelity</span><strong id="fidelity">99%</strong></div>
+<div class="metric"><span>Ideal probability per trial</span><strong id="probability">0.143898%</strong></div>
+<div class="metric"><span>Mean trials per selected event</span><strong id="trials">695</strong></div>
+</div>
+<div class="settings"><div>Each triangle source: <strong id="triangle">0.565653</strong></div>
+<div>Each connecting source: <strong id="vertical">0.236005</strong></div></div>
+<p><small>Source settings are the amplitudes λ in √(1−|λ|²) Σ λᵏ|k,k⟩, not laser powers. The calculator includes all nine vacuum-normalization factors.</small></p>
+<noscript><p>The displayed default is for 99% fidelity. Enable JavaScript to vary the target; the written guide includes a static table.</p></noscript>
+</section>
+<p><strong>Model:</strong> nine phase-coherent pair sources acting on disjoint optical modes; perfect mode matching; no loss; and selection of exactly one photon at each site without resolving away the color superposition. This is ideal postselection, not heralding an undetected usable state or forecasting detector count rates.</p>
+<p>With x = ω² and s = t², the probability and optimal setting are:</p>
+<div class="formula">P(s,x) = s³x(3+x²)(1−s)⁶(1−sx)³<br>s* = 2 / [3+2x+√(9−4x+4x²)]</div>
+<p>The proof permits arbitrary weights on this graph while requiring equal phase-aligned pure amplitudes. Concavity first makes the triangle strengths equal and the connecting strengths equal. A quadratic then determines the unique optimum in s.</p>
+<h2>The remaining useful question</h2>
+<p>Our exact exclusions imply that perfect fidelity cannot be approached at fixed source-coefficient budget while retaining nonzero output strength at six, eight, or ten sites. The prism provides an achievable rate. A quantitative upper bound across all architectures is still open in this work.</p>
+<p>In the balanced prism class, P* is asymptotic to 0.01690√(1−F): reducing error by a factor of 100 costs about a factor of 10 in probability. No claim is made that this exponent or constant is globally optimal.</p>
+<p><strong>Universal-rate follow-up:</strong> the <a href="../notes/universal-rate-bound-feasibility-2026-09-26.md">feasibility assessment</a> proves that some power-law bound exists for all complex sources at the excluded sizes. It also establishes an explicit square-root upper bound for all nonnegative six-site sources, with optimal exponent in that class.</p>
+<p><strong>Complex-weight progress:</strong> a <a href="../notes/complex-rate-bound-2026-09-26.md">new local stability proof</a> establishes the square-root rate bound in a full neighborhood of the prism limit, allowing all 135 complex source entries. It also rules out a cubic polynomial certificate even with the balance equations included. Other zero-output limits remain to be controlled for a universal complex bound. These results have exact reproducible checks and await independent audit.</p>
+<p><strong>Beyond the prism:</strong> the <a href="RATE-BOUNDARIES.md">illustrated boundary investigation</a> excludes two different zero-output limits and supplies rank tests that every possible high-fidelity limit must pass. The remaining singular response cases still need analysis.</p>
+<h2>Reproduce the calculation</h2>
+<p><code>python3 computations/useful-consequences-2026-09-26/verify.py</code></p>
+<p>The standard-library checker reconstructs the matchings, verifies 19,683 occupation vectors and exact polynomial identities, and tests the leakage formula with rational weights. See the <a href="../computations/useful-consequences-2026-09-26/README.md">replay details</a> and <a href="../computations/useful-consequences-2026-09-26/calibration.csv">calibration CSV</a>. These checks support the written proofs; they do not replace independent mathematical review.</p>
+</main><script>
+function calculate(infidelity) {
+  const fidelity = 1 - infidelity;
+  const x = Math.sqrt(3 * infidelity / fidelity);
+  const s = 2 / (3 + 2*x + Math.sqrt(9 - 4*x + 4*x*x));
+  const probability = s**3 * x * (3+x*x) * (1-s)**6 * (1-s*x)**3;
+  return {fidelity, probability, trials:1/probability, triangle:Math.sqrt(s), vertical:Math.sqrt(s*x)};
+}
+function update() {
+  const slider = document.getElementById('precision');
+  const result = calculate(10 ** -Number(slider.value));
+  const digits = Math.max(0, Math.ceil(Number(slider.value))-2);
+  const fidelityText = (100*result.fidelity).toFixed(digits+2).replace(/\.?0+$/, '') + '%';
+  document.getElementById('fidelity').textContent = fidelityText;
+  document.getElementById('probability').textContent = (100*result.probability).toPrecision(6) + '%';
+  document.getElementById('trials').textContent = Math.round(result.trials).toLocaleString('en-US');
+  document.getElementById('triangle').textContent = result.triangle.toFixed(6);
+  document.getElementById('vertical').textContent = result.vertical.toFixed(6);
+  slider.setAttribute('aria-valuetext', fidelityText + ' target fidelity');
+}
+document.getElementById('precision').addEventListener('input', update);
+update();
+</script></body></html>

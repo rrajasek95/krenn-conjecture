@@ -1,0 +1,72 @@
+{
+  "boundaries": {
+    "binary_cofactor_controls": 29,
+    "two_site_and_K4_controls": "PASS"
+  },
+  "calibration": [
+    {
+      "expected_trials": "288.087992880",
+      "fidelity": "0.9",
+      "ideal_probability": "0.00347116167530",
+      "omega": "0.759835685652",
+      "triangle_amplitude": "0.535005920775",
+      "vertical_amplitude": "0.406516590640"
+    },
+    {
+      "expected_trials": "694.935037315",
+      "fidelity": "0.99",
+      "ideal_probability": "0.00143898342479",
+      "omega": "0.417226144861",
+      "triangle_amplitude": "0.565652690511",
+      "vertical_amplitude": "0.236005091392"
+    },
+    {
+      "expected_trials": "1974.45488347",
+      "fidelity": "0.999",
+      "ideal_probability": "0.000506468903580",
+      "omega": "0.234093277210",
+      "triangle_amplitude": "0.573781583704",
+      "vertical_amplitude": "0.134318411332"
+    },
+    {
+      "expected_trials": "6021.35232619",
+      "fidelity": "0.9999",
+      "ideal_probability": "0.000166075649759",
+      "omega": "0.131610691686",
+      "triangle_amplitude": "0.576233762627",
+      "vertical_amplitude": "0.0758385240722"
+    }
+  ],
+  "certification": "NOT INDEPENDENTLY AUDITED OR ADMITTED",
+  "dependency_hashes_checked": 6,
+  "edge_weight_mutation": "REJECTED",
+  "leakage": {
+    "exact_slice_checks": 234,
+    "nonzero_leakage_witnesses": 83,
+    "off_color_scope_guard": "PASS"
+  },
+  "optimization": {
+    "exact_polynomial_derivative": "PASS",
+    "unequal_weight_controls": 2
+  },
+  "prism": {
+    "fock_occupancies_checked": 19683,
+    "output": {
+      "aaaaaa": {
+        "1": 1
+      },
+      "bbbbbb": {
+        "1": 1
+      },
+      "bcabca": {
+        "3": 1
+      },
+      "cccccc": {
+        "1": 1
+      }
+    },
+    "perfect_matchings": 4
+  },
+  "scope": "Exact finite identities and controls, plus rounded benchmark calibration; all-order proofs remain written.",
+  "status": "PASS"
+}

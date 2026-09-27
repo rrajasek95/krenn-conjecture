@@ -1,0 +1,198 @@
+# Actual cofactor rows have degree one or at least three
+
+**Status.** New analytic source by `/root/routing_author`, 2026-09-22.
+The scalar lemma was independently reconstructed in messages by `/root`
+and `/root/global_bridge`; complete source audit and root acceptance
+remain pending. The consequences below hold at arbitrary order under
+their explicit hypotheses. They do not resolve the general conjecture.
+No canonical or previously frozen source is changed.
+
+## 1. A dual degree lemma for ACTUAL hafnian cofactors
+
+Let M be a symmetric zero-diagonal matrix on an even set V, |V|>=2,
+over C. Put tau=haf(M), define C[p,p]=0, and, for distinct p,q, put
+
+    C[p,q]=haf M[V without {p,q}].                       (1)
+
+Assume tau!=0 and the actual scalar identity
+
+    M C=tau I.                                         (2)
+
+Symmetry also gives C M=tau I. Every row of C is nonzero.
+
+**Dual degree lemma.** No row of C has exactly two nonzero entries.
+Moreover, its p-th row has exactly one nonzero entry if and only if
+p belongs to an isolated two-vertex component of the support of M.
+Consequently, at a vertex of a nonmatching M component, the actual
+cofactor row has at least THREE nonzero entries.
+
+Suppose instead that the only nonzero entries of row p are
+C[p,q]=a and C[p,r]=b, with q!=r and ab!=0. This requires |V|>=4.
+The p-th row of C M gives, for every w!=p,
+
+    a M[q,w]+b M[r,w]=0.                               (3)
+
+In particular M[q,r]=0. For each w in E=V without {p,q,r}, set
+
+    K_w=haf M[V without {p,q,r,w}],
+
+using haf(empty)=1 at |V|=4. Expand the ACTUAL cofactor a at its
+retained vertex r, and the ACTUAL cofactor b at its retained vertex q:
+
+    a=sum_(w in E) M[r,w] K_w,
+    b=sum_(w in E) M[q,w] K_w.                         (4)
+
+Multiplying (3) by K_w and summing gives 0=ab+ba=2ab,
+contradicting ab!=0 in characteristic zero. The common residual sums
+in (4) are unchanged whole hafnians; no termwise noncancellation or
+support-to-amplitude inference is used.
+
+If row p of C is supported only at q, the p-th row of C M shows
+that q has exactly one M neighbor, namely p. The reviewed
+[scalar leaf lemma](../unaudited-codex-higher-common-power-bridge-2026-09-05/UNIFORM-SCALAR-PENCIL-STAR-INVARIANCE-AND-DEGREE-STRUCTURE.md#5-independent-scalar-lemma-leaves-are-isolated-edges-degree-two-is-impossible)
+then makes p--q an isolated M edge. Conversely, on such an isolated
+edge every C[p,w] with w!=q is zero because q is left isolated.
+The identity (2) makes C[p,q] nonzero. This proves both directions.
+
+This lemma does NOT identify C as the actual cofactor matrix of its
+own inverse, and it does not claim that the supports of M and C
+are equal. Only (1)--(2) are used.
+
+## 2. Four far vertices wherever a complementary color is nonmatching
+
+Now assume a full ordinary ternary source on even n>=6, in its
+reviewed original diagonal form H,B,C. To avoid confusing the color
+C with a cofactor, write K_B,K_C for the ACTUAL cofactor matrices of
+B,C. All three color hafnians are nonzero and each color satisfies
+(2), by the reviewed
+[global diagonal and inverse theorem](../unaudited-codex-higher-common-power-bridge-2026-09-05/UNIFORM-GLOBAL-EDGE-MONOCHROMATICITY-AND-COFACTOR-INVERSE.md).
+Define the far set in the physical support of H by
+
+    F_H(p)={v: dist_H(p,v)>2},                         (5)
+
+where distance between different H components is infinity. The
+reviewed [closed-neighborhood theorem](../unaudited-codex-higher-common-power-bridge-2026-09-05/UNIFORM-CLOSED-NEIGHBORHOOD-ISOTROPY-AND-COLOR-DEGREE-BOUND.md)
+gives the actual row-support inclusions
+
+    supp K_B[p,*], supp K_C[p,*] subset F_H(p).         (6)
+
+The reviewed [private-edge lemma](PRIVATE-COFACTOR-ACTIVE-EDGES-AND-STRICT-COMPONENT-BOUNDARY-DENSITY-NEW-SOURCE.md)
+supplies a C edge p--r with C[p,r] K_C[p,r]!=0.
+Thus r is in F_H(p). The original mixed word with c only on p,r
+and b everywhere else gives
+
+    C[p,r] K_B[p,r]=0, hence K_B[p,r]=0.                (7)
+
+If p lies in a nonmatching B component, Section 1 makes the support
+of K_B[p,*] have at least three elements. Those elements lie in
+F_H(p), while (7) supplies the ADDITIONAL element r. Therefore
+
+    p nonmatching in B or C  =>  |F_H(p)|>=4.          (8)
+
+In particular, if |F_H(p)|<=3, then p belongs to an isolated B edge
+p--q and an isolated C edge p--r. Their partners are distinct by
+privacy. Equivalently, the only vertices that can have fewer than
+four far H sites are degree-two vertices of the physical pair union
+Q_BC, with one isolated edge from each color. The existing private
+edge argument also gives |F_H(p)|>=2 at every vertex.
+
+If Q_BC is 3-vertex-connected, no such degree-two vertex exists, so
+
+    Q_BC 3-connected => |F_H(p)|>=4 for EVERY p.        (9)
+
+The reviewed [pair-connectivity theorem](SCALAR-ODD-TWO-TERMINAL-DECOUPLING-AND-CONNECTED-COLOR-PAIR-CONNECTIVITY-NEW-SOURCE.md)
+makes Q_BC 3-connected whenever B or C is spanning connected.
+No spanning-connectivity assumption is used in the local bound (8).
+
+Both complementary colors must have a nonmatching component, by the
+reviewed [one-matching-color exclusion](../unaudited-codex-higher-common-power-bridge-2026-09-05/UNIFORM-ONE-MATCHING-COLOR-EXCLUSION.md).
+Such a component has at least six vertices: its minimum degree is
+at least three, its order is even because its local hafnian is
+nonzero, and the only four-vertex possibility is excluded by the
+reviewed [cubic-triangle theorem](../unaudited-codex-higher-common-power-bridge-2026-09-05/UNIFORM-CUBIC-SCALAR-TRIANGLE-EXCLUSION.md).
+Hence, in EACH H graph, at least six vertices satisfy (8). There are
+at least n+6 unordered pairs at H distance greater than two, since
+sum_p |F_H(p)|>=2n+12. This count does not assert that those far
+pairs support any particular color.
+
+There is also a simultaneous version of (6): the actual cofactor
+row of any fixed color is supported in the INTERSECTION of the far
+sets for BOTH other colors. At a nonmatching vertex of that color,
+this intersection therefore has at least three elements. This follows
+by applying the same closed-neighborhood theorem twice.
+
+## 3. Two isolated complementary edges have nonadjacent partners
+
+For the same full source with n>=6, suppose B has isolated edge
+p--q and C has isolated edge p--r. These are private edges, so q!=r
+and H[p,q]=H[p,r]=0. Choose any H neighbor u of p; one exists because
+haf(H)!=0. The reviewed
+[odd-routing theorem](ZERO-BINARY-PAIR-COFACTOR-ODD-ROUTING-IDENTITY-AND-ALTERNATING-CYCLE-WITNESS-NEW-SOURCE.md)
+gives odd sets I,J partitioning V without {p,u}, with
+
+    haf B[I+p] haf B[J+u] haf C[J+p] haf C[I+u]!=0.     (10)
+
+The isolated edges force q in I and r in J. In the notation of the
+reviewed [four-site rectangle theorem](THIRD-COLOR-EDGE-ODD-ROUTING-FOUR-SITE-RANK-RECTANGLE-NEW-SOURCE.md),
+
+    X={x in I: haf B[I without x]!=0}={q},
+    Y={y in J: haf C[J without y]!=0}={r}.              (11)
+
+Indeed deletion of x!=q leaves q isolated, while the deletion of q
+is nonzero by (10) and B[p,q]!=0; the C argument is identical.
+The exact four-site coefficient therefore gives
+
+    H[p,u] H[q,r]+H[p,q] H[u,r]+H[p,r] H[u,q]=0.
+
+Thus H[q,r]=0. Also B[q,r]=0 and C[q,r]=0 by the isolated edges.
+The two partners are consequently NONADJACENT in the entire physical
+support graph. This applies, in particular, whenever |F_H(p)|<=3.
+It uses a mixed four-site word, so n>=6 is essential: the allowed
+n=4 three-matching source is outside this claim.
+
+The conclusion is local. It does not make q or r an isolated H
+vertex, nor does it rule out the two-vertex cut through q,r in Q_BC.
+
+## 4. Short-cycle consequences and exact scope
+
+If p belongs to no H triangle and no H four-cycle, its closed
+radius-two ball has size 1+sum_(u in N_H(p)) deg_H(u). Thus (8)--(9)
+give, whenever p is nonmatching in B or C, or Q_BC is 3-connected,
+
+    sum_(u in N_H(p)) deg_H(u)<=n-5.                   (12)
+
+For a nonmatching H component D of minimum degree delta>=3 and
+girth at least five, this sharpens the earlier component argument
+to
+
+    n>=delta^2+5.                                     (13)
+
+For if n<=delta^2+4, every p in D has a radius-two ball of at least
+1+delta^2 vertices, hence at most three far sites. Section 2 makes
+every vertex of D isolated-edge in both B,C. A nonmatching B
+component must then lie outside D and needs at least six vertices,
+whereas |D|>=1+delta^2 leaves at most three exterior vertices.
+This contradiction proves (13). Since n is even, the bound is
+delta^2+5 for odd delta and delta^2+6 for even delta. It strengthens
+the previous integer bound at even delta, for example to n>=22
+at delta=4; at delta=3 it retains n>=14.
+
+As a small conditional consequence, let n=12, let Q_BC be
+3-connected, and let D be a cubic H component. The reviewed cubic
+triangle theorem makes D triangle-free. At every p in D, (9) gives
+a radius-two ball of size at most eight. After p and its three
+neighbors, at most four distinct vertices can receive its six
+nonbacktracking two-step walks. If t_w is the number of such walks
+ending at w, then sum_w t_w=6, at most four t_w are nonzero, and
+each t_w<=3. Distinct pairs of those walks ending at one w give
+distinct four-cycles through p. Their count is
+sum_w binom(t_w,2)>=sum_(w:t_w>0)(t_w-1)>=2. Thus EVERY vertex of D lies
+on at least TWO distinct H four-cycles under these hypotheses.
+No arbitrary twelve-site source is excluded by this statement.
+
+The scalar dual degree lemma is unconditional under its actual
+inverse hypotheses. Its ternary consequences use only reviewed
+source identities and whole matching sums. They do not show that
+far sets must be small in general, eliminate arbitrary short cycles,
+establish coverage of the four-site rectangles, or provide the
+missing existential weighted four-deletion witness.

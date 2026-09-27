@@ -1,0 +1,69 @@
+{
+  "W_state": {
+    "all_even_connected_optimum": "n*B_n/((n-1)^2+1)",
+    "all_two_root_six_site_optimum": "1/65",
+    "disconnected_six_site_upper": "1/144",
+    "disconnected_without_isolates": 3,
+    "fixtures": [
+      {
+        "branch": "mixed-left",
+        "output_words_checked": 729,
+        "reduced_energy": "2351813/25410",
+        "source_energy": "1328305509577/10085229000"
+      },
+      {
+        "branch": "mixed-right",
+        "output_words_checked": 729,
+        "reduced_energy": "2351813/25410",
+        "source_energy": "1962749870281/10085229000"
+      },
+      {
+        "branch": "pure-right",
+        "output_words_checked": 729,
+        "reduced_energy": "3587294065/40340916",
+        "source_energy": "6594110185/40340916"
+      }
+    ],
+    "four_site_supports": 64,
+    "negative_control": "Unbalanced root transformation REJECTED",
+    "unresolved": "Disconnected cofactor graphs at eight or more sites; unrestricted colored cores"
+  },
+  "critical_core": {
+    "arbitrary_cells_per_jet": 135,
+    "consequence": "If error is little-o(signal), signal is O(distance^4); no nonzero GHZ leading term through order three",
+    "finite_increment_colors": 2,
+    "first_order_words": 729,
+    "formal_variables": 540,
+    "negative_control": "Missing cover term REJECTED",
+    "pure_cubic_identities": 2,
+    "pure_quartic_identities": 2,
+    "unresolved": "Order four and higher; the unrestricted square-root bound is not established"
+  },
+  "dependencies": {
+    "computations/boundary-structure-2026-09-26/exact.py": "8485e81a23c6a067d9c211ba19d985360b631455f1ed097c8ab803227e0853cc",
+    "computations/boundary-structure-2026-09-26/examples.py": "b70a9b1d5ab16838172aa3add9b61616a5108a32c177d31308cd0431f6b827d4",
+    "computations/boundary-structure-2026-09-26/graphs.py": "afd736ab9f71a400f0f9c369eb89918238f30db5023df3389fcd86e025ed90d6",
+    "computations/boundary-structure-2026-09-26/results.json": "fa8ae0c2870c229fb64418011af9c3727260dbff67d316da8e41bcd6417d891a",
+    "notes/diagonal-support-rate-exclusions-2026-09-26.md": "583c4785d339cc63cd4813d7674d0c45e455d4a84c0d8dd10a2a84d40f2c38ea",
+    "notes/two-root-w-state-reduction-2026-09-26.md": "ed0172d029cc76f54e2aacc11653ebac7a0110a1f1a07dee496ebe8953b80b49",
+    "notes/w-state-optimal-design-2026-09-26.md": "28a9d6dda968bff29dbdde4623e3fde44f6e49d4d0667c02d3eb7462b571427f"
+  },
+  "evidence_status": "Written proofs with exact supporting checks; independent audit pending",
+  "open_questions": [
+    "Unrestricted complex square-root rate law",
+    "Fourth and higher order GHZ approaches to the critical core",
+    "Disconnected two-root W cofactor graphs at eight or more sites",
+    "W-state optimality for arbitrary colored cores"
+  ],
+  "sha256": {
+    "computations/higher-order-2026-09-26/README.md": "27ac6b206130c510b1bc0c46e3b3a36dab88ee7876484191292b1a7b71e7249a",
+    "computations/higher-order-2026-09-26/critical.py": "947608cf09a0fdfe910640c37c2286cc27ca17028a1600e9a63765234014282d",
+    "computations/higher-order-2026-09-26/dependencies.json": "f1db59a813d6768d489ae934342bb958a41200e34e829ef44e5d21a162d3c24f",
+    "computations/higher-order-2026-09-26/shared.py": "e16238162f798e47508da369e59d49fa5ef371fa1e587831ad70ef9436479bf8",
+    "computations/higher-order-2026-09-26/verify.py": "ab71a1f6869cc2082e90793ba65942cb2512aaef47a7e295b2e0e3680d304527",
+    "computations/higher-order-2026-09-26/w_connected.py": "fe3cc80b853c7a7a698c22a69f399b2ddcc61731bac721e27447aec7f6b8ac5e",
+    "notes/critical-core-higher-jets-2026-09-26.md": "d9ebd80ba74d0371163a3e113b23f5226849d9f0a75e72bee00704870b43f44e",
+    "notes/two-root-w-connected-reduction-2026-09-26.md": "cf5c8741b0380f9a70abae94e7c94de7ab60435aa34da14b5d98edeb76f8e669"
+  },
+  "status": "PASS"
+}

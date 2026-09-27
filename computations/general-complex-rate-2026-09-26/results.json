@@ -1,0 +1,141 @@
+{
+  "status": "PASS",
+  "scope": "Supporting exact checks; arbitrary-size proof is in the research note. Not an independent audit.",
+  "coefficient_division": {
+    "cases": 132,
+    "maximum_quotient_degree": 16,
+    "complex_controls": true
+  },
+  "target_palette_projection": {
+    "target_dimensions": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "subset_projection_checks": 2145,
+    "complex_pure_amplitudes": true
+  },
+  "literal_off_color_sources": [
+    {
+      "case": "allowed_four_site_with_tiny_off_color",
+      "sites": 4,
+      "roots_checked": 4,
+      "pure_average": "1/16",
+      "error_coefficient_norm_upper_bound": "1/6129982163463555433433388108601236734474956488734408704",
+      "norm_convention": "Exact |Re|+|Im| upper bounds; complex identities exact in Q(i).",
+      "checks": {
+        "linear_response": 324,
+        "pure_scalar_residual": 12,
+        "binary_mixed_residual": 72,
+        "cubic_omission": 72,
+        "cofactor_polarization": 108,
+        "two_copy_rotation": 3
+      },
+      "inverse_condition_satisfied": true
+    },
+    {
+      "case": "complex_off_color_four_site",
+      "sites": 4,
+      "roots_checked": 4,
+      "pure_average": "1/16",
+      "error_coefficient_norm_upper_bound": "81/8192",
+      "norm_convention": "Exact |Re|+|Im| upper bounds; complex identities exact in Q(i).",
+      "checks": {
+        "linear_response": 324,
+        "pure_scalar_residual": 12,
+        "binary_mixed_residual": 72,
+        "cubic_omission": 72,
+        "cofactor_polarization": 108,
+        "two_copy_rotation": 3
+      },
+      "inverse_condition_satisfied": false
+    },
+    {
+      "case": "six_site_prism_with_diagonal_and_off_color_errors",
+      "sites": 6,
+      "roots_checked": 1,
+      "pure_average": "1/640",
+      "error_coefficient_norm_upper_bound": "43001/1280000000",
+      "norm_convention": "Exact |Re|+|Im| upper bounds; complex identities exact in Q(i).",
+      "checks": {
+        "linear_response": 729,
+        "pure_scalar_residual": 3,
+        "binary_mixed_residual": 90,
+        "cubic_omission": 30,
+        "cofactor_polarization": 45,
+        "two_copy_rotation": 3
+      },
+      "inverse_condition_satisfied": false
+    },
+    {
+      "case": "dense_complex_six_site",
+      "sites": 6,
+      "roots_checked": 1,
+      "pure_average": "3/1600",
+      "error_coefficient_norm_upper_bound": "96203/1000000",
+      "norm_convention": "Exact |Re|+|Im| upper bounds; complex identities exact in Q(i).",
+      "checks": {
+        "linear_response": 729,
+        "pure_scalar_residual": 3,
+        "binary_mixed_residual": 90,
+        "cubic_omission": 30,
+        "cofactor_polarization": 45,
+        "two_copy_rotation": 0
+      },
+      "inverse_condition_satisfied": false
+    }
+  ],
+  "general_complex_rate_constants": [
+    {
+      "sites": 6,
+      "amplitude_power": "25",
+      "rate_exponent": "1/24",
+      "cubic_response_constant": "978596487220032/91",
+      "cofactor_constant_G": "1878905255486171490/91",
+      "output_projection_constant_L": "2029217675925065209200/91",
+      "diagonal_constant_c": "1/2995912492404572160000",
+      "general_constant_c": "2197/41923654736974252102076556387717910715684869965482156556831803014452857597075825329732987437497974370340962304000000000000000000",
+      "minimum_selected_term": 4,
+      "all_budget_inequalities_verified": true
+    },
+    {
+      "sites": 8,
+      "amplitude_power": "39",
+      "rate_exponent": "1/38",
+      "cubic_response_constant": "2179657141374215271424/1827",
+      "cofactor_constant_G": "169629637370307063808746136/1827",
+      "output_projection_constant_L": "27140741979249130209399381760/29",
+      "diagonal_constant_c": "1/964202335163449515772895821824000000",
+      "general_constant_c": "707281/120060333773995295895118040971752414964893749513245910085465973968024948214284766224280640367445856989106695752330769623835496250351953772510552547914180866653568370400353245218519488352134489560109060355546624876727065875709490626560000000000000000000000000000",
+      "minimum_selected_term": 4,
+      "all_budget_inequalities_verified": true
+    },
+    {
+      "sites": 10,
+      "amplitude_power": "56",
+      "rate_exponent": "1/55",
+      "cubic_response_constant": "182900851836754941914941440/917",
+      "cofactor_constant_G": "715449604112797571220353845871250/917",
+      "output_projection_constant_L": "11590283586627320653769732303114250000/131",
+      "diagonal_constant_c": "1/11240581864524024315864972912527431865617455513600000000",
+      "general_constant_c": "38579489651/38433880226940190238487308754930180306688494236944342331438251758434318968995203281241258153569381939080522280914035590875637398734789050772863126722663898282432897176053778350137632239470986201705353752654981847805620542176444795035973900178811895870024465800521552465572587041149048897777585388091546368813437831661792693079662788050005359100878083110676905469312234350282744981473540251320320000000000000000000000000000000000000000000000000000000000000000000000",
+      "minimum_selected_term": 4,
+      "all_budget_inequalities_verified": true
+    }
+  ],
+  "sha256": {
+    "computations/general-complex-rate-2026-09-26/verify.py": "cc21b69ff629ae68b965d309fa0f7e8cec8dc132a806f44c8b1ef99386411fe3",
+    "notes/general-complex-rate-bound-2026-09-26.md": "0acfccf598fe1e98f2e4c7c6a34a8112e4edacd96684c726139fc4ddcae1c7b5",
+    "computations/quantitative-proof-identities-2026-09-26/verify.py": "7a0e789928e10f5321b01de46055a28d149a1300eda64c0c8e6761db7c57c327",
+    "computations/quantitative-proof-identities-2026-09-26/results.json": "155f0cf9a93ee40418db23f700bddb620fd592fcf71bddc7df7cfa6e3034e348",
+    "notes/quantitative-proof-identities-2026-09-26.md": "8e871caae8791dbaa27867baee5c439d96cb0c73c6163747bf3ad3a5d16572ba",
+    "proofs/krenn-gu-all-orders-two-replica-proof.md": "fb0fa1e9447d8044981692d6e9bbbeff8e6a2cfc90119b6a296cbf506b9a3c9d"
+  }
+}

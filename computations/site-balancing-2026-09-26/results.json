@@ -1,0 +1,166 @@
+{
+  "consequences": [
+    "Universal normalized-rate bounds may be proved on balanced sources",
+    "At six sites every balanced source has a derivative column of norm at least S/15",
+    "Complete four-site cancellation forces support matching number at most two",
+    "The completely flat isolated-core limit cannot be a balanced counterexample limit"
+  ],
+  "dependencies": {
+    "computations/boundary-structure-2026-09-26/exact.py": "8485e81a23c6a067d9c211ba19d985360b631455f1ed097c8ab803227e0853cc",
+    "computations/boundary-structure-2026-09-26/examples.py": "b70a9b1d5ab16838172aa3add9b61616a5108a32c177d31308cd0431f6b827d4",
+    "computations/boundary-structure-2026-09-26/graphs.py": "afd736ab9f71a400f0f9c369eb89918238f30db5023df3389fcd86e025ed90d6"
+  },
+  "evidence_status": "Written normalization and sharp norm proofs with exact support; independent audit pending",
+  "examples": {
+    "independent_polynomial_expansion": {
+      "monomials": 4995,
+      "norm_by_distinct_sites": {
+        "2": "30915",
+        "3": "229635",
+        "4": "213678"
+      }
+    },
+    "negative_controls": {
+      "dropping_balance": "REJECTED",
+      "non_unit_product": "REJECTED"
+    },
+    "norm_identities": {
+      "balanced_colored": {
+        "balanced": true,
+        "degrees": [
+          "5",
+          "5",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "edge_square_sum": "15",
+        "energy": "15",
+        "four_site_norm_squared": "45",
+        "local_gram_slack": "48",
+        "maximum_four_site_norm_squared": "3",
+        "off_diagonal_gram_norm_squared": "12"
+      },
+      "balanced_prism": {
+        "balanced": true,
+        "degrees": [
+          "201/100",
+          "201/100",
+          "201/100",
+          "201/100",
+          "201/100",
+          "201/100"
+        ],
+        "edge_square_sum": "60003/10000",
+        "energy": "603/100",
+        "four_site_norm_squared": "90603/10000",
+        "local_gram_slack": "153/25",
+        "maximum_four_site_norm_squared": "10001/10000",
+        "off_diagonal_gram_norm_squared": "0"
+      },
+      "dense_complex": {
+        "balanced": true,
+        "degrees": [
+          "240",
+          "240",
+          "240",
+          "240",
+          "240",
+          "240"
+        ],
+        "edge_square_sum": "34560",
+        "energy": "720",
+        "four_site_norm_squared": "213678",
+        "local_gram_slack": "46845",
+        "maximum_four_site_norm_squared": "15120",
+        "off_diagonal_gram_norm_squared": "311391"
+      },
+      "sharp_conference": {
+        "balanced": true,
+        "degrees": [
+          "5",
+          "5",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "edge_square_sum": "15",
+        "energy": "15",
+        "four_site_norm_squared": "15",
+        "local_gram_slack": "0",
+        "maximum_four_site_norm_squared": "1",
+        "off_diagonal_gram_norm_squared": "0"
+      },
+      "unbalanced_critical": {
+        "balanced": false,
+        "degrees": [
+          "4",
+          "4",
+          "4",
+          "4",
+          "4",
+          "0"
+        ],
+        "edge_square_sum": "10",
+        "energy": "10",
+        "four_site_norm_squared": "0",
+        "local_gram_slack": "0",
+        "maximum_four_site_norm_squared": "0",
+        "off_diagonal_gram_norm_squared": "0"
+      },
+      "unbalanced_dense": {
+        "balanced": false,
+        "degrees": [
+          "495376/75",
+          "34336/75",
+          "317532/25",
+          "15316/75",
+          "48244/3",
+          "5524/75"
+        ],
+        "edge_square_sum": "803211482944/5625",
+        "energy": "1354624/75",
+        "four_site_norm_squared": "269848947/50",
+        "local_gram_slack": "248854369731/10000",
+        "maximum_four_site_norm_squared": "3280500",
+        "off_diagonal_gram_norm_squared": "2094629129159/30000"
+      }
+    },
+    "output_words_compared": 729,
+    "pruning": {
+      "balanced_energy": "3",
+      "minimum_scope": "Positive scaling orbit of the pruned source",
+      "original_energy": "4",
+      "rate_gain": "64/27",
+      "removed_cells": 1
+    },
+    "scaling": {
+      "balanced_energy": "603/100",
+      "minimum_scope": "Positive scaling orbit of the pruned source",
+      "original_energy": "1293083/30000",
+      "rate_gain": "2162117074124002787/5919918129000000",
+      "removed_cells": 0
+    }
+  },
+  "sha256": {
+    "computations/site-balancing-2026-09-26/README.md": "4860d986b05756d5cbd7f258b553a9ddd4914951650d5beb09a5b24e85c398ae",
+    "computations/site-balancing-2026-09-26/core.py": "4e09d2c038a320da467448292f1028065f3615bad51ed887ec1c504804ead061",
+    "computations/site-balancing-2026-09-26/dependencies.json": "fffd934eb4cca451f932617391e0c64e98995e857320000b13765d4f10858ec2",
+    "computations/site-balancing-2026-09-26/verify.py": "faa7fdbe2972fe55d37cc85612c9e8351d0c99d44868784cbfc5c3ad2ec0b134",
+    "notes/balanced-four-site-response-bound-2026-09-26.md": "01f4653114edc9cdf3cbb4b68cf5bed2b04ba003a852b69fd28dc4ac799476bf",
+    "notes/site-balancing-rate-reduction-2026-09-26.md": "eb50b96f2cc835d5ad9ccd2fe56e59ee53fe24c32d040b2b54e826dfb5ce0638"
+  },
+  "status": "PASS",
+  "support_census": {
+    "fractional_extreme_cover_types": {
+      "perfect_matchings": 15,
+      "triangle_pairs": 10
+    },
+    "fractional_without_perfect": 10,
+    "perfect_matching_supports": 24823,
+    "supports": 32768
+  },
+  "unresolved": "Partial rank loss, target-specific cancellation, the unrestricted square-root law, and the global unrestricted W optimum"
+}

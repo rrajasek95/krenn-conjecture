@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="An undergraduate guide with seven diagrams to the internally reviewed all-orders Krenn–Gu proof."><title>How the all-orders Krenn–Gu proof works</title><style>
+:root{color-scheme:light;--ink:#202d3a;--muted:#526171;--blue:#2168af}
+*{box-sizing:border-box}
+body{margin:0;background:#f2f5f7;color:var(--ink);font:18px/1.7 system-ui,sans-serif}
+main{max-width:1060px;margin:auto;padding:40px 28px 80px}
+h1{font-size:clamp(34px,5vw,50px);line-height:1.12;letter-spacing:-.035em;max-width:900px}
+h2{font-size:28px;line-height:1.3;margin:2.7em 0 1em;scroll-margin-top:24px;max-width:900px}
+p,ul{max-width:880px}a{color:var(--blue);text-underline-offset:3px}
+li{padding-left:4px;margin:10px 0}
+code{font:1em/1.5 ui-monospace,monospace;background:#e8eef2;padding:1px 4px;border-radius:4px}
+.status{background:#edf7f1;border-left:4px solid #237953;padding:16px 22px;border-radius:6px;font-size:16px}
+.contents{background:white;border:1px solid #d8dedf;border-radius:12px;padding:20px 26px;margin-top:32px;font-size:16px}
+.contents ol{columns:2;column-gap:38px;margin-bottom:0;padding-left:22px}.contents li{break-inside:avoid}
+figure{margin:32px 0}.diagram{overflow-x:auto;border:1px solid #d8dedf;border-radius:16px;background:white}
+svg{display:block;width:100%;min-width:720px;height:auto}
+figcaption{font-size:15px;line-height:1.6;color:var(--muted);margin:10px 2px;max-width:920px}
+.equation{background:white;border:1px solid #d8dedf;border-radius:10px;padding:22px;margin:25px 0;overflow-x:auto}
+.equation math{font-size:24px;width:max-content;min-width:100%;margin:0}
+.key-equation{background:#edf7f1;border-color:#237953}
+footer{margin-top:60px;padding-top:20px;border-top:1px solid #d8dedf;font-size:14px;color:var(--muted)}
+@media(max-width:620px){main{padding:24px 16px 50px}.contents ol{columns:1}h2{font-size:25px}.equation math{font-size:22px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.contents{display:none}
+h2{break-after:avoid}figure,.equation{break-inside:avoid}svg{min-width:0}.diagram{overflow:visible}
+code{background:none}.equation math{font-size:15pt}a{color:inherit}footer{font-size:9pt}}
+</style></head><body><main><article><h1>How the all-orders Krenn–Gu proof works</h1>
+<p><strong>An illustrated guide at undergraduate math level · September 26, 2026</strong></p>
+<p><a href="ALL-ORDERS-PROOF.html">Browser edition</a> · <a href="README.md">All explainers</a> · <a href="../proofs/krenn-gu-all-orders-two-replica-proof.md">Full proof</a> · <a href="../notes/all-orders-two-replica-review-2026-09-26.md">Review record</a></p>
+<p>The proof turns a problem about complicated cancellations into a very rigid graph problem. It first shows that a hypothetical solution must have exactly one edge of each color at every vertex. Three such colored matchings then force an unwanted output whenever the number of vertices is greater than four.</p>
+<p>The difficult part is proving that rigidity while allowing arbitrary complex weights. The decisive new identity does this at every size at once.</p>
+<p class="status"><strong>Status.</strong> The written proof has passed two independent internal research-agent audits. External peer review and complete Lean verification remain outstanding. This guide explains that proof; it is not an additional certification. The acceptance record supplies the later review outcome for the frozen proof file, whose original candidate-review header is retained.</p>
+<nav class="contents" aria-label="Guide contents"><strong>In this guide</strong><ol><li><a href="#1-what-is-being-ruled-out">What is being ruled out?</a></li><li><a href="#2-the-route-through-the-proof">The route through the proof</a></li><li><a href="#3-why-two-copies-reveal-constraints-that-one-copy-hides">Why two copies reveal constraints that one copy hides</a></li><li><a href="#4-how-the-earlier-identities-force-same-color-edges">How the earlier identities force same-color edges</a></li><li><a href="#5-the-new-identity-every-supported-edge-accounts-for-the-whole-amplitude">The new identity: every supported edge accounts for the whole amplitude</a></li><li><a href="#6-where-the-endpoint-identity-comes-from">Where the endpoint identity comes from</a></li><li><a href="#7-why-three-perfect-matchings-cannot-work-beyond-four-sites">Why three perfect matchings cannot work beyond four sites</a></li><li><a href="#8-why-four-sites-survive">Why four sites survive</a></li><li><a href="#9-what-has-been-learned-and-what-remains-separate">What has been learned, and what remains separate?</a></li></ol></nav>
+<h2 id="1-what-is-being-ruled-out">1. What is being ruled out?</h2>
+<p>Think of vertices as output sites. An edge joins two sites and carries a complex weight. Initially, the colors at its two ends may differ. A <strong>perfect matching</strong> is a choice of edges that uses every vertex exactly once.</p>
+<p>Each matching produces a color at every site. Multiply its edge weights to get its contribution. Then add the contributions of all matchings producing that same color list. This sum is the list&#x27;s <strong>amplitude</strong>.</p>
+<p>For example, a six-site matching might produce <code>RRGBBG</code>. A pure list has just one color, such as <code>RRRRRR</code>; a mixed list uses at least two colors. The desired output has the form</p>
+<div class="equation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>H</mi><mo>=</mo><msub><mi>τ</mi><mi>R</mi></msub><msup><mi>R</mi><mi>V</mi></msup><mo>+</mo><msub><mi>τ</mi><mi>B</mi></msub><msup><mi>B</mi><mi>V</mi></msup><mo>+</mo><msub><mi>τ</mi><mi>G</mi></msub><msup><mi>G</mi><mi>V</mi></msup><mspace width="1.2em"/><msub><mi>τ</mi><mi>R</mi></msub><msub><mi>τ</mi><mi>B</mi></msub><msub><mi>τ</mi><mi>G</mi></msub><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">H = \tau_R R^V + \tau_B B^V + \tau_G G^V,
+\qquad \tau_R\tau_B\tau_G\ne 0.</annotation></semantics></math></div>
+<p>Here <code>R^V</code> means red at every site in the vertex set <code>V</code>, and similarly for blue and green. Every mixed-list amplitude must be zero. The three pure amplitudes can be different nonzero complex numbers.</p>
+<p>The theorem says this is impossible for every even number of sites greater than four. More than three target colors are also excluded: retain any three colors, and a hypothetical larger-color solution would give a three-color one. The model permits arbitrary edge density and endpoint colors. Parallel edges with the same endpoints and endpoint colors combine by adding their weights.</p>
+<p>Why is this hard? A mixed matching need not cause a mixed output: its contribution might cancel with another matching. Complex weights allow both sign and phase cancellation.</p>
+<figure><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 390" role="img" aria-labelledby="01-cancellation-title 01-cancellation-desc">
+<title id="01-cancellation-title">Finding a mixed matching is not enough</title>
+<desc id="01-cancellation-desc">Two different red pairings of four vertices have contributions plus one and minus one to the same pure output. Their sum is zero. The same cancellation principle is the obstacle when ruling out mixed outputs.</desc>
+<rect width="1000" height="100%" rx="16" fill="white"/>
+<text x="30" y="30" font-family="system-ui,sans-serif" font-size="12" fill="#526171" text-anchor="start" font-weight="700">KRENN–GU / THE ALL-ORDERS PROOF</text>
+<text x="30" y="66" font-family="system-ui,sans-serif" font-size="25" fill="#202d3a" text-anchor="start" font-weight="700">Finding a mixed matching is not enough</text>
+<rect x="30" y="105" width="280" height="220" rx="12" fill="#fcf0f1" stroke="#d8dedf"/>
+<text x="170" y="137" font-family="system-ui,sans-serif" font-size="19" fill="#202d3a" text-anchor="middle" font-weight="650">Pair 12 and 34</text>
+<line x1="85" y1="175" x2="255" y2="175" stroke="#bd3847" stroke-width="4" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="255" y1="265" x2="85" y2="265" stroke="#bd3847" stroke-width="4" stroke-dasharray="" stroke-linecap="round"/>
+<circle cx="85" cy="175" r="16" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="85" y="180" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">1</text>
+<circle cx="255" cy="175" r="16" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="255" y="180" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">2</text>
+<circle cx="255" cy="265" r="16" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="255" y="270" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">3</text>
+<circle cx="85" cy="265" r="16" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="85" y="270" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">4</text>
+<text x="170" y="305" font-family="system-ui,sans-serif" font-size="20" fill="#bd3847" text-anchor="middle" font-weight="650">+1 × +1 = +1</text>
+<rect x="350" y="105" width="280" height="220" rx="12" fill="#fcf0f1" stroke="#d8dedf"/>
+<text x="490" y="137" font-family="system-ui,sans-serif" font-size="19" fill="#202d3a" text-anchor="middle" font-weight="650">Pair 13 and 24</text>
+<line x1="405" y1="175" x2="575" y2="265" stroke="#bd3847" stroke-width="4" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="575" y1="175" x2="405" y2="265" stroke="#bd3847" stroke-width="4" stroke-dasharray="" stroke-linecap="round"/>
+<circle cx="405" cy="175" r="16" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="405" y="180" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">1</text>
+<circle cx="575" cy="175" r="16" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="575" y="180" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">2</text>
+<circle cx="575" cy="265" r="16" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="575" y="270" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">3</text>
+<circle cx="405" cy="265" r="16" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="405" y="270" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">4</text>
+<text x="490" y="305" font-family="system-ui,sans-serif" font-size="20" fill="#bd3847" text-anchor="middle" font-weight="650">+1 × −1 = −1</text>
+<line x1="646" y1="220" x2="680" y2="220" stroke="#526171" stroke-width="2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="672" y1="225" x2="680" y2="220" stroke="#526171" stroke-width="2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="672" y1="215" x2="680" y2="220" stroke="#526171" stroke-width="2" stroke-dasharray="" stroke-linecap="round"/>
+<text x="830" y="164" font-family="system-ui,sans-serif" font-size="18" fill="#526171" text-anchor="middle" font-weight="400">Same color list</text>
+<text x="830" y="207" font-family="system-ui,sans-serif" font-size="26" fill="#bd3847" text-anchor="middle" font-weight="700">RRRR</text>
+<text x="830" y="259" font-family="system-ui,sans-serif" font-size="27" fill="#202d3a" text-anchor="middle" font-weight="700">+1 − 1 = 0</text>
+<text x="500" y="366" font-family="system-ui,sans-serif" font-size="18" fill="#526171" text-anchor="middle" font-weight="400">Amplitudes add over matchings; individual products need not survive.</text>
+</svg>
+</div><figcaption>Figure 1. A cancellation example, not a solution of the conjecture. A proof must control sums of matching contributions, not just find an unwanted matching. <a href="all-orders-assets/01-cancellation.svg">Full-size diagram</a></figcaption></figure>
+<h2 id="2-the-route-through-the-proof">2. The route through the proof</h2>
+<figure><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 490" role="img" aria-labelledby="02-roadmap-title 02-roadmap-desc">
+<title id="02-roadmap-title">The proof makes cancellation impossible</title>
+<desc id="02-roadmap-desc">Six steps in order: exact target, higher-response identities, same-color edges, the new endpoint identity, one edge per vertex per color, and a mixed matching with nonzero amplitude. Arrows run across the top row, down, then back along the bottom row.</desc>
+<rect width="1000" height="100%" rx="16" fill="white"/>
+<text x="30" y="30" font-family="system-ui,sans-serif" font-size="12" fill="#526171" text-anchor="start" font-weight="700">KRENN–GU / THE ALL-ORDERS PROOF</text>
+<text x="30" y="66" font-family="system-ui,sans-serif" font-size="25" fill="#202d3a" text-anchor="start" font-weight="700">The proof makes cancellation impossible</text>
+<rect x="30" y="110" width="290" height="145" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="45" y="138" font-family="system-ui,sans-serif" font-size="12" fill="#526171" text-anchor="start" font-weight="700">1 / ASSUMPTION</text>
+<text x="45" y="173" font-family="system-ui,sans-serif" font-size="20" fill="#202d3a" text-anchor="start" font-weight="700">Exact target output</text>
+<text x="45" y="206" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="start" font-weight="400">Three nonzero pure amplitudes</text>
+<text x="45" y="231" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="start" font-weight="400">Every mixed amplitude is zero</text>
+<rect x="355" y="110" width="290" height="145" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="370" y="138" font-family="system-ui,sans-serif" font-size="12" fill="#526171" text-anchor="start" font-weight="700">2 / TWO FORMAL COPIES</text>
+<text x="370" y="173" font-family="system-ui,sans-serif" font-size="20" fill="#202d3a" text-anchor="start" font-weight="700">Higher responses vanish</text>
+<text x="370" y="206" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="start" font-weight="400">On every two-color palette</text>
+<text x="370" y="231" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="start" font-weight="400">Including the terminal degree</text>
+<rect x="680" y="110" width="290" height="145" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="695" y="138" font-family="system-ui,sans-serif" font-size="12" fill="#526171" text-anchor="start" font-weight="700">3 / MATRIX INVERSES</text>
+<text x="695" y="173" font-family="system-ui,sans-serif" font-size="20" fill="#202d3a" text-anchor="start" font-weight="700">Edges have one color</text>
+<text x="695" y="206" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="start" font-weight="400">Both endpoints agree</text>
+<text x="695" y="231" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="start" font-weight="400">Derived in the original basis</text>
+<rect x="680" y="305" width="290" height="145" rx="12" fill="#edf7f1" stroke="#d8dedf"/>
+<text x="695" y="333" font-family="system-ui,sans-serif" font-size="12" fill="#526171" text-anchor="start" font-weight="700">4 / NEW CLOSING STEP</text>
+<text x="695" y="368" font-family="system-ui,sans-serif" font-size="20" fill="#202d3a" text-anchor="start" font-weight="700">The endpoint identity</text>
+<text x="695" y="401" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="start" font-weight="400">Every supported edge contributes</text>
+<text x="695" y="426" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="start" font-weight="400">the entire pure amplitude β</text>
+<rect x="355" y="305" width="290" height="145" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="370" y="333" font-family="system-ui,sans-serif" font-size="12" fill="#526171" text-anchor="start" font-weight="700">5 / COUNT AT A VERTEX</text>
+<text x="370" y="368" font-family="system-ui,sans-serif" font-size="20" fill="#202d3a" text-anchor="start" font-weight="700">One edge per color</text>
+<text x="370" y="401" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="start" font-weight="400">β = kβ, with β nonzero</text>
+<text x="370" y="426" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="start" font-weight="400">Therefore k = 1</text>
+<rect x="30" y="305" width="290" height="145" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="45" y="333" font-family="system-ui,sans-serif" font-size="12" fill="#526171" text-anchor="start" font-weight="700">6 / GRAPH CONTRADICTION</text>
+<text x="45" y="368" font-family="system-ui,sans-serif" font-size="20" fill="#202d3a" text-anchor="start" font-weight="700">An unwanted output</text>
+<text x="45" y="401" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="start" font-weight="400">Three matchings force a mixed one</text>
+<text x="45" y="426" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="start" font-weight="400">Its nonzero product cannot cancel</text>
+<line x1="326" y1="183" x2="349" y2="183" stroke="#526171" stroke-width="2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="341" y1="188" x2="349" y2="183" stroke="#526171" stroke-width="2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="341" y1="178" x2="349" y2="183" stroke="#526171" stroke-width="2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="651" y1="183" x2="674" y2="183" stroke="#526171" stroke-width="2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="666" y1="188" x2="674" y2="183" stroke="#526171" stroke-width="2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="666" y1="178" x2="674" y2="183" stroke="#526171" stroke-width="2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="825" y1="265" x2="825" y2="295" stroke="#526171" stroke-width="2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="820" y1="287" x2="825" y2="295" stroke="#526171" stroke-width="2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="830" y1="287" x2="825" y2="295" stroke="#526171" stroke-width="2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="674" y1="378" x2="651" y2="378" stroke="#526171" stroke-width="2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="659" y1="373" x2="651" y2="378" stroke="#526171" stroke-width="2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="659" y1="383" x2="651" y2="378" stroke="#526171" stroke-width="2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="349" y1="378" x2="326" y2="378" stroke="#526171" stroke-width="2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="334" y1="373" x2="326" y2="378" stroke="#526171" stroke-width="2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="334" y1="383" x2="326" y2="378" stroke="#526171" stroke-width="2" stroke-dasharray="" stroke-linecap="round"/>
+</svg>
+</div><figcaption>Figure 2. The higher-response and diagonal-reduction arguments supply the foundations. The endpoint identity is the new step that closes all sizes. <a href="all-orders-assets/02-roadmap.svg">Full-size diagram</a></figcaption></figure>
+<p>There are three distinct tasks:</p>
+<ul><li><strong>Control cancellation algebraically.</strong> Use the exact output conditions and   two formal copies of the same source to derive polynomial identities.</li><li><strong>Force a simple graph.</strong> First, both ends of each supported edge must have   the same color. Then, each vertex must have exactly one edge of each color.</li><li><strong>Finish with graph theory.</strong> In this rigid graph, an unwanted matching has   no second contribution that could cancel it.</li></ul>
+<p>The last task is a known graph obstruction, reproduced in the full proof. The new work gets the arbitrary complex-weighted problem into that setting.</p>
+<h2 id="3-why-two-copies-reveal-constraints-that-one-copy-hides">3. Why two copies reveal constraints that one copy hides</h2>
+<p>Delete one vertex, called the <strong>root</strong>. An odd number of vertices remains. To complete a matching, the deleted root must connect to one remaining vertex. Its possible connections form a vector, or <strong>row</strong>, of edge weights.</p>
+<p>For each root color, this row has an especially simple response: it produces only the matching pure-color list on the remaining vertices. This follows directly from the assumed exact output. The three actual root rows therefore give three independent pure responses.</p>
+<p>The proof also studies <strong>higher responses</strong>: insert three, five, or more root rows and pair all remaining sites internally. These are auxiliary polynomials, not physical matchings with a root used several times. They package useful identities among the original edge weights.</p>
+<p>The key device is to take two identical, independent formal copies of the pairing calculation. At each site, compare their two selected colors using the expression</p>
+<div class="equation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>X</mi><mi>R</mi></msub><msub><mi>Y</mi><mi>B</mi></msub><mo>−</mo><msub><mi>X</mi><mi>B</mi></msub><msub><mi>Y</mi><mi>R</mi></msub></mrow><annotation encoding="application/x-tex">X_RY_B-X_BY_R.</annotation></semantics></math></div>
+<p>This is a two-by-two determinant. Rotating the two copies together preserves it; reflecting them changes its sign. The underlying formal pairing rules are also preserved by these orthogonal transformations. No positive probability distribution is needed: a formal pairing calculation is simply a sum over pairings with prescribed weights.</p>
+<figure><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 485" role="img" aria-labelledby="03-replicas-title 03-replicas-desc">
+<title id="03-replicas-title">Two copies give a symmetry of the same calculation</title>
+<desc id="03-replicas-desc">Two formal copies share identical pairing rules. Orthogonal mixing preserves those rules. A local two-color determinant changes sign under reflection. With an odd number of sites the total changes sign and must vanish; with an even number it remains invariant.</desc>
+<rect width="1000" height="100%" rx="16" fill="white"/>
+<text x="30" y="30" font-family="system-ui,sans-serif" font-size="12" fill="#526171" text-anchor="start" font-weight="700">KRENN–GU / THE ALL-ORDERS PROOF</text>
+<text x="30" y="66" font-family="system-ui,sans-serif" font-size="25" fill="#202d3a" text-anchor="start" font-weight="700">Two copies give a symmetry of the same calculation</text>
+<rect x="30" y="108" width="300" height="175" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="180" y="142" font-family="system-ui,sans-serif" font-size="20" fill="#202d3a" text-anchor="middle" font-weight="650">Identical pairing rules</text>
+<text x="180" y="192" font-family="system-ui,sans-serif" font-size="24" fill="#bd3847" text-anchor="middle" font-weight="400">Copy 1: X, g₁</text>
+<text x="180" y="239" font-family="system-ui,sans-serif" font-size="24" fill="#2168af" text-anchor="middle" font-weight="400">Copy 2: Y, g₂</text>
+<line x1="347" y1="195" x2="416" y2="195" stroke="#526171" stroke-width="2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="408" y1="200" x2="416" y2="195" stroke="#526171" stroke-width="2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="408" y1="190" x2="416" y2="195" stroke="#526171" stroke-width="2" stroke-dasharray="" stroke-linecap="round"/>
+<text x="382" y="173" font-family="system-ui,sans-serif" font-size="15" fill="#526171" text-anchor="middle" font-weight="400">mix</text>
+<rect x="435" y="108" width="535" height="175" rx="12" fill="#edf4fc" stroke="#d8dedf"/>
+<text x="702" y="145" font-family="system-ui,sans-serif" font-size="20" fill="#202d3a" text-anchor="middle" font-weight="650">A determinant at each retained site</text>
+<text x="702" y="193" font-family="system-ui,sans-serif" font-size="29" fill="#202d3a" text-anchor="middle" font-weight="400">Xᵣ Yᵦ − Xᵦ Yᵣ</text>
+<text x="702" y="239" font-family="system-ui,sans-serif" font-size="18" fill="#526171" text-anchor="middle" font-weight="400">Rotation: unchanged   ·   Reflection: sign flips</text>
+<rect x="30" y="315" width="455" height="128" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="257" y="343" font-family="system-ui,sans-serif" font-size="13" fill="#526171" text-anchor="middle" font-weight="700">ODD NUMBER OF SITES</text>
+<text x="257" y="383" font-family="system-ui,sans-serif" font-size="24" fill="#202d3a" text-anchor="middle" font-weight="650">S = −S  ⇒  S = 0</text>
+<text x="257" y="417" font-family="system-ui,sans-serif" font-size="17" fill="#526171" text-anchor="middle" font-weight="400">Gives higher-response identities</text>
+<rect x="515" y="315" width="455" height="128" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="742" y="343" font-family="system-ui,sans-serif" font-size="13" fill="#526171" text-anchor="middle" font-weight="700">EVEN NUMBER OF SITES</text>
+<text x="742" y="383" font-family="system-ui,sans-serif" font-size="24" fill="#202d3a" text-anchor="middle" font-weight="650">S stays unchanged</text>
+<text x="742" y="417" font-family="system-ui,sans-serif" font-size="17" fill="#526171" text-anchor="middle" font-weight="400">Constrains the endpoint matrix</text>
+</svg>
+</div><figcaption>Figure 3. These transformations act on bookkeeping copies. They do not change the edge weights or assume that a family of physical solutions exists. <a href="all-orders-assets/03-replicas.svg">Full-size diagram</a></figcaption></figure>
+<p>For this calculation, the reflection is chosen to fix the auxiliary root-row factor. The odd number of local determinants then changes the total sign. An expression equal to its own negative must be zero. Extracting coefficients gives relations between the ordinary response and all higher odd responses.</p>
+<p>Those relations imply that, on any chosen two-color palette, mixed higher responses vanish, while all pure higher responses have a common polynomial factor. Collect these factors into one finite, even polynomial <code>g</code>, with constant term one. A 45-degree rotation of the two copies gives</p>
+<div class="equation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msup><mrow><mi>g</mi><mo>(</mo><mfrac><mrow><mi>L</mi></mrow><mrow><msqrt><mn>2</mn></msqrt></mrow></mfrac><mo>)</mo></mrow><mn>2</mn></msup><mo>=</mo><mi>g</mi><mo>(</mo><mi>L</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">g(L/\sqrt{2})^2=g(L).</annotation></semantics></math></div>
+<p>If <code>g</code> had degree <code>k &gt; 0</code>, the left side would have degree <code>2k</code>, while the right side would have degree <code>k</code>. That is impossible for a nonzero polynomial. Thus <code>g = 1</code>: every higher odd response on a two-color palette vanishes.</p>
+<p>Two qualifications matter. This includes the <strong>highest possible odd degree</strong>, where there are no internal pairs left. And it concerns every two-color projection; it does not assert that all three-color higher responses vanish. The third active color is nevertheless essential to deriving these identities.</p>
+<h2 id="4-how-the-earlier-identities-force-same-color-edges">4. How the earlier identities force same-color edges</h2>
+<p>Delete a second vertex. A related two-copy argument on the even number of remaining sites turns the higher-response identities into matrix equations. Here is what those equations mean.</p>
+<p>Fix one color <code>h</code>. Form a matrix <code>Cₕ</code> whose entry at distinct vertices <code>r,q</code> is the total all-<code>h</code> matching amplitude after deleting <code>r,q</code>. Its diagonal entries are zero. These are actual smaller matching sums, often called <strong>hafnian cofactors</strong>.</p>
+<p>Let <code>Bᵢₕ</code> collect edge weights with color <code>i</code> at the first endpoint and color <code>h</code> at the second. The identities say</p>
+<div class="equation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>B</mi><mi>hh</mi></msub><msub><mi>C</mi><mi>h</mi></msub><mo>=</mo><msub><mi>τ</mi><mi>h</mi></msub><mi>I</mi><mspace width="1.2em"/><msub><mi>B</mi><mi>ih</mi></msub><msub><mi>C</mi><mi>h</mi></msub><mo>=</mo><mn>0</mn><mspace width="1.2em"/><mo>(</mo><mi>i</mi><mo>≠</mo><mi>h</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">B_{hh}C_h=\tau_h I,
+\qquad B_{ih}C_h=0\quad(i\ne h).</annotation></semantics></math></div>
+<p>Since <code>τₕ ≠ 0</code>, the first equation makes <code>Cₕ</code> invertible. Multiply the second equation by its inverse: <code>Bᵢₕ = 0</code> for <code>i ≠ h</code>.</p>
+<p>So every supported edge has the same color at both ends, in the original target coordinates. The proof has derived this from the general model. The harder input here is the even-omission identity that establishes the matrix equations; the final inverse-matrix deduction is ordinary linear algebra.</p>
+<h2 id="5-the-new-identity-every-supported-edge-accounts-for-the-whole-amplitude">5. The new identity: every supported edge accounts for the whole amplitude</h2>
+<p>Choose a color and call its symmetric weight matrix <code>B</code>. In the rest of this section, <code>B</code> names a matrix, not necessarily the color blue. Its <strong>hafnian</strong>, written <code>haf</code>B``, is the sum of the products of weights over all perfect matchings. For four vertices, for example,</p>
+<div class="equation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi mathvariant="normal">haf</mi><mo>(</mo><mrow><mi>B</mi></mrow><mo>)</mo><mo>=</mo><msub><mi>B</mi><mi>12</mi></msub><msub><mi>B</mi><mi>34</mi></msub><mo>+</mo><msub><mi>B</mi><mi>13</mi></msub><msub><mi>B</mi><mi>24</mi></msub><mo>+</mo><msub><mi>B</mi><mi>14</mi></msub><msub><mi>B</mi><mi>23</mi></msub></mrow><annotation encoding="application/x-tex">\operatorname{haf}(B)=B_{12}B_{34}+B_{13}B_{24}+B_{14}B_{23}.</annotation></semantics></math></div>
+<p>Write <code>β = haf</code>B`<code>. Every matching pairs a fixed vertex </code>p<code> with some partner </code>q`. Grouping matchings by that partner gives the ordinary expansion</p>
+<div class="equation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>β</mi><mo>=</mo><munder><mo>∑</mo><mrow><mi>q</mi><mo>≠</mo><mi>p</mi></mrow></munder><msub><mi>B</mi><mi>pq</mi></msub><mi mathvariant="normal">haf</mi><mo>(</mo><mrow><mi>B</mi><mo>[</mo><mi>V</mi><mo>∖</mo><mo>{</mo><mi>p</mi><mo>,</mo><mi>q</mi><mo>}</mo><mo>]</mo></mrow><mo>)</mo></mrow><annotation encoding="application/x-tex">\beta=\sum_{q\ne p}B_{pq}\operatorname{haf}(B[V\setminus\{p,q\}]).</annotation></semantics></math></div>
+<p>The bracketed matrix is what remains after deleting <code>p,q</code>. Each summand is the total contribution from matchings that use edge <code>pq</code>.</p>
+<p>The breakthrough is much stronger than this sum formula. For <strong>every edge with nonzero weight</strong>, the proof establishes</p>
+<div class="equation key-equation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>B</mi><mi>pq</mi></msub><mi mathvariant="normal">haf</mi><mo>(</mo><mrow><mi>B</mi><mo>[</mo><mi>V</mi><mo>∖</mo><mo>{</mo><mi>p</mi><mo>,</mo><mi>q</mi><mo>}</mo><mo>]</mo></mrow><mo>)</mo><mo>=</mo><mi>β</mi></mrow><annotation encoding="application/x-tex">\boxed{B_{pq}\operatorname{haf}(B[V\setminus\{p,q\}])=\beta.}</annotation></semantics></math></div>
+<p>Thus each supported edge at <code>p</code> accounts for the entire amplitude <code>β</code>. If there are <code>k</code> such edges, the ordinary expansion becomes</p>
+<div class="equation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>β</mi><mo>=</mo><mi>k</mi><mi>β</mi></mrow><annotation encoding="application/x-tex">\beta=k\beta.</annotation></semantics></math></div>
+<p>The target amplitude is nonzero, so <code>k = 1</code>. This applies at every vertex and in every color. Each color&#x27;s edges therefore form a perfect matching.</p>
+<figure><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 515" role="img" aria-labelledby="04-endpoint-title 04-endpoint-desc">
+<title id="04-endpoint-title">Each supported edge accounts for the whole amplitude</title>
+<desc id="04-endpoint-desc">Condition on an edge pq of weight d. Its contribution is d times the retained hafnian alpha. The new identity makes this beta. Three supported edges at p would therefore give beta equals three beta, impossible when beta is nonzero.</desc>
+<rect width="1000" height="100%" rx="16" fill="white"/>
+<text x="30" y="30" font-family="system-ui,sans-serif" font-size="12" fill="#526171" text-anchor="start" font-weight="700">KRENN–GU / THE ALL-ORDERS PROOF</text>
+<text x="30" y="66" font-family="system-ui,sans-serif" font-size="25" fill="#202d3a" text-anchor="start" font-weight="700">Each supported edge accounts for the whole amplitude</text>
+<rect x="30" y="108" width="455" height="342" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="257" y="143" font-family="system-ui,sans-serif" font-size="21" fill="#202d3a" text-anchor="middle" font-weight="650">One supported edge pq</text>
+<line x1="130" y1="199" x2="380" y2="199" stroke="#bd3847" stroke-width="4" stroke-dasharray="" stroke-linecap="round"/>
+<circle cx="130" cy="199" r="16" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="130" y="204" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">p</text>
+<circle cx="380" cy="199" r="16" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="380" y="204" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">q</text>
+<text x="255" y="184" font-family="system-ui,sans-serif" font-size="17" fill="#bd3847" text-anchor="middle" font-weight="400">weight d ≠ 0</text>
+<line x1="160" y1="270" x2="350" y2="270" stroke="#d8dedf" stroke-width="2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="160" y1="270" x2="350" y2="358" stroke="#d8dedf" stroke-width="2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="160" y1="270" x2="160" y2="358" stroke="#d8dedf" stroke-width="2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="350" y1="270" x2="350" y2="358" stroke="#d8dedf" stroke-width="2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="350" y1="270" x2="160" y2="358" stroke="#d8dedf" stroke-width="2" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="350" y1="358" x2="160" y2="358" stroke="#d8dedf" stroke-width="2" stroke-dasharray="" stroke-linecap="round"/>
+<circle cx="160" cy="270" r="16" fill="white" stroke="#526171" stroke-width="2"/>
+<text x="160" y="275" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">1</text>
+<circle cx="350" cy="270" r="16" fill="white" stroke="#526171" stroke-width="2"/>
+<text x="350" y="275" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">2</text>
+<circle cx="350" cy="358" r="16" fill="white" stroke="#526171" stroke-width="2"/>
+<text x="350" y="363" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">3</text>
+<circle cx="160" cy="358" r="16" fill="white" stroke="#526171" stroke-width="2"/>
+<text x="160" y="363" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">4</text>
+<text x="257" y="395" font-family="system-ui,sans-serif" font-size="19" fill="#526171" text-anchor="middle" font-weight="400">Retained matching sum: α</text>
+<text x="257" y="431" font-family="system-ui,sans-serif" font-size="23" fill="#bd3847" text-anchor="middle" font-weight="700">Its contribution: dα = β</text>
+<rect x="515" y="108" width="455" height="342" rx="12" fill="#fcf0f1" stroke="#d8dedf"/>
+<text x="742" y="143" font-family="system-ui,sans-serif" font-size="20" fill="#202d3a" text-anchor="middle" font-weight="650">Suppose p had three such edges</text>
+<line x1="605" y1="265" x2="862" y2="196" stroke="#bd3847" stroke-width="4" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="605" y1="265" x2="862" y2="265" stroke="#bd3847" stroke-width="4" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="605" y1="265" x2="862" y2="334" stroke="#bd3847" stroke-width="4" stroke-dasharray="" stroke-linecap="round"/>
+<circle cx="605" cy="265" r="16" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="605" y="270" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">p</text>
+<circle cx="862" cy="196" r="16" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="862" y="201" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">q₁</text>
+<circle cx="862" cy="265" r="16" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="862" y="270" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">q₂</text>
+<circle cx="862" cy="334" r="16" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="862" y="339" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">q₃</text>
+<rect x="715" y="183" width="44" height="31" rx="12" fill="white" stroke="#d8dedf"/>
+<text x="737" y="205" font-family="system-ui,sans-serif" font-size="21" fill="#bd3847" text-anchor="middle" font-weight="700">β</text>
+<rect x="715" y="237" width="44" height="31" rx="12" fill="white" stroke="#d8dedf"/>
+<text x="737" y="259" font-family="system-ui,sans-serif" font-size="21" fill="#bd3847" text-anchor="middle" font-weight="700">β</text>
+<rect x="715" y="293" width="44" height="31" rx="12" fill="white" stroke="#d8dedf"/>
+<text x="737" y="315" font-family="system-ui,sans-serif" font-size="21" fill="#bd3847" text-anchor="middle" font-weight="700">β</text>
+<text x="742" y="393" font-family="system-ui,sans-serif" font-size="22" fill="#202d3a" text-anchor="middle" font-weight="650">β = β + β + β is impossible</text>
+<text x="742" y="426" font-family="system-ui,sans-serif" font-size="17" fill="#526171" text-anchor="middle" font-weight="400">Exactly one supported edge can remain.</text>
+<text x="500" y="487" font-family="system-ui,sans-serif" font-size="18" fill="#526171" text-anchor="middle" font-weight="400">The equality is derived from the exact target assumptions, not from positivity.</text>
+</svg>
+</div><figcaption>Figure 4. The argument counts supported edges only after proving that every contribution is exactly the same nonzero complex number. Positivity is not assumed. <a href="all-orders-assets/04-endpoint.svg">Full-size diagram</a></figcaption></figure>
+<h2 id="6-where-the-endpoint-identity-comes-from">6. Where the endpoint identity comes from</h2>
+<p>This is the central algebraic step. Fix the supported edge <code>pq</code>, with weight <code>d ≠ 0</code>, in the color represented by <code>B</code>. Choose a second active color, whose full matching amplitude is <code>η ≠ 0</code>. Let <code>α = haf(B[V ∖ {p,q}])</code>. The goal is <code>β = dα</code>.</p>
+<p>Keep the original graph on the remaining even number of sites. Its <strong>finite response polynomial</strong> collects all ways to use some inserted row entries and pair the other vertices internally. It is finite because there are only finitely many vertices; no vertex can be used twice.</p>
+<p>Take two formal copies of this polynomial. At each retained site use the alternating pairing from Section 3, and multiply over the sites. This gives a scalar polynomial in the inserted rows. Now an even number of local signs means that reflections, as well as rotations, preserve the scalar polynomial.</p>
+<p>Introduce two independent two-component parameter vectors <code>P,Q</code>. They specify how much of the two actual <code>B</code>-colored root rows is inserted into each copy. Differentiate with respect to analogous parameters for the second color. The resulting two-by-two matrix, with a direct-edge correction, is called <code>T</code>.</p>
+<p>Two ingredients constrain <code>T</code>:</p>
+<ul><li>Mixing the copies by an orthogonal matrix transforms <code>T</code> in the same way   as an ordinary matrix acting on those two copies.</li><li>The original root identities force specific off-diagonal factors. Together   with that transformation rule, they give the special form below. Symmetry   alone would not be enough.</li></ul>
+<div class="equation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtable columnalign="left"><mtr><mtd><mi>T</mi><mo>=</mo><mi>a</mi><mi>I</mi><mo>+</mo><mi>b</mi><mi>P</mi><msup><mi>Q</mi><mi mathvariant="normal">T</mi></msup><mspace width="1.2em"/><mi>a</mi><mo>,</mo><mi>b</mi><mo>∈</mo><mi mathvariant="double-struck">C</mi><mo>[</mo><mi>σ</mi><mo>,</mo><mi>ρ</mi><mo>,</mo><mi>z</mi><mo>]</mo></mtd></mtr><mtr><mtd><mi>σ</mi><mo>=</mo><mi>P</mi><mo>·</mo><mi>P</mi><mspace width="1.2em"/><mi>ρ</mi><mo>=</mo><mi>Q</mi><mo>·</mo><mi>Q</mi><mspace width="1.2em"/><mi>z</mi><mo>=</mo><mi>P</mi><mo>·</mo><mi>Q</mi></mtd></mtr></mtable></mrow><annotation encoding="application/x-tex">T=aI+bPQ^{\mathsf T},
+\qquad a,b\in\mathbb C[\sigma,\rho,z],
+\qquad \sigma=P\cdot P,\ \rho=Q\cdot Q,\ z=P\cdot Q.</annotation></semantics></math></div>
+<p>The dot products are bilinear sums, with no complex conjugation. The three scalar quantities describe the polynomial information about <code>P,Q</code> unchanged by simultaneous orthogonal transformations. The coefficients <code>a,b</code> are finite polynomials in them. The full proof establishes their polynomiality, including parameter values where intermediate geometric arguments degenerate.</p>
+<p>The complete higher-response identities at both original roots now give</p>
+<div class="equation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><mo>∂</mo><mi>b</mi></mrow><mrow><mo>∂</mo><mi>z</mi></mrow></mfrac><mo>+</mo><mi>d</mi><mi>b</mi><mo>=</mo><mn>0</mn><mspace width="1.2em"/><mfrac><mrow><mo>∂</mo><mi>a</mi></mrow><mrow><mo>∂</mo><mi>z</mi></mrow></mfrac><mo>+</mo><mi>d</mi><mi>a</mi><mo>=</mo><mi>β</mi><mi>η</mi></mrow><annotation encoding="application/x-tex">\frac{\partial b}{\partial z}+db=0,
+\qquad \frac{\partial a}{\partial z}+da=\beta\eta.</annotation></semantics></math></div>
+<p>These derivatives are in auxiliary parameters. The source weights remain fixed. In deriving these equations, one must differentiate the full expression before setting a parameter to zero. The terminal odd response from Section 3 is needed here too.</p>
+<p>The useful observation is elementary: <strong>a derivative lowers polynomial degree; multiplication by a nonzero constant does not.</strong></p>
+<p>Suppose the highest term of <code>b</code>, as a polynomial in <code>z</code>, were <code>u zᵏ</code>, where <code>u ≠ 0</code> can depend on <code>σ, ρ</code>. Then <code>db</code> has highest term <code>duzᵏ</code>, and the derivative has no term of that degree to cancel it. Even a nonzero constant fails the equation. So <code>b = 0</code>.</p>
+<p>Apply the same argument to <code>a − βη/d</code>. It follows that</p>
+<div class="equation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>b</mi><mo>=</mo><mn>0</mn><mspace width="1.2em"/><mi>a</mi><mo>=</mo><mfrac><mrow><mi>β</mi><mi>η</mi></mrow><mrow><mi>d</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">b=0,\qquad a=\frac{\beta\eta}{d}.</annotation></semantics></math></div>
+<figure><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 455" role="img" aria-labelledby="05-polynomial-title 05-polynomial-desc">
+<title id="05-polynomial-title">A finite polynomial cannot hide its highest power</title>
+<desc id="05-polynomial-desc">For b with leading term u z to the k, d b has coefficient d u at degree k and b prime has coefficient zero there. With d and u nonzero, the equation b prime plus d b equals zero is impossible. Nonzero constants fail as well.</desc>
+<rect width="1000" height="100%" rx="16" fill="white"/>
+<text x="30" y="30" font-family="system-ui,sans-serif" font-size="12" fill="#526171" text-anchor="start" font-weight="700">KRENN–GU / THE ALL-ORDERS PROOF</text>
+<text x="30" y="66" font-family="system-ui,sans-serif" font-size="25" fill="#202d3a" text-anchor="start" font-weight="700">A finite polynomial cannot hide its highest power</text>
+<text x="500" y="120" font-family="system-ui,sans-serif" font-size="21" fill="#202d3a" text-anchor="middle" font-weight="400">Assume b(z) = u zᵏ + lower powers, with u ≠ 0 and k ≥ 1.</text>
+<text x="455" y="170" font-family="system-ui,sans-serif" font-size="16" fill="#526171" text-anchor="middle" font-weight="650">coefficient of zᵏ</text>
+<text x="650" y="170" font-family="system-ui,sans-serif" font-size="16" fill="#526171" text-anchor="middle" font-weight="650">coefficient of zᵏ⁻¹</text>
+<text x="835" y="170" font-family="system-ui,sans-serif" font-size="16" fill="#526171" text-anchor="middle" font-weight="650">lower powers</text>
+<rect x="30" y="189" width="940" height="55" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="52" y="224" font-family="system-ui,sans-serif" font-size="22" fill="#202d3a" text-anchor="start" font-weight="650">Differentiate: b′</text>
+<text x="455" y="224" font-family="system-ui,sans-serif" font-size="25" fill="#bd3847" text-anchor="middle" font-weight="650">0</text>
+<text x="650" y="224" font-family="system-ui,sans-serif" font-size="25" fill="#202d3a" text-anchor="middle" font-weight="650">ku</text>
+<text x="835" y="224" font-family="system-ui,sans-serif" font-size="25" fill="#202d3a" text-anchor="middle" font-weight="650">…</text>
+<rect x="30" y="256" width="940" height="55" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="52" y="291" font-family="system-ui,sans-serif" font-size="22" fill="#202d3a" text-anchor="start" font-weight="650">Multiply: db</text>
+<text x="455" y="291" font-family="system-ui,sans-serif" font-size="25" fill="#bd3847" text-anchor="middle" font-weight="650">du ≠ 0</text>
+<text x="650" y="291" font-family="system-ui,sans-serif" font-size="25" fill="#202d3a" text-anchor="middle" font-weight="650">∗</text>
+<text x="835" y="291" font-family="system-ui,sans-serif" font-size="25" fill="#202d3a" text-anchor="middle" font-weight="650">…</text>
+<rect x="30" y="323" width="940" height="55" rx="12" fill="#fcf0f1" stroke="#d8dedf"/>
+<text x="52" y="358" font-family="system-ui,sans-serif" font-size="22" fill="#202d3a" text-anchor="start" font-weight="650">Add: b′ + db</text>
+<text x="455" y="358" font-family="system-ui,sans-serif" font-size="25" fill="#bd3847" text-anchor="middle" font-weight="650">du ≠ 0</text>
+<text x="650" y="358" font-family="system-ui,sans-serif" font-size="25" fill="#202d3a" text-anchor="middle" font-weight="650">∗</text>
+<text x="835" y="358" font-family="system-ui,sans-serif" font-size="25" fill="#202d3a" text-anchor="middle" font-weight="650">…</text>
+<text x="500" y="416" font-family="system-ui,sans-serif" font-size="18" fill="#526171" text-anchor="middle" font-weight="400">For k = 0: b′ = 0 and db ≠ 0. Thus the only polynomial solution is b = 0.</text>
+</svg>
+</div><figcaption>Figure 5. Finiteness is decisive. The function exp(−dz) solves the homogeneous differential equation, but it is not a polynomial when <code>d ≠ 0</code>. It is not an allowed response of a fixed finite graph. <a href="all-orders-assets/05-polynomial.svg">Full-size diagram</a></figcaption></figure>
+<p>Finally set all the auxiliary parameters to zero. Directly evaluating the pairing gives <code>a(0) = ηα</code>. Comparing this with the forced constant value of <code>a</code> gives</p>
+<div class="equation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>η</mi><mi>α</mi><mo>=</mo><mfrac><mrow><mi>β</mi><mi>η</mi></mrow><mrow><mi>d</mi></mrow></mfrac><mspace width="1.2em"/><mo>⟹</mo><mspace width="1.2em"/><mi>β</mi><mo>=</mo><mi>d</mi><mi>α</mi></mrow><annotation encoding="application/x-tex">\eta\alpha=\frac{\beta\eta}{d}
+\quad\Longrightarrow\quad \beta=d\alpha.</annotation></semantics></math></div>
+<p>We may cancel <code>η</code> because the second pure output is nonzero. This proves the endpoint identity. No assumption that the smaller hafnian <code>α</code> is nonzero was needed; the identity implies it afterward.</p>
+<p>The full proof&#x27;s Section 4 supplies the root boundary equations, the matrix lemma, and the parameter differentiations summarized here. The guide spells out the degree argument and final deduction, but does not replace those coefficient calculations.</p>
+<h2 id="7-why-three-perfect-matchings-cannot-work-beyond-four-sites">7. Why three perfect matchings cannot work beyond four sites</h2>
+<p>Call the three color matchings <code>F,G,H</code>. First, two colors cannot share the same pair of vertices. If they did, choose that pair in one color and every other edge of the second color&#x27;s matching. This gives a mixed list with a nonzero amplitude.</p>
+<p>More generally, a color list now has <strong>at most one compatible matching</strong>: each vertex has only one edge of the color it requests. Any compatible matching has a product of nonzero weights, so there is nothing to cancel. It remains to find a mixed matching in the union of <code>F,G,H</code>.</p>
+<p><strong>Start with two colors.</strong> The union of <code>F,G</code> consists of alternating even cycles. If there is more than one cycle, use <code>F</code> on one and <code>G</code> on the others. That is already a mixed perfect matching. So the only possible escape is a single cycle through all vertices.</p>
+<p><strong>Add the third matching as chords.</strong> Number the cycle vertices <code>0,1,…,n−1</code>. If an <code>H</code>-chord joins an even vertex to an odd one, delete its endpoints. The two remaining paths each have an even number of vertices. Pair consecutive vertices on those paths and add the chord. This is a mixed perfect matching.</p>
+<p>Thus every <code>H</code>-chord would have to join equal parities. In particular, both parity classes would have to have even size. This already rules out the escape when <code>n</code> is twice an odd number, including six sites.</p>
+<p><strong>Two crossing chords also produce a matching.</strong> If an even-even chord and an odd-odd chord interlace around the cycle, deleting their four endpoints leaves four paths of even size, possibly empty. Match those paths and put back the two chords. When <code>n &gt; 4</code>, at least one cycle edge is used, making the result mixed.</p>
+<figure><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" role="img" aria-labelledby="06-chords-title 06-chords-desc">
+<title id="06-chords-title">Interlacing chords leave even paths to pair</title>
+<desc id="06-chords-desc">On an eight-cycle the third-color chords 0–4 and 1–5 interlace. Removing their endpoints leaves paths 2–3 and 6–7 and two empty paths. The two chords and two remaining cycle edges form a mixed perfect matching, producing GGRRGGRR.</desc>
+<rect width="1000" height="100%" rx="16" fill="white"/>
+<text x="30" y="30" font-family="system-ui,sans-serif" font-size="12" fill="#526171" text-anchor="start" font-weight="700">KRENN–GU / THE ALL-ORDERS PROOF</text>
+<text x="30" y="66" font-family="system-ui,sans-serif" font-size="25" fill="#202d3a" text-anchor="start" font-weight="700">Interlacing chords leave even paths to pair</text>
+<rect x="30" y="105" width="455" height="310" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="257" y="139" font-family="system-ui,sans-serif" font-size="19" fill="#202d3a" text-anchor="middle" font-weight="650">Two opposite-parity chord types</text>
+<line x1="257" y1="171" x2="322.761" y2="198.239" stroke="#bd3847" stroke-width="4" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="322.761" y1="198.239" x2="350" y2="264" stroke="#2168af" stroke-width="4" stroke-dasharray="9 5" stroke-linecap="round"/>
+<line x1="350" y1="264" x2="322.761" y2="329.761" stroke="#bd3847" stroke-width="4" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="322.761" y1="329.761" x2="257" y2="357" stroke="#2168af" stroke-width="4" stroke-dasharray="9 5" stroke-linecap="round"/>
+<line x1="257" y1="357" x2="191.239" y2="329.761" stroke="#bd3847" stroke-width="4" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="191.239" y1="329.761" x2="164" y2="264" stroke="#2168af" stroke-width="4" stroke-dasharray="9 5" stroke-linecap="round"/>
+<line x1="164" y1="264" x2="191.239" y2="198.239" stroke="#bd3847" stroke-width="4" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="191.239" y1="198.239" x2="257" y2="171" stroke="#2168af" stroke-width="4" stroke-dasharray="9 5" stroke-linecap="round"/>
+<line x1="257" y1="171" x2="257" y2="357" stroke="#237953" stroke-width="4" stroke-dasharray="2 6" stroke-linecap="round"/>
+<line x1="322.761" y1="198.239" x2="191.239" y2="329.761" stroke="#237953" stroke-width="4" stroke-dasharray="2 6" stroke-linecap="round"/>
+<circle cx="257" cy="171" r="16" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="257" y="176" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">0</text>
+<circle cx="322.761" cy="198.239" r="16" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="322.761" y="203.239" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">1</text>
+<circle cx="350" cy="264" r="16" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="350" y="269" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">2</text>
+<circle cx="322.761" cy="329.761" r="16" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="322.761" y="334.761" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">3</text>
+<circle cx="257" cy="357" r="16" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="257" y="362" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">4</text>
+<circle cx="191.239" cy="329.761" r="16" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="191.239" y="334.761" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">5</text>
+<circle cx="164" cy="264" r="16" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="164" y="269" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">6</text>
+<circle cx="191.239" cy="198.239" r="16" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="191.239" y="203.239" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">7</text>
+<text x="257" y="393" font-family="system-ui,sans-serif" font-size="17" fill="#526171" text-anchor="middle" font-weight="400">Green: 0–4 (even) and 1–5 (odd)</text>
+<rect x="515" y="105" width="455" height="310" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="742" y="139" font-family="system-ui,sans-serif" font-size="19" fill="#202d3a" text-anchor="middle" font-weight="650">Complete the matching on the paths</text>
+<line x1="742" y1="171" x2="807.761" y2="198.239" stroke="#d8dedf" stroke-width="1.6" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="807.761" y1="198.239" x2="835" y2="264" stroke="#d8dedf" stroke-width="1.6" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="835" y1="264" x2="807.761" y2="329.761" stroke="#bd3847" stroke-width="4" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="807.761" y1="329.761" x2="742" y2="357" stroke="#d8dedf" stroke-width="1.6" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="742" y1="357" x2="676.239" y2="329.761" stroke="#d8dedf" stroke-width="1.6" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="676.239" y1="329.761" x2="649" y2="264" stroke="#d8dedf" stroke-width="1.6" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="649" y1="264" x2="676.239" y2="198.239" stroke="#bd3847" stroke-width="4" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="676.239" y1="198.239" x2="742" y2="171" stroke="#d8dedf" stroke-width="1.6" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="742" y1="171" x2="742" y2="357" stroke="#237953" stroke-width="4" stroke-dasharray="2 6" stroke-linecap="round"/>
+<line x1="807.761" y1="198.239" x2="676.239" y2="329.761" stroke="#237953" stroke-width="4" stroke-dasharray="2 6" stroke-linecap="round"/>
+<circle cx="742" cy="171" r="16" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="742" y="176" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">0</text>
+<circle cx="807.761" cy="198.239" r="16" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="807.761" y="203.239" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">1</text>
+<circle cx="835" cy="264" r="16" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="835" y="269" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">2</text>
+<circle cx="807.761" cy="329.761" r="16" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="807.761" y="334.761" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">3</text>
+<circle cx="742" cy="357" r="16" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="742" y="362" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">4</text>
+<circle cx="676.239" cy="329.761" r="16" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="676.239" y="334.761" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">5</text>
+<circle cx="649" cy="264" r="16" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="649" y="269" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">6</text>
+<circle cx="676.239" cy="198.239" r="16" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="676.239" y="203.239" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">7</text>
+<text x="742" y="393" font-family="system-ui,sans-serif" font-size="17" fill="#526171" text-anchor="middle" font-weight="400">Green 0–4, 1–5; red 2–3, 6–7</text>
+<text x="500" y="454" font-family="system-ui,sans-serif" font-size="18" fill="#526171" text-anchor="middle" font-weight="400">The resulting color list GGRRGGRR has one nonzero matching contribution.</text>
+</svg>
+</div><figcaption>Figure 6. “Crossing” means that the endpoints alternate around the cycle; it does not depend on a physical crossing of optical paths. The eight-site drawing illustrates the general even-path argument. <a href="all-orders-assets/06-chords.svg">Full-size diagram</a></figcaption></figure>
+<p><strong>Avoiding those crossings is impossible.</strong> Choose a chord and a side of that chord containing as few interior cycle vertices as possible, among all chords and both sides. Its endpoints have equal parity, so there is an interior vertex of the opposite parity. That vertex&#x27;s <code>H</code>-partner must also be inside: a partner outside would give the forbidden interlacing pair. But its interior chord cuts off a still smaller arc. This contradicts the choice of the smallest one.</p>
+<p>Every possibility therefore supplies a mixed perfect matching, which has a nonzero amplitude. This contradicts the assumed exact output.</p>
+<h2 id="8-why-four-sites-survive">8. Why four sites survive</h2>
+<p>There are exactly three perfect matchings on four vertices. Color them red, blue, and green and give every edge weight one. They produce exactly the three desired pure lists. There is no fourth matching to cause trouble.</p>
+<figure><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 510" role="img" aria-labelledby="07-boundary-title 07-boundary-desc">
+<title id="07-boundary-title">Four sites work; beyond four, mixed outputs intervene</title>
+<desc id="07-boundary-desc">At four sites the red pairing 12,34, blue pairing 13,24 and green pairing 14,23 exhaust all matchings. The six-site example has a mixed matching green 0–3, blue 1–2 and red 4–5, with color list GBBGRR. Unit weights give amplitude one.</desc>
+<rect width="1000" height="100%" rx="16" fill="white"/>
+<text x="30" y="30" font-family="system-ui,sans-serif" font-size="12" fill="#526171" text-anchor="start" font-weight="700">KRENN–GU / THE ALL-ORDERS PROOF</text>
+<text x="30" y="66" font-family="system-ui,sans-serif" font-size="25" fill="#202d3a" text-anchor="start" font-weight="700">Four sites work; beyond four, mixed outputs intervene</text>
+<rect x="30" y="105" width="455" height="340" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="257" y="141" font-family="system-ui,sans-serif" font-size="21" fill="#202d3a" text-anchor="middle" font-weight="650">K₄: exactly three matchings</text>
+<line x1="65" y1="205" x2="160" y2="205" stroke="#bd3847" stroke-width="4" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="160" y1="307" x2="65" y2="307" stroke="#bd3847" stroke-width="4" stroke-dasharray="" stroke-linecap="round"/>
+<circle cx="65" cy="205" r="13" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="65" y="210" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">1</text>
+<circle cx="160" cy="205" r="13" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="160" y="210" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">2</text>
+<circle cx="160" cy="307" r="13" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="160" y="312" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">3</text>
+<circle cx="65" cy="307" r="13" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="65" y="312" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">4</text>
+<text x="112" y="352" font-family="system-ui,sans-serif" font-size="20" fill="#bd3847" text-anchor="middle" font-weight="700">RRRR</text>
+<line x1="210" y1="205" x2="305" y2="307" stroke="#2168af" stroke-width="4" stroke-dasharray="9 5" stroke-linecap="round"/>
+<line x1="305" y1="205" x2="210" y2="307" stroke="#2168af" stroke-width="4" stroke-dasharray="9 5" stroke-linecap="round"/>
+<circle cx="210" cy="205" r="13" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="210" y="210" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">1</text>
+<circle cx="305" cy="205" r="13" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="305" y="210" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">2</text>
+<circle cx="305" cy="307" r="13" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="305" y="312" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">3</text>
+<circle cx="210" cy="307" r="13" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="210" y="312" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">4</text>
+<text x="257" y="352" font-family="system-ui,sans-serif" font-size="20" fill="#2168af" text-anchor="middle" font-weight="700">BBBB</text>
+<line x1="355" y1="205" x2="355" y2="307" stroke="#237953" stroke-width="4" stroke-dasharray="2 6" stroke-linecap="round"/>
+<line x1="450" y1="205" x2="450" y2="307" stroke="#237953" stroke-width="4" stroke-dasharray="2 6" stroke-linecap="round"/>
+<circle cx="355" cy="205" r="13" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="355" y="210" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">1</text>
+<circle cx="450" cy="205" r="13" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="450" y="210" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">2</text>
+<circle cx="450" cy="307" r="13" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="450" y="312" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">3</text>
+<circle cx="355" cy="307" r="13" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="355" y="312" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">4</text>
+<text x="402" y="352" font-family="system-ui,sans-serif" font-size="20" fill="#237953" text-anchor="middle" font-weight="700">GGGG</text>
+<text x="257" y="398" font-family="system-ui,sans-serif" font-size="20" fill="#526171" text-anchor="middle" font-weight="400">No mixed matching exists.</text>
+<text x="257" y="428" font-family="system-ui,sans-serif" font-size="17" fill="#526171" text-anchor="middle" font-weight="400">Unit weights: all three amplitudes are 1.</text>
+<rect x="515" y="105" width="455" height="340" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="742" y="141" font-family="system-ui,sans-serif" font-size="21" fill="#202d3a" text-anchor="middle" font-weight="650">Six sites: one mixed matching</text>
+<line x1="742" y1="171" x2="824.272" y2="218.5" stroke="#d8dedf" stroke-width="1.6" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="824.272" y1="218.5" x2="824.272" y2="313.5" stroke="#2168af" stroke-width="4" stroke-dasharray="9 5" stroke-linecap="round"/>
+<line x1="824.272" y1="313.5" x2="742" y2="361" stroke="#d8dedf" stroke-width="1.6" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="742" y1="361" x2="659.728" y2="313.5" stroke="#d8dedf" stroke-width="1.6" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="659.728" y1="313.5" x2="659.728" y2="218.5" stroke="#bd3847" stroke-width="4" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="659.728" y1="218.5" x2="742" y2="171" stroke="#d8dedf" stroke-width="1.6" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="742" y1="171" x2="742" y2="361" stroke="#237953" stroke-width="4" stroke-dasharray="2 6" stroke-linecap="round"/>
+<line x1="824.272" y1="218.5" x2="659.728" y2="313.5" stroke="#d8dedf" stroke-width="1.6" stroke-dasharray="" stroke-linecap="round"/>
+<line x1="824.272" y1="313.5" x2="659.728" y2="218.5" stroke="#d8dedf" stroke-width="1.6" stroke-dasharray="" stroke-linecap="round"/>
+<circle cx="742" cy="171" r="16" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="742" y="176" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">0</text>
+<circle cx="824.272" cy="218.5" r="16" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="824.272" y="223.5" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">1</text>
+<circle cx="824.272" cy="313.5" r="16" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="824.272" y="318.5" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">2</text>
+<circle cx="742" cy="361" r="16" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="742" y="366" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">3</text>
+<circle cx="659.728" cy="313.5" r="16" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="659.728" y="318.5" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">4</text>
+<circle cx="659.728" cy="218.5" r="16" fill="white" stroke="#202d3a" stroke-width="2"/>
+<text x="659.728" y="223.5" font-family="system-ui,sans-serif" font-size="15" fill="#202d3a" text-anchor="middle" font-weight="650">5</text>
+<text x="742" y="398" font-family="system-ui,sans-serif" font-size="23" fill="#202d3a" text-anchor="middle" font-weight="700">GBBGRR</text>
+<text x="742" y="428" font-family="system-ui,sans-serif" font-size="17" fill="#526171" text-anchor="middle" font-weight="400">Unit weights: its unwanted amplitude is 1.</text>
+<text x="500" y="483" font-family="system-ui,sans-serif" font-size="18" fill="#526171" text-anchor="middle" font-weight="400">Color also uses line pattern: red solid, blue dashed, green dotted.</text>
+</svg>
+</div><figcaption>Figure 7. The four-site construction works. The six-site drawing shows how a mixed output can arise after rigidity is established; the general argument in Section 7, not this single example, excludes every larger even size. <a href="all-orders-assets/07-boundary.svg">Full-size diagram</a></figcaption></figure>
+<p>Precisely where does the graph argument stop at four? Two interlacing third-color chords already use every vertex. They form the pure third matching, without any leftover cycle edge. The step that demanded a mixed matching therefore does not apply. The algebraic endpoint identity itself remains valid at four sites.</p>
+<p>At two sites, parallel edges with different colors can give arbitrarily many pure outputs. An odd number of sites has no perfect matching in this model.</p>
+<h2 id="9-what-has-been-learned-and-what-remains-separate">9. What has been learned, and what remains separate?</h2>
+<p>The structural conclusion is stronger than a collection of unsuccessful searches. Under the exact target conditions, the original edge blocks must be diagonal, and each color must have degree one at every vertex. These facts remove the freedom that complex cancellation initially seemed to offer.</p>
+<p>The distinctive new step is the supported-edge endpoint identity. A finite polynomial and its orthogonal symmetry impose it uniformly in the number of vertices. The proof does not check a few graph sizes and extrapolate. The final three-matching obstruction is prior graph theory, not a new result claimed by this workspace.</p>
+<p>This completes the workspace&#x27;s written proof of <strong>exact impossibility</strong> in the stated model. It does not determine how quickly the success rate of an approximate construction must fall as its fidelity approaches one. Combined with standard polynomial algebra, the exact exclusion guarantees some power-law bound at each fixed size. The separate <a href="QUANTITATIVE-PROOF.md">quantitative follow-up</a> gives an explicit global rate bound for diagonal complex sources, with exponent 4/(3n+2). The subsequent <a href="GENERAL-RATE-BOUND.md">full-model rate argument</a>, strengthened by the <a href="RATE-FOLLOWUPS.md">parity follow-up</a>, gives exponent 16/[n(3n+22)] for arbitrary complex endpoint colors, including 1/15 at six sites. These quantitative deductions await independent audit; the unrestricted sharp square-root rate remains open. The exact statement also does not automatically cover extra ancillary sites, heralding protocols, or other changes to the matching model.</p>
+<p>For the evidence behind the current status, see the <a href="../notes/all-orders-two-replica-review-2026-09-26.md">review record</a>. It links both full-chain internal audits and the exact supporting checker. The checker tests covariance, boundary identities, the allowed four-site source, and a negative control missing the required third-color premise. Those checks support the algebra and scope; the argument for all sizes is the written analytic proof.</p>
+<p>The older <a href="EXPLAINER.md">main explainer</a> and <a href="SIX-SITE-PROOF.md">six-site guide</a> preserve the preceding research snapshot. This guide describes the subsequent all-orders closure. The <a href="../proofs/krenn-gu-all-orders-two-replica-proof.md">full proof</a> contains every algebraic step, and its Section 6 gives the provenance of the graph lemma.</p></article><footer>Built from ALL-ORDERS-PROOF.md with Python’s standard library. Diagrams and native MathML equations are embedded; no network connection or JavaScript is required for reading. Source links refer to the surrounding repository.</footer></main></body></html>

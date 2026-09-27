@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="450" viewBox="0 0 1000 450" role="img" aria-labelledby="title description">
+  <title id="title">Two zero-output limits excluded from high GHZ fidelity</title>
+  <desc id="description">Left: a colored five-cycle and an isolated sixth site. Fidelity is below three quarters for all nearby five-site cores, with arbitrary edges to the sixth site. Right: a complete bipartite graph with shores of sizes two and four, with an identity matrix on each crossing edge. Every nearby complex source has fidelity below one half. These bounds apply to the explicit neighborhoods in the proof, not all architectures.</desc>
+  <defs>
+    <style>
+      text { font-family: system-ui, -apple-system, sans-serif; fill: #183249; }
+      .heading { font-size: 21px; font-weight: 700; }
+      .small { font-size: 13px; fill: #52667a; }
+      .caption { font-size: 15px; font-weight: 600; }
+      .node { fill: #fff; stroke: #183249; stroke-width: 2; }
+      .label { font-size: 15px; text-anchor: middle; dominant-baseline: central; font-weight: 650; }
+      .edge { stroke-width: 4; stroke-linecap: round; }
+    </style>
+  </defs>
+  <rect width="1000" height="450" rx="16" fill="#f5f8fb"/>
+  <rect x="16" y="16" width="476" height="384" rx="14" fill="#fff" stroke="#d8e1e9"/>
+  <rect x="508" y="16" width="476" height="384" rx="14" fill="#fff" stroke="#d8e1e9"/>
+  <text x="40" y="52" class="heading">Five-cycle + isolated site</text>
+  <text x="40" y="75" class="small">Five-site core; unit colored edges at the limit</text>
+  <g class="edge" fill="none">
+    <path d="M200 111 L298 182" stroke="#c79c28"/>
+    <path d="M298 182 L260 291" stroke="#cf654b"/>
+    <path d="M260 291 L140 291" stroke="#339e9a"/>
+    <path d="M140 291 L102 182" stroke="#c79c28"/>
+    <path d="M102 182 L200 111" stroke="#cf654b"/>
+  </g>
+  <g font-size="15" font-weight="600">
+    <text x="254" y="139">a</text><text x="290" y="243">b</text>
+    <text x="194" y="281">c</text><text x="99" y="243">a</text><text x="133" y="139">b</text>
+  </g>
+  <g>
+    <circle class="node" cx="200" cy="111" r="17"/><text class="label" x="200" y="111">0</text>
+    <circle class="node" cx="298" cy="182" r="17"/><text class="label" x="298" y="182">1</text>
+    <circle class="node" cx="260" cy="291" r="17"/><text class="label" x="260" y="291">2</text>
+    <circle class="node" cx="140" cy="291" r="17"/><text class="label" x="140" y="291">3</text>
+    <circle class="node" cx="102" cy="182" r="17"/><text class="label" x="102" y="182">4</text>
+    <circle cx="401" cy="200" r="28" fill="none" stroke="#a7b6c4" stroke-dasharray="4 4"/>
+    <circle class="node" cx="401" cy="200" r="17"/><text class="label" x="401" y="200">5</text>
+    <text x="401" y="247" text-anchor="middle" class="small">Incident edges</text>
+    <text x="401" y="266" text-anchor="middle" class="small">can vary freely</text>
+  </g>
+  <text x="40" y="346" class="caption">Fixed core: fidelity ≤ 2/3</text>
+  <text x="40" y="373" class="caption">Nearby cores: fidelity &lt; 75%</text>
+  <text x="532" y="52" class="heading">Two-versus-four bipartite limit</text>
+  <text x="532" y="75" class="small">An identity block on each of eight crossing pairs</text>
+  <g stroke="#5286b0" stroke-width="2.5" opacity=".8" fill="none">
+    <path d="M590 155 L865 115 M590 155 L865 175 M590 155 L865 235 M590 155 L865 295"/>
+    <path d="M590 255 L865 115 M590 255 L865 175 M590 255 L865 235 M590 255 L865 295"/>
+  </g>
+  <g>
+    <circle class="node" cx="590" cy="155" r="17"/><text class="label" x="590" y="155">0</text>
+    <circle class="node" cx="590" cy="255" r="17"/><text class="label" x="590" y="255">1</text>
+    <circle class="node" cx="865" cy="115" r="17"/><text class="label" x="865" y="115">2</text>
+    <circle class="node" cx="865" cy="175" r="17"/><text class="label" x="865" y="175">3</text>
+    <circle class="node" cx="865" cy="235" r="17"/><text class="label" x="865" y="235">4</text>
+    <circle class="node" cx="865" cy="295" r="17"/><text class="label" x="865" y="295">5</text>
+  </g>
+  <text x="532" y="346" class="caption">Fixed crossing blocks, edge 01 absent: fidelity ≤ 2/5</text>
+  <text x="532" y="373" class="caption">Nearby sources: fidelity &lt; 50%</text>
+  <text x="30" y="428" class="small">The neighborhood bounds allow arbitrary complex perturbations. Sizes and norm conventions are specified in the proof.</text>
+</svg>

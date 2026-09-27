@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Krenn–Gu: what we have learned</title><style>:root{color-scheme:light}*{box-sizing:border-box}body{margin:0;background:#f5f3ee;color:#202d3a;font:18px/1.75 system-ui,sans-serif}main{max-width:1040px;margin:auto;padding:48px 32px 80px}h1{font-size:clamp(32px,5vw,54px);line-height:1.14;letter-spacing:-.035em;max-width:850px}h2{font-size:26px;line-height:1.35;margin:54px 0 20px;padding-top:20px;border-top:1px solid #cfd9dc}p,li{max-width:84ch}a{color:#17618c;text-underline-offset:3px}strong{font-weight:650}code,pre{font-family:ui-monospace,monospace;font-size:.87em}pre{padding:22px;background:#e9eeed;border-radius:10px;overflow:auto;line-height:1.7}table{border-collapse:collapse;width:100%;font-size:15px;background:#fff;line-height:1.6}th,td{padding:14px 16px;border:1px solid #d8dedf;text-align:left;vertical-align:top}th{background:#e9eeed}td:first-child{min-width:140px}table a{white-space:normal}.table-scroll{overflow:auto;margin:24px 0}.equation{padding:18px;background:#fff;border-left:3px solid #397a91;margin:24px 0;overflow:auto}math{font-size:1.13em}nav{display:flex;gap:15px;flex-wrap:wrap;font-size:14px;padding:14px 0;border-bottom:1px solid #cfd9dc}footer{margin-top:40px;font-size:14px;color:#526171}@media(max-width:650px){main{padding:20px 16px 50px}body{font-size:17px}td,th{padding:10px;min-width:160px}math{font-size:1em}}@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}nav{display:none}h2{break-after:avoid}.equation,pre{break-inside:avoid}a{color:inherit}table{font-size:9pt}.table-scroll{overflow:visible}}
+/* explainer-diagrams:start */
+.explainer-diagram{margin:30px 0 36px;break-inside:avoid}
+.diagram-scroll{overflow-x:auto;border:1px solid #d8dedf;border-radius:16px;background:white}
+.explainer-diagram svg{display:block;width:100%;height:auto;min-width:720px}
+.explainer-diagram figcaption{font-size:15px;line-height:1.6;color:#526171;margin:10px 4px 0;max-width:95ch}
+.diagram-hint{font-size:12px;color:#526171;text-align:right;margin:5px 4px 0}
+@media(max-width:760px){.explainer-diagram svg{min-width:820px}.diagram-scroll{overscroll-behavior-x:contain}}
+@media print{.explainer-diagram svg{min-width:0}.diagram-scroll{overflow:visible}.diagram-hint{display:none}}
+/* explainer-diagrams:end */
+</style><main><nav aria-label="Reading guide"><a href="#part-1">The problem</a><a href="EXPLAINER-LAB.html">Interactive examples</a><a href="#part-3">Prior work</a><a href="#part-5">Our contributions</a><a href="#part-6">The gap</a><a href="EXPLAINER.md">Markdown source</a></nav><h1>Krenn–Gu: what the conjecture asks, and what we have learned</h1><p class="historical-status"><strong>Historical snapshot (September 25):</strong> the exact conjecture was subsequently proved and Lean-verified. See the <a href="ALL-ORDERS-PROOF.html">complete proof guide</a> and <a href="../README.md">current project status</a>. The account below preserves the earlier research frontier.</p>
+<p><em>A reading guide to this workspace, checked on September 25, 2026 (Pacific time). Assumes basic graph theory, complex numbers, and linear algebra; no quantum physics background. <a href="EXPLAINER-LAB.html">Open the interactive matching examples</a> or the <a href="SIX-SITE-PROOF.html">illustrated six-site proof</a>.</em></p>
+<p><strong>The question is whether pairwise sources can produce perfect agreement among many particles in three or more possible states.</strong> Two states are easy. Three states work for four particles. The conjecture says that, in this model, three states become impossible with six or more particles—even if we use complex weights to make unwanted outcomes cancel.</p>
+<p>The workspace has learned considerably more than “our searches did not find a solution.” It contains exact exclusions of small cases, a substantial internally reviewed reduction of the general problem, and restrictions on every remaining hypothetical counterexample. <strong>It does not contain a complete resolution.</strong> Its September research chain places the remaining orders at even <strong>n ≥ 12</strong>; the public formal-conjectures registry still lists the general <strong>n = 8</strong> and <strong>n = 10</strong>, three-color cases as open. These are different evidence levels, not interchangeable status reports. <a href="historical-sources/ALL-ORDER-STATUS-AND-STRATEGY-2026-09-20.md.txt">Local synthesis</a>; <a href="https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/Paper/MonochromaticQuantumGraph.lean">public registry</a>.</p>
+<h2 id="part-1">1. Build the problem from pairs.</h2>
+<p>Imagine n labeled sites. A source joins two sites, contributes a weight, and assigns a color to each endpoint. A complete event pairs up every site exactly once. Mathematicians call that a <strong>perfect matching</strong>.</p>
+<p>The weight of an event is the product of its edge weights. Its output is the list of colors inherited by the vertices. Several different matchings can produce the same color list; their weights <strong>add</strong> to give that output&#39;s amplitude. The general model permits parallel sources, different colors on the two ends of an edge, and arbitrary complex weights.</p>
+<!-- explainer-figure:01-matching-term:start -->
+<figure class="explainer-diagram" id="figure-01-matching-term"><div class="diagram-scroll" tabindex="0" aria-label="Diagram; scroll horizontally on small screens"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 370" role="img" aria-labelledby="01-matching-term-title 01-matching-term-desc">
+<title id="01-matching-term-title">A matching is one term in an output amplitude</title>
+<desc id="01-matching-term-desc">Six sites are paired as 12 red, 36 green, and 45 blue. With edge weights 2, minus 1, and 3, this matching contributes minus 6 to the output RRGBBG. The output amplitude adds all matchings producing that same word.</desc>
+<rect width="1000" height="100%" rx="16" fill="#fff"/>
+<text x="30" y="31" font-family="system-ui, sans-serif" font-size="12" fill="#526171" text-anchor="start" font-weight="700">KRENN–GU / 01</text>
+<text x="30" y="66" font-family="system-ui, sans-serif" font-size="25" fill="#202d3a" text-anchor="start" font-weight="700">A matching is one term in an output amplitude</text>
+<rect x="30" y="95" width="280" height="242" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<line x1="170" y1="131" x2="245.344" y2="174.5" stroke="#bd3847" stroke-width="4" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="245.344" y1="261.5" x2="94.6558" y2="174.5" stroke="#237953" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 6" opacity="1"/>
+<line x1="170" y1="305" x2="94.6558" y2="261.5" stroke="#2168af" stroke-width="4" stroke-linecap="round" stroke-dasharray="9 5" opacity="1"/>
+<circle cx="170" cy="131" r="17" fill="white" stroke="#bd3847" stroke-width="2.5"/>
+<text x="170" y="137" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">1</text>
+<circle cx="245.344" cy="174.5" r="17" fill="white" stroke="#bd3847" stroke-width="2.5"/>
+<text x="245.344" y="180.5" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">2</text>
+<circle cx="245.344" cy="261.5" r="17" fill="white" stroke="#237953" stroke-width="2.5"/>
+<text x="245.344" y="267.5" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">3</text>
+<circle cx="170" cy="305" r="17" fill="white" stroke="#2168af" stroke-width="2.5"/>
+<text x="170" y="311" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">4</text>
+<circle cx="94.6558" cy="261.5" r="17" fill="white" stroke="#2168af" stroke-width="2.5"/>
+<text x="94.6558" y="267.5" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">5</text>
+<circle cx="94.6558" cy="174.5" r="17" fill="white" stroke="#237953" stroke-width="2.5"/>
+<text x="94.6558" y="180.5" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">6</text>
+<text x="214" y="154" font-family="system-ui, sans-serif" font-size="15" fill="#bd3847" text-anchor="start" font-weight="650">R · 2</text>
+<text x="164" y="191" font-family="system-ui, sans-serif" font-size="15" fill="#237953" text-anchor="start" font-weight="650">G · −1</text>
+<text x="92" y="302" font-family="system-ui, sans-serif" font-size="15" fill="#2168af" text-anchor="start" font-weight="650">B · 3</text>
+<line x1="327" y1="216" x2="366" y2="216" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="358" y1="211" x2="366" y2="216" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="358" y1="221" x2="366" y2="216" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<text x="390" y="143" font-family="system-ui, sans-serif" font-size="17" fill="#526171" text-anchor="start" font-weight="400">Read vertices 1 → 6</text>
+<text x="406" y="180" font-family="system-ui, sans-serif" font-size="14" fill="#526171" text-anchor="middle" font-weight="400">1</text>
+<text x="445" y="180" font-family="system-ui, sans-serif" font-size="14" fill="#526171" text-anchor="middle" font-weight="400">2</text>
+<text x="484" y="180" font-family="system-ui, sans-serif" font-size="14" fill="#526171" text-anchor="middle" font-weight="400">3</text>
+<text x="523" y="180" font-family="system-ui, sans-serif" font-size="14" fill="#526171" text-anchor="middle" font-weight="400">4</text>
+<text x="562" y="180" font-family="system-ui, sans-serif" font-size="14" fill="#526171" text-anchor="middle" font-weight="400">5</text>
+<text x="601" y="180" font-family="system-ui, sans-serif" font-size="14" fill="#526171" text-anchor="middle" font-weight="400">6</text>
+<rect x="390" y="195" width="32" height="36" rx="6" fill="#fcf0f1" stroke="#bd3847"/>
+<text x="406" y="220" font-family="system-ui, sans-serif" font-size="20" fill="#bd3847" text-anchor="middle" font-weight="700">R</text>
+<rect x="429" y="195" width="32" height="36" rx="6" fill="#fcf0f1" stroke="#bd3847"/>
+<text x="445" y="220" font-family="system-ui, sans-serif" font-size="20" fill="#bd3847" text-anchor="middle" font-weight="700">R</text>
+<rect x="468" y="195" width="32" height="36" rx="6" fill="#edf7f1" stroke="#237953"/>
+<text x="484" y="220" font-family="system-ui, sans-serif" font-size="20" fill="#237953" text-anchor="middle" font-weight="700">G</text>
+<rect x="507" y="195" width="32" height="36" rx="6" fill="#edf4fc" stroke="#2168af"/>
+<text x="523" y="220" font-family="system-ui, sans-serif" font-size="20" fill="#2168af" text-anchor="middle" font-weight="700">B</text>
+<rect x="546" y="195" width="32" height="36" rx="6" fill="#edf4fc" stroke="#2168af"/>
+<text x="562" y="220" font-family="system-ui, sans-serif" font-size="20" fill="#2168af" text-anchor="middle" font-weight="700">B</text>
+<rect x="585" y="195" width="32" height="36" rx="6" fill="#edf7f1" stroke="#237953"/>
+<text x="601" y="220" font-family="system-ui, sans-serif" font-size="20" fill="#237953" text-anchor="middle" font-weight="700">G</text>
+<text x="390" y="270" font-family="system-ui, sans-serif" font-size="17" fill="#526171" text-anchor="start" font-weight="400">One mixed color list</text>
+<line x1="635" y1="216" x2="675" y2="216" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="667" y1="211" x2="675" y2="216" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="667" y1="221" x2="675" y2="216" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<text x="705" y="144" font-family="system-ui, sans-serif" font-size="17" fill="#526171" text-anchor="start" font-weight="400">Multiply within a matching</text>
+<text x="705" y="206" font-family="system-ui, sans-serif" font-size="23" fill="#202d3a" text-anchor="start" font-weight="700">2 × (−1) × 3 = −6</text>
+<text x="705" y="254" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="start" font-weight="400">Then add contributions from</text>
+<text x="705" y="280" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="start" font-weight="400">all matchings with this list.</text>
+</svg></div><figcaption>Figure 1. Pair first, multiply edge weights, then group by the inherited vertex colors. The displayed −6 is one matching contribution; other matchings could change the total.</figcaption><p class="diagram-hint"><a href="explainer-assets/01-matching-term.svg">Open full-size diagram</a> · on small screens, scroll sideways</p></figure>
+<!-- explainer-figure:01-matching-term:end -->
+
+<p>The target is:</p>
+<pre><code class="language-text">all red    → amplitude 1
+all blue   → amplitude 1
+all green  → amplitude 1
+every mixed color list → amplitude 0
+</code></pre>
+<p>For example, <code>RRRRRR</code>, <code>BBBBBB</code>, and <code>GGGGGG</code> should survive, but <code>RRBBGG</code> should not. In quantum notation the target is proportional to</p>
+<div class="equation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mtext>|R⋯R⟩</mtext><mo>+</mo><mtext>|B⋯B⟩</mtext><mo>+</mo><mtext>|G⋯G⟩</mtext></mrow></math></div>
+
+
+<p>This is a GHZ state: a coherent superposition of the all-equal outcomes, rather than merely a classical choice between them. We omit its overall normalization. The graph model comes from quantum-optical experiments based on pair sources and postselection. The conjecture concerns that resource model; it is not a prohibition on preparing such entangled states by every possible experimental method. <a href="https://mariokrenn.wordpress.com/graph-theory-question/">Krenn&#39;s problem page</a>; <a href="https://dustingmixon.wordpress.com/2021/01/18/a-graph-coloring-problem-from-quantum-physics-with-prizes/">Mixon&#39;s formulation</a>.</p>
+<p>Write d for the number of colors. The proposed maximum is:</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Sites n</th>
+<th align="right">Proposed maximum d</th>
+<th>A construction attaining it</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2</td>
+<td align="right">Unbounded</td>
+<td>One parallel edge per color</td>
+</tr>
+<tr>
+<td>4</td>
+<td align="right">3</td>
+<td>The three perfect matchings of the complete graph K₄</td>
+</tr>
+<tr>
+<td>Even n ≥ 6</td>
+<td align="right">2</td>
+<td>An even cycle with alternating red and blue edges</td>
+</tr>
+</tbody></table></div>
+<p>Odd n cannot be covered by pairs. For the difficult upper bound it suffices to exclude <strong>three</strong> colors: a solution with more colors could be projected onto any three, retaining exactly their three constant outputs.</p>
+<p>For a precise formulation, label the sites V = {1,…,n} and the colors {1,…,d}. For u &lt; v, the matrix entry Aᵤᵥ(i,j) is the sum of the weights of all sources assigning color i to u and color j to v. Reverse endpoint order by Aᵥᵤ(j,i) = Aᵤᵥ(i,j); a single block Aᵤᵥ need not itself be symmetric. For a color assignment c: V → {1,…,d}, define</p>
+<div class="equation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><msub><mi>H</mi><mi>A</mi></msub><mtext>(c)</mtext><mo>=</mo><munder><mo>∑</mo><mrow><mi>M</mi><mo>∈</mo><mtext>PM(V)</mtext></mrow></munder><munder><mo>∏</mo><mtext>{u,v} ∈ M, u &lt; v</mtext></munder><msub><mi>A</mi><mrow><mi>u</mi><mi>v</mi></mrow></msub><mtext>(c(u),c(v))</mtext></mrow></math></div>
+
+
+<p>Here PM(V) is the set of all pairings of V; missing edges have coefficient zero. The equations are Hₐ(c) = 1 when c is constant and Hₐ(c) = 0 otherwise. In tensor notation this is H(A) = ∑ᵢeᵢ⊗⋯⊗eᵢ, but you can read everything as a system of polynomial equations. For d = 3 it has 9·binom(n,2) edge coefficients and 3ⁿ output equations. Merely counting equations and unknowns does not establish inconsistency: many equations are dependent and exceptional cancellations are allowed. <a href="../proofs/six-site-arbitrary-complex-obstruction.md">Aggregate formulation</a>.</p>
+<h2 id="part-2">2. Why four sites work, and adding a third color is dangerous.</h2>
+<p>On four vertices, give these pairs unit weights:</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Color</th>
+<th>Pairs</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Red</td>
+<td>12 and 34</td>
+</tr>
+<tr>
+<td>Blue</td>
+<td>13 and 24</td>
+</tr>
+<tr>
+<td>Green</td>
+<td>14 and 23</td>
+</tr>
+</tbody></table></div>
+<p>These are all three perfect matchings of K₄. Each produces a constant output. There is no fourth matching to produce an unwanted mixture.</p>
+<!-- explainer-figure:02-four-site-exception:start -->
+<figure class="explainer-diagram" id="figure-02-four-site-exception"><div class="diagram-scroll" tabindex="0" aria-label="Diagram; scroll horizontally on small screens"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 377" role="img" aria-labelledby="02-four-site-exception-title 02-four-site-exception-desc">
+<title id="02-four-site-exception-title">Four sites: the three pairings are exactly the three targets</title>
+<desc id="02-four-site-exception-desc">The red matching is 12 and 34; the blue matching is 13 and 24; the green matching is 14 and 23. These are all perfect matchings of K4. Unit weights give RRRR, BBBB, GGGG, each with amplitude one.</desc>
+<rect width="1000" height="100%" rx="16" fill="#fff"/>
+<text x="30" y="31" font-family="system-ui, sans-serif" font-size="12" fill="#526171" text-anchor="start" font-weight="700">KRENN–GU / 02</text>
+<text x="30" y="66" font-family="system-ui, sans-serif" font-size="25" fill="#202d3a" text-anchor="start" font-weight="700">Four sites: the three pairings are exactly the three targets</text>
+<rect x="30" y="98" width="290" height="230" rx="12" fill="#fcf0f1" stroke="#d8dedf"/>
+<text x="175" y="126" font-family="system-ui, sans-serif" font-size="18" fill="#bd3847" text-anchor="middle" font-weight="700">Red</text>
+<line x1="95" y1="160" x2="255" y2="160" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="95" y1="160" x2="255" y2="257" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="95" y1="160" x2="95" y2="257" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="255" y1="160" x2="255" y2="257" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="255" y1="160" x2="95" y2="257" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="255" y1="257" x2="95" y2="257" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="95" y1="160" x2="255" y2="160" stroke="#bd3847" stroke-width="4" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="255" y1="257" x2="95" y2="257" stroke="#bd3847" stroke-width="4" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<circle cx="95" cy="160" r="17" fill="white" stroke="#bd3847" stroke-width="2.5"/>
+<text x="95" y="166" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">1</text>
+<circle cx="255" cy="160" r="17" fill="white" stroke="#bd3847" stroke-width="2.5"/>
+<text x="255" y="166" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">2</text>
+<circle cx="255" cy="257" r="17" fill="white" stroke="#bd3847" stroke-width="2.5"/>
+<text x="255" y="263" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">3</text>
+<circle cx="95" cy="257" r="17" fill="white" stroke="#bd3847" stroke-width="2.5"/>
+<text x="95" y="263" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">4</text>
+<text x="175" y="305" font-family="system-ui, sans-serif" font-size="18" fill="#bd3847" text-anchor="middle" font-weight="650">RRRR  ·  amplitude 1</text>
+<rect x="355" y="98" width="290" height="230" rx="12" fill="#edf4fc" stroke="#d8dedf"/>
+<text x="500" y="126" font-family="system-ui, sans-serif" font-size="18" fill="#2168af" text-anchor="middle" font-weight="700">Blue</text>
+<line x1="420" y1="160" x2="580" y2="160" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="420" y1="160" x2="580" y2="257" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="420" y1="160" x2="420" y2="257" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="580" y1="160" x2="580" y2="257" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="580" y1="160" x2="420" y2="257" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="580" y1="257" x2="420" y2="257" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="420" y1="160" x2="580" y2="257" stroke="#2168af" stroke-width="4" stroke-linecap="round" stroke-dasharray="9 5" opacity="1"/>
+<line x1="580" y1="160" x2="420" y2="257" stroke="#2168af" stroke-width="4" stroke-linecap="round" stroke-dasharray="9 5" opacity="1"/>
+<circle cx="420" cy="160" r="17" fill="white" stroke="#2168af" stroke-width="2.5"/>
+<text x="420" y="166" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">1</text>
+<circle cx="580" cy="160" r="17" fill="white" stroke="#2168af" stroke-width="2.5"/>
+<text x="580" y="166" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">2</text>
+<circle cx="580" cy="257" r="17" fill="white" stroke="#2168af" stroke-width="2.5"/>
+<text x="580" y="263" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">3</text>
+<circle cx="420" cy="257" r="17" fill="white" stroke="#2168af" stroke-width="2.5"/>
+<text x="420" y="263" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">4</text>
+<text x="500" y="305" font-family="system-ui, sans-serif" font-size="18" fill="#2168af" text-anchor="middle" font-weight="650">BBBB  ·  amplitude 1</text>
+<rect x="680" y="98" width="290" height="230" rx="12" fill="#edf7f1" stroke="#d8dedf"/>
+<text x="825" y="126" font-family="system-ui, sans-serif" font-size="18" fill="#237953" text-anchor="middle" font-weight="700">Green</text>
+<line x1="745" y1="160" x2="905" y2="160" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="745" y1="160" x2="905" y2="257" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="745" y1="160" x2="745" y2="257" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="905" y1="160" x2="905" y2="257" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="905" y1="160" x2="745" y2="257" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="905" y1="257" x2="745" y2="257" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="745" y1="160" x2="745" y2="257" stroke="#237953" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 6" opacity="1"/>
+<line x1="905" y1="160" x2="905" y2="257" stroke="#237953" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 6" opacity="1"/>
+<circle cx="745" cy="160" r="17" fill="white" stroke="#237953" stroke-width="2.5"/>
+<text x="745" y="166" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">1</text>
+<circle cx="905" cy="160" r="17" fill="white" stroke="#237953" stroke-width="2.5"/>
+<text x="905" y="166" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">2</text>
+<circle cx="905" cy="257" r="17" fill="white" stroke="#237953" stroke-width="2.5"/>
+<text x="905" y="263" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">3</text>
+<circle cx="745" cy="257" r="17" fill="white" stroke="#237953" stroke-width="2.5"/>
+<text x="745" y="263" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">4</text>
+<text x="825" y="305" font-family="system-ui, sans-serif" font-size="18" fill="#237953" text-anchor="middle" font-weight="650">GGGG  ·  amplitude 1</text>
+<text x="500" y="357" font-family="system-ui, sans-serif" font-size="18" fill="#526171" text-anchor="middle" font-weight="400">No fourth pairing exists, so there is no unwanted mixed output.</text>
+</svg></div><figcaption>Figure 2. Faint edges show K₄; bold edges show one complete pairing. Each panel covers every vertex once, and together they exhaust all possibilities.</figcaption><p class="diagram-hint"><a href="explainer-assets/02-four-site-exception.svg">Open full-size diagram</a> · on small screens, scroll sideways</p></figure>
+<!-- explainer-figure:02-four-site-exception:end -->
+
+<p>On six vertices, the cycle with red pairs <code>12, 34, 56</code> and blue pairs <code>23, 45, 61</code> has exactly two perfect matchings. Now add green pairs <code>14, 25, 36</code>. The green constant output appears—but so does, for example,</p>
+<pre><code class="language-text">12 red + 36 green + 45 blue → R R G B B G.
+</code></pre>
+<p>That output has amplitude 1. In this particular graph, it has only one contributing matching, so there is nothing to cancel it. The <a href="EXPLAINER-LAB.html">interactive examples</a> enumerate all the matchings and let you inspect their outputs.</p>
+<!-- explainer-figure:03-third-color-leak:start -->
+<figure class="explainer-diagram" id="figure-03-third-color-leak"><div class="diagram-scroll" tabindex="0" aria-label="Diagram; scroll horizontally on small screens"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 445" role="img" aria-labelledby="03-third-color-leak-title 03-third-color-leak-desc">
+<title id="03-third-color-leak-title">Adding a third color creates new mixed pairings</title>
+<desc id="03-third-color-leak-desc">The six-cycle has two pure matchings. Adding green edges 14, 25, 36 gives six matchings: three pure and three mixed. The highlighted matching 12 red, 36 green, 45 blue gives RRGBBG with amplitude one.</desc>
+<rect width="1000" height="100%" rx="16" fill="#fff"/>
+<text x="30" y="31" font-family="system-ui, sans-serif" font-size="12" fill="#526171" text-anchor="start" font-weight="700">KRENN–GU / 03</text>
+<text x="30" y="66" font-family="system-ui, sans-serif" font-size="25" fill="#202d3a" text-anchor="start" font-weight="700">Adding a third color creates new mixed pairings</text>
+<rect x="30" y="98" width="450" height="294" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="255" y="130" font-family="system-ui, sans-serif" font-size="20" fill="#202d3a" text-anchor="middle" font-weight="650">Alternating cycle</text>
+<rect x="520" y="98" width="450" height="294" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="745" y="130" font-family="system-ui, sans-serif" font-size="20" fill="#202d3a" text-anchor="middle" font-weight="650">Add the green matching</text>
+<line x1="255" y1="154" x2="321.684" y2="192.5" stroke="#bd3847" stroke-width="4" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="321.684" y1="269.5" x2="255" y2="308" stroke="#bd3847" stroke-width="4" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="188.316" y1="269.5" x2="188.316" y2="192.5" stroke="#bd3847" stroke-width="4" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="321.684" y1="192.5" x2="321.684" y2="269.5" stroke="#2168af" stroke-width="4" stroke-linecap="round" stroke-dasharray="9 5" opacity="1"/>
+<line x1="255" y1="308" x2="188.316" y2="269.5" stroke="#2168af" stroke-width="4" stroke-linecap="round" stroke-dasharray="9 5" opacity="1"/>
+<line x1="255" y1="154" x2="188.316" y2="192.5" stroke="#2168af" stroke-width="4" stroke-linecap="round" stroke-dasharray="9 5" opacity="1"/>
+<circle cx="255" cy="154" r="17" fill="white" stroke="#202d3a" stroke-width="2.5"/>
+<text x="255" y="160" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">1</text>
+<circle cx="321.684" cy="192.5" r="17" fill="white" stroke="#202d3a" stroke-width="2.5"/>
+<text x="321.684" y="198.5" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">2</text>
+<circle cx="321.684" cy="269.5" r="17" fill="white" stroke="#202d3a" stroke-width="2.5"/>
+<text x="321.684" y="275.5" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">3</text>
+<circle cx="255" cy="308" r="17" fill="white" stroke="#202d3a" stroke-width="2.5"/>
+<text x="255" y="314" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">4</text>
+<circle cx="188.316" cy="269.5" r="17" fill="white" stroke="#202d3a" stroke-width="2.5"/>
+<text x="188.316" y="275.5" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">5</text>
+<circle cx="188.316" cy="192.5" r="17" fill="white" stroke="#202d3a" stroke-width="2.5"/>
+<text x="188.316" y="198.5" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">6</text>
+<text x="255" y="361" font-family="system-ui, sans-serif" font-size="18" fill="#526171" text-anchor="middle" font-weight="400">2 matchings → 2 pure outputs</text>
+<line x1="745" y1="154" x2="811.684" y2="192.5" stroke="#bd3847" stroke-width="4" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="811.684" y1="269.5" x2="745" y2="308" stroke="#bd3847" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="0.22"/>
+<line x1="678.316" y1="269.5" x2="678.316" y2="192.5" stroke="#bd3847" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="0.22"/>
+<line x1="811.684" y1="192.5" x2="811.684" y2="269.5" stroke="#2168af" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="9 5" opacity="0.22"/>
+<line x1="745" y1="308" x2="678.316" y2="269.5" stroke="#2168af" stroke-width="4" stroke-linecap="round" stroke-dasharray="9 5" opacity="1"/>
+<line x1="745" y1="154" x2="678.316" y2="192.5" stroke="#2168af" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="9 5" opacity="0.22"/>
+<line x1="745" y1="154" x2="745" y2="308" stroke="#237953" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="2 6" opacity="0.22"/>
+<line x1="811.684" y1="192.5" x2="678.316" y2="269.5" stroke="#237953" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="2 6" opacity="0.22"/>
+<line x1="811.684" y1="269.5" x2="678.316" y2="192.5" stroke="#237953" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 6" opacity="1"/>
+<circle cx="745" cy="154" r="17" fill="white" stroke="#bd3847" stroke-width="2.5"/>
+<text x="745" y="160" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">1</text>
+<circle cx="811.684" cy="192.5" r="17" fill="white" stroke="#bd3847" stroke-width="2.5"/>
+<text x="811.684" y="198.5" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">2</text>
+<circle cx="811.684" cy="269.5" r="17" fill="white" stroke="#237953" stroke-width="2.5"/>
+<text x="811.684" y="275.5" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">3</text>
+<circle cx="745" cy="308" r="17" fill="white" stroke="#2168af" stroke-width="2.5"/>
+<text x="745" y="314" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">4</text>
+<circle cx="678.316" cy="269.5" r="17" fill="white" stroke="#2168af" stroke-width="2.5"/>
+<text x="678.316" y="275.5" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">5</text>
+<circle cx="678.316" cy="192.5" r="17" fill="white" stroke="#237953" stroke-width="2.5"/>
+<text x="678.316" y="198.5" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">6</text>
+<rect x="631" y="340" width="32" height="36" rx="6" fill="#fcf0f1" stroke="#bd3847"/>
+<text x="647" y="365" font-family="system-ui, sans-serif" font-size="20" fill="#bd3847" text-anchor="middle" font-weight="700">R</text>
+<rect x="670" y="340" width="32" height="36" rx="6" fill="#fcf0f1" stroke="#bd3847"/>
+<text x="686" y="365" font-family="system-ui, sans-serif" font-size="20" fill="#bd3847" text-anchor="middle" font-weight="700">R</text>
+<rect x="709" y="340" width="32" height="36" rx="6" fill="#edf7f1" stroke="#237953"/>
+<text x="725" y="365" font-family="system-ui, sans-serif" font-size="20" fill="#237953" text-anchor="middle" font-weight="700">G</text>
+<rect x="748" y="340" width="32" height="36" rx="6" fill="#edf4fc" stroke="#2168af"/>
+<text x="764" y="365" font-family="system-ui, sans-serif" font-size="20" fill="#2168af" text-anchor="middle" font-weight="700">B</text>
+<rect x="787" y="340" width="32" height="36" rx="6" fill="#edf4fc" stroke="#2168af"/>
+<text x="803" y="365" font-family="system-ui, sans-serif" font-size="20" fill="#2168af" text-anchor="middle" font-weight="700">B</text>
+<rect x="826" y="340" width="32" height="36" rx="6" fill="#edf7f1" stroke="#237953"/>
+<text x="842" y="365" font-family="system-ui, sans-serif" font-size="20" fill="#237953" text-anchor="middle" font-weight="700">G</text>
+<text x="500" y="424" font-family="system-ui, sans-serif" font-size="18" fill="#526171" text-anchor="middle" font-weight="400">With unit weights, this mixed output has one contribution and cannot cancel.</text>
+</svg></div><figcaption>Figure 3. The right panel highlights one of the three unwanted mixed matchings. Vertex numbers fix the order of the color list. This construction fails; the example alone is not a general impossibility proof.</figcaption><p class="diagram-hint"><a href="explainer-assets/03-third-color-leak.svg">Open full-size diagram</a> · on small screens, scroll sideways</p></figure>
+<!-- explainer-figure:03-third-color-leak:end -->
+
+<p>The difficult possibility is that a more elaborate graph might produce every unwanted output in several ways, with amplitudes that add to zero. Positive weights cannot do that; complex weights can. Even the tiny matching sum</p>
+<div class="equation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><msub><mi>w</mi><mn>12</mn></msub><msub><mi>w</mi><mn>34</mn></msub><mo>+</mo><msub><mi>w</mi><mn>13</mn></msub><msub><mi>w</mi><mn>24</mn></msub><mo>+</mo><msub><mi>w</mi><mn>14</mn></msub><msub><mi>w</mi><mn>23</mn></msub></mrow></math></div>
+
+
+<p>can vanish with supported matchings present: choose the three products to be 1, −1, and 0. This is a cancellation example, not a solution of the conjecture. <strong>Finding a mixed matching does not prove that its output amplitude is nonzero.</strong></p>
+<!-- explainer-figure:04-cancellation:start -->
+<figure class="explainer-diagram" id="figure-04-cancellation"><div class="diagram-scroll" tabindex="0" aria-label="Diagram; scroll horizontally on small screens"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" role="img" aria-labelledby="04-cancellation-title 04-cancellation-desc">
+<title id="04-cancellation-title">Two matchings can cancel in the same output</title>
+<desc id="04-cancellation-desc">Two all-red matchings on four sites have weights plus one and minus one. They both produce RRRR, so that amplitude is zero. This is a scalar cancellation example, not a full GHZ solution.</desc>
+<rect width="1000" height="100%" rx="16" fill="#fff"/>
+<text x="30" y="31" font-family="system-ui, sans-serif" font-size="12" fill="#526171" text-anchor="start" font-weight="700">KRENN–GU / 04</text>
+<text x="30" y="66" font-family="system-ui, sans-serif" font-size="25" fill="#202d3a" text-anchor="start" font-weight="700">Two matchings can cancel in the same output</text>
+<rect x="30" y="95" width="275" height="222" rx="12" fill="#fcf0f1" stroke="#d8dedf"/>
+<text x="167" y="127" font-family="system-ui, sans-serif" font-size="18" fill="#202d3a" text-anchor="middle" font-weight="650">Matching 12 / 34</text>
+<line x1="90" y1="159" x2="245" y2="159" stroke="#bd3847" stroke-width="4" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="245" y1="239" x2="90" y2="239" stroke="#bd3847" stroke-width="4" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<circle cx="90" cy="159" r="17" fill="white" stroke="#bd3847" stroke-width="2.5"/>
+<text x="90" y="165" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">1</text>
+<circle cx="245" cy="159" r="17" fill="white" stroke="#bd3847" stroke-width="2.5"/>
+<text x="245" y="165" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">2</text>
+<circle cx="245" cy="239" r="17" fill="white" stroke="#bd3847" stroke-width="2.5"/>
+<text x="245" y="245" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">3</text>
+<circle cx="90" cy="239" r="17" fill="white" stroke="#bd3847" stroke-width="2.5"/>
+<text x="90" y="245" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">4</text>
+<text x="167" y="288" font-family="system-ui, sans-serif" font-size="19" fill="#bd3847" text-anchor="middle" font-weight="650">+1 × +1 = +1</text>
+<rect x="350" y="95" width="275" height="222" rx="12" fill="#fcf0f1" stroke="#d8dedf"/>
+<text x="487" y="127" font-family="system-ui, sans-serif" font-size="18" fill="#202d3a" text-anchor="middle" font-weight="650">Matching 13 / 24</text>
+<line x1="410" y1="159" x2="565" y2="239" stroke="#bd3847" stroke-width="4" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="565" y1="159" x2="410" y2="239" stroke="#bd3847" stroke-width="4" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<circle cx="410" cy="159" r="17" fill="white" stroke="#bd3847" stroke-width="2.5"/>
+<text x="410" y="165" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">1</text>
+<circle cx="565" cy="159" r="17" fill="white" stroke="#bd3847" stroke-width="2.5"/>
+<text x="565" y="165" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">2</text>
+<circle cx="565" cy="239" r="17" fill="white" stroke="#bd3847" stroke-width="2.5"/>
+<text x="565" y="245" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">3</text>
+<circle cx="410" cy="239" r="17" fill="white" stroke="#bd3847" stroke-width="2.5"/>
+<text x="410" y="245" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">4</text>
+<text x="487" y="288" font-family="system-ui, sans-serif" font-size="19" fill="#bd3847" text-anchor="middle" font-weight="650">+1 × −1 = −1</text>
+<text x="330" y="215" font-family="system-ui, sans-serif" font-size="28" fill="#202d3a" text-anchor="middle" font-weight="400">+</text>
+<line x1="645" y1="207" x2="698" y2="207" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="690" y1="202" x2="698" y2="207" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="690" y1="212" x2="698" y2="207" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<text x="818" y="144" font-family="system-ui, sans-serif" font-size="20" fill="#202d3a" text-anchor="middle" font-weight="650">Same output: RRRR</text>
+<text x="818" y="211" font-family="system-ui, sans-serif" font-size="29" fill="#bd3847" text-anchor="middle" font-weight="700">1 + (−1) = 0</text>
+<text x="818" y="262" font-family="system-ui, sans-serif" font-size="17" fill="#526171" text-anchor="middle" font-weight="400">Two terms. Zero amplitude.</text>
+<text x="500" y="343" font-family="system-ui, sans-serif" font-size="17" fill="#526171" text-anchor="middle" font-weight="400">Weights: w₁₂ = w₃₄ = w₁₃ = 1, w₂₄ = −1; the other edges are absent.</text>
+</svg></div><figcaption>Figure 4. Cancellation happens between matchings producing the same color list. A positive red contribution and a negative red contribution can sum to zero. Contributions to different lists cannot cancel one another.</figcaption><p class="diagram-hint"><a href="explainer-assets/04-cancellation.svg">Open full-size diagram</a> · on small screens, scroll sideways</p></figure>
+<!-- explainer-figure:04-cancellation:end -->
+
+<h2 id="part-3">3. What prior work actually established.</h2>
+<p>The hypotheses matter as much as the numerical bound.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Work</th>
+<th>Established result</th>
+<th>What it leaves open</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Bogdanov&#39;s observation, developed in Chandran–Gajjala&#39;s work</td>
+<td>Three distinct monochromatic matching colors on more than four vertices force a mixed matching. This settles the case without destructive interference. The later paper classifies graphs whose perfect matchings are all monochromatic.</td>
+<td>Arbitrary complex cancellation. <a href="https://arxiv.org/html/2202.05562v2">Paper</a></td>
+</tr>
+<tr>
+<td>Cervera-Lierta, Krenn, Aspuru-Guzik, 2022</td>
+<td>SAT excludes monochromatic-edge solutions at (n,d) = (6,3) and (8,4); larger d follows by color projection. The necessary Boolean constraints allow possible cancellation.</td>
+<td>Bicolored edges, and the three-color eight-site case. <a href="https://arxiv.org/html/2109.13273">Paper, §3</a></td>
+</tr>
+<tr>
+<td>Kevin Mantey&#39;s computational work, 2023</td>
+<td>Four sites cannot support four colors; the three-color four-site solution has the K₄ form up to relabeling and rescaling.</td>
+<td>Larger orders. <a href="https://github.com/bafflingbits/graph_n4_solution">Exact computational repository</a></td>
+</tr>
+<tr>
+<td>Chandran–Gajjala, Quantum 2024</td>
+<td>Simple experiment graphs with n &gt; 4 cannot reach d ≥ n/√2. Bicolored edges are permitted.</td>
+<td>The general parallel-source model and the fixed target d = 3 at larger n. <a href="https://arxiv.org/html/2304.06407v3">Paper, §2.4</a></td>
+</tr>
+<tr>
+<td>Chandran–Gajjala–Illickan, MFCS 2024</td>
+<td>In the full weighted multigraph model, vertex connectivity ≤ 2 and maximum skeleton degree ≤ 3 are excluded for n &gt; 4. A reduction implies that a smallest counterexample must be 4-connected.</td>
+<td>More highly connected graphs. <a href="https://arxiv.org/html/2407.00303v1">Paper, §1.3</a></td>
+</tr>
+<tr>
+<td>AlphaProof Nexus / formal-conjectures, 2026</td>
+<td>The general system is impossible for d = n at every even n ≥ 4, hence also for d ≥ n by projection.</td>
+<td>The much smaller target d = 3. <a href="https://mariokrenn.wordpress.com/graph-theory-question/">Problem author&#39;s update</a></td>
+</tr>
+<tr>
+<td>KitaKen1&#39;s Lean development</td>
+<td>For every even n ≥ 6, the general system over an integral domain satisfies d ≤ n − 2.</td>
+<td>A bound growing with n does not establish d ≤ 2. <a href="https://github.com/KitaKen1/monochromatic-quantum-graph-sharp-bound-lean/tree/6c5340384479dbb36129b2e0084449be2458cce2">Pinned proof repository</a></td>
+</tr>
+<tr>
+<td>algal&#39;s independent Lean development</td>
+<td>The full complex (6,3) case is excluded. The public registry update was merged September 18, 2026; it links an external Lean proof.</td>
+<td>Eight and more sites. <a href="https://github.com/google-deepmind/formal-conjectures/pull/4610">Accepted update and proof link</a></td>
+</tr>
+</tbody></table></div>
+<p>Here a graph&#39;s <strong>skeleton</strong> keeps a single adjacency for each pair of sites joined by any edge. A 4-connected graph stays connected after deletion of any three vertices. Thus the published sparse-graph results already show that a smallest counterexample cannot have a simple small separating boundary.</p>
+<p>One correction to the workspace&#39;s older reference notes is important: <strong>an unsatisfiable support relaxation can prove weighted nonexistence.</strong> The 2022 SAT encoding permits two or more contributions to a forbidden output, since those might cancel, but forbids exactly one. Every weighted solution must pass that test. Therefore UNSAT excludes weighted solutions; SAT alone does not produce one. <a href="https://arxiv.org/html/2109.13273">The paper&#39;s explicit explanation</a>.</p>
+<h2 id="part-4">4. How to read the evidence in this workspace.</h2>
+<p>This guide uses three distinctions:</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Meaning here</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Published / public formal result</td>
+<td>An external primary source or linked formal development establishes the stated result.</td>
+</tr>
+<tr>
+<td>Repository-certified</td>
+<td>The workspace records a mathematical argument, exact checkers or certificates, and independent internal audits in its accepted proof material. This does not automatically mean a completed Lean theorem.</td>
+</tr>
+<tr>
+<td>Internally reviewed research</td>
+<td>A newer source has a recorded independent analytic audit and acceptance, but has not entered the certified dependency record or public formal registry.</td>
+</tr>
+</tbody></table></div>
+<p>The September audits are reviews recorded by the research agents. They should not be described as journal peer review or as a fresh independent verification performed for this explainer. I read the key statements, proof arguments, audits, and acceptance records; I did not rebuild the entire proof dependency chain or replay all certificates.</p>
+<p>The directory name <code>unaudited-*</code> is historical in several active lanes: a later companion audit may exist even while the frozen source still says “audit pending.” Conversely, an ambitious old title is not enough to establish a result. The dated <a href="../PROOF-SKETCH.md">proof sketch</a>, <a href="../certification/SUPERSESSIONS.md">certification ledger</a>, and companion reviews determine the scope.</p>
+<h2 id="part-5">5. The strongest useful contributions of this workspace.</h2>
+<p>“Contribution” below means a result or mechanism developed and recorded here, compared with the external sources checked above. It is not a claim of worldwide priority. In particular, the six-site exclusion has an independent public proof and the elementary constructions and no-cancellation argument belong to prior work.</p>
+<p><strong>A. Concrete finite cases, with exact evidence.</strong> The repository-certified core contains a general complex <strong>six-site obstruction</strong>, organized into nineteen rank-defect graph types. It also contains an <strong>eight-site diagonal obstruction</strong>: three arbitrary weighted color graphs cannot produce the target, even over an arbitrary field, and even if the three constant amplitudes are merely nonzero rather than equal. Its finite argument reduces to 4,096 cases and 87 symmetry classes with checked UNSAT certificates. <a href="../proofs/six-site-arbitrary-complex-obstruction.md">Six-site proof</a>; <a href="../proofs/eight-site-diagonal-obstruction.md">eight-site proof</a>.</p>
+<p>The eight-site statement allows parallel same-color sources and arbitrary cancellation within each color. Its improvement over the earlier diagonal (8,4) exclusion is reaching <strong>three colors</strong>. The shipped <a href="../formal/n8-diagonal/STATUS.md">Lean status</a> records an incomplete formalization; do not call the whole theorem kernel-checked merely because some components compile.</p>
+<p><strong>B. The most significant newer reduction: bicolored aggregate edges disappear.</strong> The September theorem states that every exact full three-color source on even n ≥ 4 has only same-color entries in each aggregate edge matrix, in the original target basis. This is a conclusion from the full equations, not an assumption imposed on the search. <a href="../computations/unaudited-codex-higher-common-power-bridge-2026-09-05/UNIFORM-GLOBAL-EDGE-MONOCHROMATICITY-AND-COFACTOR-INVERSE.md">Theorem and proof</a>; <a href="../computations/unaudited-codex-higher-common-power-bridge-2026-09-05/UNIFORM-GLOBAL-EDGE-MONOCHROMATICITY-AND-COFACTOR-INVERSE-AUDIT.md">independent audit</a>.</p>
+<p>To understand the gain, a pair originally has nine possible color coefficients: RR, RB, RG, BR, BB, BG, GR, GB, GG. The reduction forces its six off-diagonal coefficients to vanish. There remain three weighted graphs, one per color. Multiple physical sources with identical endpoint colors have first been added together; the conclusion concerns that aggregate coefficient, not every microscopic parallel source separately.</p>
+<!-- explainer-figure:05-diagonal-reduction:start -->
+<figure class="explainer-diagram" id="figure-05-diagonal-reduction"><div class="diagram-scroll" tabindex="0" aria-label="Diagram; scroll horizontally on small screens"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 399" role="img" aria-labelledby="05-diagonal-reduction-title 05-diagonal-reduction-desc">
+<title id="05-diagonal-reduction-title">The new reduction removes six coefficients per pair</title>
+<desc id="05-diagonal-reduction-desc">A general 3 by 3 endpoint-color block can have nine entries. The internally reviewed theorem forces its off-diagonal entries to zero in the original target basis, leaving RR, BB, GG. Across all site pairs these form three n by n scalar matrices, one per color.</desc>
+<rect width="1000" height="100%" rx="16" fill="#fff"/>
+<text x="30" y="31" font-family="system-ui, sans-serif" font-size="12" fill="#526171" text-anchor="start" font-weight="700">KRENN–GU / 05</text>
+<text x="30" y="66" font-family="system-ui, sans-serif" font-size="25" fill="#202d3a" text-anchor="start" font-weight="700">The new reduction removes six coefficients per pair</text>
+<text x="151" y="112" font-family="system-ui, sans-serif" font-size="19" fill="#202d3a" text-anchor="middle" font-weight="650">General block Aᵤᵥ</text>
+<text x="151" y="141" font-family="system-ui, sans-serif" font-size="14" fill="#526171" text-anchor="middle" font-weight="400">Columns: color at v</text>
+<text x="100" y="157" font-family="system-ui, sans-serif" font-size="17" fill="#bd3847" text-anchor="middle" font-weight="700">R</text>
+<text x="56" y="202" font-family="system-ui, sans-serif" font-size="17" fill="#bd3847" text-anchor="middle" font-weight="700">R</text>
+<text x="153" y="157" font-family="system-ui, sans-serif" font-size="17" fill="#2168af" text-anchor="middle" font-weight="700">B</text>
+<text x="56" y="255" font-family="system-ui, sans-serif" font-size="17" fill="#2168af" text-anchor="middle" font-weight="700">B</text>
+<text x="206" y="157" font-family="system-ui, sans-serif" font-size="17" fill="#237953" text-anchor="middle" font-weight="700">G</text>
+<text x="56" y="308" font-family="system-ui, sans-serif" font-size="17" fill="#237953" text-anchor="middle" font-weight="700">G</text>
+<rect x="74" y="170" width="51" height="51" rx="4" fill="#fcf0f1" stroke="#d8dedf"/>
+<text x="100" y="202" font-family="system-ui, sans-serif" font-size="18" fill="#bd3847" text-anchor="middle" font-weight="650">RR</text>
+<rect x="127" y="170" width="51" height="51" rx="4" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="153" y="202" font-family="system-ui, sans-serif" font-size="18" fill="#526171" text-anchor="middle" font-weight="400">RB</text>
+<rect x="180" y="170" width="51" height="51" rx="4" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="206" y="202" font-family="system-ui, sans-serif" font-size="18" fill="#526171" text-anchor="middle" font-weight="400">RG</text>
+<rect x="74" y="223" width="51" height="51" rx="4" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="100" y="255" font-family="system-ui, sans-serif" font-size="18" fill="#526171" text-anchor="middle" font-weight="400">BR</text>
+<rect x="127" y="223" width="51" height="51" rx="4" fill="#edf4fc" stroke="#d8dedf"/>
+<text x="153" y="255" font-family="system-ui, sans-serif" font-size="18" fill="#2168af" text-anchor="middle" font-weight="650">BB</text>
+<rect x="180" y="223" width="51" height="51" rx="4" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="206" y="255" font-family="system-ui, sans-serif" font-size="18" fill="#526171" text-anchor="middle" font-weight="400">BG</text>
+<rect x="74" y="276" width="51" height="51" rx="4" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="100" y="308" font-family="system-ui, sans-serif" font-size="18" fill="#526171" text-anchor="middle" font-weight="400">GR</text>
+<rect x="127" y="276" width="51" height="51" rx="4" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="153" y="308" font-family="system-ui, sans-serif" font-size="18" fill="#526171" text-anchor="middle" font-weight="400">GB</text>
+<rect x="180" y="276" width="51" height="51" rx="4" fill="#edf7f1" stroke="#d8dedf"/>
+<text x="206" y="308" font-family="system-ui, sans-serif" font-size="18" fill="#237953" text-anchor="middle" font-weight="650">GG</text>
+<text x="37" y="351" font-family="system-ui, sans-serif" font-size="14" fill="#526171" text-anchor="start" font-weight="400">Rows: color at u</text>
+<line x1="256" y1="248" x2="365" y2="248" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="357" y1="243" x2="365" y2="248" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="357" y1="253" x2="365" y2="248" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<text x="310" y="198" font-family="system-ui, sans-serif" font-size="15" fill="#526171" text-anchor="middle" font-weight="400">Full three-color</text>
+<text x="310" y="220" font-family="system-ui, sans-serif" font-size="15" fill="#526171" text-anchor="middle" font-weight="400">source equations</text>
+<text x="496" y="112" font-family="system-ui, sans-serif" font-size="19" fill="#202d3a" text-anchor="middle" font-weight="650">Diagonal in the same basis</text>
+<text x="496" y="141" font-family="system-ui, sans-serif" font-size="14" fill="#526171" text-anchor="middle" font-weight="400">Only same-color entries remain</text>
+<text x="444" y="157" font-family="system-ui, sans-serif" font-size="17" fill="#bd3847" text-anchor="middle" font-weight="700">R</text>
+<text x="400" y="202" font-family="system-ui, sans-serif" font-size="17" fill="#bd3847" text-anchor="middle" font-weight="700">R</text>
+<text x="497" y="157" font-family="system-ui, sans-serif" font-size="17" fill="#2168af" text-anchor="middle" font-weight="700">B</text>
+<text x="400" y="255" font-family="system-ui, sans-serif" font-size="17" fill="#2168af" text-anchor="middle" font-weight="700">B</text>
+<text x="550" y="157" font-family="system-ui, sans-serif" font-size="17" fill="#237953" text-anchor="middle" font-weight="700">G</text>
+<text x="400" y="308" font-family="system-ui, sans-serif" font-size="17" fill="#237953" text-anchor="middle" font-weight="700">G</text>
+<rect x="418" y="170" width="51" height="51" rx="4" fill="#fcf0f1" stroke="#d8dedf"/>
+<text x="444" y="202" font-family="system-ui, sans-serif" font-size="18" fill="#bd3847" text-anchor="middle" font-weight="650">RR</text>
+<rect x="471" y="170" width="51" height="51" rx="4" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="497" y="202" font-family="system-ui, sans-serif" font-size="18" fill="#526171" text-anchor="middle" font-weight="400">0</text>
+<rect x="524" y="170" width="51" height="51" rx="4" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="550" y="202" font-family="system-ui, sans-serif" font-size="18" fill="#526171" text-anchor="middle" font-weight="400">0</text>
+<rect x="418" y="223" width="51" height="51" rx="4" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="444" y="255" font-family="system-ui, sans-serif" font-size="18" fill="#526171" text-anchor="middle" font-weight="400">0</text>
+<rect x="471" y="223" width="51" height="51" rx="4" fill="#edf4fc" stroke="#d8dedf"/>
+<text x="497" y="255" font-family="system-ui, sans-serif" font-size="18" fill="#2168af" text-anchor="middle" font-weight="650">BB</text>
+<rect x="524" y="223" width="51" height="51" rx="4" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="550" y="255" font-family="system-ui, sans-serif" font-size="18" fill="#526171" text-anchor="middle" font-weight="400">0</text>
+<rect x="418" y="276" width="51" height="51" rx="4" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="444" y="308" font-family="system-ui, sans-serif" font-size="18" fill="#526171" text-anchor="middle" font-weight="400">0</text>
+<rect x="471" y="276" width="51" height="51" rx="4" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="497" y="308" font-family="system-ui, sans-serif" font-size="18" fill="#526171" text-anchor="middle" font-weight="400">0</text>
+<rect x="524" y="276" width="51" height="51" rx="4" fill="#edf7f1" stroke="#d8dedf"/>
+<text x="550" y="308" font-family="system-ui, sans-serif" font-size="18" fill="#237953" text-anchor="middle" font-weight="650">GG</text>
+<line x1="598" y1="248" x2="693" y2="248" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="685" y1="243" x2="693" y2="248" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="685" y1="253" x2="693" y2="248" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<text x="647" y="209" font-family="system-ui, sans-serif" font-size="15" fill="#526171" text-anchor="middle" font-weight="400">Across all</text>
+<text x="647" y="230" font-family="system-ui, sans-serif" font-size="15" fill="#526171" text-anchor="middle" font-weight="400">site pairs</text>
+<rect x="720" y="158" width="247" height="49" rx="8" fill="#fcf0f1" stroke="#bd3847"/>
+<text x="844" y="190" font-family="system-ui, sans-serif" font-size="18" fill="#bd3847" text-anchor="middle" font-weight="650">Mᴿ  ·  n × n site matrix</text>
+<rect x="720" y="221" width="247" height="49" rx="8" fill="#edf4fc" stroke="#2168af"/>
+<text x="844" y="253" font-family="system-ui, sans-serif" font-size="18" fill="#2168af" text-anchor="middle" font-weight="650">Mᴮ  ·  n × n site matrix</text>
+<rect x="720" y="284" width="247" height="49" rx="8" fill="#edf7f1" stroke="#237953"/>
+<text x="844" y="316" font-family="system-ui, sans-serif" font-size="18" fill="#237953" text-anchor="middle" font-weight="650">Mᴳ  ·  n × n site matrix</text>
+<text x="500" y="379" font-family="system-ui, sans-serif" font-size="17" fill="#526171" text-anchor="middle" font-weight="400">Internally reviewed research · complex weights and matching cancellation remain.</text>
+</svg></div><figcaption>Figure 5. The left two arrays index endpoint colors; the three resulting matrices index sites. RR, RB, and so on denote aggregate coefficients, not fixed numerical values. The theorem applies to a full exact three-color source and is internally reviewed research.</figcaption><p class="diagram-hint"><a href="explainer-assets/05-diagonal-reduction.svg">Open full-size diagram</a> · on small screens, scroll sideways</p></figure>
+<!-- explainer-figure:05-diagonal-reduction:end -->
+
+<p><strong>Why useful:</strong> it removes an entire type of freedom at every order. The remaining difficulty is cancellation among same-color pairings. It is still a weighted problem, so the old unweighted matching theorem does not finish it. This reduction is <strong>internally reviewed research</strong>, outside the certified dependency record.</p>
+<p><strong>C. A surprising link between an edge graph and all its pair deletions.</strong> The <strong>hafnian</strong>, written haf(M), is the sum of the products of edge weights over all perfect matchings. For a color h, let Mₕ be its symmetric matrix of edge weights. Let Cₕ[p,q] be the total matching weight after deleting p and q, with diagonal entries defined as zero. The same research theorem gives</p>
+<div class="equation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><msub><mi>M</mi><mi>h</mi></msub><msub><mi>C</mi><mi>h</mi></msub><mo>=</mo><msub><mi>τ</mi><mi>h</mi></msub><mi>I</mi><mo>,</mo><mtext>   </mtext><msub><mi>C</mi><mi>h</mi></msub><mo>=</mo><msub><mi>τ</mi><mi>h</mi></msub><msubsup><mi>M</mi><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msubsup></mrow></math></div>
+
+
+<p>where τₕ is the nonzero all-h amplitude. This identity is special to the source equations; it is not a general hafnian identity for arbitrary matrices.</p>
+<!-- explainer-figure:06-cofactor:start -->
+<figure class="explainer-diagram" id="figure-06-cofactor"><div class="diagram-scroll" tabindex="0" aria-label="Diagram; scroll horizontally on small screens"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 420" role="img" aria-labelledby="06-cofactor-title 06-cofactor-desc">
+<title id="06-cofactor-title">A cofactor sums the matchings left after deleting two sites</title>
+<desc id="06-cofactor-desc">Delete sites 1 and 2 from a six-site scalar weighted graph. The remaining sites 3,4,5,6 have three possible pairings. Their sum is C[1,2] = w34 w56 + w35 w46 + w36 w45. Only under the full-source hypotheses does the additional identity MC = tau I follow.</desc>
+<rect width="1000" height="100%" rx="16" fill="#fff"/>
+<text x="30" y="31" font-family="system-ui, sans-serif" font-size="12" fill="#526171" text-anchor="start" font-weight="700">KRENN–GU / 06</text>
+<text x="30" y="66" font-family="system-ui, sans-serif" font-size="25" fill="#202d3a" text-anchor="start" font-weight="700">A cofactor sums the matchings left after deleting two sites</text>
+<line x1="151" y1="150" x2="213.354" y2="186" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="151" y1="150" x2="213.354" y2="258" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="151" y1="150" x2="151" y2="294" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="151" y1="150" x2="88.6462" y2="258" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="151" y1="150" x2="88.6462" y2="186" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="213.354" y1="186" x2="213.354" y2="258" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="213.354" y1="186" x2="151" y2="294" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="213.354" y1="186" x2="88.6462" y2="258" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="213.354" y1="186" x2="88.6462" y2="186" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="213.354" y1="258" x2="151" y2="294" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="213.354" y1="258" x2="88.6462" y2="258" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="213.354" y1="258" x2="88.6462" y2="186" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="151" y1="294" x2="88.6462" y2="258" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="151" y1="294" x2="88.6462" y2="186" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="88.6462" y1="258" x2="88.6462" y2="186" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<circle cx="151" cy="150" r="17" fill="white" stroke="#202d3a" stroke-width="2.5"/>
+<text x="151" y="156" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">1</text>
+<circle cx="213.354" cy="186" r="17" fill="white" stroke="#202d3a" stroke-width="2.5"/>
+<text x="213.354" y="192" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">2</text>
+<circle cx="213.354" cy="258" r="17" fill="white" stroke="#202d3a" stroke-width="2.5"/>
+<text x="213.354" y="264" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">3</text>
+<circle cx="151" cy="294" r="17" fill="white" stroke="#202d3a" stroke-width="2.5"/>
+<text x="151" y="300" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">4</text>
+<circle cx="88.6462" cy="258" r="17" fill="white" stroke="#202d3a" stroke-width="2.5"/>
+<text x="88.6462" y="264" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">5</text>
+<circle cx="88.6462" cy="186" r="17" fill="white" stroke="#202d3a" stroke-width="2.5"/>
+<text x="88.6462" y="192" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">6</text>
+<line x1="127" y1="126" x2="175" y2="174" stroke="#bd3847" stroke-width="3" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="127" y1="174" x2="175" y2="126" stroke="#bd3847" stroke-width="3" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="189.354" y1="162" x2="237.354" y2="210" stroke="#bd3847" stroke-width="3" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="189.354" y1="210" x2="237.354" y2="162" stroke="#bd3847" stroke-width="3" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<text x="151" y="112" font-family="system-ui, sans-serif" font-size="18" fill="#202d3a" text-anchor="middle" font-weight="650">Original scalar graph</text>
+<text x="151" y="329" font-family="system-ui, sans-serif" font-size="16" fill="#526171" text-anchor="middle" font-weight="400">Delete p = 1 and q = 2</text>
+<line x1="263" y1="218" x2="321" y2="218" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="313" y1="213" x2="321" y2="218" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="313" y1="223" x2="321" y2="218" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<text x="439" y="112" font-family="system-ui, sans-serif" font-size="18" fill="#202d3a" text-anchor="middle" font-weight="650">The surviving subgraph</text>
+<line x1="368" y1="167" x2="511" y2="167" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="368" y1="167" x2="511" y2="268" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="368" y1="167" x2="368" y2="268" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="511" y1="167" x2="511" y2="268" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="511" y1="167" x2="368" y2="268" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="511" y1="268" x2="368" y2="268" stroke="#b4bec5" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<circle cx="368" cy="167" r="17" fill="white" stroke="#202d3a" stroke-width="2.5"/>
+<text x="368" y="173" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">3</text>
+<circle cx="511" cy="167" r="17" fill="white" stroke="#202d3a" stroke-width="2.5"/>
+<text x="511" y="173" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">4</text>
+<circle cx="511" cy="268" r="17" fill="white" stroke="#202d3a" stroke-width="2.5"/>
+<text x="511" y="274" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">5</text>
+<circle cx="368" cy="268" r="17" fill="white" stroke="#202d3a" stroke-width="2.5"/>
+<text x="368" y="274" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">6</text>
+<text x="439" y="329" font-family="system-ui, sans-serif" font-size="16" fill="#526171" text-anchor="middle" font-weight="400">All its pairings contribute</text>
+<line x1="544" y1="218" x2="596" y2="218" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="588" y1="213" x2="596" y2="218" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="588" y1="223" x2="596" y2="218" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<text x="627" y="162" font-family="system-ui, sans-serif" font-size="24" fill="#202d3a" text-anchor="start" font-weight="650">C[1,2] =</text>
+<text x="662" y="202" font-family="system-ui, sans-serif" font-size="24" fill="#202d3a" text-anchor="start" font-weight="400">w₃₄w₅₆</text>
+<text x="662" y="239" font-family="system-ui, sans-serif" font-size="24" fill="#202d3a" text-anchor="start" font-weight="400">+ w₃₅w₄₆</text>
+<text x="662" y="276" font-family="system-ui, sans-serif" font-size="24" fill="#202d3a" text-anchor="start" font-weight="400">+ w₃₆w₄₅</text>
+<rect x="30" y="353" width="940" height="45" rx="8" fill="#edf4f6" stroke="#c0d4dd"/>
+<text x="500" y="382" font-family="system-ui, sans-serif" font-size="19" fill="#202d3a" text-anchor="middle" font-weight="650">For a full three-color source:  MC = τ I,  hence C = τ M⁻¹  (internally reviewed).</text>
+</svg></div><figcaption>Figure 6. The cofactor definition is an actual matching sum. The inverse identity in the bottom band is an additional consequence of the full-source equations, not an identity satisfied by every weighted graph drawn above.</figcaption><p class="diagram-hint"><a href="explainer-assets/06-cofactor.svg">Open full-size diagram</a> · on small screens, scroll sideways</p></figure>
+<!-- explainer-figure:06-cofactor:end -->
+
+<p><strong>Why useful:</strong> the many deletion sums are constrained to be the entries of a single scaled matrix inverse. A matching problem with exponentially many terms acquires strong linear-algebra restrictions. Crucially, Cₕ must contain the <strong>actual</strong> matching sums; substituting a convenient unrelated inverse would lose the content of the theorem.</p>
+<p>The proof combines the original one-defect output equations with a separately audited omission identity. Define Bᵢₕ[p,q] = Aₚq(i,h) for distinct sites and zero on the diagonal. Once those equations establish BᵢₕCₕ = δᵢₕτₕI, invertibility immediately kills Bᵢₕ for i ≠ h. That last step is short; the omission identity is a substantive part of the proof, not something to assume from elementary matching expansion. <a href="../computations/unaudited-codex-higher-common-power-bridge-2026-09-05/UNIFORM-GLOBAL-EDGE-MONOCHROMATICITY-AND-COFACTOR-INVERSE.md">Detailed derivation</a>.</p>
+<p>A short consequence shows what this buys. Suppose M is symmetric with zero diagonal, τ = haf(M) ≠ 0, and its actual cofactor matrix C satisfies MC = τI. Since both matrices are symmetric, transposing gives CM = τI too. <strong>No row of C can have exactly two nonzero entries.</strong></p>
+<p>To prove this, suppose row p is supported only at q and r, with C[p,q] = a ≠ 0 and C[p,r] = b ≠ 0. The off-diagonal entries of CM give</p>
+<div class="equation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>a</mi><mi>M</mi><mtext>[q,w]</mtext><mo>+</mo><mi>b</mi><mi>M</mi><mtext>[r,w]</mtext><mo>=</mo><mn>0</mn><mtext>   (w ≠ p)</mtext></mrow></math></div>
+
+
+<p>In particular M[q,r] = 0. For w outside {p,q,r}, put K_w = haf(M[V∖{p,q,r,w}]). Expand C[p,q] by the partner of the retained vertex r, and C[p,r] by the partner of q:</p>
+<div class="equation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>a</mi><mo>=</mo><munder><mo>∑</mo><mi>w</mi></munder><mi>M</mi><mtext>[r,w]</mtext><msub><mi>K</mi><mi>w</mi></msub><mo>,</mo><mtext>   </mtext><mi>b</mi><mo>=</mo><munder><mo>∑</mo><mi>w</mi></munder><mi>M</mi><mtext>[q,w]</mtext><msub><mi>K</mi><mi>w</mi></msub></mrow></math></div>
+
+
+<p>Multiply the preceding zero equation by K_w and sum. Its left side becomes ab + ba = 2ab, which cannot vanish over ℂ. The contradiction proves the claim. Every K_w is an actual matching sum, so the proof allows cancellation throughout. This is an instructive example of a combinatorial restriction obtained from the inverse identity without pretending that individual matching terms are positive. <a href="historical-sources/ACTUAL-COFACTOR-DUAL-DEGREE-AND-FOUR-FAR-SITE-THEOREM-NEW-SOURCE.md.txt">Cofactor-row lemma</a>.</p>
+<p><strong>D. One uncomplicated color would already be fatal.</strong> At every even n ≥ 6, the internally reviewed chain excludes a full three-color source if <strong>any one</strong> color graph consists entirely of isolated matching edges. Additional identities inherited from the third color force the other colors into matching structure as well, yielding a contradiction. This is stronger than the classical situation where all colors already consist of matchings. <a href="historical-sources/UNIFORM-ONE-MATCHING-COLOR-EXCLUSION.md.txt">One-matching-color theorem</a>.</p>
+<p><strong>Why useful:</strong> proving that some color must be a matching is now a sufficient route to the full conjecture. That forcing step is still missing.</p>
+<p><strong>E. Every remaining candidate has a restrictive local geometry.</strong> For each site p and color h, the newer chain gives</p>
+<div class="equation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mn>1</mn><mo>≤</mo><msub><mtext>deg</mtext><mi>h</mi></msub><mtext>(p)</mtext><mo>≤</mo><mfrac><mi>n</mi><mn>2</mn></mfrac><mo>−</mo><mn>2</mn></mrow></math></div>
+
+
+<p>Degree two is impossible; degree one belongs to an isolated edge. Each color must have a more complicated component, which has minimum degree at least three and no articulation vertex. <a href="../certification/stronger-results-2026-09-26/sources/NB.md">Degree bound</a>; <a href="../certification/stronger-results-2026-09-26/sources/SD.md">scalar degree structure</a>; <a href="historical-sources/UNIFORM-SCALAR-EVEN-LOBE-AND-ARTICULATION-EXCLUSION.md.txt">component theorem</a>.</p>
+<p>This explains the small-order progress. At n = 6 the upper bound is one; at n = 8 it is two, but degree two is forbidden. Every color would therefore be a matching, contradicting D. At n = 10 the only remaining nontrivial components are cubic: every vertex has degree three. A separate analytic argument excludes those components, giving an internally reviewed <strong>general ten-site exclusion</strong>. <a href="../certification/stronger-results-2026-09-26/sources/H10.md">Ten-site proof and audit link</a>.</p>
+<p>At n = 12, degree four becomes possible. The preceding argument no longer covers every component. This is a concrete reason that closing ten sites does not automatically close the next case.</p>
+<!-- explainer-figure:07-degree-frontier:start -->
+<figure class="explainer-diagram" id="figure-07-degree-frontier"><div class="diagram-scroll" tabindex="0" aria-label="Diagram; scroll horizontally on small screens"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 355" role="img" aria-labelledby="07-degree-frontier-title 07-degree-frontier-desc">
+<title id="07-degree-frontier-title">Why six and eight collapse, ten needs more, and twelve remains</title>
+<desc id="07-degree-frontier-desc">The internally reviewed color-degree bound is one through n/2 minus two. Degree two is forbidden and degree one lies in an isolated edge. At six and eight sites only degree one remains. At ten, degrees one and three remain and a separate theorem excludes cubic components. At twelve, degrees one, three, and four remain; general exclusion is open.</desc>
+<rect width="1000" height="100%" rx="16" fill="#fff"/>
+<text x="30" y="31" font-family="system-ui, sans-serif" font-size="12" fill="#526171" text-anchor="start" font-weight="700">KRENN–GU / 07</text>
+<text x="30" y="66" font-family="system-ui, sans-serif" font-size="25" fill="#202d3a" text-anchor="start" font-weight="700">Why six and eight collapse, ten needs more, and twelve remains</text>
+<rect x="30" y="104" width="220" height="203" rx="12" fill="#f2f6f7" stroke="#d8dedf"/>
+<text x="140" y="139" font-family="system-ui, sans-serif" font-size="25" fill="#202d3a" text-anchor="middle" font-weight="700">n = 6</text>
+<text x="140" y="169" font-family="system-ui, sans-serif" font-size="16" fill="#526171" text-anchor="middle" font-weight="400">Degree at most 1</text>
+<text x="140" y="202" font-family="system-ui, sans-serif" font-size="20" fill="#202d3a" text-anchor="middle" font-weight="650">Allowed: {1}</text>
+<text x="140" y="231" font-family="system-ui, sans-serif" font-size="14" fill="#526171" text-anchor="middle" font-weight="400">Every color is a matching.</text>
+<text x="140" y="267" font-family="system-ui, sans-serif" font-size="14" fill="#202d3a" text-anchor="middle" font-weight="400">One-matching-color</text>
+<text x="140" y="289" font-family="system-ui, sans-serif" font-size="14" fill="#202d3a" text-anchor="middle" font-weight="400">theorem gives contradiction.</text>
+<rect x="270" y="104" width="220" height="203" rx="12" fill="#f2f6f7" stroke="#d8dedf"/>
+<text x="380" y="139" font-family="system-ui, sans-serif" font-size="25" fill="#202d3a" text-anchor="middle" font-weight="700">n = 8</text>
+<text x="380" y="169" font-family="system-ui, sans-serif" font-size="16" fill="#526171" text-anchor="middle" font-weight="400">Degree at most 2</text>
+<text x="380" y="202" font-family="system-ui, sans-serif" font-size="20" fill="#202d3a" text-anchor="middle" font-weight="650">Allowed: {1}</text>
+<text x="380" y="231" font-family="system-ui, sans-serif" font-size="14" fill="#526171" text-anchor="middle" font-weight="400">Degree 2 is forbidden.</text>
+<text x="380" y="267" font-family="system-ui, sans-serif" font-size="14" fill="#202d3a" text-anchor="middle" font-weight="400">Again every color</text>
+<text x="380" y="289" font-family="system-ui, sans-serif" font-size="14" fill="#202d3a" text-anchor="middle" font-weight="400">would be a matching.</text>
+<rect x="510" y="104" width="220" height="203" rx="12" fill="#f2f6f7" stroke="#d8dedf"/>
+<text x="620" y="139" font-family="system-ui, sans-serif" font-size="25" fill="#202d3a" text-anchor="middle" font-weight="700">n = 10</text>
+<text x="620" y="169" font-family="system-ui, sans-serif" font-size="16" fill="#526171" text-anchor="middle" font-weight="400">Degree at most 3</text>
+<text x="620" y="202" font-family="system-ui, sans-serif" font-size="20" fill="#202d3a" text-anchor="middle" font-weight="650">Allowed: {1, 3}</text>
+<text x="620" y="231" font-family="system-ui, sans-serif" font-size="14" fill="#526171" text-anchor="middle" font-weight="400">Cubic components remain.</text>
+<text x="620" y="267" font-family="system-ui, sans-serif" font-size="14" fill="#202d3a" text-anchor="middle" font-weight="400">A separate analytic proof</text>
+<text x="620" y="289" font-family="system-ui, sans-serif" font-size="14" fill="#202d3a" text-anchor="middle" font-weight="400">excludes these too.</text>
+<rect x="750" y="104" width="220" height="203" rx="12" fill="#fff8ec" stroke="#d6ac60"/>
+<text x="860" y="139" font-family="system-ui, sans-serif" font-size="25" fill="#202d3a" text-anchor="middle" font-weight="700">n = 12</text>
+<text x="860" y="169" font-family="system-ui, sans-serif" font-size="16" fill="#526171" text-anchor="middle" font-weight="400">Degree at most 4</text>
+<text x="860" y="202" font-family="system-ui, sans-serif" font-size="20" fill="#202d3a" text-anchor="middle" font-weight="650">Allowed: {1, 3, 4}</text>
+<text x="860" y="231" font-family="system-ui, sans-serif" font-size="14" fill="#526171" text-anchor="middle" font-weight="400">More components possible.</text>
+<text x="860" y="267" font-family="system-ui, sans-serif" font-size="14" fill="#202d3a" text-anchor="middle" font-weight="400">No general contradiction</text>
+<text x="860" y="289" font-family="system-ui, sans-serif" font-size="14" fill="#202d3a" text-anchor="middle" font-weight="400">has been established.</text>
+<text x="500" y="332" font-family="system-ui, sans-serif" font-size="17" fill="#526171" text-anchor="middle" font-weight="400">These are consequences of the internally reviewed chain; the full conjecture stays open.</text>
+</svg></div><figcaption>Figure 7. The degree bound alone handles neither ten nor twelve sites. Ten requires the additional cubic-component argument. At twelve, both cubic and degree-four behavior remain to be covered by a general proof.</figcaption><p class="diagram-hint"><a href="explainer-assets/07-degree-frontier.svg">Open full-size diagram</a> · on small screens, scroll sideways</p></figure>
+<!-- explainer-figure:07-degree-frontier:end -->
+
+<p>The September 23–25 results constrain that frontier further. In each color graph, every vertex must have at least two sites farther than two steps away, counting sites in other components as infinitely far. There must be at least four such sites if the vertex belongs to a nonmatching component in either other color. When an actual cofactor row has exactly three nonzero entries, those three sites cannot be adjacent to each other <strong>in any color</strong>. These are local restrictions on a hypothetical source, not an exclusion of all twelve-site sources. <a href="historical-sources/ACTUAL-COFACTOR-DUAL-DEGREE-AND-FOUR-FAR-SITE-THEOREM-NEW-SOURCE.md.txt">Distance and cofactor theorem</a>; <a href="historical-sources/ROOT-MATH-ACCEPTANCE-ACTUAL-COFACTOR-DUAL-DEGREE-AND-FOUR-FAR-SITES.json">acceptance record</a>; <a href="historical-sources/COFACTOR-SUPPORT-THREE-FORCES-PHYSICAL-INDEPENDENCE-AND-FOUR-FAR-SHELL-NEW-SOURCE.md.txt">three-neighbor theorem</a>; <a href="historical-sources/ROOT-MATH-ACCEPTANCE-COFACTOR-TRIPLES-PHYSICAL-INDEPENDENCE-AND-FOUR-FAR-SHELL.json">acceptance record</a>.</p>
+<p><strong>F. We know exactly why several tempting shortcuts fail.</strong> This is useful research output, even though it is not a new solved order:</p>
+<ul>
+<li><strong>Deleting vertices need not preserve the target.</strong> The repository-certified clean-pair theorem supplies an exact reduction by two sites only when a specified higher-order correction vanishes and the needed amplitudes remain nonzero. Finding such a pair in every source remains open. <a href="../proofs/clean-pair-cap-exact-descent.md">Descent proof</a>.</li>
+<li><strong>Many correct local equations need not imply the full target.</strong> Explicit families pass the listed inverse and local-response identities and every mixed-output test within any fixed defect radius of a constant word, yet fail a longer mixed word. Such examples refute those checks as a sufficient criterion; they are not counterexamples to Krenn–Gu. <a href="historical-sources/SCOPE-AFFINE-HADAMARD-BOUNDED-DEFECT-CHECKS.md.txt">Bounded-defect construction</a>.</li>
+<li><strong>An actual cofactor matrix cannot automatically be treated as a new source matrix.</strong> An exact scalar example satisfies the inverse identity once and fails it after taking cofactors again. An iteration argument therefore needs additional justification. <a href="historical-sources/ACTUAL-COFACTOR-ITERATION-FAILS-SCALAR-SCOPE-GUARD-NEW-SOURCE.md.txt">Explicit example</a>.</li>
+</ul>
+<h2 id="part-6">6. The remaining mathematical task, in one formula.</h2>
+<p>The <strong>hafnian</strong> of a weighted matrix is just its perfect-matching sum. Write haf(M[S]) for that sum on a subset S; it is 1 for the empty set and 0 for an odd-sized set.</p>
+<p>Following the internally reviewed diagonal reduction, split the sites into their output color classes R, B, G. The amplitude factorizes exactly:</p>
+<div class="equation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mtext>amplitude(R,B,G)</mtext><mo>=</mo><mtext>haf(</mtext><msub><mi>M</mi><mi>R</mi></msub><mtext>[R])</mtext><mtext> haf(</mtext><msub><mi>M</mi><mi>B</mi></msub><mtext>[B])</mtext><mtext> haf(</mtext><msub><mi>M</mi><mi>G</mi></msub><mtext>[G])</mtext></mrow></math></div>
+
+
+<p>Every contributing matching pairs red sites internally, blue sites internally, and green sites internally. Multiplying the three matching sums includes all these possibilities and preserves their cancellations.</p>
+<!-- explainer-figure:08-partition-product:start -->
+<figure class="explainer-diagram" id="figure-08-partition-product"><div class="diagram-scroll" tabindex="0" aria-label="Diagram; scroll horizontally on small screens"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 414" role="img" aria-labelledby="08-partition-product-title 08-partition-product-desc">
+<title id="08-partition-product-title">After the reduction, every mixed output is a product of sums</title>
+<desc id="08-partition-product-desc">For an illustrative eight-site partition, sites 1,2,3,4 are red; 5,6 are blue; 7,8 are green. The red hafnian has three terms, while the blue and green factors are single edges. Their product is the output amplitude. Every mixed partition of a full target must have at least one zero factor.</desc>
+<rect width="1000" height="100%" rx="16" fill="#fff"/>
+<text x="30" y="31" font-family="system-ui, sans-serif" font-size="12" fill="#526171" text-anchor="start" font-weight="700">KRENN–GU / 08</text>
+<text x="30" y="66" font-family="system-ui, sans-serif" font-size="25" fill="#202d3a" text-anchor="start" font-weight="700">After the reduction, every mixed output is a product of sums</text>
+<rect x="30" y="105" width="411" height="204" rx="12" fill="#fcf0f1" stroke="#d8dedf"/>
+<text x="235.5" y="139" font-family="system-ui, sans-serif" font-size="20" fill="#bd3847" text-anchor="middle" font-weight="650">R = {1, 2, 3, 4}</text>
+<rect x="465" y="105" width="234" height="204" rx="12" fill="#edf4fc" stroke="#d8dedf"/>
+<text x="582" y="139" font-family="system-ui, sans-serif" font-size="20" fill="#2168af" text-anchor="middle" font-weight="650">B = {5, 6}</text>
+<rect x="725" y="105" width="245" height="204" rx="12" fill="#edf7f1" stroke="#d8dedf"/>
+<text x="847.5" y="139" font-family="system-ui, sans-serif" font-size="20" fill="#237953" text-anchor="middle" font-weight="650">G = {7, 8}</text>
+<line x1="129" y1="178" x2="329" y2="178" stroke="#bd3847" stroke-width="4" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="129" y1="178" x2="329" y2="243" stroke="#bd3847" stroke-width="4" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="129" y1="178" x2="129" y2="243" stroke="#bd3847" stroke-width="4" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="329" y1="178" x2="329" y2="243" stroke="#bd3847" stroke-width="4" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="329" y1="178" x2="129" y2="243" stroke="#bd3847" stroke-width="4" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="329" y1="243" x2="129" y2="243" stroke="#bd3847" stroke-width="4" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<circle cx="129" cy="178" r="17" fill="white" stroke="#bd3847" stroke-width="2.5"/>
+<text x="129" y="184" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">1</text>
+<circle cx="329" cy="178" r="17" fill="white" stroke="#bd3847" stroke-width="2.5"/>
+<text x="329" y="184" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">2</text>
+<circle cx="329" cy="243" r="17" fill="white" stroke="#bd3847" stroke-width="2.5"/>
+<text x="329" y="249" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">3</text>
+<circle cx="129" cy="243" r="17" fill="white" stroke="#bd3847" stroke-width="2.5"/>
+<text x="129" y="249" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">4</text>
+<line x1="513" y1="206" x2="651" y2="206" stroke="#2168af" stroke-width="4" stroke-linecap="round" stroke-dasharray="9 5" opacity="1"/>
+<circle cx="513" cy="206" r="17" fill="white" stroke="#2168af" stroke-width="2.5"/>
+<text x="513" y="212" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">5</text>
+<circle cx="651" cy="206" r="17" fill="white" stroke="#2168af" stroke-width="2.5"/>
+<text x="651" y="212" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">6</text>
+<line x1="776" y1="206" x2="921" y2="206" stroke="#237953" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 6" opacity="1"/>
+<circle cx="776" cy="206" r="17" fill="white" stroke="#237953" stroke-width="2.5"/>
+<text x="776" y="212" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">7</text>
+<circle cx="921" cy="206" r="17" fill="white" stroke="#237953" stroke-width="2.5"/>
+<text x="921" y="212" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">8</text>
+<text x="235" y="291" font-family="system-ui, sans-serif" font-size="19" fill="#bd3847" text-anchor="middle" font-weight="650">R₁₂R₃₄ + R₁₃R₂₄ + R₁₄R₂₃</text>
+<text x="582" y="291" font-family="system-ui, sans-serif" font-size="23" fill="#2168af" text-anchor="middle" font-weight="650">B₅₆</text>
+<text x="847" y="291" font-family="system-ui, sans-serif" font-size="23" fill="#237953" text-anchor="middle" font-weight="650">G₇₈</text>
+<text x="453" y="292" font-family="system-ui, sans-serif" font-size="23" fill="#202d3a" text-anchor="middle" font-weight="400">×</text>
+<text x="711" y="292" font-family="system-ui, sans-serif" font-size="23" fill="#202d3a" text-anchor="middle" font-weight="400">×</text>
+<text x="500" y="354" font-family="system-ui, sans-serif" font-size="22" fill="#202d3a" text-anchor="middle" font-weight="650">Amplitude = haf(Mᴿ[R]) × haf(Mᴮ[B]) × haf(Mᴳ[G])</text>
+<text x="500" y="392" font-family="system-ui, sans-serif" font-size="16" fill="#526171" text-anchor="middle" font-weight="400">At least one factor must vanish for every mixed partition. Cancellation can occur inside a factor.</text>
+</svg></div><figcaption>Figure 8. An illustrative partition with four red, two blue, and two green sites. Only edges within the chosen color classes contribute to this word. The open task is to force some mixed partition whose factors are all nonzero, while allowing cancellation inside each sum.</figcaption><p class="diagram-hint"><a href="explainer-assets/08-partition-product.svg">Open full-size diagram</a> · on small screens, scroll sideways</p></figure>
+<!-- explainer-figure:08-partition-product:end -->
+
+<p>The three full hafnians must be nonzero, but the displayed product must be zero for <strong>every partition using at least two colors</strong>. To finish the conjecture one must show, uniformly for all remaining even orders, that these requirements are incompatible. One way would be to force a partition for which all three factors are nonzero. Another would be to establish a valid descent for every possible source. <a href="historical-sources/ALL-ORDER-STATUS-AND-STRATEGY-2026-09-20.md.txt">Precise closure target</a>.</p>
+<p>The gap is substantial: selected matching contributions can cancel, deletion can destroy useful identities, and no theorem yet guarantees a useful partition or reducible configuration in every remaining case.</p>
+<h2 id="part-7">7. What we can responsibly say now.</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Case</th>
+<th>Public result checked for this guide</th>
+<th>Workspace evidence</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>n = 2</td>
+<td>Arbitrarily many colors are achievable</td>
+<td>Elementary construction</td>
+</tr>
+<tr>
+<td>n = 4</td>
+<td>Three colors are optimal in the general model</td>
+<td>Preserved as the essential positive example</td>
+</tr>
+<tr>
+<td>n = 6, d ≥ 3</td>
+<td>General complex case excluded; independent Lean proof linked publicly</td>
+<td>Separate repository-certified proof and newer structural derivation</td>
+</tr>
+<tr>
+<td>n = 8, d = 3</td>
+<td>General registry item remains open</td>
+<td>Certified diagonal exclusion; internally reviewed general exclusion via the newer reduction</td>
+</tr>
+<tr>
+<td>n = 10, d = 3</td>
+<td>General registry item remains open</td>
+<td>Internally reviewed analytic general exclusion</td>
+</tr>
+<tr>
+<td>Even n ≥ 12, d = 3</td>
+<td>No general exclusion established in the sources checked</td>
+<td>Open; uniform restrictions and conditional routes remain</td>
+</tr>
+</tbody></table></div>
+<p>The public statuses above refer to the <a href="https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/Paper/MonochromaticQuantumGraph.lean">registry checked for this guide</a>, not to every result that might exist elsewhere. Local statuses refer to the linked proof and review records, not to a new certification.</p>
+<p>The most valuable learning is that a potential counterexample has become much more specific. Within the newer research chain, it must be a system of three complex weighted same-color graphs, each containing substantial nonmatching structure, satisfying actual inverse-cofactor identities and strong distance restrictions, while coordinating cancellation across <strong>every</strong> mixed partition. That gives both proof work and exact searches concrete necessary conditions to exploit.</p>
+<p>For a deeper reading, follow the <a href="../computations/unaudited-codex-higher-common-power-bridge-2026-09-05/UNIFORM-GLOBAL-EDGE-MONOCHROMATICITY-AND-COFACTOR-INVERSE.md">global diagonal reduction</a>, then the <a href="../certification/stronger-results-2026-09-26/sources/H10.md">ten-site argument</a>, and finally the <a href="historical-sources/ALL-ORDER-STATUS-AND-STRATEGY-2026-09-20.md.txt">remaining closure target</a>. Those three documents provide the clearest route from the new structural insight to the problem still requiring a proof.</p>
+<footer>Reading edition of EXPLAINER.md · Native MathML equations · No network dependencies</footer></main></html>

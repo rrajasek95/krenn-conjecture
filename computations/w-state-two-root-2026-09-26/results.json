@@ -1,0 +1,85 @@
+{
+  "constant_orders_checked": 48,
+  "dependencies": {
+    "computations/boundary-structure-2026-09-26/exact.py": "8485e81a23c6a067d9c211ba19d985360b631455f1ed097c8ab803227e0853cc",
+    "computations/boundary-structure-2026-09-26/examples.py": "b70a9b1d5ab16838172aa3add9b61616a5108a32c177d31308cd0431f6b827d4",
+    "computations/boundary-structure-2026-09-26/graphs.py": "afd736ab9f71a400f0f9c369eb89918238f30db5023df3389fcd86e025ed90d6",
+    "computations/higher-order-2026-09-26/results.json": "347b27a9de5cdb56776eaef10b6ec960b3cd1953eaeebfb0c3794ef5bcad0a10",
+    "computations/higher-order-2026-09-26/shared.py": "e16238162f798e47508da369e59d49fa5ef371fa1e587831ad70ef9436479bf8",
+    "notes/two-root-w-connected-reduction-2026-09-26.md": "cf5c8741b0380f9a70abae94e7c94de7ab60435aa34da14b5d98edeb76f8e669",
+    "notes/w-state-optimal-design-2026-09-26.md": "28a9d6dda968bff29dbdde4623e3fde44f6e49d4d0667c02d3eb7462b571427f"
+  },
+  "disconnected_examples": [
+    {
+      "actual_rate": "1/288",
+      "components": 2,
+      "disconnected_upper": "1/72",
+      "optimum": "1/65",
+      "sites": 6,
+      "source_energy": "12"
+    },
+    {
+      "actual_rate": "8/83521",
+      "components": 3,
+      "disconnected_upper": "1/360",
+      "optimum": "9/3136",
+      "sites": 8,
+      "source_energy": "17"
+    },
+    {
+      "actual_rate": "5/2576816",
+      "components": 4,
+      "disconnected_upper": "729/1254400",
+      "optimum": "49/83025",
+      "sites": 10,
+      "source_energy": "22"
+    }
+  ],
+  "evidence_status": "Written all-orders theorem with exact supporting checks; independent audit pending",
+  "four_site": {
+    "optimum": "1/10",
+    "output_words": 81,
+    "reduction": "PASS",
+    "sites": 4
+  },
+  "polynomial_identities": {
+    "gap_identity": "denominator - numerator = 1",
+    "power_bound_identity": "d(d+r)-(d-1)(d+r+1)=r+1"
+  },
+  "rate_table": [
+    {
+      "disconnected_ratio_upper": "13/14",
+      "optimum": "1/65",
+      "sites": 6
+    },
+    {
+      "disconnected_ratio_upper": "50/51",
+      "optimum": "9/3136",
+      "sites": 8
+    },
+    {
+      "disconnected_ratio_upper": "123/124",
+      "optimum": "49/83025",
+      "sites": 10
+    },
+    {
+      "disconnected_ratio_upper": "244/245",
+      "optimum": "3675/28579232",
+      "sites": 12
+    },
+    {
+      "disconnected_ratio_upper": "425/426",
+      "optimum": "441045/15155066381",
+      "sites": 14
+    }
+  ],
+  "scope": "All even site counts in the two-root architecture with a scalar ground-color core",
+  "sha256": {
+    "computations/w-state-two-root-2026-09-26/README.md": "60bb8051f4dc99856677ed4f34e21ce99349dbba4a8d123663077216dae91ef2",
+    "computations/w-state-two-root-2026-09-26/dependencies.json": "2b3a2dd7c9915a9c7aedaea2632a0fd008b8d4ab7532c6cc0a6be10e419318e7",
+    "computations/w-state-two-root-2026-09-26/verify.py": "1c6b15e44044387bb9f973b1f41fdcff664e3e0e393c2dc281f5f1d0f66dfe99",
+    "notes/w-state-two-root-optimum-2026-09-26.md": "bef6bf5d37344f62e1e289a58cbc9858dbf6a041d31b8305baeef446c0dc0fd3"
+  },
+  "status": "PASS",
+  "unresolved": "Arbitrary colored cores and unrestricted W-state optimality"
+}

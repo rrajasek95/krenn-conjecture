@@ -1,0 +1,239 @@
+{
+  "constants": {
+    "all_sizes": [
+      {
+        "alpha": "1/15",
+        "gamma": "1655595487/72897679038573941146676847881758827289462522937742875828372192278964678140169829404921941036097418534874055011696311515732314661208885572013602563902370316041190375424000000000000000000000",
+        "minimum_selected_term": 4,
+        "q": "16",
+        "sites": 6
+      },
+      {
+        "alpha": "1/23",
+        "gamma": "500246412961/535956096491595049446348240571295987620921152716836904577450897341343188000632589793635645977326244126636712243396320426999484442781596014604913433752526091343313602179388197521476029064444637983270343666971987308411731966925687861062678982510874370061206438914161954781637087692076229365318389307263077098429606007438662369087930404700160000000000000000000000000000",
+        "minimum_selected_term": 4,
+        "q": "24",
+        "sites": 8
+      },
+      {
+        "alpha": "2/65",
+        "gamma": "1488377021731616101801/36650115642677441705261020531355455296481485577335662083505025011894737312916486927116747612303516377290288225287897098796411546064742562530151559414265537332565642988645832611694938570730194740788417632819342849963024800483160129667575602912835551026306655568447040358119493176410099262982944269131681201618684231464897925483431286740710595485623130791853270567644271875724364143725316021823043821522595554404214975695127758513530378776053707362996113273061528619975438805103244362057565301912446543219557349660883276939345808981997668085038044938240000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "minimum_selected_term": 4,
+        "q": "67/2",
+        "sites": 10
+      }
+    ],
+    "six_site": {
+      "B": "1877/40",
+      "G": "114105783/50",
+      "K3": "95088",
+      "Kd": "9172899/2000",
+      "Lambda": "1/10",
+      "M": "3/2",
+      "Q": "9172949/500",
+      "diagonal_c": "5/110075388",
+      "gamma": "30517578125/237338311407960032524872801849441507496648938637289958605504542081577690024116224",
+      "quadratic_K": "1406174009116653612/625"
+    }
+  },
+  "discarded_shortcut": {
+    "counterexample": [
+      [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          5
+        ]
+      ]
+    ],
+    "intersection_counts": {
+      "(0, 0, 1)": 1080,
+      "(0, 0, 3)": 360,
+      "(1, 1, 1)": 90
+    },
+    "no_rainbow_triples": 1530,
+    "proposed_classification": "REFUTED"
+  },
+  "evidence_status": "RESEARCH; NOT INDEPENDENTLY AUDITED",
+  "paired_hafnian": [
+    {
+      "block_size": 2,
+      "certified_example_floor": "1325/48841",
+      "equality_case": false,
+      "excess": "1325/48841",
+      "hafnian": "16547337385549/6867638701924"
+    },
+    {
+      "block_size": 2,
+      "certified_example_floor": "149/1225",
+      "equality_case": true,
+      "excess": "149/1225",
+      "hafnian": "11621/4900"
+    },
+    {
+      "block_size": 3,
+      "certified_example_floor": "28185/97682",
+      "equality_case": false,
+      "excess": "167316949/579156578",
+      "hafnian": "320338929993067091/81436459727414792"
+    },
+    {
+      "block_size": 3,
+      "certified_example_floor": "447/2450",
+      "equality_case": true,
+      "excess": "447/2450",
+      "hafnian": "34863/9800"
+    },
+    {
+      "block_size": 4,
+      "certified_example_floor": "153063/97682",
+      "equality_case": false,
+      "excess": "142260113061266175/83855585460167521",
+      "hafnian": "49554674491027147939570417/6737780191452051960185968"
+    },
+    {
+      "block_size": 4,
+      "certified_example_floor": "1341/4900",
+      "equality_case": true,
+      "excess": "1341/4900",
+      "hafnian": "104589/19600"
+    },
+    {
+      "block_size": 5,
+      "certified_example_floor": "1206495/195364",
+      "equality_case": false,
+      "excess": "16295438375158099766281/1988719064773332928036",
+      "hafnian": "1351081963138981794887051810825/79896597510238432143885208544"
+    },
+    {
+      "block_size": 5,
+      "certified_example_floor": "4023/9800",
+      "equality_case": true,
+      "excess": "4023/9800",
+      "hafnian": "313767/39200"
+    }
+  ],
+  "parity_projection": {
+    "literal_examples": [
+      {
+        "case": "allowed_four_site_with_tiny_off_color",
+        "off_color_norm_squared": "1/2348542582773833227889480596789337027375682548908319870707290971532209025114608443463698998384768703031934976",
+        "projected_remainder_squared": "0"
+      },
+      {
+        "case": "complex_off_color_four_site",
+        "off_color_norm_squared": "7/16384",
+        "projected_remainder_squared": "0"
+      },
+      {
+        "case": "six_site_prism_with_diagonal_and_off_color_errors",
+        "off_color_norm_squared": "1/12800000",
+        "projected_remainder_squared": "0"
+      },
+      {
+        "case": "dense_complex_six_site",
+        "off_color_norm_squared": "123/5000",
+        "projected_remainder_squared": "231233/1000000000000"
+      }
+    ],
+    "structural": [
+      {
+        "assignments": 243,
+        "linear_terms_removed": 108,
+        "sites": 4
+      },
+      {
+        "assignments": 10935,
+        "linear_terms_removed": 2430,
+        "sites": 6
+      }
+    ]
+  },
+  "phase_condition": {
+    "all_cells": 135,
+    "certificate_words": 180,
+    "phase_cone_margin": "851499/1030301",
+    "words_verified": 729,
+    "zero_margin_guard": "REJECTED AS REQUIRED"
+  },
+  "positive_cover": {
+    "B_squared": "41/1440",
+    "maximum_weighted_quotient": "41/2",
+    "mixed_words": 180,
+    "negative_weight_guard": "PASS",
+    "pure_matching_triples": 3375,
+    "quotient_monomials": 5130,
+    "selection_histogram": {
+      "2_colors_2_choices": 1080,
+      "2_colors_6_choices": 450,
+      "3_colors_1_choices": 1440,
+      "3_colors_2_choices": 270,
+      "3_colors_3_choices": 120,
+      "3_colors_6_choices": 15
+    },
+    "word_totals": {
+      "three_colors": "41/2",
+      "two_colors": "17"
+    }
+  },
+  "prism": {
+    "constant_edges_incompatible_with_word": 6,
+    "protected_cubic_coefficient": 1,
+    "protected_word": "bcabca",
+    "scope": "Fixed A0 and A1; arbitrary analytic terms starting at order two."
+  },
+  "probability_conversion": {
+    "10": "10896201253125/1099511627776",
+    "6": "14348907/16777216",
+    "8": "43046721/16777216"
+  },
+  "scope": "Exact finite checks and examples support the separate analytic proofs; not a formal proof.",
+  "sha256": {
+    "computations/general-complex-rate-2026-09-26/results.json": "dd49237de4e30d53f7ea8b04c61de6f7c00d07cae70a52202d4ac718b3ff18ea",
+    "computations/general-complex-rate-2026-09-26/verify.py": "cc21b69ff629ae68b965d309fa0f7e8cec8dc132a806f44c8b1ef99386411fe3",
+    "computations/quantitative-proof-identities-2026-09-26/results.json": "155f0cf9a93ee40418db23f700bddb620fd592fcf71bddc7df7cfa6e3034e348",
+    "computations/quantitative-proof-identities-2026-09-26/verify.py": "7a0e789928e10f5321b01de46055a28d149a1300eda64c0c8e6761db7c57c327",
+    "computations/rate-sharpness-followup-2026-09-26/verify.py": "45eb45ef94ac70e3ea85f70bc7fd342029863107d0bbce959f1d9b9a62b20a26",
+    "computations/universal-rate-gate-2026-09-26/verify.py": "ab84f8405aab460e2124e3a3b8de692d826b4de1c732aee08e4bead24643cb35",
+    "computations/useful-consequences-2026-09-26/prism.json": "c1af4965441d049e3a48f530aec1c096b0c900ffc175e914827c7e81991aa94b",
+    "notes/paired-hafnian-application-2026-09-26.md": "360ebcb928f4563a23aa8aadc2e09b68e36f67ee1cbdc21b5873f05b5c5357f1",
+    "notes/rate-sharpness-followup-2026-09-26.md": "5bea9743c8183029e6aed64b7321d78c43f76ef49299a2fa2cad58c576fb29c2",
+    "proofs/krenn-gu-all-orders-two-replica-proof.md": "fb0fa1e9447d8044981692d6e9bbbeff8e6a2cfc90119b6a296cbf506b9a3c9d"
+  },
+  "status": "PASS"
+}

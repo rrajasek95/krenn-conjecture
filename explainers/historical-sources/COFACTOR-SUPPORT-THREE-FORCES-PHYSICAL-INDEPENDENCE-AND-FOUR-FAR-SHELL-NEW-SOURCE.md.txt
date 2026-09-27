@@ -1,0 +1,122 @@
+# Three cofactor neighbors are physically independent in a full ternary source
+
+**Status.** New all-order analytic source by `/root/global_bridge`,
+2026-09-25; complete independent audit pending. The general conjecture
+remains open. No canonical or previously frozen source is changed.
+
+## 1. Actual full-source hypothesis and theorem
+
+Let an original diagonal ordinary ternary quadratic A on V, |V|=2m>=6,
+have whole top A^[m]=sum_h tau_h h^V with all three tau_h nonzero.
+The physical-site algebra is commutative and kills any repeated site;
+A^[j]=A^j/j!. Fix one color M, write tau=haf(M), and let K be its
+ACTUAL deleted-pair hafnian cofactor matrix with defined zero diagonal.
+The reviewed [global theorem](../unaudited-codex-higher-common-power-bridge-2026-09-05/UNIFORM-GLOBAL-EDGE-MONOCHROMATICITY-AND-COFACTOR-INVERSE.md)
+gives M K=K M=tau I.
+
+**Theorem.** If supp K[p,*]=S={q,s,t} has exactly three sites, then
+S is independent in the ENTIRE physical support graph: every color
+matrix vanishes on all three pairs inside S. No assumption about
+how many original M edges at p meet these cofactors is needed.
+
+## 2. A nonzero cubic on the actual core retained off the triple
+
+Write a=K[p,q], b=K[p,s], c=K[p,t], so abc!=0. The accepted
+[support-three calculation](FOUR-FAR-EQUALITY-AND-UNIQUE-ACTIVE-COFACTOR-INTERSECTION-NEW-SOURCE.md#1-a-scalar-cofactor-support-triple-is-independent-in-the-original-matrix)
+gives M[S,S]=0: the p row of K M on q,s,t reduces, after nonzero
+scalings, to x+y=x+z=y+z=0.
+
+Put T=V\S, and let Q be the ACTUAL M quadratic on T. For i in S
+write the original M row, now wholly supported on T, as
+
+    R_i=sum_(v in T) M[i,v] e_v,
+    F_q=a R_q, F_s=b R_s, F_t=c R_t, P=abc.
+
+Define the symmetric trilinear form
+
+    Phi(L1,L2,L3)=[e^T] L1 L2 L3 Q^[m-3].             (1)
+
+The exponent is nonnegative at m>=3. The actual inverse row gives
+
+    F_q+F_s+F_t=tau e_p.                              (2)
+
+Since M[S,S]=0, expanding the full hafnian forces all three sites
+q,s,t to match into T. Therefore
+
+    Phi(F_q,F_s,F_t)=P tau.                            (3)
+
+For distinct i,j in S, let k be the remaining site. The off-diagonal
+entry (M K)[i,k]=0 expands the ACTUAL cofactor K[v,k] by the two
+retained independent sites i,j. Summing over v in T gives exactly
+
+    Phi(R_i,R_i,R_j)=0,
+    hence Phi(F_i,F_i,F_j)=0.                          (4)
+
+The two repeated rows remain raw, so no factorial is removed.
+Equation (2) and e_p^2=0 imply Phi(sum F,sum F,F_i)=0. Expanding
+and using (3)--(4) leaves, for EVERY i in S,
+
+    Phi(F_i,F_i,F_i)=-2 P tau !=0.                     (5)
+
+Thus each original row R_i has a nonzero cube on this actual
+retained odd core. No scalar inverse is assigned to Q, and no
+identity is iterated on K.
+
+## 3. The full ternary cubic removes the other-color edges
+
+Fix i in S and write S\{i}={j,k}. For either other color N, the
+reviewed [three-active-color higher-response theorem](../unaudited-codex-higher-common-power-bridge-2026-09-05/UNIFORM-THREE-ACTIVE-COLOR-HIGHER-PURE-RESPONSE-VANISHING.md)
+makes the original-root response R_i^3 (A restricted off i)^[m-2]
+zero on EVERY word using only M,N.
+
+Select N at precisely j,k and M at every site of T. The M row R_i
+has no entry at j,k. The N core edge j--k is therefore forced; after
+its selection the remaining core is exactly Q and its exponent is
+m-3. The selected coefficient is
+
+    N[j,k] Phi(R_i,R_i,R_i)=0.                          (6)
+
+Equation (5), divided by the nonzero scaling of R_i, proves
+N[j,k]=0. Applying this to every i and both other colors proves
+the theorem. This step uses the FULL original ternary cubic,
+not scalar-class closure or a response frame on an induced source.
+
+## 4. Four-far equality: an exact shell and component consequence
+
+Use the accepted [four-far equality theorem](FOUR-FAR-EQUALITY-AND-UNIQUE-ACTIVE-COFACTOR-INTERSECTION-NEW-SOURCE.md).
+Thus p is nonmatching in B,C and F_H(p)={q,r,s,t}, with
+
+    supp K_B[p,*]={q,s,t}, supp K_C[p,*]={r,s,t}.
+
+Both triples are now physically independent. Accordingly, the only
+possible physical edge within F_H(p) is q--r. In particular s--t,
+q--s,q--t,r--s,r--t vanish in ALL colors.
+
+There are further zeros on that remaining pair. The p,r entry of
+K_B B is zero and, writing a=K_B[p,q]!=0, gives
+
+    0=a B[q,r]+K_B[p,s] B[s,r]+K_B[p,t] B[t,r]
+      =a B[q,r].                                      (7)
+
+Thus B[q,r]=0. The p,q entry of K_C C similarly gives C[q,r]=0.
+The entire four-set F_H(p) is therefore independent in BOTH B,C;
+its sole permitted physical edge is H[q,r].
+
+Let D_2(p)={v:dist_H(p,v)=2}. Every H neighbor of s or t lies in D_2(p):
+their H-far status excludes p and N_H(p), and the just-proved physical
+zeros exclude all of F_H(p). All other sites have H-distance at most
+two from p. Since haf(H)!=0, both H rows are nonempty. Hence
+
+    N_H(s),N_H(t) subset D_2(p),
+    dist_H(p,s)=dist_H(p,t)=3.                          (8)
+
+Thus s,t lie in p's same NONMATCHING H component. Every site outside
+that component belongs to {q,r}. Each H component has even order
+and nonzero local hafnian, by factorization of the nonzero full pure
+hafnian. Therefore H is either spanning connected, or has exactly
+two components: the component on V\{q,r} and the isolated edge q--r.
+The latter edge, if present as that isolated component, is private.
+
+The equality is not excluded: no argument here kills its required
+pure-cube exterior correction, gives universal routing coverage,
+or establishes general pair-union 3-connectivity.

@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Why six sites cannot support three colors</title><style>:root{color-scheme:light}*{box-sizing:border-box}body{margin:0;background:#f5f3ee;color:#202d3a;font:18px/1.75 system-ui,sans-serif}main{max-width:1040px;margin:auto;padding:48px 32px 80px}h1{font-size:clamp(32px,5vw,54px);line-height:1.14;letter-spacing:-.035em;max-width:850px}h2{font-size:26px;line-height:1.35;margin:54px 0 20px;padding-top:20px;border-top:1px solid #cfd9dc}p,li{max-width:84ch}a{color:#17618c;text-underline-offset:3px}strong{font-weight:650}code,pre{font-family:ui-monospace,monospace;font-size:.87em}pre{padding:22px;background:#e9eeed;border-radius:10px;overflow:auto;line-height:1.7}table{border-collapse:collapse;width:100%;font-size:15px;background:#fff;line-height:1.6}th,td{padding:14px 16px;border:1px solid #d8dedf;text-align:left;vertical-align:top}th{background:#e9eeed}td:first-child{min-width:140px}table a{white-space:normal}.table-scroll{overflow:auto;margin:24px 0}.equation{padding:18px;background:#fff;border-left:3px solid #397a91;margin:24px 0;overflow:auto}math{font-size:1.13em}nav{display:flex;gap:15px;flex-wrap:wrap;font-size:14px;padding:14px 0;border-bottom:1px solid #cfd9dc}footer{margin-top:40px;font-size:14px;color:#526171}@media(max-width:650px){main{padding:20px 16px 50px}body{font-size:17px}td,th{padding:10px;min-width:160px}math{font-size:1em}}@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}nav{display:none}h2{break-after:avoid}.equation,pre{break-inside:avoid}a{color:inherit}table{font-size:9pt}.table-scroll{overflow:visible}}
+/* explainer-diagrams:start */
+.explainer-diagram{margin:30px 0 36px;break-inside:avoid}
+.diagram-scroll{overflow-x:auto;border:1px solid #d8dedf;border-radius:16px;background:white}
+.explainer-diagram svg{display:block;width:100%;height:auto;min-width:720px}
+.explainer-diagram figcaption{font-size:15px;line-height:1.6;color:#526171;margin:10px 4px 0;max-width:95ch}
+.diagram-hint{font-size:12px;color:#526171;text-align:right;margin:5px 4px 0}
+@media(max-width:760px){.explainer-diagram svg{min-width:820px}.diagram-scroll{overscroll-behavior-x:contain}}
+@media print{.explainer-diagram svg{min-width:0}.diagram-scroll{overflow:visible}.diagram-hint{display:none}}
+/* explainer-diagrams:end */
+
+.equation math{min-width:max-content} .equation{line-height:1.6} .explainer-diagram{margin-left:0;margin-right:0}
+</style></head><body><main><nav aria-label="Proof guide"><a href="EXPLAINER.html">Larger explainer</a><a href="#part-2">Structural inputs</a><a href="#part-3">The deduction</a><a href="#part-8">Certified route</a><a href="SIX-SITE-PROOF.md">Markdown source</a></nav><h1>Why six sites cannot support three colors</h1>
+<p><em>An illustrated proof guide at undergraduate level. September 25, 2026. <a href="SIX-SITE-PROOF.html">Browser edition</a> · <a href="EXPLAINER.html">The larger explainer</a> · <a href="EXPLAINER-LAB.html">Try the matching examples</a>.</em></p>
+<p><strong>The six-site theorem says that pair sources can produce perfect agreement in at most two colors.</strong> This holds with arbitrary complex weights, different colors at the two ends of a source, and any number of parallel sources. Two colors are achievable, so the bound is exact.</p>
+<p>There are two routes to understand here. The workspace&#39;s <strong>earlier certified proof</strong> reduces the general problem to 19 graph types and excludes all of them. Its newer <strong>internally reviewed structural results</strong> make a short six-site deduction possible. We will state two substantial inputs from that newer work, then prove the remaining steps in detail. This is a proof exposition using stated lemmas; it is not a self-contained proof of those lemmas or a new formal verification. The theorem also has an independent public Lean proof, discussed at the end.</p>
+<h2 id="part-1">1. What would a forbidden construction have to do?</h2>
+<p>Label six sites 1 through 6. A complete event pairs every site with one other site: a <strong>perfect matching</strong>, containing three edges. There are 5 × 3 × 1 = <strong>15</strong> possible pairings. Each edge contributes an endpoint color at each site and a complex weight. Multiply the three weights within an event; add the weights of all events producing the same color list.</p>
+<p>We want exactly these amplitudes:</p>
+<pre><code class="language-text">RRRRRR → 1       BBBBBB → 1       GGGGGG → 1
+every other list of six colors → 0
+</code></pre>
+<p>An amplitude is a complex number, so different events can cancel. Seeing an unwanted matching is insufficient to refute a proposed construction: we must show that its contribution cannot be canceled.</p>
+<p>For each pair u,v, collect its source weights in a 3 × 3 matrix Aᵤᵥ. The entry Aᵤᵥ(i,j) is the sum of all source weights giving color i at u and color j at v. This aggregation preserves every output amplitude, including cancellation among parallel sources. Use u &lt; v to fix the endpoint order. For an output c = (c₁,…,c₆),</p>
+<div class="equation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="An output amplitude is the sum, over all perfect matchings, of the three edge weights multiplied together."><mrow><mrow><msub><mi>H</mi><mi>A</mi></msub><mo>(</mo><mi>c</mi><mo>)</mo></mrow><mo>=</mo><munder><mo>∑</mo><mrow><mi>P</mi><mo>∈</mo><mrow><mi mathvariant="normal">PM</mi><mo>(</mo><mn>6</mn><mo>)</mo></mrow></mrow></munder><munder><mo>∏</mo><mrow><mo>{</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo>}</mo><mo>∈</mo><mi>P</mi><mo>,</mo><mi>u</mi><mo>&lt;</mo><mi>v</mi></mrow></munder><mrow><msub><mi>A</mi><mrow><mi>u</mi><mi>v</mi></mrow></msub><mo>(</mo><msub><mi>c</mi><mi>u</mi></msub><mo>,</mo><msub><mi>c</mi><mi>v</mi></msub><mo>)</mo></mrow></mrow></math></div>
+
+<p>Thus the task is a system of 729 equations in 135 complex coefficients: three output equations equal 1 and 726 equal 0. Counting equations alone proves nothing. The proof must use their structure.</p>
+<p>It suffices to exclude three colors. A construction with more would remain a three-color construction after discarding the other colors at every site. Nonzero unequal pure amplitudes can also be rescaled to 1 over the complex numbers. <a href="../proofs/six-site-arbitrary-complex-obstruction.md">Exact formulation and reduction</a>.</p>
+<figure class="explainer-diagram" id="figure-01-roadmap"><div class="diagram-scroll" tabindex="0" aria-label="Diagram; scroll horizontally on small screens"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 395" role="img" aria-labelledby="01-roadmap-title 01-roadmap-desc">
+<title id="01-roadmap-title">The short proof: structure leaves nowhere for cancellation to hide</title>
+<desc id="01-roadmap-desc">Two imported structural lemmas imply color degree at most two. The inverse-cofactor identity excludes degree two, leaving one perfect matching per color. Those matchings force a mixed output with exactly one nonzero term. An older certificate proof is independent.</desc>
+<rect width="1000" height="100%" rx="16" fill="#fff"/>
+<text x="30" y="31" font-family="system-ui, sans-serif" font-size="12" fill="#526171" text-anchor="start" font-weight="700">KRENN–GU / 01</text>
+<text x="30" y="66" font-family="system-ui, sans-serif" font-size="25" fill="#202d3a" text-anchor="start" font-weight="700">The short proof: structure leaves nowhere for cancellation to hide</text>
+<rect x="30" y="110" width="205" height="174" rx="12" fill="#edf4fc" stroke="#d8dedf"/>
+<text x="45" y="140" font-family="system-ui, sans-serif" font-size="13" fill="#526171" text-anchor="start" font-weight="700">INPUTS A + B</text>
+<text x="45" y="180" font-family="system-ui, sans-serif" font-size="15" fill="#202d3a" text-anchor="start" font-weight="400">Diagonal edges</text>
+<text x="45" y="211" font-family="system-ui, sans-serif" font-size="15" fill="#202d3a" text-anchor="start" font-weight="400">Inverse cofactors</text>
+<text x="45" y="242" font-family="system-ui, sans-serif" font-size="15" fill="#202d3a" text-anchor="start" font-weight="600">Zero neighborhood blocks</text>
+<line x1="244" y1="200" x2="265" y2="200" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="257" y1="195" x2="265" y2="200" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="257" y1="205" x2="265" y2="200" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<rect x="275" y="110" width="205" height="174" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="290" y="140" font-family="system-ui, sans-serif" font-size="13" fill="#526171" text-anchor="start" font-weight="700">LINEAR ALGEBRA</text>
+<text x="290" y="180" font-family="system-ui, sans-serif" font-size="15" fill="#202d3a" text-anchor="start" font-weight="400">Six rows, six columns</text>
+<text x="290" y="211" font-family="system-ui, sans-serif" font-size="15" fill="#202d3a" text-anchor="start" font-weight="400">Degree ≤ 2</text>
+<text x="290" y="242" font-family="system-ui, sans-serif" font-size="15" fill="#202d3a" text-anchor="start" font-weight="600">Degree 2 is impossible</text>
+<line x1="489" y1="200" x2="510" y2="200" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="502" y1="195" x2="510" y2="200" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="502" y1="205" x2="510" y2="200" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<rect x="520" y="110" width="205" height="174" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="535" y="140" font-family="system-ui, sans-serif" font-size="13" fill="#526171" text-anchor="start" font-weight="700">GRAPH THEORY</text>
+<text x="535" y="180" font-family="system-ui, sans-serif" font-size="15" fill="#202d3a" text-anchor="start" font-weight="400">Each color is a matching</text>
+<text x="535" y="211" font-family="system-ui, sans-serif" font-size="14" fill="#202d3a" text-anchor="start" font-weight="400">Colors cannot share pairs</text>
+<text x="535" y="242" font-family="system-ui, sans-serif" font-size="15" fill="#202d3a" text-anchor="start" font-weight="600">Red + blue form a cycle</text>
+<line x1="734" y1="200" x2="755" y2="200" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="747" y1="195" x2="755" y2="200" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="747" y1="205" x2="755" y2="200" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<rect x="765" y="110" width="205" height="174" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="780" y="140" font-family="system-ui, sans-serif" font-size="13" fill="#526171" text-anchor="start" font-weight="700">CONTRADICTION</text>
+<text x="780" y="180" font-family="system-ui, sans-serif" font-size="15" fill="#202d3a" text-anchor="start" font-weight="400">Green must cross</text>
+<text x="780" y="211" font-family="system-ui, sans-serif" font-size="15" fill="#202d3a" text-anchor="start" font-weight="400">One mixed output</text>
+<text x="780" y="242" font-family="system-ui, sans-serif" font-size="15" fill="#202d3a" text-anchor="start" font-weight="600">One nonzero product</text>
+<text x="500" y="327" font-family="system-ui, sans-serif" font-size="18" fill="#526171" text-anchor="middle" font-weight="400">The lemmas are the hard inputs; the six-site deduction is worked out below.</text>
+<text x="500" y="365" font-family="system-ui, sans-serif" font-size="17" fill="#526171" text-anchor="middle" font-weight="400">Separate earlier route: rank-one blocks → 19 defect graphs → exact certificates.</text>
+</svg></div><figcaption>Figure 1. The newer route separates two substantial structural inputs from an elementary six-site deduction. The earlier certificate proof has its own dependencies.</figcaption><p class="diagram-hint"><a href="six-site-assets/01-roadmap.svg">Open full-size diagram</a> · on small screens, scroll sideways</p></figure>
+
+<h2 id="part-2">2. The two structural inputs.</h2>
+<p>Assume a three-color construction exists, and derive a contradiction. The following inputs apply to the <strong>whole exact three-color system</strong>, including every mixed-output equation. They are stronger than statements about an arbitrary weighted graph.</p>
+<p><strong>Input A: edges become monochromatic, and their cofactors form an inverse.</strong> The newer research chain proves that every aggregate Aᵤᵥ is diagonal in the original target color bases. A surviving aggregate edge therefore gives the same color to both endpoints. This is a derived restriction, not an assumption that the original sources were monochromatic. Off-diagonal sources may cancel in the aggregate.</p>
+<p>For each color h, let Mₕ be the symmetric 6 × 6 matrix whose entry Mₕ[u,v] is the h/h weight on pair u,v; diagonal entries are zero. Its <strong>hafnian</strong> is the sum of the products over all perfect matchings. For example, on four vertices,</p>
+<div class="equation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="The four-site hafnian is M12 times M34 plus M13 times M24 plus M14 times M23."><mrow><mrow><mi mathvariant="normal">haf</mi><mo>(</mo><mrow><mi>M</mi><mo>[</mo><mrow><mrow><mo>{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo>}</mo></mrow></mrow><mo>]</mo></mrow><mo>)</mo></mrow><mo>=</mo><msub><mi>M</mi><mn>12</mn></msub><msub><mi>M</mi><mn>34</mn></msub><mo>+</mo><msub><mi>M</mi><mn>13</mn></msub><msub><mi>M</mi><mn>24</mn></msub><mo>+</mo><msub><mi>M</mi><mn>14</mn></msub><msub><mi>M</mi><mn>23</mn></msub></mrow></math></div>
+
+<p>The pure-color amplitude is τₕ = haf(Mₕ), which is nonzero. Define the <strong>hafnian cofactor</strong> Cₕ[u,v] to be the four-site hafnian after deleting u and v, for u ≠ v; set Cₕ[u,u] = 0. This definition uses the actual weights, so cancellations are included inside Cₕ.</p>
+<p>The substantive identity is</p>
+<div class="equation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="M h times C h equals tau h times the identity; C h equals tau h times the inverse of M h."><mrow><msub><mi>M</mi><mi>h</mi></msub><msub><mi>C</mi><mi>h</mi></msub><mo>=</mo><msub><mi>τ</mi><mi>h</mi></msub><msub><mi>I</mi><mn>6</mn></msub><mo>,</mo><mtext>   </mtext><msub><mi>C</mi><mi>h</mi></msub><mo>=</mo><msub><mi>τ</mi><mi>h</mi></msub><msup><msub><mi>M</mi><mi>h</mi></msub><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow></math></div>
+
+<p>Here I₆ is the identity matrix. In particular, both Mₕ and Cₕ are invertible. The diagonal entries of the first identity are the usual expansion of the hafnian at a vertex. The vanishing off-diagonal entries require the structural theorem: <strong>this inverse identity is false for a general symmetric matrix.</strong> <a href="../computations/unaudited-codex-higher-common-power-bridge-2026-09-05/UNIFORM-GLOBAL-EDGE-MONOCHROMATICITY-AND-COFACTOR-INVERSE.md">Input A: statement and proof</a>.</p>
+<p><strong>Input B: a color&#39;s neighborhood creates a zero block in another color&#39;s cofactor.</strong> Join u,v in the color-h graph when Mₕ[u,v] ≠ 0. Let Nₕ(p) be p&#39;s neighbors and let S = {p} ∪ Nₕ(p). For either other color k,</p>
+<div class="equation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="The S by S block of the other-color cofactor is zero."><mrow><mrow><msub><mi>C</mi><mi>k</mi></msub><mo>[</mo><mrow><mi>S</mi><mo>,</mo><mi>S</mi></mrow><mo>]</mo></mrow><mo>=</mo><mn>0</mn></mrow></math></div>
+
+<p>In words: every entry of Cₖ whose row and column both lie in this closed neighborhood is zero. Two identities explain the content:</p>
+<pre><code class="language-text">Mₕ[p,u] Cₖ[p,u] = 0
+2 Mₕ[p,u] Mₕ[p,v] Cₖ[u,v] = 0    (u ≠ v, both different from p)
+</code></pre>
+<p>The first is the original output equation with h at p,u and k everywhere else. The second is a deeper consequence of the workspace&#39;s higher-response theorem, which uses three active colors. It is not obtained by forbidding matchings individually. If u and v are h-neighbors, their edge weights are nonzero, so the second identity forces Cₖ[u,v] = 0; the first deals with pairs involving p. <a href="../certification/stronger-results-2026-09-26/sources/NB.md">Input B: §2 and its dependencies</a>.</p>
+<p>These are the hard imported facts. The linked sources record internal mathematical audits; they are separate from the earlier certificate chain and the independent Lean proof. The argument below needs only the zero-block statement, not the stronger degree theorem also proved in the Input B source.</p>
+<h2 id="part-3">3. Six sites force every color-degree to be at most two.</h2>
+<p>Fix a vertex p and a color h. Write s = |S| = 1 + degₕ(p). Choose another color k. By Input A, the six rows of Cₖ are linearly independent. Consequently the s rows indexed by S are independent too.</p>
+<p>But Input B says those rows are zero in all s columns indexed by S. They have entries only in the remaining 6 − s columns. No more than 6 − s independent vectors can live there. Therefore</p>
+<div class="equation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="s is at most six minus s, so s is at most three, and the color degree is at most two."><mrow><mi>s</mi><mo>≤</mo><mn>6</mn><mo>−</mo><mi>s</mi><mo>,</mo><mtext>   </mtext><mi>s</mi><mo>≤</mo><mn>3</mn><mo>,</mo><mtext>   </mtext><mrow><msub><mi mathvariant="normal">deg</mi><mi>h</mi></msub><mo>(</mo><mi>p</mi><mo>)</mo></mrow><mo>≤</mo><mn>2</mn></mrow></math></div>
+
+<p>A vertex cannot have degree zero in a color: then no perfect matching could produce that pure color, contradicting τₕ ≠ 0. Every color-degree is therefore either <strong>one or two</strong>.</p>
+<figure class="explainer-diagram" id="figure-02-zero-block"><div class="diagram-scroll" tabindex="0" aria-label="Diagram; scroll horizontally on small screens"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 485" role="img" aria-labelledby="02-zero-block-title 02-zero-block-desc">
+<title id="02-zero-block-title">Too many neighbors would make the cofactor matrix singular</title>
+<desc id="02-zero-block-desc">If p had three red neighbors u,v,w, its closed neighborhood S would have four vertices. The four corresponding rows of the blue cofactor would be zero in the four S columns, leaving only two columns for four independent rows. This contradicts invertibility.</desc>
+<rect width="1000" height="100%" rx="16" fill="#fff"/>
+<text x="30" y="31" font-family="system-ui, sans-serif" font-size="12" fill="#526171" text-anchor="start" font-weight="700">KRENN–GU / 02</text>
+<text x="30" y="66" font-family="system-ui, sans-serif" font-size="25" fill="#202d3a" text-anchor="start" font-weight="700">Too many neighbors would make the cofactor matrix singular</text>
+<rect x="30" y="102" width="260" height="290" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="160" y="134" font-family="system-ui, sans-serif" font-size="18" fill="#202d3a" text-anchor="middle" font-weight="650">Suppose red-degree ≥ 3</text>
+<line x1="160" y1="190" x2="70" y2="300" stroke="#bd3847" stroke-width="4" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="160" y1="190" x2="160" y2="330" stroke="#bd3847" stroke-width="4" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="160" y1="190" x2="250" y2="300" stroke="#bd3847" stroke-width="4" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<circle cx="160" cy="190" r="17" fill="white" stroke="#202d3a" stroke-width="2.5"/>
+<text x="160" y="196" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">p</text>
+<circle cx="70" cy="300" r="17" fill="white" stroke="#202d3a" stroke-width="2.5"/>
+<text x="70" y="306" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">u</text>
+<circle cx="160" cy="330" r="17" fill="white" stroke="#202d3a" stroke-width="2.5"/>
+<text x="160" y="336" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">v</text>
+<circle cx="250" cy="300" r="17" fill="white" stroke="#202d3a" stroke-width="2.5"/>
+<text x="250" y="306" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">w</text>
+<text x="160" y="375" font-family="system-ui, sans-serif" font-size="17" fill="#526171" text-anchor="middle" font-weight="400">Choose S = {p,u,v,w}</text>
+<line x1="307" y1="245" x2="345" y2="245" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="337" y1="240" x2="345" y2="245" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="337" y1="250" x2="345" y2="245" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<text x="470" y="124" font-family="system-ui, sans-serif" font-size="16" fill="#bd3847" text-anchor="middle" font-weight="650">4 columns in S</text>
+<text x="605" y="124" font-family="system-ui, sans-serif" font-size="16" fill="#2168af" text-anchor="middle" font-weight="650">2 left</text>
+<rect x="400" y="155" width="35" height="35" rx="0" fill="#fcf0f1" stroke="#d8dedf"/>
+<text x="417.5" y="180" font-family="system-ui, sans-serif" font-size="22" fill="#bd3847" text-anchor="middle" font-weight="400">0</text>
+<rect x="435" y="155" width="35" height="35" rx="0" fill="#fcf0f1" stroke="#d8dedf"/>
+<text x="452.5" y="180" font-family="system-ui, sans-serif" font-size="22" fill="#bd3847" text-anchor="middle" font-weight="400">0</text>
+<rect x="470" y="155" width="35" height="35" rx="0" fill="#fcf0f1" stroke="#d8dedf"/>
+<text x="487.5" y="180" font-family="system-ui, sans-serif" font-size="22" fill="#bd3847" text-anchor="middle" font-weight="400">0</text>
+<rect x="505" y="155" width="35" height="35" rx="0" fill="#fcf0f1" stroke="#d8dedf"/>
+<text x="522.5" y="180" font-family="system-ui, sans-serif" font-size="22" fill="#bd3847" text-anchor="middle" font-weight="400">0</text>
+<rect x="540" y="155" width="35" height="35" rx="0" fill="#edf4fc" stroke="#d8dedf"/>
+<text x="557.5" y="180" font-family="system-ui, sans-serif" font-size="22" fill="#526171" text-anchor="middle" font-weight="400">∗</text>
+<rect x="575" y="155" width="35" height="35" rx="0" fill="#edf4fc" stroke="#d8dedf"/>
+<text x="592.5" y="180" font-family="system-ui, sans-serif" font-size="22" fill="#526171" text-anchor="middle" font-weight="400">∗</text>
+<rect x="400" y="190" width="35" height="35" rx="0" fill="#fcf0f1" stroke="#d8dedf"/>
+<text x="417.5" y="215" font-family="system-ui, sans-serif" font-size="22" fill="#bd3847" text-anchor="middle" font-weight="400">0</text>
+<rect x="435" y="190" width="35" height="35" rx="0" fill="#fcf0f1" stroke="#d8dedf"/>
+<text x="452.5" y="215" font-family="system-ui, sans-serif" font-size="22" fill="#bd3847" text-anchor="middle" font-weight="400">0</text>
+<rect x="470" y="190" width="35" height="35" rx="0" fill="#fcf0f1" stroke="#d8dedf"/>
+<text x="487.5" y="215" font-family="system-ui, sans-serif" font-size="22" fill="#bd3847" text-anchor="middle" font-weight="400">0</text>
+<rect x="505" y="190" width="35" height="35" rx="0" fill="#fcf0f1" stroke="#d8dedf"/>
+<text x="522.5" y="215" font-family="system-ui, sans-serif" font-size="22" fill="#bd3847" text-anchor="middle" font-weight="400">0</text>
+<rect x="540" y="190" width="35" height="35" rx="0" fill="#edf4fc" stroke="#d8dedf"/>
+<text x="557.5" y="215" font-family="system-ui, sans-serif" font-size="22" fill="#526171" text-anchor="middle" font-weight="400">∗</text>
+<rect x="575" y="190" width="35" height="35" rx="0" fill="#edf4fc" stroke="#d8dedf"/>
+<text x="592.5" y="215" font-family="system-ui, sans-serif" font-size="22" fill="#526171" text-anchor="middle" font-weight="400">∗</text>
+<rect x="400" y="225" width="35" height="35" rx="0" fill="#fcf0f1" stroke="#d8dedf"/>
+<text x="417.5" y="250" font-family="system-ui, sans-serif" font-size="22" fill="#bd3847" text-anchor="middle" font-weight="400">0</text>
+<rect x="435" y="225" width="35" height="35" rx="0" fill="#fcf0f1" stroke="#d8dedf"/>
+<text x="452.5" y="250" font-family="system-ui, sans-serif" font-size="22" fill="#bd3847" text-anchor="middle" font-weight="400">0</text>
+<rect x="470" y="225" width="35" height="35" rx="0" fill="#fcf0f1" stroke="#d8dedf"/>
+<text x="487.5" y="250" font-family="system-ui, sans-serif" font-size="22" fill="#bd3847" text-anchor="middle" font-weight="400">0</text>
+<rect x="505" y="225" width="35" height="35" rx="0" fill="#fcf0f1" stroke="#d8dedf"/>
+<text x="522.5" y="250" font-family="system-ui, sans-serif" font-size="22" fill="#bd3847" text-anchor="middle" font-weight="400">0</text>
+<rect x="540" y="225" width="35" height="35" rx="0" fill="#edf4fc" stroke="#d8dedf"/>
+<text x="557.5" y="250" font-family="system-ui, sans-serif" font-size="22" fill="#526171" text-anchor="middle" font-weight="400">∗</text>
+<rect x="575" y="225" width="35" height="35" rx="0" fill="#edf4fc" stroke="#d8dedf"/>
+<text x="592.5" y="250" font-family="system-ui, sans-serif" font-size="22" fill="#526171" text-anchor="middle" font-weight="400">∗</text>
+<rect x="400" y="260" width="35" height="35" rx="0" fill="#fcf0f1" stroke="#d8dedf"/>
+<text x="417.5" y="285" font-family="system-ui, sans-serif" font-size="22" fill="#bd3847" text-anchor="middle" font-weight="400">0</text>
+<rect x="435" y="260" width="35" height="35" rx="0" fill="#fcf0f1" stroke="#d8dedf"/>
+<text x="452.5" y="285" font-family="system-ui, sans-serif" font-size="22" fill="#bd3847" text-anchor="middle" font-weight="400">0</text>
+<rect x="470" y="260" width="35" height="35" rx="0" fill="#fcf0f1" stroke="#d8dedf"/>
+<text x="487.5" y="285" font-family="system-ui, sans-serif" font-size="22" fill="#bd3847" text-anchor="middle" font-weight="400">0</text>
+<rect x="505" y="260" width="35" height="35" rx="0" fill="#fcf0f1" stroke="#d8dedf"/>
+<text x="522.5" y="285" font-family="system-ui, sans-serif" font-size="22" fill="#bd3847" text-anchor="middle" font-weight="400">0</text>
+<rect x="540" y="260" width="35" height="35" rx="0" fill="#edf4fc" stroke="#d8dedf"/>
+<text x="557.5" y="285" font-family="system-ui, sans-serif" font-size="22" fill="#526171" text-anchor="middle" font-weight="400">∗</text>
+<rect x="575" y="260" width="35" height="35" rx="0" fill="#edf4fc" stroke="#d8dedf"/>
+<text x="592.5" y="285" font-family="system-ui, sans-serif" font-size="22" fill="#526171" text-anchor="middle" font-weight="400">∗</text>
+<rect x="400" y="295" width="35" height="35" rx="0" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="417.5" y="320" font-family="system-ui, sans-serif" font-size="22" fill="#526171" text-anchor="middle" font-weight="400">∗</text>
+<rect x="435" y="295" width="35" height="35" rx="0" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="452.5" y="320" font-family="system-ui, sans-serif" font-size="22" fill="#526171" text-anchor="middle" font-weight="400">∗</text>
+<rect x="470" y="295" width="35" height="35" rx="0" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="487.5" y="320" font-family="system-ui, sans-serif" font-size="22" fill="#526171" text-anchor="middle" font-weight="400">∗</text>
+<rect x="505" y="295" width="35" height="35" rx="0" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="522.5" y="320" font-family="system-ui, sans-serif" font-size="22" fill="#526171" text-anchor="middle" font-weight="400">∗</text>
+<rect x="540" y="295" width="35" height="35" rx="0" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="557.5" y="320" font-family="system-ui, sans-serif" font-size="22" fill="#526171" text-anchor="middle" font-weight="400">0</text>
+<rect x="575" y="295" width="35" height="35" rx="0" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="592.5" y="320" font-family="system-ui, sans-serif" font-size="22" fill="#526171" text-anchor="middle" font-weight="400">∗</text>
+<rect x="400" y="330" width="35" height="35" rx="0" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="417.5" y="355" font-family="system-ui, sans-serif" font-size="22" fill="#526171" text-anchor="middle" font-weight="400">∗</text>
+<rect x="435" y="330" width="35" height="35" rx="0" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="452.5" y="355" font-family="system-ui, sans-serif" font-size="22" fill="#526171" text-anchor="middle" font-weight="400">∗</text>
+<rect x="470" y="330" width="35" height="35" rx="0" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="487.5" y="355" font-family="system-ui, sans-serif" font-size="22" fill="#526171" text-anchor="middle" font-weight="400">∗</text>
+<rect x="505" y="330" width="35" height="35" rx="0" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="522.5" y="355" font-family="system-ui, sans-serif" font-size="22" fill="#526171" text-anchor="middle" font-weight="400">∗</text>
+<rect x="540" y="330" width="35" height="35" rx="0" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="557.5" y="355" font-family="system-ui, sans-serif" font-size="22" fill="#526171" text-anchor="middle" font-weight="400">∗</text>
+<rect x="575" y="330" width="35" height="35" rx="0" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="592.5" y="355" font-family="system-ui, sans-serif" font-size="22" fill="#526171" text-anchor="middle" font-weight="400">0</text>
+<text x="375" y="228" font-family="system-ui, sans-serif" font-size="20" fill="#bd3847" text-anchor="middle" font-weight="700">4</text>
+<text x="375" y="251" font-family="system-ui, sans-serif" font-size="12" fill="#526171" text-anchor="middle" font-weight="400">rows</text>
+<text x="505" y="399" font-family="system-ui, sans-serif" font-size="17" fill="#526171" text-anchor="middle" font-weight="400">The blue cofactor matrix</text>
+<text x="675" y="182" font-family="system-ui, sans-serif" font-size="19" fill="#202d3a" text-anchor="start" font-weight="400">These four rows must</text>
+<text x="675" y="212" font-family="system-ui, sans-serif" font-size="19" fill="#202d3a" text-anchor="start" font-weight="400">be linearly independent.</text>
+<text x="675" y="268" font-family="system-ui, sans-serif" font-size="19" fill="#202d3a" text-anchor="start" font-weight="400">But they fit in a space</text>
+<text x="675" y="298" font-family="system-ui, sans-serif" font-size="19" fill="#202d3a" text-anchor="start" font-weight="400">of dimension only two.</text>
+<text x="675" y="353" font-family="system-ui, sans-serif" font-size="23" fill="#bd3847" text-anchor="start" font-weight="700">Impossible.</text>
+<text x="500" y="454" font-family="system-ui, sans-serif" font-size="18" fill="#526171" text-anchor="middle" font-weight="400">In general: s independent rows supported in 6 − s columns require s ≤ 6 − s.</text>
+</svg></div><figcaption>Figure 2. The displayed four-vertex subset already gives a contradiction if a vertex has three or more same-color neighbors. An asterisk marks an entry not determined by the highlighted zero block; it may also be zero.</figcaption><p class="diagram-hint"><a href="six-site-assets/02-zero-block.svg">Open full-size diagram</a> · on small screens, scroll sideways</p></figure>
+
+<h2 id="part-4">4. Degree two is impossible: an explicit cofactor calculation.</h2>
+<p>Fix one color, and abbreviate its matrices to M and C. Suppose p has exactly two neighbors r,s, with nonzero weights a = M[p,r] and b = M[p,s]. Call the remaining three vertices E.</p>
+<p>Pick q in E, and name the other two vertices u,v. In C[r,q], we have deleted r and q. The retained vertex p has only s available, so it must pair with s; the remaining pair is u,v. Similarly, deleting s and q forces p to pair with r. Thus</p>
+<div class="equation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="C r q equals b times M u v, and C s q equals a times M u v."><mrow><mrow><mi>C</mi><mo>[</mo><mrow><mi>r</mi><mo>,</mo><mi>q</mi></mrow><mo>]</mo></mrow><mo>=</mo><mi>b</mi><mrow><mi>M</mi><mo>[</mo><mrow><mi>u</mi><mo>,</mo><mi>v</mi></mrow><mo>]</mo></mrow><mo>,</mo><mtext>   </mtext><mrow><mi>C</mi><mo>[</mo><mrow><mi>s</mi><mo>,</mo><mi>q</mi></mrow><mo>]</mo></mrow><mo>=</mo><mi>a</mi><mrow><mi>M</mi><mo>[</mo><mrow><mi>u</mi><mo>,</mo><mi>v</mi></mrow><mo>]</mo></mrow></mrow></math></div>
+
+<p>The p,q entry of MC = τI is zero because p ≠ q. Its only possible terms come from p&#39;s two neighbors:</p>
+<div class="equation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="Zero equals the p q entry of M C, equals a C r q plus b C s q, equals two a b M u v."><mrow><mn>0</mn><mo>=</mo><mrow><mrow><mo>(</mo><mi>M</mi><mi>C</mi><mo>)</mo></mrow><mo>[</mo><mrow><mi>p</mi><mo>,</mo><mi>q</mi></mrow><mo>]</mo></mrow><mo>=</mo><mi>a</mi><mrow><mi>C</mi><mo>[</mo><mrow><mi>r</mi><mo>,</mo><mi>q</mi></mrow><mo>]</mo></mrow><mo>+</mo><mi>b</mi><mrow><mi>C</mi><mo>[</mo><mrow><mi>s</mi><mo>,</mo><mi>q</mi></mrow><mo>]</mo></mrow><mo>=</mo><mn>2</mn><mi>a</mi><mi>b</mi><mrow><mi>M</mi><mo>[</mo><mrow><mi>u</mi><mo>,</mo><mi>v</mi></mrow><mo>]</mo></mrow></mrow></math></div>
+
+<p>Over the complex numbers, 2ab is nonzero. Hence M[u,v] = 0. Letting q run through the three choices in E shows that <strong>all three edges within E have weight zero</strong>.</p>
+<p>Now try to make any nonzero perfect matching in this color. Vertex p must pair with r or s. The unused neighbor must then pair with one vertex of E. The remaining two E vertices must pair with each other—but that edge has weight zero. Every matching product vanishes, so τ = 0, a contradiction.</p>
+<p>Therefore degree two is impossible. Combined with Step 3, <strong>each color graph is a perfect matching: three disjoint edges with nonzero weights.</strong> This calculation is the six-site specialization of the workspace&#39;s <a href="../certification/stronger-results-2026-09-26/sources/SD.md">scalar degree-two lemma, §5</a>.</p>
+<figure class="explainer-diagram" id="figure-03-degree-two"><div class="diagram-scroll" tabindex="0" aria-label="Diagram; scroll horizontally on small screens"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 465" role="img" aria-labelledby="03-degree-two-title 03-degree-two-desc">
+<title id="03-degree-two-title">Two neighbors force the remaining triangle to vanish</title>
+<desc id="03-degree-two-desc">In one color, p has precisely neighbors r and s with weights a and b. For q among the other three vertices, the off-diagonal cofactor identity gives zero equals 2ab times the edge weight between the other two vertices. Varying q kills every edge in that triangle.</desc>
+<rect width="1000" height="100%" rx="16" fill="#fff"/>
+<text x="30" y="31" font-family="system-ui, sans-serif" font-size="12" fill="#526171" text-anchor="start" font-weight="700">KRENN–GU / 03</text>
+<text x="30" y="66" font-family="system-ui, sans-serif" font-size="25" fill="#202d3a" text-anchor="start" font-weight="700">Two neighbors force the remaining triangle to vanish</text>
+<rect x="30" y="104" width="430" height="303" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<line x1="245" y1="154" x2="117" y2="231" stroke="#bd3847" stroke-width="4" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="245" y1="154" x2="373" y2="231" stroke="#bd3847" stroke-width="4" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<circle cx="245" cy="154" r="17" fill="white" stroke="#202d3a" stroke-width="2.5"/>
+<text x="245" y="160" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">p</text>
+<circle cx="117" cy="231" r="17" fill="white" stroke="#202d3a" stroke-width="2.5"/>
+<text x="117" y="237" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">r</text>
+<circle cx="373" cy="231" r="17" fill="white" stroke="#202d3a" stroke-width="2.5"/>
+<text x="373" y="237" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">s</text>
+<circle cx="115" cy="347" r="17" fill="white" stroke="#202d3a" stroke-width="2.5"/>
+<text x="115" y="353" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">q</text>
+<circle cx="245" cy="298" r="17" fill="white" stroke="#202d3a" stroke-width="2.5"/>
+<text x="245" y="304" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">u</text>
+<circle cx="374" cy="347" r="17" fill="white" stroke="#202d3a" stroke-width="2.5"/>
+<text x="374" y="353" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">v</text>
+<text x="166" y="175" font-family="system-ui, sans-serif" font-size="17" fill="#bd3847" text-anchor="middle" font-weight="650">a ≠ 0</text>
+<text x="325" y="175" font-family="system-ui, sans-serif" font-size="17" fill="#bd3847" text-anchor="middle" font-weight="650">b ≠ 0</text>
+<line x1="115" y1="347" x2="245" y2="298" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 5" opacity="1"/>
+<rect x="167" y="307.5" width="26" height="28" rx="4" fill="white" stroke="white"/>
+<text x="180" y="328.5" font-family="system-ui, sans-serif" font-size="20" fill="#bd3847" text-anchor="middle" font-weight="700">0</text>
+<line x1="245" y1="298" x2="374" y2="347" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 5" opacity="1"/>
+<rect x="296.5" y="307.5" width="26" height="28" rx="4" fill="white" stroke="white"/>
+<text x="309.5" y="328.5" font-family="system-ui, sans-serif" font-size="20" fill="#bd3847" text-anchor="middle" font-weight="700">0</text>
+<line x1="115" y1="347" x2="374" y2="347" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 5" opacity="1"/>
+<rect x="231.5" y="332" width="26" height="28" rx="4" fill="white" stroke="white"/>
+<text x="244.5" y="353" font-family="system-ui, sans-serif" font-size="20" fill="#bd3847" text-anchor="middle" font-weight="700">0</text>
+<circle cx="115" cy="347" r="17" fill="white" stroke="#202d3a" stroke-width="2.5"/>
+<text x="115" y="353" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">q</text>
+<circle cx="245" cy="298" r="17" fill="white" stroke="#202d3a" stroke-width="2.5"/>
+<text x="245" y="304" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">u</text>
+<circle cx="374" cy="347" r="17" fill="white" stroke="#202d3a" stroke-width="2.5"/>
+<text x="374" y="353" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">v</text>
+<text x="245" y="390" font-family="system-ui, sans-serif" font-size="16" fill="#526171" text-anchor="middle" font-weight="400">E = {q,u,v}: all internal weights become zero</text>
+<text x="500" y="142" font-family="system-ui, sans-serif" font-size="21" fill="#202d3a" text-anchor="start" font-weight="650">Delete r,q:  p must pair with s</text>
+<text x="500" y="180" font-family="system-ui, sans-serif" font-size="23" fill="#202d3a" text-anchor="start" font-weight="400">C[r,q] = b M[u,v]</text>
+<text x="500" y="225" font-family="system-ui, sans-serif" font-size="21" fill="#202d3a" text-anchor="start" font-weight="650">Delete s,q:  p must pair with r</text>
+<text x="500" y="263" font-family="system-ui, sans-serif" font-size="23" fill="#202d3a" text-anchor="start" font-weight="400">C[s,q] = a M[u,v]</text>
+<rect x="490" y="292" width="480" height="101" rx="12" fill="#fcf0f1" stroke="#d8dedf"/>
+<text x="730" y="333" font-family="system-ui, sans-serif" font-size="22" fill="#202d3a" text-anchor="middle" font-weight="400">0 = a·b M[u,v] + b·a M[u,v]</text>
+<text x="730" y="372" font-family="system-ui, sans-serif" font-size="22" fill="#bd3847" text-anchor="middle" font-weight="650">0 = 2ab M[u,v]   ⇒   M[u,v] = 0</text>
+<text x="500" y="441" font-family="system-ui, sans-serif" font-size="17" fill="#526171" text-anchor="middle" font-weight="400">Every full matching needs an edge inside E, so its product is zero. The pure amplitude vanishes.</text>
+</svg></div><figcaption>Figure 3. Only the two displayed edges touch p in this color; other edges incident to r and s may exist. The equations force all three E-edges to vanish, destroying every pure-color perfect matching.</figcaption><p class="diagram-hint"><a href="six-site-assets/03-degree-two.svg">Open full-size diagram</a> · on small screens, scroll sideways</p></figure>
+
+<h2 id="part-5">5. Different colors cannot share a pair.</h2>
+<p>Suppose red and blue both use pair u,v. Ask for red at u,v and blue at the remaining four sites. The red pair contributes a nonzero weight. The other four vertices are paired by the remaining two edges of the blue perfect matching, also with nonzero weights.</p>
+<p>There is exactly one compatible matching: every color graph has degree one. The mixed amplitude is a product of three nonzero numbers, so it cannot be zero. This contradicts the target. The same reasoning applies to any pair of colors.</p>
+<p>Thus we have three <strong>pairwise edge-disjoint perfect matchings</strong> on six vertices. We will now show that even this rigid possibility fails.</p>
+<h2 id="part-6">6. Three perfect matchings inevitably create an uncancelable mixed output.</h2>
+<p>First consider the red and blue matchings. Their union has degree two at every vertex, with colors alternating around every cycle. Every cycle has even length at least four; a two-vertex component would require a shared edge, already excluded. With only six vertices available, their union must be a single six-cycle.</p>
+<p>Relabel around that cycle:</p>
+<pre><code class="language-text">red:   12, 34, 56
+blue:  23, 45, 61
+</code></pre>
+<p>Split the vertices into the odd sites O = {1,3,5} and the even sites T = {2,4,6}. Each set has three vertices. <strong>The green perfect matching must have an edge crossing from O to T.</strong> Otherwise it would have to pair three vertices entirely within each set, which is impossible.</p>
+<p>There are nine possible pairs between O and T. Six already belong to red or blue. Since green cannot share those, its crossing edge must be one of</p>
+<pre><code class="language-text">14, 36, 52.
+</code></pre>
+<p>Rotating the labels by an even number of steps lets us call that edge 14 while preserving the displayed red/blue pattern. We have now forced the matching</p>
+<pre><code class="language-text">14 green   +   23 blue   +   56 red.
+</code></pre>
+<p>Read the colors at sites 1 through 6: <strong>GBBGRR</strong>. There are exactly two sites of each color, and every aggregate edge is monochromatic. Those two sites must therefore pair with each other. There is only one term in this mixed amplitude:</p>
+<div class="equation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="The mixed output GBBGRR has amplitude green 14 times blue 23 times red 56, which is nonzero."><mrow><mrow><msub><mi>H</mi><mi>A</mi></msub><mo>(</mo><mtext>GBBGRR</mtext><mo>)</mo></mrow><mo>=</mo><mrow><msub><mi>M</mi><mi>G</mi></msub><mo>[</mo><mrow><mn>1</mn><mo>,</mo><mn>4</mn></mrow><mo>]</mo></mrow><mrow><msub><mi>M</mi><mi>B</mi></msub><mo>[</mo><mrow><mn>2</mn><mo>,</mo><mn>3</mn></mrow><mo>]</mo></mrow><mrow><msub><mi>M</mi><mi>R</mi></msub><mo>[</mo><mrow><mn>5</mn><mo>,</mo><mn>6</mn></mrow><mo>]</mo></mrow><mo>≠</mo><mn>0</mn></mrow></math></div>
+
+<p>The target requires it to be zero. <strong>Contradiction.</strong> No choice of complex phases or magnitudes can cancel a single nonzero product. This completes the six-site deduction from Inputs A and B.</p>
+<figure class="explainer-diagram" id="figure-04-forced-mixed"><div class="diagram-scroll" tabindex="0" aria-label="Diagram; scroll horizontally on small screens"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 565" role="img" aria-labelledby="04-forced-mixed-title 04-forced-mixed-desc">
+<title id="04-forced-mixed-title">A green crossing forces one mixed output with no cancellation</title>
+<desc id="04-forced-mixed-desc">Red edges 12,34,56 and blue edges 23,45,61 form an alternating six-cycle. Its shores are 1,3,5 and 2,4,6. A green perfect matching must cross these odd shores. After relabeling, choose green 14. Together with blue 23 and red 56 this gives GBBGRR.</desc>
+<rect width="1000" height="100%" rx="16" fill="#fff"/>
+<text x="30" y="31" font-family="system-ui, sans-serif" font-size="12" fill="#526171" text-anchor="start" font-weight="700">KRENN–GU / 04</text>
+<text x="30" y="66" font-family="system-ui, sans-serif" font-size="25" fill="#202d3a" text-anchor="start" font-weight="700">A green crossing forces one mixed output with no cancellation</text>
+<rect x="30" y="105" width="475" height="350" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="267" y="137" font-family="system-ui, sans-serif" font-size="17" fill="#526171" text-anchor="middle" font-weight="400">Odd shore</text>
+<text x="267" y="420" font-family="system-ui, sans-serif" font-size="17" fill="#526171" text-anchor="middle" font-weight="400">Even shore</text>
+<line x1="107" y1="185" x2="107" y2="365" stroke="#bd3847" stroke-width="4" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="267" y1="185" x2="267" y2="365" stroke="#bd3847" stroke-width="4" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="427" y1="185" x2="427" y2="365" stroke="#bd3847" stroke-width="4" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="107" y1="365" x2="267" y2="185" stroke="#2168af" stroke-width="4" stroke-linecap="round" stroke-dasharray="9 5" opacity="1"/>
+<line x1="267" y1="365" x2="427" y2="185" stroke="#2168af" stroke-width="4" stroke-linecap="round" stroke-dasharray="9 5" opacity="1"/>
+<line x1="107" y1="185" x2="427" y2="365" stroke="#2168af" stroke-width="4" stroke-linecap="round" stroke-dasharray="9 5" opacity="1"/>
+<circle cx="107" cy="185" r="17" fill="white" stroke="#202d3a" stroke-width="2.5"/>
+<text x="107" y="191" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">1</text>
+<circle cx="267" cy="185" r="17" fill="white" stroke="#202d3a" stroke-width="2.5"/>
+<text x="267" y="191" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">3</text>
+<circle cx="427" cy="185" r="17" fill="white" stroke="#202d3a" stroke-width="2.5"/>
+<text x="427" y="191" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">5</text>
+<circle cx="107" cy="365" r="17" fill="white" stroke="#202d3a" stroke-width="2.5"/>
+<text x="107" y="371" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">2</text>
+<circle cx="267" cy="365" r="17" fill="white" stroke="#202d3a" stroke-width="2.5"/>
+<text x="267" y="371" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">4</text>
+<circle cx="427" cy="365" r="17" fill="white" stroke="#202d3a" stroke-width="2.5"/>
+<text x="427" y="371" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">6</text>
+<line x1="107" y1="185" x2="267" y2="365" stroke="#237953" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 7" opacity="1"/>
+<circle cx="107" cy="185" r="17" fill="white" stroke="#237953" stroke-width="2.5"/>
+<text x="107" y="191" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">1</text>
+<circle cx="267" cy="365" r="17" fill="white" stroke="#237953" stroke-width="2.5"/>
+<text x="267" y="371" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">4</text>
+<text x="180" y="292" font-family="system-ui, sans-serif" font-size="26" fill="#237953" text-anchor="middle" font-weight="700">G</text>
+<line x1="518" y1="280" x2="555" y2="280" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="547" y1="275" x2="555" y2="280" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="547" y1="285" x2="555" y2="280" stroke="#526171" stroke-width="2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<rect x="570" y="105" width="400" height="350" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="770" y="141" font-family="system-ui, sans-serif" font-size="21" fill="#202d3a" text-anchor="middle" font-weight="650">Forced mixed matching</text>
+<line x1="637" y1="210" x2="900" y2="210" stroke="#237953" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 6" opacity="1"/>
+<line x1="637" y1="270" x2="900" y2="270" stroke="#2168af" stroke-width="4" stroke-linecap="round" stroke-dasharray="9 5" opacity="1"/>
+<line x1="637" y1="330" x2="900" y2="330" stroke="#bd3847" stroke-width="4" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<circle cx="637" cy="210" r="17" fill="white" stroke="#237953" stroke-width="2.5"/>
+<text x="637" y="216" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">1</text>
+<circle cx="900" cy="210" r="17" fill="white" stroke="#237953" stroke-width="2.5"/>
+<text x="900" y="216" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">4</text>
+<circle cx="637" cy="270" r="17" fill="white" stroke="#2168af" stroke-width="2.5"/>
+<text x="637" y="276" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">2</text>
+<circle cx="900" cy="270" r="17" fill="white" stroke="#2168af" stroke-width="2.5"/>
+<text x="900" y="276" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">3</text>
+<circle cx="637" cy="330" r="17" fill="white" stroke="#bd3847" stroke-width="2.5"/>
+<text x="637" y="336" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">5</text>
+<circle cx="900" cy="330" r="17" fill="white" stroke="#bd3847" stroke-width="2.5"/>
+<text x="900" y="336" font-family="system-ui, sans-serif" font-size="17" fill="#202d3a" text-anchor="middle" font-weight="650">6</text>
+<text x="770" y="201" font-family="system-ui, sans-serif" font-size="17" fill="#237953" text-anchor="middle" font-weight="400">green</text>
+<text x="770" y="261" font-family="system-ui, sans-serif" font-size="17" fill="#2168af" text-anchor="middle" font-weight="400">blue</text>
+<text x="770" y="321" font-family="system-ui, sans-serif" font-size="17" fill="#bd3847" text-anchor="middle" font-weight="400">red</text>
+<rect x="654" y="390" width="32" height="36" rx="6" fill="#edf7f1" stroke="#237953"/>
+<text x="670" y="415" font-family="system-ui, sans-serif" font-size="20" fill="#237953" text-anchor="middle" font-weight="700">G</text>
+<rect x="693" y="390" width="32" height="36" rx="6" fill="#edf4fc" stroke="#2168af"/>
+<text x="709" y="415" font-family="system-ui, sans-serif" font-size="20" fill="#2168af" text-anchor="middle" font-weight="700">B</text>
+<rect x="732" y="390" width="32" height="36" rx="6" fill="#edf4fc" stroke="#2168af"/>
+<text x="748" y="415" font-family="system-ui, sans-serif" font-size="20" fill="#2168af" text-anchor="middle" font-weight="700">B</text>
+<rect x="771" y="390" width="32" height="36" rx="6" fill="#edf7f1" stroke="#237953"/>
+<text x="787" y="415" font-family="system-ui, sans-serif" font-size="20" fill="#237953" text-anchor="middle" font-weight="700">G</text>
+<rect x="810" y="390" width="32" height="36" rx="6" fill="#fcf0f1" stroke="#bd3847"/>
+<text x="826" y="415" font-family="system-ui, sans-serif" font-size="20" fill="#bd3847" text-anchor="middle" font-weight="700">R</text>
+<rect x="849" y="390" width="32" height="36" rx="6" fill="#fcf0f1" stroke="#bd3847"/>
+<text x="865" y="415" font-family="system-ui, sans-serif" font-size="20" fill="#bd3847" text-anchor="middle" font-weight="700">R</text>
+<text x="500" y="492" font-family="system-ui, sans-serif" font-size="20" fill="#202d3a" text-anchor="middle" font-weight="650">Three vertices on each shore cannot all pair internally: green must cross.</text>
+<text x="500" y="535" font-family="system-ui, sans-serif" font-size="17" fill="#526171" text-anchor="middle" font-weight="400">GBBGRR has exactly two sites of each color → exactly one compatible matching → nonzero amplitude.</text>
+</svg></div><figcaption>Figure 4. Only one green edge is needed; its other edges are intentionally omitted. The odd-sized shores force some green crossing, and symmetry lets us label it 14. Red is solid, blue dashed, and green dotted.</figcaption><p class="diagram-hint"><a href="six-site-assets/04-forced-mixed.svg">Open full-size diagram</a> · on small screens, scroll sideways</p></figure>
+
+<h2 id="part-7">7. Why two colors work, and why four sites are different.</h2>
+<p>For two colors, take just the alternating red/blue six-cycle from Step 6, with unit edge weights. It has exactly two perfect matchings: after choosing either edge at vertex 1, every remaining choice is forced around the cycle. They give RRRRRR and BBBBBB, each with amplitude 1. The upper bound of two is therefore attained.</p>
+<p>On four sites, the three perfect matchings of K₄ work in three colors. The final parity argument above has no analogue: the two sides of an alternating four-cycle have two vertices each, so green can pair within both sides. The three pairings exhaust all possible events; there is no mixed one. <a href="EXPLAINER.html#figure-02-four-site-exception">Illustrated four-site construction</a>.</p>
+<p>The same argument does not settle every larger order. The row-count step gives degₕ(p) ≤ n/2 − 1, which no longer forces degrees at most two when n ≥ 8. More complicated color graphs must then be addressed. The workspace has additional results for those orders; the present proof deliberately stops at the six-site theorem.</p>
+<h2 id="part-8">8. How the earlier certified proof establishes the general case.</h2>
+<p>The preceding explanation uses recent structural lemmas. The workspace had already proved the unrestricted six-site theorem by a different route, with exact finite certificates. Its organizing idea is to count how many pair matrices fail to have rank one.</p>
+<p>A nonzero rank-one block Aᵤᵥ = xyᵀ separates its two endpoint factors. A prior <strong>forced incident-edge theorem</strong> shows that every site must touch at least three distinct rank-one blocks, one witness for each target color. There are only five other sites available. Thus at most two incident blocks can fail to have rank one. <a href="../notes/slice-cover.md">Forced-edge theorem</a>; <a href="../proofs/six-site-arbitrary-complex-obstruction.md">six-site assembly, §3</a>.</p>
+<p>Make a graph F by drawing the pairs whose matrices have rank <strong>different from one</strong>. This includes rank-zero blocks as well as ranks two and three. Every vertex of F has degree at most two. Consequently its components are paths, cycles, and isolated vertices. On six vertices, this gives exactly <strong>19 types</strong>, up to relabeling.</p>
+<figure class="explainer-diagram" id="figure-05-census"><div class="diagram-scroll" tabindex="0" aria-label="Diagram; scroll horizontally on small screens"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1240" role="img" aria-labelledby="05-census-title 05-census-desc">
+<title id="05-census-title">The earlier certified route: exactly 19 defect-graph types</title>
+<desc id="05-census-desc">All graphs on six vertices with maximum degree at most two, up to relabeling. Each component is a path P or cycle C, with its vertex count in the subscript. Grouped by edge count, there are 1,1,2,4,5,4,2 types, totaling 19. A drawn edge marks an aggregate block of rank different from one, including a zero block.</desc>
+<rect width="1000" height="100%" rx="16" fill="#fff"/>
+<text x="30" y="31" font-family="system-ui, sans-serif" font-size="12" fill="#526171" text-anchor="start" font-weight="700">KRENN–GU / 05</text>
+<text x="30" y="66" font-family="system-ui, sans-serif" font-size="25" fill="#202d3a" text-anchor="start" font-weight="700">The earlier certified route: exactly 19 defect-graph types</text>
+<text x="30" y="104" font-family="system-ui, sans-serif" font-size="18" fill="#526171" text-anchor="start" font-weight="400">Draw an edge when its 3 × 3 aggregate block has rank ≠ 1. Every vertex has degree ≤ 2.</text>
+<rect x="30" y="130" width="310" height="138" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="46" y="157" font-family="system-ui, sans-serif" font-size="18" fill="#202d3a" text-anchor="start" font-weight="650">6P₁</text>
+<text x="324" y="157" font-family="system-ui, sans-serif" font-size="13" fill="#526171" text-anchor="end" font-weight="400">0 edges</text>
+<circle cx="122.5" cy="221" r="4.5" fill="#202d3a"/>
+<circle cx="147.5" cy="221" r="4.5" fill="#202d3a"/>
+<circle cx="172.5" cy="221" r="4.5" fill="#202d3a"/>
+<circle cx="197.5" cy="221" r="4.5" fill="#202d3a"/>
+<circle cx="222.5" cy="221" r="4.5" fill="#202d3a"/>
+<circle cx="247.5" cy="221" r="4.5" fill="#202d3a"/>
+<rect x="355" y="130" width="310" height="138" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="371" y="157" font-family="system-ui, sans-serif" font-size="18" fill="#202d3a" text-anchor="start" font-weight="650">P₂ + 4P₁</text>
+<text x="649" y="157" font-family="system-ui, sans-serif" font-size="13" fill="#526171" text-anchor="end" font-weight="400">1 edges</text>
+<line x1="443" y1="221" x2="477" y2="221" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<circle cx="443" cy="221" r="4.5" fill="#202d3a"/>
+<circle cx="477" cy="221" r="4.5" fill="#202d3a"/>
+<circle cx="502" cy="221" r="4.5" fill="#202d3a"/>
+<circle cx="527" cy="221" r="4.5" fill="#202d3a"/>
+<circle cx="552" cy="221" r="4.5" fill="#202d3a"/>
+<circle cx="577" cy="221" r="4.5" fill="#202d3a"/>
+<rect x="680" y="130" width="310" height="138" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="696" y="157" font-family="system-ui, sans-serif" font-size="18" fill="#202d3a" text-anchor="start" font-weight="650">2P₂ + 2P₁</text>
+<text x="974" y="157" font-family="system-ui, sans-serif" font-size="13" fill="#526171" text-anchor="end" font-weight="400">2 edges</text>
+<line x1="763.5" y1="221" x2="797.5" y2="221" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<circle cx="763.5" cy="221" r="4.5" fill="#202d3a"/>
+<circle cx="797.5" cy="221" r="4.5" fill="#202d3a"/>
+<line x1="822.5" y1="221" x2="856.5" y2="221" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<circle cx="822.5" cy="221" r="4.5" fill="#202d3a"/>
+<circle cx="856.5" cy="221" r="4.5" fill="#202d3a"/>
+<circle cx="881.5" cy="221" r="4.5" fill="#202d3a"/>
+<circle cx="906.5" cy="221" r="4.5" fill="#202d3a"/>
+<rect x="30" y="281" width="310" height="138" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="46" y="308" font-family="system-ui, sans-serif" font-size="18" fill="#202d3a" text-anchor="start" font-weight="650">P₃ + 3P₁</text>
+<text x="324" y="308" font-family="system-ui, sans-serif" font-size="13" fill="#526171" text-anchor="end" font-weight="400">2 edges</text>
+<line x1="113.5" y1="372" x2="147.5" y2="372" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="147.5" y1="372" x2="181.5" y2="372" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<circle cx="113.5" cy="372" r="4.5" fill="#202d3a"/>
+<circle cx="147.5" cy="372" r="4.5" fill="#202d3a"/>
+<circle cx="181.5" cy="372" r="4.5" fill="#202d3a"/>
+<circle cx="206.5" cy="372" r="4.5" fill="#202d3a"/>
+<circle cx="231.5" cy="372" r="4.5" fill="#202d3a"/>
+<circle cx="256.5" cy="372" r="4.5" fill="#202d3a"/>
+<rect x="355" y="281" width="310" height="138" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="371" y="308" font-family="system-ui, sans-serif" font-size="18" fill="#202d3a" text-anchor="start" font-weight="650">3P₂</text>
+<text x="649" y="308" font-family="system-ui, sans-serif" font-size="13" fill="#526171" text-anchor="end" font-weight="400">3 edges</text>
+<line x1="434" y1="372" x2="468" y2="372" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<circle cx="434" cy="372" r="4.5" fill="#202d3a"/>
+<circle cx="468" cy="372" r="4.5" fill="#202d3a"/>
+<line x1="493" y1="372" x2="527" y2="372" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<circle cx="493" cy="372" r="4.5" fill="#202d3a"/>
+<circle cx="527" cy="372" r="4.5" fill="#202d3a"/>
+<line x1="552" y1="372" x2="586" y2="372" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<circle cx="552" cy="372" r="4.5" fill="#202d3a"/>
+<circle cx="586" cy="372" r="4.5" fill="#202d3a"/>
+<rect x="680" y="281" width="310" height="138" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="696" y="308" font-family="system-ui, sans-serif" font-size="18" fill="#202d3a" text-anchor="start" font-weight="650">P₃ + P₂ + P₁</text>
+<text x="974" y="308" font-family="system-ui, sans-serif" font-size="13" fill="#526171" text-anchor="end" font-weight="400">3 edges</text>
+<line x1="759" y1="372" x2="793" y2="372" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="793" y1="372" x2="827" y2="372" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<circle cx="759" cy="372" r="4.5" fill="#202d3a"/>
+<circle cx="793" cy="372" r="4.5" fill="#202d3a"/>
+<circle cx="827" cy="372" r="4.5" fill="#202d3a"/>
+<line x1="852" y1="372" x2="886" y2="372" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<circle cx="852" cy="372" r="4.5" fill="#202d3a"/>
+<circle cx="886" cy="372" r="4.5" fill="#202d3a"/>
+<circle cx="911" cy="372" r="4.5" fill="#202d3a"/>
+<rect x="30" y="432" width="310" height="138" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="46" y="459" font-family="system-ui, sans-serif" font-size="18" fill="#202d3a" text-anchor="start" font-weight="650">P₄ + 2P₁</text>
+<text x="324" y="459" font-family="system-ui, sans-serif" font-size="13" fill="#526171" text-anchor="end" font-weight="400">3 edges</text>
+<line x1="109" y1="523" x2="143" y2="523" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="143" y1="523" x2="177" y2="523" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="177" y1="523" x2="211" y2="523" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<circle cx="109" cy="523" r="4.5" fill="#202d3a"/>
+<circle cx="143" cy="523" r="4.5" fill="#202d3a"/>
+<circle cx="177" cy="523" r="4.5" fill="#202d3a"/>
+<circle cx="211" cy="523" r="4.5" fill="#202d3a"/>
+<circle cx="236" cy="523" r="4.5" fill="#202d3a"/>
+<circle cx="261" cy="523" r="4.5" fill="#202d3a"/>
+<rect x="355" y="432" width="310" height="138" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="371" y="459" font-family="system-ui, sans-serif" font-size="18" fill="#202d3a" text-anchor="start" font-weight="650">C₃ + 3P₁</text>
+<text x="649" y="459" font-family="system-ui, sans-serif" font-size="13" fill="#526171" text-anchor="end" font-weight="400">3 edges</text>
+<line x1="472.5" y1="488" x2="500.213" y2="536" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="500.213" y1="536" x2="444.787" y2="536" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="444.787" y1="536" x2="472.5" y2="488" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<circle cx="472.5" cy="488" r="4.5" fill="#202d3a"/>
+<circle cx="500.213" cy="536" r="4.5" fill="#202d3a"/>
+<circle cx="444.787" cy="536" r="4.5" fill="#202d3a"/>
+<circle cx="530.5" cy="523" r="4.5" fill="#202d3a"/>
+<circle cx="555.5" cy="523" r="4.5" fill="#202d3a"/>
+<circle cx="580.5" cy="523" r="4.5" fill="#202d3a"/>
+<rect x="680" y="432" width="310" height="138" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="696" y="459" font-family="system-ui, sans-serif" font-size="18" fill="#202d3a" text-anchor="start" font-weight="650">P₅ + P₁</text>
+<text x="974" y="459" font-family="system-ui, sans-serif" font-size="13" fill="#526171" text-anchor="end" font-weight="400">4 edges</text>
+<line x1="754.5" y1="523" x2="788.5" y2="523" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="788.5" y1="523" x2="822.5" y2="523" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="822.5" y1="523" x2="856.5" y2="523" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="856.5" y1="523" x2="890.5" y2="523" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<circle cx="754.5" cy="523" r="4.5" fill="#202d3a"/>
+<circle cx="788.5" cy="523" r="4.5" fill="#202d3a"/>
+<circle cx="822.5" cy="523" r="4.5" fill="#202d3a"/>
+<circle cx="856.5" cy="523" r="4.5" fill="#202d3a"/>
+<circle cx="890.5" cy="523" r="4.5" fill="#202d3a"/>
+<circle cx="915.5" cy="523" r="4.5" fill="#202d3a"/>
+<rect x="30" y="583" width="310" height="138" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="46" y="610" font-family="system-ui, sans-serif" font-size="18" fill="#202d3a" text-anchor="start" font-weight="650">P₄ + P₂</text>
+<text x="324" y="610" font-family="system-ui, sans-serif" font-size="13" fill="#526171" text-anchor="end" font-weight="400">4 edges</text>
+<line x1="104.5" y1="674" x2="138.5" y2="674" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="138.5" y1="674" x2="172.5" y2="674" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="172.5" y1="674" x2="206.5" y2="674" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<circle cx="104.5" cy="674" r="4.5" fill="#202d3a"/>
+<circle cx="138.5" cy="674" r="4.5" fill="#202d3a"/>
+<circle cx="172.5" cy="674" r="4.5" fill="#202d3a"/>
+<circle cx="206.5" cy="674" r="4.5" fill="#202d3a"/>
+<line x1="231.5" y1="674" x2="265.5" y2="674" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<circle cx="231.5" cy="674" r="4.5" fill="#202d3a"/>
+<circle cx="265.5" cy="674" r="4.5" fill="#202d3a"/>
+<rect x="355" y="583" width="310" height="138" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="371" y="610" font-family="system-ui, sans-serif" font-size="18" fill="#202d3a" text-anchor="start" font-weight="650">2P₃</text>
+<text x="649" y="610" font-family="system-ui, sans-serif" font-size="13" fill="#526171" text-anchor="end" font-weight="400">4 edges</text>
+<line x1="429.5" y1="674" x2="463.5" y2="674" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="463.5" y1="674" x2="497.5" y2="674" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<circle cx="429.5" cy="674" r="4.5" fill="#202d3a"/>
+<circle cx="463.5" cy="674" r="4.5" fill="#202d3a"/>
+<circle cx="497.5" cy="674" r="4.5" fill="#202d3a"/>
+<line x1="522.5" y1="674" x2="556.5" y2="674" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="556.5" y1="674" x2="590.5" y2="674" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<circle cx="522.5" cy="674" r="4.5" fill="#202d3a"/>
+<circle cx="556.5" cy="674" r="4.5" fill="#202d3a"/>
+<circle cx="590.5" cy="674" r="4.5" fill="#202d3a"/>
+<rect x="680" y="583" width="310" height="138" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="696" y="610" font-family="system-ui, sans-serif" font-size="18" fill="#202d3a" text-anchor="start" font-weight="650">C₃ + P₂ + P₁</text>
+<text x="974" y="610" font-family="system-ui, sans-serif" font-size="13" fill="#526171" text-anchor="end" font-weight="400">4 edges</text>
+<line x1="793" y1="639" x2="820.713" y2="687" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="820.713" y1="687" x2="765.287" y2="687" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="765.287" y1="687" x2="793" y2="639" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<circle cx="793" cy="639" r="4.5" fill="#202d3a"/>
+<circle cx="820.713" cy="687" r="4.5" fill="#202d3a"/>
+<circle cx="765.287" cy="687" r="4.5" fill="#202d3a"/>
+<line x1="851" y1="674" x2="885" y2="674" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<circle cx="851" cy="674" r="4.5" fill="#202d3a"/>
+<circle cx="885" cy="674" r="4.5" fill="#202d3a"/>
+<circle cx="910" cy="674" r="4.5" fill="#202d3a"/>
+<rect x="30" y="734" width="310" height="138" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="46" y="761" font-family="system-ui, sans-serif" font-size="18" fill="#202d3a" text-anchor="start" font-weight="650">C₄ + 2P₁</text>
+<text x="324" y="761" font-family="system-ui, sans-serif" font-size="13" fill="#526171" text-anchor="end" font-weight="400">4 edges</text>
+<line x1="160" y1="790" x2="192" y2="822" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="192" y1="822" x2="160" y2="854" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="160" y1="854" x2="128" y2="822" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="128" y1="822" x2="160" y2="790" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<circle cx="160" cy="790" r="4.5" fill="#202d3a"/>
+<circle cx="192" cy="822" r="4.5" fill="#202d3a"/>
+<circle cx="160" cy="854" r="4.5" fill="#202d3a"/>
+<circle cx="128" cy="822" r="4.5" fill="#202d3a"/>
+<circle cx="218" cy="825" r="4.5" fill="#202d3a"/>
+<circle cx="243" cy="825" r="4.5" fill="#202d3a"/>
+<rect x="355" y="734" width="310" height="138" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="371" y="761" font-family="system-ui, sans-serif" font-size="18" fill="#202d3a" text-anchor="start" font-weight="650">P₆</text>
+<text x="649" y="761" font-family="system-ui, sans-serif" font-size="13" fill="#526171" text-anchor="end" font-weight="400">5 edges</text>
+<line x1="425" y1="825" x2="459" y2="825" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="459" y1="825" x2="493" y2="825" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="493" y1="825" x2="527" y2="825" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="527" y1="825" x2="561" y2="825" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="561" y1="825" x2="595" y2="825" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<circle cx="425" cy="825" r="4.5" fill="#202d3a"/>
+<circle cx="459" cy="825" r="4.5" fill="#202d3a"/>
+<circle cx="493" cy="825" r="4.5" fill="#202d3a"/>
+<circle cx="527" cy="825" r="4.5" fill="#202d3a"/>
+<circle cx="561" cy="825" r="4.5" fill="#202d3a"/>
+<circle cx="595" cy="825" r="4.5" fill="#202d3a"/>
+<rect x="680" y="734" width="310" height="138" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="696" y="761" font-family="system-ui, sans-serif" font-size="18" fill="#202d3a" text-anchor="start" font-weight="650">C₃ + P₃</text>
+<text x="974" y="761" font-family="system-ui, sans-serif" font-size="13" fill="#526171" text-anchor="end" font-weight="400">5 edges</text>
+<line x1="788.5" y1="790" x2="816.213" y2="838" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="816.213" y1="838" x2="760.787" y2="838" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="760.787" y1="838" x2="788.5" y2="790" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<circle cx="788.5" cy="790" r="4.5" fill="#202d3a"/>
+<circle cx="816.213" cy="838" r="4.5" fill="#202d3a"/>
+<circle cx="760.787" cy="838" r="4.5" fill="#202d3a"/>
+<line x1="846.5" y1="825" x2="880.5" y2="825" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="880.5" y1="825" x2="914.5" y2="825" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<circle cx="846.5" cy="825" r="4.5" fill="#202d3a"/>
+<circle cx="880.5" cy="825" r="4.5" fill="#202d3a"/>
+<circle cx="914.5" cy="825" r="4.5" fill="#202d3a"/>
+<rect x="30" y="885" width="310" height="138" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="46" y="912" font-family="system-ui, sans-serif" font-size="18" fill="#202d3a" text-anchor="start" font-weight="650">C₄ + P₂</text>
+<text x="324" y="912" font-family="system-ui, sans-serif" font-size="13" fill="#526171" text-anchor="end" font-weight="400">5 edges</text>
+<line x1="155.5" y1="941" x2="187.5" y2="973" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="187.5" y1="973" x2="155.5" y2="1005" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="155.5" y1="1005" x2="123.5" y2="973" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="123.5" y1="973" x2="155.5" y2="941" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<circle cx="155.5" cy="941" r="4.5" fill="#202d3a"/>
+<circle cx="187.5" cy="973" r="4.5" fill="#202d3a"/>
+<circle cx="155.5" cy="1005" r="4.5" fill="#202d3a"/>
+<circle cx="123.5" cy="973" r="4.5" fill="#202d3a"/>
+<line x1="213.5" y1="976" x2="247.5" y2="976" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<circle cx="213.5" cy="976" r="4.5" fill="#202d3a"/>
+<circle cx="247.5" cy="976" r="4.5" fill="#202d3a"/>
+<rect x="355" y="885" width="310" height="138" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="371" y="912" font-family="system-ui, sans-serif" font-size="18" fill="#202d3a" text-anchor="start" font-weight="650">C₅ + P₁</text>
+<text x="649" y="912" font-family="system-ui, sans-serif" font-size="13" fill="#526171" text-anchor="end" font-weight="400">5 edges</text>
+<line x1="497.5" y1="941" x2="527.934" y2="963.111" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="527.934" y1="963.111" x2="516.309" y2="998.889" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="516.309" y1="998.889" x2="478.691" y2="998.889" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="478.691" y1="998.889" x2="467.066" y2="963.111" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="467.066" y1="963.111" x2="497.5" y2="941" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<circle cx="497.5" cy="941" r="4.5" fill="#202d3a"/>
+<circle cx="527.934" cy="963.111" r="4.5" fill="#202d3a"/>
+<circle cx="516.309" cy="998.889" r="4.5" fill="#202d3a"/>
+<circle cx="478.691" cy="998.889" r="4.5" fill="#202d3a"/>
+<circle cx="467.066" cy="963.111" r="4.5" fill="#202d3a"/>
+<circle cx="555.5" cy="976" r="4.5" fill="#202d3a"/>
+<rect x="680" y="885" width="310" height="138" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="696" y="912" font-family="system-ui, sans-serif" font-size="18" fill="#202d3a" text-anchor="start" font-weight="650">C₆</text>
+<text x="974" y="912" font-family="system-ui, sans-serif" font-size="13" fill="#526171" text-anchor="end" font-weight="400">6 edges</text>
+<line x1="835" y1="941" x2="862.713" y2="957" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="862.713" y1="957" x2="862.713" y2="989" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="862.713" y1="989" x2="835" y2="1005" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="835" y1="1005" x2="807.287" y2="989" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="807.287" y1="989" x2="807.287" y2="957" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="807.287" y1="957" x2="835" y2="941" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<circle cx="835" cy="941" r="4.5" fill="#202d3a"/>
+<circle cx="862.713" cy="957" r="4.5" fill="#202d3a"/>
+<circle cx="862.713" cy="989" r="4.5" fill="#202d3a"/>
+<circle cx="835" cy="1005" r="4.5" fill="#202d3a"/>
+<circle cx="807.287" cy="989" r="4.5" fill="#202d3a"/>
+<circle cx="807.287" cy="957" r="4.5" fill="#202d3a"/>
+<rect x="30" y="1036" width="310" height="138" rx="12" fill="#f5f7f8" stroke="#d8dedf"/>
+<text x="46" y="1063" font-family="system-ui, sans-serif" font-size="18" fill="#202d3a" text-anchor="start" font-weight="650">2C₃</text>
+<text x="324" y="1063" font-family="system-ui, sans-serif" font-size="13" fill="#526171" text-anchor="end" font-weight="400">6 edges</text>
+<line x1="139.5" y1="1092" x2="167.213" y2="1140" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="167.213" y1="1140" x2="111.787" y2="1140" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="111.787" y1="1140" x2="139.5" y2="1092" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<circle cx="139.5" cy="1092" r="4.5" fill="#202d3a"/>
+<circle cx="167.213" cy="1140" r="4.5" fill="#202d3a"/>
+<circle cx="111.787" cy="1140" r="4.5" fill="#202d3a"/>
+<line x1="230.5" y1="1092" x2="258.213" y2="1140" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="258.213" y1="1140" x2="202.787" y2="1140" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<line x1="202.787" y1="1140" x2="230.5" y2="1092" stroke="#202d3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="" opacity="1"/>
+<circle cx="230.5" cy="1092" r="4.5" fill="#202d3a"/>
+<circle cx="258.213" cy="1140" r="4.5" fill="#202d3a"/>
+<circle cx="202.787" cy="1140" r="4.5" fill="#202d3a"/>
+<text x="30" y="1220" font-family="system-ui, sans-serif" font-size="17" fill="#526171" text-anchor="start" font-weight="400">Pₖ = path on k vertices (P₁ is isolated). Cₖ = cycle on k vertices. “+” means disjoint components.</text>
+</svg></div><figcaption>Figure 5. The complete finite census used in the older proof. These are defect graphs, not the red/blue/green support graphs from the short proof. Every box contains six vertices; exact certificate arguments exclude every box.</figcaption><p class="diagram-hint"><a href="six-site-assets/05-census.svg">Open full-size diagram</a> · on small screens, scroll sideways</p></figure>
+
+<p>This reduces infinitely many complex-weighted constructions to a finite list of structural cases. It does not remove the weights by assumption. Within each case, exact reasoning about supports and cancellation is still needed:</p>
+<ul>
+<li>A pure output with amplitude 1 must have at least one nonzero matching term.</li>
+<li>A mixed output with amplitude 0 can have no nonzero terms or several canceling terms; it cannot have exactly one.</li>
+<li>Rank-one blocks have rectangular supports, because a supported entry is a product of a nonzero coordinate of x and a nonzero coordinate of y.</li>
+<li>Rank-at-least-two blocks have a nonzero 2 × 2 minor, while rank-zero blocks must remain allowed as a separate possibility.</li>
+</ul>
+<p>These are necessary conditions for a complex solution. Boolean unsatisfiability of such conditions excludes a case, but Boolean satisfiability does not construct valid weights. Some cases need additional exact algebra. For example, a mixed coefficient with exactly two supported terms gives x + y = 0; families of these equations can force a supposedly nonzero minor to vanish. Other arguments compare complete sums of matching terms after multiplying by a common nonzero factor. They preserve cancellations throughout.</p>
+<p>The certificates and algebraic arguments close all 19 cases. The <a href="../proofs/six-site-arbitrary-complex-obstruction.md">canonical six-site proof, §§4–6</a> names the case-specific proof notes, checkers, and audits. This explainer describes that chain; creating it did not replay the full certificate suite.</p>
+<p>There is also an independent Lean development of the unrestricted six-site theorem in <a href="https://github.com/algal/krenn-gu-6x3-certificate">algal&#39;s certificate repository</a>. Its integration into DeepMind&#39;s formal-conjectures project was <a href="https://github.com/google-deepmind/formal-conjectures/pull/4610">merged on September 18, 2026</a>. That proof uses checked SAT certificates and Lean&#39;s <code>native_decide</code>, whose trust boundary includes Lean&#39;s compiler/runtime. It does not formally certify the newer Inputs A and B used in our short exposition. The workspace records its own inspection of the external artifact in <a href="../notes/external-six-site-lean-certificate.md">this inspection note</a>.</p>
+<h2 id="part-9">9. What useful things does this proof teach us?</h2>
+<p>The obstacle is <strong>unavoidable mixed agreement</strong>: the three desired pure outputs force a mixed output to survive. Complex weights remain fully allowed; the proof succeeds by making one offending coefficient have exactly one nonzero term.</p>
+<p>The newer structure explains why searching arbitrary weights can be wasteful. If a full solution existed, its aggregate edges, actual cofactor matrices, and single-color neighborhoods would obey very rigid identities. In six sites those identities leave only three perfect matchings, and a short parity argument finishes the problem. This makes the obstruction understandable beyond the finite certificates.</p>
+<p>The earlier proof teaches a complementary method: <strong>use local linear algebra to reduce a continuous problem to a complete finite census</strong>, then retain enough exact algebra to handle cancellation correctly. Both routes prove impossibility for the same general six-site model, with different dependencies and different verification records.</p>
+<p>For the broader research story—including which results are prior work, which are workspace contributions, and what remains open—continue with <a href="EXPLAINER.html">the larger explainer</a>.</p>
+<footer>Six-site proof guide · September 25, 2026 · Diagrams and equations work offline.</footer></main></body></html>

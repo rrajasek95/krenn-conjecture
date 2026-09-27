@@ -1,0 +1,149 @@
+# All-order status and the remaining closure theorem
+
+This is an editorial synthesis of independently reviewed research, not
+a new proof or a formal-registry promotion. The general complex ordinary
+ternary Krenn–Gu conjecture remains OPEN. The current internally reviewed
+general frontier is even n>=12; the allowed four-site case remains.
+
+The main completed reduction is general in n. What remains is a uniform
+nonexistence theorem for the resulting weighted system, rather than an
+unchecked final calculation in an otherwise complete proof.
+
+## What is resolved at arbitrary order
+
+1. **Exact diagonal reduction.** Every full ternary source is diagonal
+   in the original target bases. Its three actual scalar color matrices
+   obey M_h C_h=tau_h I, where C_h consists of actual deleted-pair
+   hafnians and tau_h!=0. This is neither an assigned inverse nor a
+   restriction to positive or support-valid graphs.
+   [Source and complete audit](../unaudited-codex-higher-common-power-bridge-2026-09-05/UNIFORM-GLOBAL-EDGE-MONOCHROMATICITY-AND-COFACTOR-INVERSE.md).
+
+2. **One matching color is enough for a contradiction.** At every even
+   n>=6, no full ternary source can have even one color consisting of
+   a perfect matching. The proof uses whole mixed cubic responses to
+   force the other colors into matchings. Thus forcing one matching
+   color would now close the conjecture.
+   [All-order theorem](../unaudited-codex-higher-common-power-bridge-2026-09-05/UNIFORM-ONE-MATCHING-COLOR-EXCLUSION.md).
+
+3. **Strong universal structural restrictions.** At forbidden orders
+   n>=6, every color must have a nonmatching component. Those components
+   have minimum degree at least three and are 2-vertex-connected; every
+   color has a non-edge component with an internal zero actual cofactor.
+   Color degrees are one or at least three, with upper bound n/2-2. Every
+   pair-color union is 2-vertex-connected. These statements constrain
+   every remaining source, without a dense-family ansatz.
+   [Current reviewed synthesis](../unaudited-codex-higher-common-power-bridge-2026-09-05/CURRENT-UNIFORM-FRONTIER.md).
+
+4. **Exact two-vertex-cut structure.** A pair-color two-cut leaves exactly
+   two pieces of the same parity. The actual inverse equations force
+   both participating colors to split into separate even blocks, in
+   the specified opposite pattern. Consequently a pair containing a
+   connected spanning color is 3-vertex-connected. This does not rule
+   out all two-cuts when both participating colors are disconnected.
+   [Classification](PAIR-COLOR-TWO-VERTEX-CUT-PARITY-AND-EVEN-INTERFACE-SPLIT-NEW-SOURCE.md),
+   [odd decoupling](SCALAR-ODD-TWO-TERMINAL-DECOUPLING-AND-CONNECTED-COLOR-PAIR-CONNECTIVITY-NEW-SOURCE.md),
+   [classification acceptance](ROOT-MATH-ACCEPTANCE-PAIR-COLOR-TWO-VERTEX-CUT-CLASSIFICATION.json),
+   [decoupling acceptance](ROOT-MATH-ACCEPTANCE-ODD-TWO-TERMINAL-DECOUPLING.json).
+
+   Both parity cases now also have explicit smaller binary constructions
+   preserving the whole two-target top and all four whole cubic identities.
+   Odd pieces use one new boundary vertex; even pieces use a specified
+   unit edge. These are proved coefficient factorizations, not presumed
+   inheritance under deletion. They do not preserve a third active target.
+   [Odd lifts](ODD-SEPARATOR-BINARY-LIFTS-INHERIT-WHOLE-CUBIC-RESPONSES-NEW-SOURCE.md),
+   [even lifts](EVEN-SEPARATOR-VIRTUAL-EDGE-BINARY-LIFTS-AND-CUBIC-INHERITANCE-NEW-SOURCE.md).
+
+5. **Original-core and pair rigidity.** Original deleted-root row maps
+   are injective; their diagonal preimages are exactly the original
+   row span. Every whole original deleted-pair tensor is nonzero, and
+   its single-pure-target case is exactly an existing mutual anchor.
+   Same-color exterior rows of a pair are either both zero or linearly
+   independent. These close several proposed local normalization and
+   repair arguments, but do not force a usable pair or a smaller source.
+   [Reviewed statements and dependencies](../unaudited-codex-higher-common-power-bridge-2026-09-05/ALL-ORDER-RESULTS-AND-CLOSURE-ROUTES.md).
+
+6. **Global coefficient certificates under explicit conditions.** Joint
+   component-cut restrictions and arbitrary-length selected-pair cycle
+   arguments turn suitable configurations into forbidden mixed words.
+   The new equal-color-corner argument also applies within a connected
+   component and forces actual higher complementary hafnians to vanish.
+   The existence of a suitable configuration with a nonzero simultaneous
+   complement is not part of those theorems.
+   [Cycle certificate](GLOBAL-SELECTED-PAIR-ORIENTATION-CYCLE-CERTIFICATE-NEW-SOURCE.md),
+   [corner propagation](EQUAL-COLOR-CORNER-AND-ACTUAL-HIGHER-COFACTOR-ZERO-PROPAGATION-NEW-SOURCE.md).
+
+At forbidden orders n>=6 there are also results for specified component families.
+A union of qualifying complete multipartite cofactor components, including
+odd-prime Fourier blocks, cannot carry a supported matching of another
+color; arbitrary exterior components are retained. An entire color made
+only of qualifying components is excluded. Separate theorems handle
+specified common-balanced binary component families. Exactly-half-size
+components with diameter at most two and complete multipartite actual
+cofactor support are excluded. These hypotheses are essential; one
+qualifying component with arbitrary exterior is not itself ruled out.
+
+## The precise missing step
+
+For a partition V=S_a disjoint_union S_b disjoint_union S_c, the actual
+coefficient of its color word is
+
+    haf(M_a[S_a]) haf(M_b[S_b]) haf(M_c[S_c]).
+
+A full source demands that this product vanish for EVERY partition with
+at least two nonempty parts, while all three full hafnians are nonzero.
+The remaining task is to prove that these demands cannot coexist at
+arbitrary forbidden order, using the derived compatibility identities.
+Equivalently, one must force a nonzero mixed coefficient or supply a
+valid descent covering every remaining source. Forcing one matching
+color is a particularly clean sufficient intermediate theorem.
+
+The hard gap is universal coverage: components can have complicated
+internal cofactor zeros, selected deletions can cancel, and pair unions
+can remain highly connected. Neither an admissible cycle nor a useful
+separator is known to exist in every remaining case.
+
+## Which route is best supported
+
+The exact diagonal weighted formulation remains the best-supported
+starting point. It uses the all-order reductions already established
+and keeps the matching sums that cause the central difficulty.
+
+A concrete sufficient target is **binary rigidity**: prove that every
+actual diagonal two-color source with a full two-target top and all four
+whole cubic monomials vanishing at every root has a matching color.
+The accepted one-matching-color binary argument would then make
+both colors matchings. A pair projection of a ternary source has these
+premises, so the target would close the ternary conjecture. The reviewed
+controls considered here do not refute it, but it is stronger in domain
+than necessary: it also concerns binary sources that have no third-color
+extension.
+General binary rigidity, including its common-balanced subclass, is open.
+
+The new [minimum-source reduction](MINIMUM-NONMATCHING-BINARY-CUBIC-SOURCE-HAS-THREE-CONNECTED-PAIR-UNION-NEW-SOURCE.md)
+now proves that a smallest nonmatching member of this exact binary class,
+if one exists, has a 3-vertex-connected pair-color union. Both smaller
+separator constructions remain in the class, and matching behavior in
+both smaller pieces would reassemble to matching behavior in the original.
+The two- and four-site bases are also proved. Thus it suffices to settle
+binary rigidity in the 3-vertex-connected case. Neither individual color
+is asserted connected, and the reduced object is not a smaller ternary
+counterexample. The [complete independent audit](MINIMUM-NONMATCHING-BINARY-CUBIC-SOURCE-HAS-THREE-CONNECTED-PAIR-UNION-NEW-SOURCE-AUDIT.md)
+and [root acceptance](ROOT-MATH-ACCEPTANCE-MINIMUM-NONMATCHING-BINARY-THREE-CONNECTIVITY.json)
+record this precise scope.
+
+The practical direction is to combine exact separator reductions where
+cuts exist with global coefficient and cycle arguments for the remaining
+components. If binary rigidity proves too strong, the additional third
+color must be used explicitly. No argument establishes that one research
+route is uniquely optimal or guarantees that its remaining theorem is easy.
+
+The scope controls explain what to avoid. Nonzero individual cofactors
+do not ensure a nonzero simultaneous complement; even a prescribed
+perfect matching can fail every deletion ordering. A viable deletion
+need not inherit an actual scalar inverse. For every fixed defect radius,
+there are controls passing those near-pure coefficient checks and the
+listed local identities while retaining a longer nonzero mixed word.
+Thus finite-radius checks and unproved complement nonvanishing cannot
+replace the global step.
+[Deletion-flag obstruction](ADAPTIVE-HAFNIAN-DELETION-FLAGS-AND-PRESCRIBED-MATCHING-OBSTRUCTION-RESEARCH-NOTE.md),
+[bounded-defect guard](../unaudited-codex-higher-common-power-bridge-2026-09-05/SCOPE-AFFINE-HADAMARD-BOUNDED-DEFECT-CHECKS.md).

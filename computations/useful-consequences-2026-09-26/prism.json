@@ -1,0 +1,17 @@
+{
+  "sites": 6,
+  "colors": ["a", "b", "c"],
+  "edges": [
+    {"ends": [0, 1], "color": "a", "omega_power": 0},
+    {"ends": [3, 4], "color": "a", "omega_power": 0},
+    {"ends": [2, 5], "color": "a", "omega_power": 1},
+    {"ends": [1, 2], "color": "b", "omega_power": 0},
+    {"ends": [4, 5], "color": "b", "omega_power": 0},
+    {"ends": [0, 3], "color": "b", "omega_power": 1},
+    {"ends": [0, 2], "color": "c", "omega_power": 0},
+    {"ends": [3, 5], "color": "c", "omega_power": 0},
+    {"ends": [1, 4], "color": "c", "omega_power": 1}
+  ],
+  "expected_output_omega_powers": {"aaaaaa": 1, "bbbbbb": 1, "cccccc": 1, "bcabca": 3},
+  "physical_model": "Nine phase-coherent, disjoint-mode two-mode squeezed vacua; ideal lossless selection of exactly one photon at each output site."
+}

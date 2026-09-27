@@ -71,6 +71,7 @@ The upstream checkout must remain at the pinned revision for this replay.
   through diagonalisation and endpoint identities to the graph contradiction.
 - [Exact upstream statements and reproduction details](formal/upstream-adapter/README.md).
 - [Statement-fidelity audit](formal/all-orders/EXACT-UPSTREAM-STATEMENT-AND-CLOSURE-AUDIT-2026-09-26.md).
+- [Illustrated undergraduate guides](explainers/README.md), including the complete proof walkthrough.
 
 ## Timeline
 
@@ -95,6 +96,8 @@ earlier proof frontier and the scope of each milestone.
 | --- | --- |
 | [formal/](formal/README.md) | Completed Lean proof, upstream adapter, and separately labelled legacy projects. |
 | [proofs/](proofs/) | Paper, LaTeX sources, written proofs, and presentation build scripts. |
+| [explainers/](explainers/README.md) | Illustrated undergraduate guides to the proof and its consequences. |
+| [research/](research/README.md) | Follow-up subprojects, current frontiers, and a shared replay command. |
 | [certification/](certification/) | Frozen historical proof packages, audits, and exact replay records. |
 | [docs/history/](docs/history/README.md) | Archived overview, proof sketch, and milestone references. |
 | [notes/](notes/) | Research notes and intermediate arguments, with their original evidence status. |
@@ -104,3 +107,18 @@ earlier proof frontier and the scope of each milestone.
 For a reproducible citation, link the relevant Lean declaration at the fixed
 proof commit: [complex result](https://github.com/rrajasek95/krenn-conjecture/blob/7f78a17ecedd245bd1c17b0dce3f6a9ea2afd66f/formal/upstream-adapter/FullProof.lean#L29)
 or [real result](https://github.com/rrajasek95/krenn-conjecture/blob/5e7d0fe0b6058f4658ccc5dae5f148ea8e7bc248/formal/upstream-adapter/RealCorollaries.lean#L63).
+
+## Research subprojects
+
+Follow-up work has its own proofs, explainers, and reproducible checks.
+The rate and design results are written research with exact supporting checks;
+independent audit is pending. The unrestricted targets below remain open.
+
+| Subproject | Results so far and next question |
+| --- | --- |
+| [GHZ fidelity and rate](research/ghz-rates/README.md) | Explicit rate bounds, local square-root laws, and boundary identities; pursuing the unrestricted square-root law. |
+| [Optimal W-state design](research/w-state-design/README.md) | All-even optimality when the ground support has no perfect matching, plus local and unrestricted response bounds; pursuing global optimality. |
+| [Response identities and reconstruction](research/response-methods/README.md) | Reusable optimization certificates, source balancing, stability estimates, and source-reconstruction methods. |
+
+[Research overview and replay instructions](research/README.md) ·
+[Illustrated guides](explainers/README.md)

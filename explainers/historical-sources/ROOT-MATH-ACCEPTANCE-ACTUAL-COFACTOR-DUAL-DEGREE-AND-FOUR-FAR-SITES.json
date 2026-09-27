@@ -1,0 +1,33 @@
+{
+  "status": "ROOT MATHEMATICAL ACCEPTANCE after complete frozen source and independent audit read, with analytic reconstruction",
+  "date_utc": "2026-09-23T01:05:34+00:00",
+  "reviewer": "/root",
+  "source_sha256": "36c0589eb53e17cdc8e9885f55ae47f38b2c3a5461a942b175650442f58c8d19",
+  "source_freeze_sha256": "2fedc86ed624299c806f588b528c31f251ab0da36938be330481aa47b4cfeb58",
+  "independent_audit_sha256": "363ab31186be66070313c7307174983b27d8f928de84355682a68e0ca7bbf4eb",
+  "audit_freeze_sha256": "7475ed5a48646f2736008e200a56dcc2910930b3078776d2627f5c5ce73062a1",
+  "accepted_scope": [
+    "For a symmetric zero-diagonal M with nonzero hafnian and actual MC=tau I, every actual cofactor row has support size one or at least three; size one is equivalent to membership in an isolated M edge.",
+    "In a full ternary source at n>=6, a vertex nonmatching in B or C has at least four sites at H-distance greater than two. A 3-connected B/C support union makes this true at every vertex.",
+    "Every H graph has at least six vertices with four far sites and at least n+6 unordered far pairs. A fixed color's cofactor row is supported in the intersection of the far sets for the other two colors.",
+    "If B and C have isolated edges p-q and p-r, their distinct partners q,r are nonadjacent in every color, by the full ternary routing rectangle theorem.",
+    "A girth-at-least-five nonmatching component of minimum degree delta requires n>=delta^2+5, rounded to the next even integer. Under complementary pair 3-connectivity, every vertex of a cubic component at n=12 belongs to at least two distinct four-cycles."
+  ],
+  "root_reconstruction": [
+    "For a two-entry cofactor row a=C[p,q], b=C[p,r], sum the off-diagonal CM row against the common residual hafnians K_w. The actual expansions give 0=ab+ba, contradicting ab!=0 over C.",
+    "A nonmatching B vertex has at least three nonzero actual B cofactor entries, all H-far. The private C partner is also H-far and its original mixed two-site coefficient kills the B cofactor there, giving a fourth distinct site.",
+    "For isolated complementary edges, the odd-routing residual support sets are the singleton partners. The four-site H hafnian then reduces to H[p,u]H[q,r], forcing H[q,r]=0; the other two colors vanish at q,r by isolation.",
+    "A girth-five component has a radius-two ball of at least 1+delta^2 at every vertex. If n<=delta^2+4, all those vertices would be matching in B and C, leaving at most three exterior sites for a required nonmatching component."
+  ],
+  "not_established": [
+    "That the cofactor matrix itself satisfies an actual scalar inverse-cofactor identity",
+    "That every vertex has four far sites without the local nonmatching or pair-connectivity premise",
+    "General n=12 exclusion, existential weighted four-deletion, or conjecture closure"
+  ],
+  "preservation": {
+    "baseline_sha256": "8401e5a6eafb7b2c6843f3e3e0cd1b697253156bad95794dd7a4e9fa4ec16ae3",
+    "records_checked": 1205,
+    "all_text_hashes_and_lines_unchanged": true
+  },
+  "canonical_edit": "none; editorial integration separately reviewable"
+}

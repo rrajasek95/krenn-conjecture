@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Krenn–Gu · See the matchings</title>
+<style>
+  :root { color-scheme: light; --ink:#202d3a; --muted:#526171; --paper:#f5f3ee; --line:#d8dedf; --red:#bd3847; --blue:#2168af; --green:#237953; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font:17px/1.65 system-ui,sans-serif; }
+  main { max-width:1120px; margin:auto; padding:48px 28px 64px; }
+  .eyebrow { color:var(--muted); font-size:12px; font-weight:700; letter-spacing:.15em; text-transform:uppercase; }
+  h1 { font-size:clamp(32px,5vw,58px); line-height:1.13; letter-spacing:-.04em; margin:12px 0 20px; }
+  h2 { font-size:21px; line-height:1.35; margin-top:0; }
+  p { max-width:76ch; }
+  a { color:#185b88; text-underline-offset:3px; }
+  .intro { font-size:20px; max-width:780px; }
+  .controls { display:flex; flex-wrap:wrap; gap:10px; margin:30px 0 24px; }
+  button,select,input { font:inherit; }
+  button { border:1px solid #b7c2c7; border-radius:8px; padding:10px 15px; color:var(--ink); background:white; cursor:pointer; }
+  button[aria-pressed="true"] { background:var(--ink); color:white; border-color:var(--ink); }
+  button:hover { border-color:#1e627f; }
+  button:focus-visible,select:focus-visible,input:focus-visible { outline:3px solid #db9d14; outline-offset:4px; }
+  .panel { background:white; border:1px solid var(--line); border-radius:16px; padding:26px; }
+  .lab { display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:start; }
+  .graph-panel { position:sticky; top:18px; }
+  svg { display:block; width:100%; height:auto; }
+  .legend { display:flex; flex-wrap:wrap; gap:18px; justify-content:center; font-size:14px; }
+  .legend span { font-weight:700; }
+  .red { color:var(--red); } .blue { color:var(--blue); } .green { color:var(--green); }
+  .muted { color:var(--muted); font-size:14px; }
+  .notice { background:#eef4f6; border-left:4px solid #397a91; padding:14px 18px; margin:16px 0; }
+  label { display:block; margin:14px 0 5px; font-weight:600; }
+  select { width:100%; padding:9px; background:white; border:1px solid #aeb9c2; border-radius:6px; }
+  .word { letter-spacing:.13em; font:700 22px/1.5 ui-monospace,monospace; white-space:nowrap; }
+  table { width:100%; border-collapse:collapse; font-size:15px; }
+  th,td { text-align:left; padding:9px 6px; border-bottom:1px solid var(--line); }
+  th { font-weight:600; color:var(--muted); }
+  td .word { font-size:17px; }
+  .mixed { background:#fff2e8; }
+  .output-scroll { overflow-x:auto; }
+  .footer { border-top:1px solid var(--line); margin-top:30px; padding-top:20px; }
+  .number { font-variant-numeric:tabular-nums; }
+  .weight-control { margin:16px 0; }
+  input[type="range"] { width:100%; accent-color:var(--red); }
+  [hidden] { display:none !important; }
+  .summary { margin:24px 0; }
+  @media(max-width:780px) { main { padding:28px 16px; } .lab { grid-template-columns:1fr; } .graph-panel { position:static; } .panel { padding:20px; } }
+  @media print { .controls,select,.weight-control { display:none; } main { padding:0; } .graph-panel { position:static; } body { background:white; } }
+</style>
+<main>
+  <div class="eyebrow">Krenn–Gu / interactive companion</div>
+  <h1>Every pairing contributes.<br>Can the mixtures disappear?</h1>
+  <p class="intro">A perfect matching pairs every vertex exactly once. Multiply its edge weights, then add the weights of matchings producing the same color list. The target keeps only the all-equal lists.</p>
+  <p><a href="EXPLAINER.html">Read the full explainer: prior work, workspace findings, and what remains open →</a></p>
+  <nav class="controls" aria-label="Choose a matching example">
+    <button type="button" data-example="four" aria-pressed="true">1 · Four sites, three colors</button>
+    <button type="button" data-example="cycle" aria-pressed="false">2 · Six sites, two colors</button>
+    <button type="button" data-example="third" aria-pressed="false">3 · Add a third color</button>
+    <button type="button" data-example="cancel" aria-pressed="false">4 · See cancellation</button>
+  </nav>
+  <p id="description" class="summary"></p>
+  <div class="lab">
+    <div class="panel graph-panel">
+      <h2 id="graph-heading">The graph</h2>
+      <svg id="graph" viewBox="0 0 450 390" role="img" aria-labelledby="graph-title graph-desc"></svg>
+      <div class="legend"><span class="red">R · red · solid</span><span class="blue">B · blue · dashed</span><span class="green">G · green · dotted</span></div>
+      <p class="muted">Edge letters identify colors. Edge numbers identify weights. Bold edges belong to the selected matching; vertex labels give the output order.</p>
+      <label for="matching">Inspect a matching</label>
+      <select id="matching"></select>
+      <p id="selected" aria-live="polite"></p>
+      <div id="weight-control" class="weight-control" hidden>
+        <label for="weight">Weight of red edge 2–4: <output id="weight-value" for="weight">−1</output></label>
+        <input id="weight" type="range" min="-2" max="2" step="1" value="-1">
+        <p class="muted">The other three edges have weight +1. At −1, the two matching contributions cancel exactly.</p>
+      </div>
+    </div>
+    <div class="panel">
+      <h2>Sum by output</h2>
+      <p class="muted">These are all color lists with a nonzero matching contribution. Every unlisted list has amplitude zero. A listed sum can also be zero through cancellation.</p>
+      <div class="output-scroll"><table>
+        <thead><tr><th>Color list</th><th>Contributions</th><th>Amplitude</th></tr></thead>
+        <tbody id="outputs"></tbody>
+      </table></div>
+      <div id="verdict" class="notice" aria-live="polite"></div>
+      <p id="lesson"></p>
+    </div>
+  </div>
+  <noscript><p>Enable JavaScript to enumerate the matchings. The full <a href="EXPLAINER.html">text explainer</a> gives the same constructions without JavaScript.</p></noscript>
+  <div class="footer">
+    <p><strong>The open issue is exact cancellation at arbitrary size.</strong> Failure of one six-site construction is only an example. A general impossibility proof must exclude every allowed graph and every assignment of complex weights.</p>
+    <p class="muted">These examples use same-color endpoints and small integer weights. The conjecture allows bicolored edges and complex weights too. The cancellation example is one scalar matching sum, not a GHZ solution or a conjecture counterexample. All enumeration here is exact for the displayed integers.</p>
+  </div>
+</main>
+<script>
+'use strict';
+const COLORS={R:'#bd3847',B:'#2168af',G:'#237953'};
+const edge=(u,v,c,w=1)=>({u:u-1,v:v-1,c,w});
+const examples={
+  four:{n:4, edges:[edge(1,2,'R'),edge(3,4,'R'),edge(1,3,'B'),edge(2,4,'B'),edge(1,4,'G'),edge(2,3,'G')],
+    description:'Four sites are exceptional. K₄ has exactly three perfect matchings; we can give each its own color.',
+    lesson:'There are no mixed outputs to remove. Each of the three all-equal lists has amplitude 1, so this is an exact three-color solution.'},
+  cycle:{n:6, edges:[edge(1,2,'R'),edge(3,4,'R'),edge(5,6,'R'),edge(2,3,'B'),edge(4,5,'B'),edge(6,1,'B')],
+    description:'An even cycle has just two perfect matchings. Alternating red and blue edges produces a two-color solution.',
+    lesson:'Once you choose the partner of vertex 1, every other pair is forced. This construction works on every even cycle, not just six sites.'},
+  third:{n:6, edges:[edge(1,2,'R'),edge(3,4,'R'),edge(5,6,'R'),edge(2,3,'B'),edge(4,5,'B'),edge(6,1,'B'),edge(1,4,'G'),edge(2,5,'G'),edge(3,6,'G')],
+    description:'Adding the green matching gives the desired all-green output, but also creates three unwanted mixed outputs.',
+    lesson:'Each mixed list in this graph has only one contributing matching. With its nonzero edge weights it cannot cancel. More complicated graphs might offer several contributions to the same list; ruling out every such possibility is the hard part.'},
+  cancel:{n:4, edges:[edge(1,2,'R'),edge(3,4,'R'),edge(1,3,'R'),edge(2,4,'R',-1)],
+    description:'Two different pairings now produce the same all-red list. Their weights add, so changing one sign can remove the entire output.',
+    lesson:'At weight −1 the amplitude is 1 + (−1) = 0, even though two nonzero matching contributions exist. This is why “a matching exists” and “its output survives” are different statements.'}
+};
+function enumerate(n,edges){
+  const results=[];
+  function visit(left,picked,product){
+    if(!left.length){
+      const word=Array(n).fill('?');
+      for(const i of picked){const e=edges[i]; word[e.u]=word[e.v]=e.c;}
+      results.push({picked:[...picked],weight:product,word:word.join('')}); return;
+    }
+    const u=left[0];
+    edges.forEach((e,i)=>{
+      if(e.w===0 || (e.u!==u && e.v!==u)) return;
+      const v=e.u===u?e.v:e.u;
+      if(!left.includes(v)) return;
+      visit(left.filter(x=>x!==u&&x!==v),[...picked,i],product*e.w);
+    });
+  }
+  visit(Array.from({length:n},(_,i)=>i),[],1);
+  return results;
+}
+function groupOutputs(matchings){
+  const groups=new Map();
+  matchings.forEach(m=>{if(!groups.has(m.word))groups.set(m.word,[]);groups.get(m.word).push(m.weight);});
+  return [...groups].map(([word,terms])=>({word,terms,sum:terms.reduce((a,b)=>a+b,0),pure:new Set(word).size===1}));
+}
+const byId=id=>document.getElementById(id);
+const signed=n=>n<0?'−'+Math.abs(n):String(n);
+function coloredWord(word){return '<span class="word">'+[...word].map(c=>'<span style="color:'+COLORS[c]+'">'+c+'</span>').join('')+'</span>';}
+let active='four', selected=0, currentMatchings=[];
+function draw(){
+  const ex=examples[active], chosen=currentMatchings[selected], chosenSet=new Set(chosen?chosen.picked:[]);
+  const pts=Array.from({length:ex.n},(_,i)=>{const a=-Math.PI/2+2*Math.PI*i/ex.n;return [225+150*Math.cos(a),190+150*Math.sin(a)];});
+  const parts=['<title id="graph-title">'+ex.n+' vertices, example '+active+'</title><desc id="graph-desc">'+ex.description+' Use the matching selector below for a textual list of its edges and output.</desc>'];
+  ex.edges.forEach((e,i)=>{
+    const [x1,y1]=pts[e.u],[x2,y2]=pts[e.v], isChosen=chosenSet.has(i), dash=e.c==='B'?'10 5':e.c==='G'?'2 6':'';
+    parts.push('<line x1="'+x1+'" y1="'+y1+'" x2="'+x2+'" y2="'+y2+'" stroke="'+COLORS[e.c]+'" stroke-width="'+(isChosen?6:2)+'" stroke-linecap="round" stroke-dasharray="'+dash+'" opacity="'+(isChosen?1:.24)+'"/>');
+    const t=.28, tx=x1*(1-t)+x2*t,ty=y1*(1-t)+y2*t;
+    const label=e.c+(e.w!==1?' '+signed(e.w):'');
+    parts.push('<text x="'+tx+'" y="'+(ty-5)+'" fill="'+COLORS[e.c]+'" font-size="15" font-weight="700" text-anchor="middle" stroke="white" stroke-width="4" paint-order="stroke">'+label+'</text>');
+  });
+  pts.forEach(([x,y],i)=>{
+    const c=chosen?chosen.word[i]:null;
+    parts.push('<circle cx="'+x+'" cy="'+y+'" r="20" fill="white" stroke="'+(c?COLORS[c]:'#202d3a')+'" stroke-width="3"/><text x="'+x+'" y="'+(y+6)+'" text-anchor="middle" fill="#202d3a" font-size="18" font-weight="700">'+(i+1)+'</text>');
+  });
+  byId('graph').innerHTML=parts.join('');
+  if(chosen){
+    const factors=chosen.picked.map(i=>{const e=ex.edges[i];return (e.u+1)+'–'+(e.v+1)+' '+e.c+' ('+signed(e.w)+')';});
+    byId('selected').innerHTML=factors.join(' × ')+'<br>'+coloredWord(chosen.word)+' · matching weight <strong>'+signed(chosen.weight)+'</strong>';
+  }
+}
+function render(reset=true){
+  const ex=examples[active];
+  currentMatchings=enumerate(ex.n,ex.edges);
+  if(reset)selected=active==='third'?currentMatchings.findIndex(m=>new Set(m.word).size>1):0;
+  selected=Math.max(0,Math.min(selected,currentMatchings.length-1));
+  byId('description').textContent=ex.description;
+  byId('lesson').textContent=ex.lesson;
+  byId('weight-control').hidden=active!=='cancel';
+  byId('matching').innerHTML=currentMatchings.map((m,i)=>'<option value="'+i+'">'+(i+1)+' · '+m.picked.map(j=>{const e=ex.edges[j];return(e.u+1)+'–'+(e.v+1)+e.c;}).join(' / ')+' → '+m.word+'</option>').join('');
+  byId('matching').value=String(selected);
+  const groups=groupOutputs(currentMatchings).sort((a,b)=>Number(b.pure)-Number(a.pure)||a.word.localeCompare(b.word));
+  byId('outputs').innerHTML=groups.map(g=>'<tr class="'+(g.pure?'':'mixed')+'"><td>'+coloredWord(g.word)+'</td><td>'+g.terms.map(n=>n<0?'('+signed(n)+')':signed(n)).join(' + ')+'</td><td class="number"><strong>'+signed(g.sum)+'</strong></td></tr>').join('');
+  const bad=groups.filter(g=>!g.pure&&g.sum!==0).length;
+  if(active==='cancel'){
+    const sum=groups.reduce((a,g)=>a+g.sum,0);
+    byId('verdict').textContent='All-red amplitude: '+signed(sum)+'. '+(sum===0?'Two supported matchings, zero total amplitude.':'The all-red output survives at this weight.');
+  }else{
+    byId('verdict').textContent=currentMatchings.length+' perfect matchings · '+bad+' unwanted outputs. '+(bad?'This three-color attempt fails.':'Every target amplitude is 1; every mixed amplitude is 0.');
+  }
+  draw();
+}
+document.querySelectorAll('[data-example]').forEach(button=>button.addEventListener('click',()=>{
+  active=button.dataset.example;
+  document.querySelectorAll('[data-example]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+  render();
+}));
+byId('matching').addEventListener('change',e=>{selected=Number(e.target.value);draw();});
+byId('weight').addEventListener('input',e=>{
+  const w=Number(e.target.value); examples.cancel.edges[3].w=w; byId('weight-value').textContent=signed(w); render(false);
+});
+render();
+</script>
+</html>

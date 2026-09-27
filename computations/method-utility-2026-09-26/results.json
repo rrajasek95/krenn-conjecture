@@ -1,0 +1,167 @@
+{
+  "W": {
+    "even_size_rates": [
+      {
+        "cofactor": 1,
+        "rate": "1/10",
+        "response_gain": "6/5",
+        "sites": 4
+      },
+      {
+        "cofactor": 3,
+        "rate": "1/65",
+        "response_gain": "135/13",
+        "sites": 6
+      },
+      {
+        "cofactor": 15,
+        "rate": "9/3136",
+        "response_gain": "252",
+        "sites": 8
+      },
+      {
+        "cofactor": 105,
+        "rate": "49/83025",
+        "response_gain": "496125/41",
+        "sites": 10
+      },
+      {
+        "cofactor": 945,
+        "rate": "3675/28579232",
+        "response_gain": "58939650/61",
+        "sites": 12
+      }
+    ],
+    "exact_W6_rate": "1/65",
+    "minimum_preimage_norm_squared": "26/45",
+    "output_coefficients_checked": 729
+  },
+  "arcs": [
+    {
+      "achieved_rate_exponent": "1/2",
+      "error_order": 3,
+      "error_to_target_order": "3",
+      "scope": "Exact polynomial arc, all matching output coefficients expanded",
+      "source_base_norm_squared": "6",
+      "target_order": 1,
+      "violates_square_root": false
+    },
+    {
+      "achieved_rate_exponent": "1/2",
+      "error_order": 6,
+      "error_to_target_order": "3",
+      "scope": "Exact polynomial arc, all matching output coefficients expanded",
+      "source_base_norm_squared": "6",
+      "target_order": 2,
+      "violates_square_root": false
+    },
+    {
+      "achieved_rate_exponent": "1/2",
+      "error_order": 3,
+      "error_to_target_order": "3",
+      "scope": "Exact polynomial arc, all matching output coefficients expanded",
+      "source_base_norm_squared": "6",
+      "target_order": 1,
+      "violates_square_root": false
+    }
+  ],
+  "evidence_status": "Exact supporting calculations; analytic proofs await independent audit",
+  "holomorphic_SOS_obstruction_dependency": {
+    "coefficient_field": "integers",
+    "column_counts": {
+      "balanced": 2130,
+      "mixed": 16290
+    },
+    "sector_basis_size": 17355,
+    "support_size": 1296,
+    "target_evaluation": 64,
+    "total_columns": 18420
+  },
+  "integral_examples": {
+    "genuine_integral_dependence": {
+      "coefficient_bounds": [
+        "0",
+        "1"
+      ],
+      "conclusion": "|target| <= norm_constant * ||errors||_2 on the unit ball",
+      "monic_degree": 2,
+      "norm_constant": "1"
+    },
+    "restricted_prism": {
+      "coefficient_bounds": [
+        "5"
+      ],
+      "conclusion": "|target| <= norm_constant * ||errors||_2 on the unit ball",
+      "monic_degree": 1,
+      "norm_constant": "5"
+    }
+  },
+  "negative_controls": {
+    "false_integral_identity": "REJECTED",
+    "false_norm_majorant": "REJECTED",
+    "false_response_norm": "REJECTED",
+    "false_upper": "REJECTED",
+    "invalid_holomorphic_SOS": "REJECTED",
+    "unmet_second_requirement": "REJECTED",
+    "wrong_ideal_power": "REJECTED",
+    "zero_output": "REJECTED"
+  },
+  "pinned_dependencies": {
+    "computations/complex-rate-bound-2026-09-26/balanced-dual.json": "89b2880df5b7e67e73ac39737717b6beceb37d1afd226d68c34649c0f2039f45",
+    "computations/complex-rate-bound-2026-09-26/verify.py": "acee77481e6ebc5311643d6a53f921774493ad31c1b9b914c361b3686bce2ba2",
+    "computations/quantitative-proof-identities-2026-09-26/verify.py": "7a0e789928e10f5321b01de46055a28d149a1300eda64c0c8e6761db7c57c327",
+    "computations/rate-design-frontier-2026-09-26/core.py": "59b1abe9e19a75bee96445a9d6c1b345d31be9bb0e36bc021af33e121b9ba6cb",
+    "proofs/krenn-gu-all-orders-two-replica-proof.md": "fb0fa1e9447d8044981692d6e9bbbeff8e6a2cfc90119b6a296cbf506b9a3c9d"
+  },
+  "robust_core_ball": {
+    "core_radius": "1/1000000",
+    "dual_output_operator_norm_upper": "601510254377/200000000000",
+    "rate_upper": "714159892918862739731117501334377/5453103919280361943513635337500000000",
+    "response_error_upper": "4020001/500000000000",
+    "scope": "Every complex core in the Euclidean ball; every qualifying root vector"
+  },
+  "source_sha256": {
+    "computations/method-utility-2026-09-26/README.md": "140af6001139e1e3cc8ed7ab7c6f208d958f7edf26f99508cad002299202b8ff",
+    "computations/method-utility-2026-09-26/dependencies.json": "8a9bfe3af1be4191ce356d676ebd2ca125a37a73c51774a84b9bfe515b9aa006",
+    "computations/method-utility-2026-09-26/examples.py": "36515026413e5be5b80b7a1a633cfd8c2cc7958fc764c852b378d04d58cf876c",
+    "computations/method-utility-2026-09-26/polynomial.py": "acd752a03229e04cc5ca98c5bcbd20977312afad7c6d8fd0f0b58256edb16472",
+    "computations/method-utility-2026-09-26/quality.py": "4cc5590b00611fc9906a8c0e259a8d3a971a14a64abf59dc5b3aa64f92efc728",
+    "computations/method-utility-2026-09-26/search.py": "419e14bb8db8c51d39978c0c05b2212aa2c46a6079aa36f2a89ac00004f75341",
+    "computations/method-utility-2026-09-26/shared.py": "4b22b569614a92588f85cfea42ebc866a7976f555b2e5ccedf13f80679065de7",
+    "computations/method-utility-2026-09-26/two-quality-certificate.json": "026b3b73f49b93ced37d1e78f7f0ca52e8994da7df6095cf13925d81532fd87d",
+    "computations/method-utility-2026-09-26/two-quality-problem.json": "3c66acfc85bdf5c498cd9549ac3a3f43f85914ac35d7871d596540127677208f",
+    "computations/method-utility-2026-09-26/verify.py": "c3f94be5a9a7fbffb63b691f97caed2be897376dc0dd9e536bf5555294566ba3",
+    "notes/integral-rate-certificates-2026-09-26.md": "c99504407468a1202eed5d5db72c85753ba1fa7762fc135716bd1b2b2a4b17d1",
+    "notes/reusable-response-certificates-2026-09-26.md": "791ef4dd7a41cfaa419329cbff780a6ab8fdcf3c9dd314b56cb31e838c035cc6",
+    "notes/w-state-optimal-design-2026-09-26.md": "28a9d6dda968bff29dbdde4623e3fde44f6e49d4d0667c02d3eb7462b571427f"
+  },
+  "three_constraint_gap": {
+    "analytic_ingredient": "Pure Bloch vectors have length one; positive octant has coordinate sum >= 1",
+    "pure_optimum": "2",
+    "relaxed_optimum": "3"
+  },
+  "two_quality": {
+    "margins": [
+      "2127957312376083773/1500000000000000000000000000000",
+      "712062042736167039/500000000000000000000000000000"
+    ],
+    "psd": {
+      "positive_pivots": 45,
+      "zero_pivots": 0
+    },
+    "quality_values": [
+      "210662850824571581261357600/212790758387163644583431073",
+      "6856591101212843960790000/23643417598573738287047897"
+    ],
+    "rate_lower": "23643417598573738287047897/181804500000019881740592612153",
+    "rate_upper": "14186474791/109082700000000",
+    "relative_gap": "212115928654214739345449720647/7093025279572121486114369100000000"
+  },
+  "weighted_W": {
+    "cofactor_balance_defect": "7587/31265",
+    "cofactor_norm_squared": "1528",
+    "core_energy": "65",
+    "minimum_incident_norm_squared": "1974481/9554584",
+    "output_coefficients_checked": 729
+  }
+}

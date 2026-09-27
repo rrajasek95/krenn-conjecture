@@ -1,0 +1,260 @@
+# Whole mixed cubic responses exclude an entire matching color at every forbidden order
+
+**Status.** Independently audited all-order research, 2026-09-20.
+[Complete independent audit PASS](../unaudited-codex-diagonal-continuation-2026-09-20/ONE-MATCHING-COLOR-EXCLUSION-NEW-SOURCE-AUDIT.md);
+the parent read the complete source and audit and accepted their stated scope.
+Frozen review objects are unchanged. The general conjecture remains open;
+formal certification status is unchanged.
+
+## 1. Binary rigidity with an explicit additional cubic hypothesis
+
+Work over C in the commutative physical-site-square-zero algebra, with
+Q^[j]=Q^j/j!, and haf(empty)=1. Let V consist of m>=3 disjoint pairs
+
+    I_i={i0,i1},       i=1,...,m,       |V|=2m.
+
+Consider the ACTUAL diagonal binary quadratic
+
+    Q=sum_i a_i h_(i0) h_(i1)+sum_(u<v) B[u,v] b_u b_v,
+    a_i!=0,       B=B^T,       B[u,u]=0,
+    Q^[m]=tau_h h^V+tau_b b^V,       tau_h tau_b!=0.       (1)
+
+Thus the ENTIRE h graph is the displayed perfect matching; the b graph
+and all its complex weights are initially arbitrary. In particular
+tau_h=product_i a_i and tau_b=haf(B). For each physical root p in I_i,
+let p* be its partner and define its two original root rows and core
+
+    Z_p=a_i h_(p*),       Y_p=sum_(v!=p) B[p,v] b_v,
+    R_p=Q restricted off p.
+
+Assume in addition the WHOLE mixed cubic identities
+
+    Y_p^2 Z_p R_p^[m-2]=0               for EVERY p.      (2)
+
+This means every binary coefficient of this actual row/core response
+is zero. It is a separate assumption, NOT a consequence asserted for
+arbitrary binary sources satisfying (1).
+
+**Binary rigidity theorem.** Under (1)--(2), the entire b graph is also
+a perfect matching. No scalar cofactor inverse, positivity, source
+minimum, higher response degree, or actual contraction is required.
+
+**Full-source consequence.** At every even n>=6, a full ordinary complex
+ternary source cannot have an entire monochromatic graph that is a
+perfect matching. Section 6 checks the source-relative hypotheses and
+the final already-reviewed obstruction. Section 7 gives a further
+all-order bound on the number of isolated matching components.
+
+## 2. Proper paired zeros and one b edge per quotient link
+
+For J a nonempty proper subset of the pair indices, write V_J for the
+union of its pairs. The coefficient in (1) with b on V_J and h elsewhere
+is the exact product
+
+    (product_(i notin J) a_i) haf(B[V_J])=0.
+
+The h matching on the complement is forced. Thus
+
+    haf(B[V_J])=0       for every nonempty proper J.      (3)
+
+In particular B[i0,i1]=0 for every i. The entire b graph has no edge
+internal to any h pair. All cancellations inside the hafnian in (3)
+are retained; the proof will isolate a term only after inducedness.
+
+Fix p in I_i and another pair I_j={u,v}. In (2), take the word b at
+exactly u,v and h at every other retained site. The two Y_p factors
+must fill u,v in the two possible orders, and Z_p fills p*. The
+remaining h matching consists of every pair except I_i,I_j. Its exact
+coefficient, with RAW rows and the DIVIDED residual power, is
+
+    0=2 B[p,u] B[p,v] a_i product_(k notin {i,j}) a_k.    (4)
+
+Every displayed anchor weight is nonzero. Therefore a physical vertex
+has at most one b neighbor in any other h pair. Applying this to all
+roots makes each 2-by-2 crossing block B[I_i,I_j] a partial matching:
+at most one nonzero entry in each row and each column.
+
+Because m>=3, the union of two pairs is proper. Equation (3) on those
+four sites, using the absence of internal b edges, gives
+
+    B[i0,j0] B[i1,j1]+B[i0,j1] B[i1,j0]=0.               (5)
+
+The partial-matching pattern permits at most one of these products
+to be nonzero. Hence the block contains at most ONE nonzero b edge.
+This is exactly the one-color rectangle consequence needed below,
+derived here from (1)--(2) without a separate cofactor hypothesis.
+The properness of two pairs is where n>4 is used.
+
+## 3. Physical port labels and the shortest-cycle graph fact
+
+Define a simple quotient graph G on the h pairs: i--j is an edge
+precisely when B[I_i,I_j] has its one nonzero edge. At each endpoint
+i of this quotient edge, label the incidence by the physical port
+0 or 1 used by that actual b edge. The two endpoint labels need not
+agree. Equality of labels is compared ONLY at the same quotient vertex.
+
+A corner of a simple quotient cycle is called aligned if its two
+incidences use the SAME physical port. It is unaligned when the two
+ports differ. A cycle with every corner unaligned is exactly a set
+of its actual b edges matching both physical vertices of every pair
+on that cycle once.
+
+Since haf(B)!=0, there is at least one supported b perfect matching
+whose edge-weight product is nonzero. Its projection to the h pairs
+has degree two at every vertex. There are no loops, by (3), and no
+doubled edges, by (5). Its components are therefore simple cycles of
+length at least three, with EVERY corner unaligned. In particular
+G contains a simple cycle with at most one aligned corner. This does
+not assume the quotient is connected or that all matching terms survive.
+
+Choose a SHORTEST such cycle C. It is induced. Here is the complete
+elementary proof, valid for arbitrary local incidence labels. If uv
+were a chord, it would split C into two shorter simple cycles C1,C2.
+All nonendpoint corners are inherited once. At an endpoint with
+different old labels, the chord label can match at most one of them,
+so at most one of the new corners is aligned. At an endpoint with
+equal old labels, at most two are aligned. Consequently
+
+    align(C1)+align(C2) <= align(C)+2 <= 3.               (6)
+
+One shorter cycle would have at most one aligned corner, contradicting
+minimality. Thus C is induced. This reuses the elementary chord-count
+mechanism in the existing common-anchor work. It needs neither Yeo's
+theorem nor connected-cycle sums, graph enumeration, or tensor ranks.
+
+## 4. Zero aligned corners cannot occur on a proper induced cycle
+
+Suppose C has ell vertices J and zero aligned corners. Inducedness
+and the one-edge-per-link result imply that B[V_J] has exactly the
+ell actual cycle edges, with no internal-pair edges and no chords.
+Its unaligned corners make these edges a perfect matching of V_J.
+It is the UNIQUE matching on those sites, with nonzero weight product
+
+    haf(B[V_J])=product_(e in C) B[e]!=0.                 (7)
+
+If J is proper, this contradicts (3). Here B[e] denotes the scalar
+weight of the unique physical b edge underlying the quotient edge.
+No induced restriction is treated as a full source; only its literal
+hafnian appears. Edges incident to outside pairs cannot contribute
+to that restriction.
+
+## 5. One aligned corner gives a forbidden WHOLE cubic coefficient
+
+Suppose C has exactly one aligned corner, at pair I_i. Its two actual
+cycle edges meet the same physical endpoint p of I_i; write p* for
+the other endpoint. Let ell=|J|>=3. In the original p response (2),
+choose the following word on V without p:
+
+    b on V_J without I_i;
+    h on p* and on every pair outside J.                 (8)
+
+This uses BOTH colors even if J is the whole pair set: p* is h and
+the other ell-1 pairs are b. Only the two neighbors of p on C can
+receive the two Y_p monomers. Any b neighbor outside J is forbidden
+by the requested h coordinate there. There are no other b neighbors
+inside J because C is induced and each quotient link has one b edge.
+The monomers therefore have exactly TWO ordered placements, and
+Z_p has its unique placement at p*.
+
+At every other cycle pair the two cycle edges use opposite physical
+ports. After the two b monomers are placed, the remaining ell-2
+cycle edges form the unique b matching of the other requested b sites.
+All exterior h sites are filled by their original forced anchor edges.
+No c edge exists in this binary calculation, and no outside b edge or
+outside row placement survives the word (8). The complete coefficient is
+
+    [word (8)] Y_p^2 Z_p R_p^[m-2]
+      =2 a_i (product_(e in C) B[e])
+                         (product_(k notin J) a_k) != 0. (9)
+
+The residual matching uses ell-2 b edges and m-ell h edges, exactly
+m-2 edges in total. The factor two is from the ordered raw Y_p rows;
+the divided power contributes one copy of this residual matching.
+All displayed factors are nonzero, including when the exterior product
+is empty. Equation (9) contradicts the WHOLE identity (2).
+
+Thus no induced cycle with one aligned corner can occur, at any size.
+The shortest cycle of Section 3 must instead have zero aligned corners
+and, by Section 4, span EVERY quotient vertex. Because it is induced,
+G is exactly that cycle: there are no other quotient vertices or edges.
+Its actual b edges are a perfect matching by their unaligned ports,
+and there are no further b edges anywhere. This proves binary rigidity.
+
+## 6. Application to one entire color of a full ternary source
+
+Let an original full ordinary ternary source on n=2m>=6 have nonzero
+pure target amplitudes and suppose one ENTIRE color-h graph is a
+perfect matching. The reviewed global-edge theorem makes all its
+edge blocks diagonal in the original target bases. Projection at every
+site to h and another color b gives the actual binary quadratic (1).
+
+At every original root, the three original rows belong to the same
+odd core and have three independent nonzero pure responses. The
+reviewed higher-response theorem says that the entire binary projection
+of each higher odd product of these rows vanishes. Its cubic instance
+with two original b rows and one original h row projects EXACTLY to
+(2), with core exponent m-2. Projection preserves physical products
+and divided powers. No theorem for arbitrary binary sources is invoked
+to obtain this extra identity.
+
+Binary rigidity therefore makes the whole b graph a perfect matching.
+Apply the same argument with the third color c in place of b; its
+whole graph is a perfect matching as well. The physical union of three
+matching graphs has degree at most three at every vertex, even if
+some color edges share a physical pair. This contradicts the reviewed
+[two-high-vertices theorem](UNIFORM-TWO-HIGH-VERTICES-NECESSARY.md),
+which requires at least two physical vertices of degree at least five
+in every full ordinary ternary source at n>=6.
+
+Hence no full ternary source at n>=6 has an entire matching color.
+There is no induction on order, entry-minimum assumption, source
+replacement, or use of H6/H8/H10 certificates in this argument.
+At n=4 the two-pair set in (5) is the full set, so that zero equation
+is unavailable; the familiar three matching colors of K4 remain allowed.
+
+## 7. A uniform bound on the number of isolated color edges
+
+Combining this theorem with existing scalar structure gives the
+following useful consequence, observed independently by `/root`.
+Every color of a hypothetical full source at n>=6 must have a nonmatching
+component. Each component has even order and nonzero pure hafnian,
+because the whole pure hafnian factors over components. The reviewed
+scalar degree theorem gives minimum degree at least three in any
+nonmatching component. A component on four vertices would therefore
+be K4, whose vertices all have scalar degree three. This is excluded
+by the reviewed cubic-triangle theorem. Thus every color has at least
+SIX vertices lying in nonmatching components, and consequently at most
+
+    (n-6)/2 isolated matching edges.                     (10)
+
+This does not force a matching color in an arbitrary source, exclude
+all nonmatching components, or furnish an ordinary-source descent.
+General coverage of those components remains the unresolved step.
+
+## 8. Exact controls, prior work, and freeze scope
+
+The prior complete-anchor program supplied proper paired zeros and
+an extensive analysis of complete/incomplete links. The reviewed
+complete-block budget and incomplete-link results did not exclude all
+links of the sparse port type used here. The new step is (9): WHOLE
+cubic vanishing forbids an induced cycle with just one repeated port.
+Together with the literal one-edge-per-link condition, the elementary
+shortest-cycle argument converts that identity into complete coverage.
+
+The companion exact checker verifies weighted zero- and one-aligned
+cycle coefficients, including spanning cycles and additional supported
+exterior b edges; permitted binary matching cycles; and the allowed
+four-site ternary boundary. It also checks the actual binary Hadamard
+path controls from the separate exterior-matching source: these satisfy
+the binary top and proper paired zeros with a matching color, but their
+nonmatching color has the forbidden whole cubic coefficient 2.
+Thus the additional premise (2) cannot simply be dropped.
+
+The sibling freeze receipt binds this source, checker, exact output,
+and the required reviewed inputs. Finite controls check conventions
+and scope; the all-order theorem is the proof above, not an extrapolation
+or a graph census. Only fresh September 20 staging files were written.
+
+
+**Integration provenance.** Frozen [mathematical source](../unaudited-codex-diagonal-continuation-2026-09-20/ONE-MATCHING-COLOR-EXCLUSION-NEW-SOURCE.md), SHA256 `50ff0e17d1e56c362257e4d196d3caf5bc1f34c130308b45ea889549195c887b`. Only status, relative links, and this
+provenance paragraph changed in the research copy.

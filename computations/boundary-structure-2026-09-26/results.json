@@ -1,0 +1,132 @@
+{
+  "arithmetic": {
+    "field": "Q(omega), omega^2+omega+1=0",
+    "norm_products": 625,
+    "tested_elements": 25
+  },
+  "critical_diagonal_boundary": {
+    "all_six_augmented_ranks": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "all_six_root_response_ranks": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "derivative_columns": 135,
+    "derivative_rank": 0,
+    "diagonal_fidelity_ceiling": "39205/117612",
+    "diagonal_radius": "1/100",
+    "full_complex_neighborhood": "Unresolved: off-diagonal perturbations are not covered",
+    "nonzero_core_edges": 10,
+    "source_energy": "10",
+    "vanishing_four_site_hafnians": 15
+  },
+  "dependencies": {
+    "computations/method-utility-2026-09-26/results.json": "6c61a855ba4750cf657b36aa444c1995222d6fb7b16bdbdf1693243f56ab3961",
+    "notes/complex-rate-bound-2026-09-26.md": "d53fc46c246b1e09e7dccfa3dc175141923e5acedea6182e85b41235ad625059",
+    "notes/w-state-optimal-design-2026-09-26.md": "28a9d6dda968bff29dbdde4623e3fde44f6e49d4d0667c02d3eb7462b571427f",
+    "proofs/krenn-gu-all-orders-two-replica-proof.md": "fb0fa1e9447d8044981692d6e9bbbeff8e6a2cfc90119b6a296cbf506b9a3c9d"
+  },
+  "evidence_status": "Written analytic proofs with exact supporting checks; awaiting independent audit",
+  "four_site_identities": {
+    "analytic_dependency": "Whole-binary and omission identities, exact proof sections 2-3, including three-site odd cores",
+    "cofactor_entries_checked": 144
+  },
+  "mixed_output_identity": {
+    "actual_fidelity": "6841/21692",
+    "fidelity_upper": "443129/524329",
+    "identity_colors_checked": 2,
+    "reconstruction_coefficient_norms_squared": [
+      "521/168",
+      "593/168"
+    ]
+  },
+  "negative_controls": {
+    "corrupt_cover": "REJECTED",
+    "corrupt_critical_core": "REJECTED",
+    "dropping_odd_cycle_hypothesis": "REJECTED"
+  },
+  "open_cases": [
+    "Unrestricted full-complex square-root law",
+    "Rank-deficient triangle limits and limits without a zero-crossing triangle split",
+    "Full-complex neighborhoods of the critical monochromatic core",
+    "W-state optimality for bipartite or disconnected cofactor graphs"
+  ],
+  "prism_jet_obstruction": {
+    "arbitrary_second_jet_cells": 135,
+    "arbitrary_third_jet_cells": 135,
+    "consequence": "With l nonzero and second-order error zero, third-order error cannot vanish",
+    "formal_variables": 325,
+    "full_first_order_coefficients": 729,
+    "identity": "l * E3_protected - sum_h E2_left_h * E2_right_h = l^4",
+    "protected_word": [
+      1,
+      2,
+      0,
+      1,
+      2,
+      0
+    ],
+    "second_order_constraints": 6
+  },
+  "regular_triangles": {
+    "four_site_colorings": 6,
+    "gauge_covariance_words": 729,
+    "response_rank_per_triangle": 9,
+    "triangle_color_assignments": 36
+  },
+  "sha256": {
+    "computations/boundary-structure-2026-09-26/README.md": "a4abc22fd305df504718091224035cb392dc458050939cda9a7d39b8e9bbf26b",
+    "computations/boundary-structure-2026-09-26/dependencies.json": "6639fc90ce586560a2d64c9b165a5bdcebb672d35717cbc4829fd0753a06347b",
+    "computations/boundary-structure-2026-09-26/exact.py": "8485e81a23c6a067d9c211ba19d985360b631455f1ed097c8ab803227e0853cc",
+    "computations/boundary-structure-2026-09-26/examples.py": "b70a9b1d5ab16838172aa3add9b61616a5108a32c177d31308cd0431f6b827d4",
+    "computations/boundary-structure-2026-09-26/graphs.py": "afd736ab9f71a400f0f9c369eb89918238f30db5023df3389fcd86e025ed90d6",
+    "computations/boundary-structure-2026-09-26/prism_jets.py": "dda1f58d48ce4e61d8f34114a5ca883815eeaadbef868addc8be9572155d444e",
+    "computations/boundary-structure-2026-09-26/verify.py": "5a9e39560de87bb35e82da45932e6d302048537597a3f4e053242559f773f1f3",
+    "notes/diagonal-support-rate-exclusions-2026-09-26.md": "583c4785d339cc63cd4813d7674d0c45e455d4a84c0d8dd10a2a84d40f2c38ea",
+    "notes/regular-triangle-rate-classification-2026-09-26.md": "8119874a5d32a49a15ed47ee9ef8efa853b664b83c36f1216333fe2046eb2f2a",
+    "notes/two-root-w-state-reduction-2026-09-26.md": "ed0172d029cc76f54e2aacc11653ebac7a0110a1f1a07dee496ebe8953b80b49"
+  },
+  "status": "PASS",
+  "support_census": {
+    "excluded_by_edge_count": {
+      "5": 6,
+      "6": 60,
+      "7": 285,
+      "8": 840,
+      "9": 1605,
+      "10": 1968,
+      "11": 1185,
+      "12": 440,
+      "13": 105,
+      "14": 15,
+      "15": 1
+    },
+    "excluded_supports": 6510,
+    "independent_consistency_checks": 32768,
+    "integer_minor_absolute_upper": "16",
+    "matching_incidence_rank": 10,
+    "rank_prime": 101,
+    "sites": 6,
+    "supports": 32768,
+    "unresolved_supports": 26258
+  },
+  "two_root_W": {
+    "bipartite_example_energy": "17/2",
+    "bipartite_example_rate": "48/4913",
+    "deleted_energy": "8",
+    "nonbipartite_cofactor_rank": 3,
+    "nonzero_outputs_after": 6,
+    "nonzero_outputs_before": 6,
+    "ternary_words_checked": 729
+  }
+}

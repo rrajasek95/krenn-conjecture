@@ -1,0 +1,309 @@
+{
+  "dependencies": {
+    "computations/boundary-structure-2026-09-26/exact.py": "8485e81a23c6a067d9c211ba19d985360b631455f1ed097c8ab803227e0853cc",
+    "computations/site-balancing-2026-09-26/results.json": "3e7e09e651eda32b5eea76be375860372e6d94679575aa1c6edf6fdf584900c8",
+    "notes/regular-triangle-rate-classification-2026-09-26.md": "8119874a5d32a49a15ed47ee9ef8efa853b664b83c36f1216333fe2046eb2f2a",
+    "notes/site-balancing-rate-reduction-2026-09-26.md": "eb50b96f2cc835d5ad9ccd2fe56e59ee53fe24c32d040b2b54e826dfb5ce0638",
+    "notes/w-state-optimal-design-2026-09-26.md": "28a9d6dda968bff29dbdde4623e3fde44f6e49d4d0667c02d3eb7462b571427f",
+    "notes/w-state-two-root-optimum-2026-09-26.md": "bef6bf5d37344f62e1e289a58cbc9858dbf6a041d31b8305baeef446c0dc0fd3"
+  },
+  "evidence_status": "Written proofs and exact checks; independent audit pending",
+  "sha256": {
+    "computations/balanced-frontier-2026-09-27/README.md": "38cab9adfc2ade9170759bcba357e7bf96dcd174eb2a64e925e29e6fc6d08f89",
+    "computations/balanced-frontier-2026-09-27/dependencies.json": "7540f2e6dd7700fb19305cac22cbcabae691205d284736986cc7727b4fb2eb47",
+    "computations/balanced-frontier-2026-09-27/explore_w.py": "7bcbbefa8339ea7fc9075bcdd866063d93aecf3d3cb7712f72a7012f554fabfd",
+    "computations/balanced-frontier-2026-09-27/triangle.py": "980016984b55143ba2c7b1efdfd7dc53e6b2945ca74e89708559b82b05464e65",
+    "computations/balanced-frontier-2026-09-27/verify.py": "5876925184733ea12b1d5e37b080a02354c9631c4a61efe35437b93a3c40003d",
+    "computations/balanced-frontier-2026-09-27/w_response.py": "f361cdc2bc4e1a33de88a47e402a3f44928d3c2a2fc3324a0268f83c821eb1a6",
+    "notes/triangle-response-rank-classification-2026-09-27.md": "02b422d0430a31a68b10023fec6eea720ea23e86b1109e542e88f87d6e6b8450",
+    "notes/w-state-no-ground-matching-optimum-2026-09-27.md": "f44f8f88bd42a9c1a4d0c3f06da30e774d97ab93f66ee6bbafb141bdf4c1f3c9",
+    "notes/w-state-unrestricted-response-bound-2026-09-27.md": "8ec0f9855d6665967e1a8920f2b0369ed4cd7fd21828be000d7c040abb86c557"
+  },
+  "status": "PASS",
+  "triangle_classification": {
+    "complete_support_example": {
+      "balanced_representative": "Exists by finite site scaling; same output and Jacobian rank",
+      "derivative_rank": 25,
+      "isolated_cofactor_rows": [
+        4,
+        5
+      ],
+      "source_energy": 18
+    },
+    "negative_control_missing_edge": "REJECTED",
+    "triangles": {
+      "dense_determinantal": {
+        "kernel_dimension": 2,
+        "kind": "determinantal",
+        "rank": 7
+      },
+      "regular": {
+        "kernel_dimension": 0,
+        "kind": "regular",
+        "rank": 9
+      },
+      "scalar": {
+        "kernel_dimension": 2,
+        "kind": "determinantal",
+        "rank": 7
+      },
+      "shared_pair": {
+        "kernel_dimension": 1,
+        "kind": "shared_rank_one_pair",
+        "rank": 8
+      },
+      "singlets": {
+        "kernel_dimension": 2,
+        "kind": "determinantal",
+        "rank": 7
+      }
+    },
+    "two_triangle_jacobian_ranks": {
+      "regular / regular": 81,
+      "regular / scalar": 63,
+      "regular / shared_pair": 72,
+      "scalar / scalar": 49,
+      "shared_pair / scalar": 56,
+      "shared_pair / shared_pair": 64
+    }
+  },
+  "unresolved": [
+    "Unrestricted GHZ square-root rate law",
+    "Scalar six-site W threshold 520/9",
+    "Global unrestricted W optimum"
+  ],
+  "unrestricted_W_response": {
+    "all_even_odd_split_checks": [
+      {
+        "largest_non_singleton_ratio": null,
+        "sites": 4
+      },
+      {
+        "largest_non_singleton_ratio": "65/81",
+        "sites": 6
+      },
+      {
+        "largest_non_singleton_ratio": "49/85",
+        "sites": 8
+      },
+      {
+        "largest_non_singleton_ratio": "29889/69629",
+        "sites": 10
+      },
+      {
+        "largest_non_singleton_ratio": "893101/2657205",
+        "sites": 12
+      },
+      {
+        "largest_non_singleton_ratio": "485537/1771561",
+        "sites": 14
+      },
+      {
+        "largest_non_singleton_ratio": "1287140625/5584618013",
+        "sites": 16
+      },
+      {
+        "largest_non_singleton_ratio": "11899821517/59971640625",
+        "sites": 18
+      },
+      {
+        "largest_non_singleton_ratio": "3074024910421/17669593598053",
+        "sites": 20
+      },
+      {
+        "largest_non_singleton_ratio": "175535890294401/1134247257693185",
+        "sites": 22
+      },
+      {
+        "largest_non_singleton_ratio": "2195605094323397/15762487524399945",
+        "sites": 24
+      },
+      {
+        "largest_non_singleton_ratio": "746250152587890625/5895033972213466349",
+        "sites": 26
+      },
+      {
+        "largest_non_singleton_ratio": "10956908376680935833/94473361968994140625",
+        "sites": 28
+      },
+      {
+        "largest_non_singleton_ratio": "4319724688155571521569/40375606989528060548121",
+        "sites": 30
+      },
+      {
+        "largest_non_singleton_ratio": "364090032841203030074401/3667405217729228387403325",
+        "sites": 32
+      },
+      {
+        "largest_non_singleton_ratio": "6533345059376330839236813/70560042809476970591362657",
+        "sites": 34
+      },
+      {
+        "largest_non_singleton_ratio": "3108487921015230255126953125/35835157894897179191531745477",
+        "sites": 36
+      },
+      {
+        "largest_non_singleton_ratio": "62538847893166816290368127629/766549064568135858917236328125",
+        "sites": 38
+      },
+      {
+        "largest_non_singleton_ratio": "2550376106176018017322080129357/33121395522514632770658687856769",
+        "sites": 40
+      },
+      {
+        "largest_non_singleton_ratio": "3695636718691463456391417086353601/50693651592345702044979973921548765",
+        "sites": 42
+      },
+      {
+        "largest_non_singleton_ratio": "86405391038818614171595484226390185/1248382568105040620526493803383006129",
+        "sites": 44
+      },
+      {
+        "largest_non_singleton_ratio": "52853315348731050433500766754150390625/802272187570759722991606306815346891721",
+        "sites": 46
+      },
+      {
+        "largest_non_singleton_ratio": "1350657231824180756479951220909235401789/21490116280762180363082392215728759765625",
+        "sites": 48
+      },
+      {
+        "largest_non_singleton_ratio": "899607045489188666426887417336171956872449/14972010968486304786381046976969446207375829",
+        "sites": 50
+      },
+      {
+        "largest_non_singleton_ratio": "124727300498918786657281140589275015214752501/2167150376390131636677437810386427465847755045",
+        "sites": 52
+      },
+      {
+        "largest_non_singleton_ratio": "3594206786894555963579324345873010940478454733/65082628704071104096040378463932226059724902061",
+        "sites": 54
+      },
+      {
+        "largest_non_singleton_ratio": "2687007352945397475275666814137995243072509765625/50624351430323886304937010040456293288654117071533",
+        "sites": 56
+      },
+      {
+        "largest_non_singleton_ratio": "3330921942489291851121344828850863960095352431509/65197489581572812210069474342726767063140869140625",
+        "sites": 58
+      },
+      {
+        "largest_non_singleton_ratio": "66781335073528851649173143421982975969751038594773661/1356100570936893717413361783801345266411063406261968853",
+        "sites": 60
+      },
+      {
+        "largest_non_singleton_ratio": "11074180259488060089584454158142673424624929044150141601/232999924639411035250371417506953004116586658548518330745",
+        "sites": 62
+      },
+      {
+        "largest_non_singleton_ratio": "379321090447632163280692792218308859229273926556372029453/8259118876997335682061913064520921630445970791528446256153",
+        "sites": 64
+      },
+      {
+        "largest_non_singleton_ratio": "25779245398157898808289809048065135893411934375762939453125/580215081667399910774165397793736984707786389971896245565593",
+        "sites": 66
+      },
+      {
+        "largest_non_singleton_ratio": "12207873697519482991537434854010150427702284683028777448372289/283721092119869609783240672227151685357117094099521636962890625",
+        "sites": 68
+      },
+      {
+        "largest_non_singleton_ratio": "11449311985263092413872232020555643507372743252587966326121822529/274493931332612456851062282492553163234142639897147646416384117521",
+        "sites": 70
+      },
+      {
+        "largest_non_singleton_ratio": "2209818993950579471349049110223353412659759896990652915231500891401/54601749623260241668682480684556498820480843780759163718445360348365",
+        "sites": 72
+      },
+      {
+        "largest_non_singleton_ratio": "87705597839379056981728152239022565265025922819965234773756888291981/2231474518839730231301321326910409321449827079955807250920034897558105",
+        "sites": 74
+      },
+      {
+        "largest_non_singleton_ratio": "89407759991107250288469427659983346234895407178555615246295928955078125/2340423220140469239654549087878037686760892059824709851174214580905371957",
+        "sites": 76
+      },
+      {
+        "largest_non_singleton_ratio": "3742928446091489004691295945330112018861942308617701969375963880273490221/100726756978961167639689184121203242849862391494752955622971057891845703125",
+        "sites": 78
+      },
+      {
+        "largest_non_singleton_ratio": "4019048413153960181331546352525742566132725410879421680829833164541466246481/111108805674816433960996333012025249950324724635752849789242726396617509834397",
+        "sites": 80
+      }
+    ],
+    "four_site_negative_control": {
+      "ground_energy": "6",
+      "harmonic_sum": "4/3",
+      "rate_bound": "1/8",
+      "row_norms_squared": [
+        "3",
+        "3",
+        "3",
+        "3"
+      ],
+      "scale_invariant_objective": "8"
+    },
+    "four_site_unwanted_words": 6,
+    "no_ground_matching_supports": {
+      "graphs_examined": 32768,
+      "no_perfect_matching_with_all_response_rows_supported": {
+        "1+5": 1398,
+        "3+3": 10
+      }
+    },
+    "one_root_equality": {
+      "ground_energy": "10",
+      "harmonic_sum": "26/45",
+      "rate_bound": "1/65",
+      "row_norms_squared": [
+        "9",
+        "9",
+        "9",
+        "9",
+        "9",
+        "45"
+      ],
+      "scale_invariant_objective": "520/9"
+    },
+    "six_site_scalar_inequality": "OPEN: a^2 sum_i 1/r_i^2 >= 520/9 when haf(D)=0",
+    "two_excitation_identities_checked": 15,
+    "two_triangles_bound": "1/81",
+    "unrestricted_upper_bounds": [
+      {
+        "sites": 4,
+        "two_root_optimum": "1/10",
+        "unrestricted_upper_bound": "1/8"
+      },
+      {
+        "sites": 6,
+        "two_root_optimum": "1/65",
+        "unrestricted_upper_bound": "4/135"
+      },
+      {
+        "sites": 8,
+        "two_root_optimum": "9/3136",
+        "unrestricted_upper_bound": "6075/802816"
+      },
+      {
+        "sites": 10,
+        "two_root_optimum": "49/83025",
+        "unrestricted_upper_bound": "12544/6328125"
+      },
+      {
+        "sites": 12,
+        "two_root_optimum": "3675/28579232",
+        "unrestricted_upper_bound": "3828125/7286298624"
+      },
+      {
+        "sites": 14,
+        "two_root_optimum": "441045/15155066381",
+        "unrestricted_upper_bound": "102886977600/734167578388699"
+      },
+      {
+        "sites": 16,
+        "two_root_optimum": "1002001/148111360000",
+        "unrestricted_upper_bound": "825190909543/21990232555520000"
+      }
+    ]
+  }
+}
