@@ -363,7 +363,7 @@ flowchart TD
     D --> E["A ground-cofactor equation requires a small edge"]
     E --> F["Control bh and y together"]
     F --> G["Repeat for the second outside site"]
-    G --> H["Every six-site matching has fifth-power size, up to the measured error"]
+    G --> H["The matching expansion has fifth-power size, up to the measured error"]
 ~~~
 
 The existing support theorem makes this useful: a non-star flat
@@ -383,6 +383,61 @@ A two-pair color pattern hides every center-containing response but
 has a nonzero leaf-only response. A complete cube-root source hides
 all responses but violates the required small-edge constraint.
 Together, the leaf response and the cofactor equation exclude both.
+
+## Two arms: matrix rank supplies another route
+
+The [two-arm theorem](../notes/two-invertible-arm-ghz-bound-2026-09-27.md)
+gives the same fifth-power estimate when the two binary arm matrices
+are uniformly invertible. Their smaller singular values must each
+be at least a fixed fraction of the non-ground source norm.
+The constants may deteriorate as either arm becomes rank one.
+
+Consider four sites with two possible pairings:
+
+~~~mermaid
+flowchart LR
+    A["Pairing 1: G joins 0–1; Y joins 2–r"] --> C["Same four-site output: GY + HB"]
+    B["Pairing 2: H joins 0–r; B joins 1–2"] --> C
+    C --> D["Group sites as (0,r) versus (1,2)"]
+    D --> E["HB has matrix rank one"]
+    D --> F["GY retains the smaller singular value of G"]
+    E --> G["Cancellation leaves a measurable residual"]
+    F --> G
+~~~
+
+Regrouping a tensor as a matrix is called *flattening*. Here it turns
+the second pairing into a rank-one matrix. If $G$ has rank two, the
+first pairing has a component that a rank-one matrix cannot cancel.
+The residual has norm at least
+$\sigma_{\min}(G)\|Y\|$.
+This is a quantitative statement: it bounds the hidden block $Y$
+using an observed response.
+
+Ground-cofactor equations select two outside sites with a controlled
+attachment at the same core vertex. If that vertex is a leaf, the
+matrix estimate controls its companion attachment and a product
+involving the outside arm. If it is the center, the outside arms
+are already controlled. Both cases supply the factors of size
+$\delta^2$ needed in the six-site matching expansion.
+
+One invertible arm also suffices when a ground cofactor row at one
+of its endpoints is nonzero. That condition makes the ground equations
+select the center or the leaf where the matrix estimate is available.
+The second arm then only needs comparable norm.
+
+There is also a precise description of the hidden linear directions:
+
+| Two nonzero arms | Attachment kernel |
+| --- | --- |
+| At least one has matrix rank two | Zero |
+| Both rank one, with different center color lines | Zero |
+| Both rank one, with the same center color line | One degree of freedom per outside color |
+
+The last case permits equal-and-opposite attachments that cancel
+exactly. The middle case has no linear kernel, but the present GHZ
+proof still needs the singular-value estimate at the leaf selected
+by the ground equations. Two-arm stars with a rank-one arm therefore
+remain on the onset frontier.
 
 ## From a shape theorem to a GHZ estimate
 
@@ -409,8 +464,9 @@ H(A)=\lambda(a^6+b^6+c^6)+E,\quad
 $$
 
 If its non-ground direction is near one of the specified smooth
-families, satisfies the three-arm condition, is near any non-star
-four-active-site flat core, or is near a full triangle, the estimates give
+families, satisfies the three-arm or two-invertible-arm condition,
+is near any non-star four-active-site flat core, or is near a full
+triangle, the estimates give
 
 $$
 |\lambda|\le C_1\varepsilon+C_2\delta^5.
@@ -428,7 +484,7 @@ The new results identify and control several difficult families, but a
 bound involving $\delta$ does not by itself give that error-versus-signal
 comparison. Within the full-support single-color branch, the remaining
 critical shapes for this onset argument are single edges and two-arm
-stars. The combined estimate is uniform when the normalized
+stars with a rank-one arm. The combined estimate is uniform when the normalized
 non-ground direction stays a fixed positive distance from those shapes.
 The error-versus-signal comparison remains open even on the families
 whose onset is now controlled.

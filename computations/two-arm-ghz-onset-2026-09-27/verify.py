@@ -1,0 +1,36 @@
+#!/usr/bin/env python3
+"""Replay exact support for fifth-power GHZ onset with two invertible arms."""
+
+from pathlib import Path
+import hashlib
+import json
+import two_arm_separation
+from algebra import require
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parents[1]
+
+
+def main():
+    dependencies = json.loads((HERE/"dependencies.json").read_text())
+    for name, digest in dependencies.items():
+        require(hashlib.sha256((ROOT/name).read_bytes()).hexdigest() == digest,
+                "Pinned dependency: "+name)
+    result = dict(
+        status="PASS",
+        evidence_status="Written proof with exact supporting checks; independent audit pending",
+        checks=two_arm_separation.check(),
+        dependencies=dependencies,
+        consequence="Two uniformly invertible arms suffice for fifth-power GHZ onset",
+        unresolved=["Unrestricted GHZ square-root rate law",
+                    "Onset near a single edge or a two-arm star with a rank-one arm"])
+    paths = [p for p in HERE.iterdir() if p.suffix in (".py", ".md", ".json")
+             and p.name != "results.json"]
+    paths += [ROOT/"notes/two-invertible-arm-ghz-bound-2026-09-27.md"]
+    result["sha256"] = {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest()
+                        for p in sorted(paths)}
+    print(json.dumps(result, indent=2, sort_keys=True))
+
+
+if __name__ == "__main__":
+    main()

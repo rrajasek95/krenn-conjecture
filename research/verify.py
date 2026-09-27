@@ -38,6 +38,7 @@ PACKAGES = (
     "w-cofactor-rigidity-2026-09-27",
     "triangle-ghz-onset-2026-09-27",
     "three-arm-ghz-onset-2026-09-27",
+    "two-arm-ghz-onset-2026-09-27",
 )
 
 
