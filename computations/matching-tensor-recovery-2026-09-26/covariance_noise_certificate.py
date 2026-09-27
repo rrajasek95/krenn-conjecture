@@ -270,6 +270,7 @@ def point_systems(tensor, denominator, edges, saved=None):
         "outside_norm_lower": max(map(abs, outside)) / F(denominator),
         "inverse_bounds": inverse_bounds,
         "matrix_certificates": reports,
+        "linear_systems": matrices,
         "Q0": [q0.get(q, F(0)) for q in range(count)],
         "Q1": [q1.get(q, F(0)) for q in range(count)],
         "Q": representative,
@@ -375,7 +376,7 @@ def anchored_mean_bounds(delta_tensor, record, n):
 
 
 def propagate(point, delta_tensor, mean_record):
-    n, m = point["n"], point["n"] // 2
+    n = point["n"]
     chart_errors, mean_report = anchored_mean_bounds(F(delta_tensor), mean_record, n)
     product = math.prod(1 + e for e in chart_errors)
     delta = product * delta_tensor + (product - 1) * point["tensor_norm"]
@@ -383,7 +384,7 @@ def propagate(point, delta_tensor, mean_record):
     kappa = 2 ** ((n + 1) // 2)
     multiplication = upper_sqrt(6 * math.comb(n, 4))
     flow_norm, pure_norm = upper_sqrt(n - 1), upper_sqrt(math.comb(n, 2))
-    g0, g1, g2, gf = point["inverse_bounds"]
+    g0, g1, g2 = point["inverse_bounds"][:3]
 
     def solve_error(g, matrix_error, target_error, center):
         assert g * matrix_error < 1, (
@@ -422,6 +423,34 @@ def propagate(point, delta_tensor, mean_record):
     error_q1 = error_q0 + flow_norm * error_x1
     error_x2 = correction(point["Q1"], error_q1, pure_norm, g2, point["x2"])
     error_q = error_q1 + pure_norm * error_x2
+    return finish_from_class_error(
+        point,
+        delta_tensor,
+        chart_errors,
+        mean_report,
+        delta,
+        error_q0,
+        error_x1,
+        error_x2,
+        error_q,
+    )
+
+
+def finish_from_class_error(
+    point,
+    delta_tensor,
+    chart_errors,
+    mean_report,
+    delta,
+    error_q0,
+    error_x1,
+    error_x2,
+    error_q,
+    coefficient_error=None,
+):
+    """Calibrate a certified covariance class and return to the original mean frame."""
+    n, m = point["n"], point["n"] // 2
+    gf = point["inverse_bounds"][3]
     q_norm = length(point["Q"])
     column_errors = [
         upper_sqrt(F(math.factorial(2 * k) * math.comb(n, 2 * k), 2**k))
@@ -431,7 +460,15 @@ def propagate(point, delta_tensor, mean_record):
         for k in range(1, m + 1)
     ]
     frame_error = length(column_errors)
-    coefficient_error = solve_error(gf, frame_error, delta, point["coordinates"])
+    if coefficient_error is None:
+        assert gf * frame_error < 1, (
+            "A perturbed correction matrix is not certified injective"
+        )
+        coefficient_error = (
+            gf
+            * (delta + frame_error * length(point["coordinates"]))
+            / (1 - gf * frame_error)
+        )
     z, c3, c5, c7 = [
         ScalarBall(value, coefficient_error) for value in point["coordinates"][:4]
     ]

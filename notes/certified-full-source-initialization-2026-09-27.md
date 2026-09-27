@@ -31,6 +31,12 @@ uniform threshold over all sources is claimed. The existing
 [near-ambiguity examples](shared-calibration-and-near-ambiguity-2026-09-27.md)
 preclude such uniform inverse bounds without additional restrictions.
 
+The later [composed-error certificate](composed-source-error-bounds-2026-09-27.md)
+sharpens these estimates on the same source. Its new example uses noise
+visible in binary64, with a tensor-error budget about `6.68e-13` and a
+certified candidate source-error bound about `2.87e-11`. The original
+certificate and bounds below remain unchanged for comparison.
+
 The proofs below apply at every odd order `n>=7` in local dimension three
 when their explicit conditions hold. Generic applicability follows from
 the earlier all-orders rank theorems. The implemented driver accepts a
