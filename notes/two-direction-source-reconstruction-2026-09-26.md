@@ -261,6 +261,33 @@ The [seven-site certificate](../computations/matching-tensor-recovery-2026-09-26
 
 ## 6. Interpretation and attribution
 
+**Corollary 8 (larger local spaces).** Theorem 1 and its reconstruction
+algorithm hold when each `V_i` has any finite dimension at least three;
+the dimensions may differ between sites.
+
+**Proof.** Embed the witness (1) in three-dimensional subspaces
+`F_i = span(x_i,y_i,z_i)` of the larger spaces. Its response span and the
+terminal extraction ranks are unchanged. Lemma 4 already treats an
+arbitrary complement of the local mean plane: each coordinate with two
+outside factors is isolated at its two sites; each coordinate with one
+outside factor is isolated by evaluating at the other mean direction.
+Consequently its kernel remains exactly `K_E`.
+
+For the first-edge constraints, decompose a candidate `Q` into coordinates
+inside the `F_i` and those using at least one extra coordinate. The latter
+map under `Phi_E` into tensor-coordinate sectors disjoint from the witness
+response span. Their image must therefore vanish; Lemma 4 makes those
+edge coordinates zero. The surviving constraints are precisely Lemma 5
+inside the three-dimensional subspaces. The cycle-detection map and
+`W intersection H_E = U(E)` are likewise unchanged. Thus all maximal-rank
+conditions hold at this embedded witness and on a nonempty open set in the
+larger source parameter space. The comparison with arbitrary alternative
+sources and the proof of global uniqueness apply without change. QED.
+
+The subsequent [two-observation theorem](two-observation-source-reconstruction-2026-09-27.md)
+uses this extension for four-dimensional sites. It also uses the values of
+two actual outputs to remove the covariance ambiguities left by span data.
+
 For a jointly Gaussian family of three-component vectors `X_i`, the cross moment `E[X_1 tensor ... tensor X_n]` has exactly the matching expansion used here: singleton factors are the means and pairs are cross-site covariances. If the mean varies in a common two-dimensional linear space while cross-site covariances stay fixed, sufficiently many generic settings span `W(E,R)`. The theorem recovers that mean geometry and the stated covariance equivalence class from the span. It neither treats a mixture distribution nor uses all moments up to a specified order. No claim about estimation from noisy empirical moments is made.
 
 The reconstruction uses established tools: flattening minors, symmetric tensor geometry, rational normal curves, circulation spaces, and rank arguments. The model-specific conclusions are the complete generic ambiguity classification and the exact elimination of the quadratic cycle correction by quotienting out `H_E`.

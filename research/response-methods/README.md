@@ -23,6 +23,7 @@ separate from the Lean-verified exact theorem.
 | Paired-hafnian stability estimates | Quantitative control in the paired-hafnian setting under the stated hypotheses. | [Proof](../../notes/paired-hafnian-application-2026-09-26.md), [replay](../../computations/rate-sharpness-followup-2026-09-26/README.md) |
 | Full-support higher-order identities | Relate higher GHZ coefficients to lower mixed coefficients; restrict when a leading GHZ output can appear. | [Proof](../../notes/full-support-single-color-jets-2026-09-27.md), [replay](../../computations/full-support-jets-2026-09-27/README.md) |
 | Matching-tensor source reconstruction | Recover source information under the stated response and direction hypotheses; distinguish single-copy from multiple-copy information. | [Matching tensors and copies](../../notes/matching-tensor-recovery-and-multiple-copies-2026-09-26.md), [two-direction reconstruction](../../notes/two-direction-source-reconstruction-2026-09-26.md) |
+| Two observed Gaussian cross moments | Generically recover both mean rows and all cross-site covariance blocks at five sites of local dimension at least four, up to product-one site scalings. | [Theorem and proof](../../notes/two-observation-source-reconstruction-2026-09-27.md), [reconstruction](../../computations/matching-tensor-recovery-2026-09-26/pair_observation.py), [independent matrix audit](../../computations/matching-tensor-recovery-2026-09-26/audit_pair_observation.py) |
 
 The matching-tensor reconstruction programs are
 [verify.py](../../computations/matching-tensor-recovery-2026-09-26/verify.py),
@@ -39,6 +40,15 @@ recovers a generic connected source graph under the stated matching and
 local-independence hypotheses, and removes the mean-quadratic ambiguity when
 the graph is not complete. These use spans of outputs; measurement-noise
 stability remains open. Their reproduction commands are in the linked notes.
+
+The [two-observation result](../../notes/two-observation-source-reconstruction-2026-09-27.md)
+uses a three-copy exterior identity to recover the unobserved response
+space from two tensors. Their coefficients then determine a covariance
+representative by rational operations. Its proof excludes degenerate
+alternative mean pairs and is supported by exact reconstruction and an
+independent Pfaffian calculation. The pair-matrix rank is established at
+five sites; overlapping coordinate projections extend recovery to arbitrary
+local dimensions at least four. The all-orders extension remains open.
 
 ## How the projects connect
 

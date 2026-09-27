@@ -165,7 +165,8 @@ def recover_terminal(observations, ws):
 def edge_maps(means, edges, ws):
     """One-edge response maps and derivatives of the two-edge layers."""
     n = len(means[0])
-    edge_keys = [(i, j, a, b) for i, j in edges for a in range(3) for b in range(3)]
+    local = len(means[0][0])
+    edge_keys = [(i, j, a, b) for i, j in edges for a in range(local) for b in range(local)]
     edge_index = {key: z for z, key in enumerate(edge_keys)}
     top = [[[0] * len(edge_keys) for _ in ws] for _ in range(n - 1)]
     for z, word in enumerate(ws):
@@ -270,7 +271,8 @@ def mean_quadratics(means, edge_keys):
 
 
 def edge_dictionary(vector, edge_keys):
-    edges = {(i, j): [[0] * 3 for _ in range(3)] for i, j, _, _ in edge_keys}
+    local = 1 + max(max(a, b) for _, _, a, b in edge_keys)
+    edges = {(i, j): [[0] * local for _ in range(local)] for i, j, _, _ in edge_keys}
     for value, (i, j, a, b) in zip(vector, edge_keys):
         edges[i, j][a][b] = value % P
     return edges
