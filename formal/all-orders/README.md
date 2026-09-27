@@ -4,8 +4,7 @@ This package proves eight algebraic lemmas used in the written Krenn–Gu
 argument. It does **not** yet prove the full conjecture in Lean. The source
 identities needed by these lemmas remain explicit hypotheses.
 
-Read the [GitHub math presentation](../../proofs/krenn-gu-all-orders-two-replica-latex.md)
-or [eight-page PDF](../../proofs/krenn-gu-all-orders-two-replica.pdf) for the
+Read the [cited research PDF](../../proofs/krenn-gu-all-orders-paper.pdf) for the
 complete written argument and its review status.
 
 ## What is checked

@@ -1,36 +1,43 @@
 # All-orders proof: reading and rebuilding
 
-- [GitHub Markdown with LaTeX mathematics](krenn-gu-all-orders-two-replica-latex.md)
-- [Eight-page PDF](krenn-gu-all-orders-two-replica.pdf)
-- [LaTeX source](krenn-gu-all-orders-two-replica.tex)
+**Read the [cited research manuscript (PDF)](krenn-gu-all-orders-paper.pdf).**
+This is the preferred reading version; GitHub's math preview can distort
+numbered equations.
+
+- [Manuscript LaTeX source](krenn-gu-all-orders-paper.tex)
 - [Frozen written proof](krenn-gu-all-orders-two-replica-proof.md)
 - [Internal review record](../notes/all-orders-two-replica-review-2026-09-26.md)
 - [Initial Lean formalization and remaining work](../formal/all-orders/README.md)
+- [Earlier eight-page presentation](krenn-gu-all-orders-two-replica.pdf)
 
-The presentation includes all seven sections and eight named core statements:
-the complex weighted no-go theorem, the whole binary response lemma, the
-even-omission lemma, global diagonal reduction, the supported endpoint identity,
-the polynomial orthogonal-kernel normal form, matching rigidity, and the
-three-matching obstruction. External peer review and a full Lean proof remain
-pending.
+The manuscript follows the exposition of Chandran, Gajjala and Illickan's
+*Krenn–Gu Conjecture for Sparse Graphs*: graph definitions, related work, main
+result and proof overview, followed by numbered lemmas and their proofs. It
+adds a graph-to-algebra explanation and a named polynomial differential-equation
+lemma to the complete argument. All ten numbered equations from the frozen
+presentation are retained.
 
-The original audited Markdown is unchanged. The presentation has been checked
-against that source, and all eight PDF pages have been visually inspected.
+Twelve references identify the published graph model, Bogdanov's obstruction,
+classical pairing and invariant-theory background, and the repository's own
+foundational results. Citations to internal research notes and agent audits are
+explicitly distinguished from published literature. External peer review and
+a full Lean proof remain pending. The frozen mathematical source is unchanged.
 
 To rebuild, install Python 3 and Tectonic. On a fresh machine, populate the TeX
 cache once:
 
 ```sh
-tectonic --outdir proofs proofs/krenn-gu-all-orders-two-replica.tex
+tectonic --outdir proofs proofs/krenn-gu-all-orders-paper.tex
 ```
 
-Then regenerate both GitHub math Markdown and the PDF from the LaTeX source:
+Then regenerate the cited PDF from its LaTeX source:
 
 ```sh
-python3 -B proofs/build_krenn_gu_presentation.py
+python3 -B proofs/build_krenn_gu_paper.py
 ```
 
-The script uses Tectonic's offline cache, checks for reference and layout
-warnings, and verifies the frozen source's SHA-256 before and after the build.
-It prints the resulting artifact hashes. PDF bytes can vary between TeX
-versions; the source hash check protects the audited input, not PDF byte identity.
+The script uses Tectonic's offline cache, checks all bibliography keys and
+absolute PDF links, rejects citation, cross-reference and layout warnings, and
+verifies the frozen source's SHA-256 before and after the build. It prints the
+resulting artifact hashes. PDF bytes can vary between TeX versions; the source
+hash check protects the audited input, not PDF byte identity.

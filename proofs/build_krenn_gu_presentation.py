@@ -95,7 +95,9 @@ def markdown_body(source):
                       r'\operatorname']:
         assert forbidden not in text, forbidden
     title = '# An all-orders two-replica proof of the complex weighted Krenn–Gu conjecture\n\n'
-    links = ('[PDF](krenn-gu-all-orders-two-replica.pdf) · '
+    links = ('**Read the [cited research PDF](krenn-gu-all-orders-paper.pdf) '
+             'for reliable equation layout and full references.**\n\n'
+             '[Earlier PDF](krenn-gu-all-orders-two-replica.pdf) · '
              '[LaTeX source](krenn-gu-all-orders-two-replica.tex) · '
              '[Audited source](krenn-gu-all-orders-two-replica-proof.md)\n\n')
     return title+links+text.strip()+'\n'

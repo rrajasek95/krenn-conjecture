@@ -1,6 +1,8 @@
 # An all-orders two-replica proof of the complex weighted Krenn–Gu conjecture
 
-[PDF](krenn-gu-all-orders-two-replica.pdf) · [LaTeX source](krenn-gu-all-orders-two-replica.tex) · [Audited source](krenn-gu-all-orders-two-replica-proof.md)
+**Read the [cited research PDF](krenn-gu-all-orders-paper.pdf) for reliable equation layout and full references.**
+
+[Earlier PDF](krenn-gu-all-orders-two-replica.pdf) · [LaTeX source](krenn-gu-all-orders-two-replica.tex) · [Audited source](krenn-gu-all-orders-two-replica-proof.md)
 
 **Review status (2026-09-26): complete written argument; internally audited.**
 This document gives the entire argument, including the earlier reflection and
