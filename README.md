@@ -110,7 +110,8 @@ or [real result](https://github.com/rrajasek95/krenn-conjecture/blob/5e7d0fe0b60
 
 ## Research subprojects
 
-Follow-up work has its own proofs, explainers, and reproducible checks.
+Each subproject collects its results, open questions, illustrated guides,
+and reproducible checks.
 The rate and design results are written research with exact supporting checks;
 independent audit is pending. The unrestricted targets below remain open.
 

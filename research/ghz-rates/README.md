@@ -38,6 +38,7 @@ into a laboratory count rate requires a physical source model.
 | Onset at every full triangle through rank loss | Pairwise attachment control and a local GHZ projection extend the fifth-power estimate to all triangles. The combined estimate is uniform away from stars with at most three arms. | [Triangle theorem](../../notes/triangle-attachment-ghz-bound-2026-09-27.md), [replay](../../computations/triangle-ghz-onset-2026-09-27/README.md) |
 | Three comparable arms suffice for onset | A weighted extension estimate handles every three-arm pattern, including zero center cofactor rows. The fifth-power estimate is now uniform away from stars with at most two arms. | [Three-arm theorem and reusable extension lemma](../../notes/three-arm-ghz-distance-bound-2026-09-27.md), [replay](../../computations/three-arm-ghz-onset-2026-09-27/README.md) |
 | Two uniformly invertible arms suffice for onset | A singular-value estimate and ground cofactors give fifth-power onset. One invertible arm also suffices when its endpoint cofactor rows meet the stated condition. | [Two-arm theorem and kernel classification](../../notes/two-invertible-arm-ghz-bound-2026-09-27.md), [replay](../../computations/two-arm-ghz-onset-2026-09-27/README.md) |
+| Two-arm onset beyond invertibility | An injective attachment map suffices, uniformly away from rank loss. This removes the endpoint-cofactor condition for one invertible arm and covers rank-one arms with different center lines. At shared-center pairs, an explicit residual bound isolates the closing-edge contribution. | [Rescaled-triangle proof and residual estimate](../../notes/transverse-two-arm-ghz-onset-2026-09-27.md), [replay](../../computations/transverse-two-arm-ghz-2026-09-27/README.md) |
 
 The earlier higher-order identities concern an analytic path parameter.
 The new distance bounds are uniform under their stated family or arm-size
@@ -57,8 +58,8 @@ flowchart TD
     B -->|Yes| G["Open: matching terms cancel"]
     G --> H["Full-support single-color identities constrain initial orders"]
     H --> I["Every such limit: first critical support uses at most four sites or is a star"]
-    I --> J["Fifth-power onset: triangles, non-star four-site cores, three comparable arms, and two invertible arms"]
-    I --> K["Remaining onset shapes: single edges and two-arm stars with a rank-one arm"]
+    I --> J["Fifth-power onset: triangles, non-star four-site cores, three comparable arms, and injective two-arm maps"]
+    I --> K["Remaining onset shapes: single edges or two rank-one arms sharing a center line"]
     J --> L["Still open: error-versus-signal estimate"]
     K --> L
 ~~~
@@ -68,6 +69,14 @@ three monochromatic words and $E$ is orthogonal to it. After normalizing
 $S=1$, the missing estimate is $\lVert E\rVert\ge c|\lambda|^3$, uniformly
 through the remaining singular limits. A large response in some direction
 does not yet control the GHZ direction.
+
+At a full-support single-color zero, the onset estimate is uniform away
+from single edges and the shared-center rank-one pairs. Near the latter,
+the [residual estimate](../../notes/transverse-two-arm-ghz-onset-2026-09-27.md#6-a-residual-estimate-at-the-shared-center-rank-one-pairs)
+is $|\lambda|\le C\varepsilon+C\delta^5+Ct\beta^2$, where $t$ is the
+non-ground source norm and $\beta$ is the norm of the edge joining the
+two leaves. This identifies a specific remaining term to control; it
+does not supply the required error-versus-signal bound.
 
 Earlier higher-order analyses are preserved in the
 [critical-cone](../../computations/critical-cone-2026-09-26/README.md),

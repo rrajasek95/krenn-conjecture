@@ -386,7 +386,7 @@ Together, the leaf response and the cofactor equation exclude both.
 
 ## Two arms: matrix rank supplies another route
 
-The [two-arm theorem](../notes/two-invertible-arm-ghz-bound-2026-09-27.md)
+The first [two-arm theorem](../notes/two-invertible-arm-ghz-bound-2026-09-27.md)
 gives the same fifth-power estimate when the two binary arm matrices
 are uniformly invertible. Their smaller singular values must each
 be at least a fixed fraction of the non-ground source norm.
@@ -434,10 +434,86 @@ There is also a precise description of the hidden linear directions:
 | Both rank one, with the same center color line | One degree of freedom per outside color |
 
 The last case permits equal-and-opposite attachments that cancel
-exactly. The middle case has no linear kernel, but the present GHZ
-proof still needs the singular-value estimate at the leaf selected
-by the ground equations. Two-arm stars with a rank-one arm therefore
-remain on the onset frontier.
+exactly. The middle case has no linear kernel, but this first proof
+still needed the singular-value estimate at the leaf selected by the
+ground equations. The next argument removes that restriction.
+
+## Two arms: rescale the edge between the leaves
+
+The [stronger two-arm theorem](../notes/transverse-two-arm-ghz-onset-2026-09-27.md)
+now covers both of the zero-kernel rows in the table. A single invertible
+arm suffices without any endpoint-cofactor condition. Two rank-one arms
+also suffice if their center color lines are different. The constants
+are uniform when the attachment map stays bounded away from losing rank.
+
+Why was the zero-kernel calculation not enough on its own? It controls
+the attachments to the two leaves in terms of the small edge between
+those leaves. But that closing edge may still be too large to discard.
+
+Call its size $\beta$, and let $t$ be the combined non-ground source
+size. If $\beta$ is at most a constant times $\delta^2$, the earlier
+estimates already work. Otherwise rescale the six sites so that the
+closing edge grows from size $\beta$ to size $t$, while both strong
+arms stay unchanged. We now have a triangle with three substantial
+edges, where the previous triangle method applies.
+
+~~~mermaid
+flowchart TD
+    A["Two strong arms; closing edge has size beta"] --> B{"Closing edge at most order delta squared?"}
+    B -->|Yes| C["Direct fifth-power estimate"]
+    B -->|No| D["Rescale the sites: make all three triangle edges substantial"]
+    D --> E["Track the separate scaling of every response"]
+    E --> F["Use the mixed output whose remainder contains only leaf-quartet edges"]
+    F --> G["Control products of attachment sizes"]
+    G --> H["Project away the shared local factor"]
+    H --> I["Undo the scaling: fifth-power GHZ estimate"]
+~~~
+
+Rescaling alone would lose too much when we reverse it. The useful
+extra fact comes from choosing the right mixed output. Put ground
+color at the center and at one outside site. Every remainder term
+then contains two mixed edges and a binary edge between the other
+four sites. Neither strong arm appears in that remainder. This
+keeps the bound at the smaller scale $\beta$ where it is needed.
+
+The final local projection matters again. An exact auxiliary example
+has total binary output of order $\delta^{19/4}$, larger than
+$\delta^5$ near zero. Its output is a product using just one color.
+The projection kills it while keeping part of the GHZ target. This
+example explains why controlling the desired signal can be easier
+than controlling the entire output.
+
+## Shared center directions: identify the remaining term
+
+The last row of the table is more delicate. Write the almost-hidden
+leaf attachments as a fixed local direction times an outside vector,
+plus an error. The single-attachment equation cannot bound that
+outside vector by itself.
+
+Two further pair equations supply complementary information. At the
+limiting shared-center pair, after removing nonzero local factors,
+they have the form
+
+$$
+uZ+W,\qquad -uZ+W.
+$$
+
+Adding them reveals $2W$; subtracting them reveals $2uZ$.
+Since $u$ is nonzero, the two equations control both unknowns.
+This elementary observation remains stable under small changes in
+the arms.
+
+Combining it with the projection gives the explicit bound
+
+$$
+|\lambda|\le C\varepsilon+C\delta^5+Ct\beta^2.
+$$
+
+Thus we recover fifth-power onset if the closing edge has size
+$O(\delta^2)$, or if its squared size is controlled by the output
+error. In general, $t\beta^2$ is the remaining contribution.
+The proof identifies that term without yet controlling it in every
+shared-center configuration.
 
 ## From a shape theorem to a GHZ estimate
 
@@ -464,7 +540,7 @@ H(A)=\lambda(a^6+b^6+c^6)+E,\quad
 $$
 
 If its non-ground direction is near one of the specified smooth
-families, satisfies the three-arm or two-invertible-arm condition,
+families, satisfies the three-arm or uniformly injective two-arm condition,
 is near any non-star four-active-site flat core, or is near a full
 triangle, the estimates give
 
@@ -483,8 +559,8 @@ $\varepsilon\ge c|\lambda|^3$ across every relevant boundary.
 The new results identify and control several difficult families, but a
 bound involving $\delta$ does not by itself give that error-versus-signal
 comparison. Within the full-support single-color branch, the remaining
-critical shapes for this onset argument are single edges and two-arm
-stars with a rank-one arm. The combined estimate is uniform when the normalized
+critical shapes for this onset argument are single edges and pairs of
+rank-one arms sharing a center line. The combined estimate is uniform when the normalized
 non-ground direction stays a fixed positive distance from those shapes.
 The error-versus-signal comparison remains open even on the families
 whose onset is now controlled.
