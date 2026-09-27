@@ -47,6 +47,7 @@ PACKAGES = (
     "single-invertible-edge-ghz-2026-09-27",
     "binary-adjugate-ghz-2026-09-27",
     "balanced-response-ghz-2026-09-27",
+    "cofactor-graph-frontier-2026-09-27",
 )
 
 

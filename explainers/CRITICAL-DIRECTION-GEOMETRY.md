@@ -740,6 +740,68 @@ The candidates left depend on the ground source. For the exact
 example whose cofactor edges are $02,03,12,13$, only sixteen of
 the thirty projective directions remain.
 
+## Only two anchor configurations remain
+
+The [cofactor-graph classification](../notes/cofactor-graph-ghz-frontier-2026-09-27.md)
+turns the preceding tests into a short list of remaining cases.
+The ground equations force the weighted sum of cofactor edges at
+every vertex to be zero. This severely restricts which graphs
+can occur.
+
+Two more observations help. Four anchored edges at one vertex
+leave only one potentially large incident block; projecting away
+that block gives onset. Also, two anchors at the same endpoint
+of a substantial binary edge force the edge between their outside
+neighbors to be small. On a six-cycle, this produces the outside
+four-cycle needed by the previous theorem.
+
+The exact checker examines all 32,768 six-vertex graphs.
+It tests the zero-row-sum condition in two ways: incidence-matrix
+ranks and explicit integer weight patterns. After applying the
+analytic rules, only the following two anchor configurations need
+new onset arguments:
+
+~~~mermaid
+flowchart LR
+    subgraph C["Four-cycle and isolated cofactor vertices"]
+        P0["0"] --- P2["2"]
+        P0 --- P3["3"]
+        P1["1"] --- P2
+        P1 --- P3
+        P4["4"]
+        P5["5"]
+        P0 -.-> P4
+    end
+    subgraph B["Two triangles joined by a bridge"]
+        B0["0"] --- B1["1"]
+        B1 --- B2["2"]
+        B2 --- B0
+        B0 --- B3["3"]
+        B3 --- B4["4"]
+        B4 --- B5["5"]
+        B5 --- B3
+        B1 -.-> B4
+    end
+~~~
+
+Solid edges are ground-cofactor anchors. The dashed edge is a
+representative binary source direction still needing analysis,
+with $b$ at one endpoint and $c$ at the other.
+A complete four-vertex cofactor graph with two isolated sites is
+also possible in the graph classification, but its extra anchors
+make it a subcase of the first remaining problem.
+
+The bound of sixteen remaining projective directions is now
+**universal within the full-support single-color onset problem**.
+With no zero cofactor rows, at most eight directions remain.
+With exactly one zero row, onset is already proved in every direction.
+Both pictured configurations have exact full-support ground
+examples; the bridge example can be chosen real.
+
+“Two configurations” still means two continuous families of
+sources and perturbations. It does not mean that checking two
+source matrices would finish the proof.
+
 ## From a shape theorem to a GHZ estimate
 
 In the smooth core families and five-arm stars, the response controls
@@ -775,6 +837,9 @@ $$
 The same estimate now holds for an edge whose norm is a fixed
 fraction of the source norm and passes either ground-cofactor test
 above, without a matrix-rank assumption.
+The graph classification now supplies this estimate in every
+nearby direction except the explicitly listed singular directions
+in the two remaining anchor configurations.
 
 This uses actual source distance. Unlike an order statement for a path
 parameter, it is unaffected by describing the same path with a slower
@@ -788,7 +853,7 @@ The new results identify and control several difficult families, but a
 bound involving $\delta$ does not by itself give that error-versus-signal
 comparison. Within the full-support single-color branch, the remaining
 critical shapes for this onset argument are the single-cell,
-different-color directions that fail the ground-cofactor tests above.
+different-color directions in those two anchor configurations.
 The combined estimate is uniform when the normalized non-ground
 direction stays a fixed positive distance from those sources.
 Indeed, a flat source with no two adjacent edges can have only one
