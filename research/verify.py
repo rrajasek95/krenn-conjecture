@@ -36,6 +36,7 @@ PACKAGES = (
     "four-core-attachments-2026-09-27",
     "w-universal-factor-two-2026-09-27",
     "w-cofactor-rigidity-2026-09-27",
+    "triangle-ghz-onset-2026-09-27",
 )
 
 

@@ -287,6 +287,53 @@ Thus internal singularities do not obstruct this particular onset
 estimate. Constants are uniform over compact families of these cores;
 they may deteriorate when the core approaches a triangle or a star.
 
+## Triangles: discard the hidden output without losing the signal
+
+A triangle has three outside sites. Each outside site can attach to the
+three triangle vertices, and some of those attachments can be invisible
+to the first response. The [triangle theorem](../notes/triangle-attachment-ghz-bound-2026-09-27.md)
+handles every such rank loss.
+
+First consider any two outside sites. If their attachments were both
+large while all measured responses vanished, they would extend the
+triangle to a flat five-site source. Our support classification says
+this must be a complete graph. But a ground-output equation requires
+at least one of its edges to be small. The contradiction controls the
+**product** of the two attachment sizes. It does not need to control
+each attachment separately.
+
+The ground equations supply a second fact: two outside sites have a
+small attachment at the same triangle vertex. Their remaining hidden
+attachments then share fixed local color directions at the other two
+triangle vertices.
+
+~~~mermaid
+flowchart TD
+    A["Triangle with three outside sites"] --> B["A ground equation supplies a small edge in every five-site extension"]
+    B --> C["Products of attachment sizes are controlled"]
+    A --> D["Two outside sites share a small attachment at one core vertex"]
+    D --> E["Their hidden output has a fixed local color factor"]
+    E --> F["Project perpendicular to that factor"]
+    F --> G["Hidden output vanishes; part of the GHZ signal survives"]
+    C --> H["Remaining terms have fifth-power size"]
+    G --> H
+~~~
+
+This projection is just a familiar linear-algebra operation. If the
+unwanted local direction is $v$, keep only the part perpendicular to
+$v$. That kills any tensor with factor $v$ at that site.
+For the binary GHZ target $b^6+c^6$, the surviving squared norm is
+always one: the two words remain orthogonal at the other sites, and
+the squared lengths of the projections of $b$ and $c$ sum to one.
+
+There is a concrete reason to use this step. An exact example has
+non-ground source size proportional to $\tau^2$, while an unwanted
+product output has size $4\tau^9$. That is larger than the fifth power
+of the source size, which is proportional to $\tau^{10}$.
+The projection removes the product output exactly. We can bound the
+GHZ signal even though these auxiliary constraints do not give the
+same bound on the entire output.
+
 ## From a shape theorem to a GHZ estimate
 
 In the smooth core families and five-arm stars, the response controls
@@ -312,8 +359,8 @@ H(A)=\lambda(a^6+b^6+c^6)+E,\quad
 $$
 
 If its non-ground direction is near one of the specified smooth
-families, satisfies the four-arm condition, or is near any non-star
-four-active-site flat core, the estimates give
+families, satisfies the four-arm condition, is near any non-star
+four-active-site flat core, or is near a full triangle, the estimates give
 
 $$
 |\lambda|\le C_1\varepsilon+C_2\delta^5.
@@ -330,8 +377,8 @@ $\varepsilon\ge c|\lambda|^3$ across every relevant boundary.
 The new results identify and control several difficult families, but a
 bound involving $\delta$ does not by itself give that error-versus-signal
 comparison. Within the full-support single-color branch, the remaining
-critical shapes for this onset argument are triangles and stars with
-at most three arms. The combined estimate is uniform when the normalized
+critical shapes for this onset argument are stars with at most three
+arms. The combined estimate is uniform when the normalized
 non-ground direction stays a fixed positive distance from those shapes.
 The error-versus-signal comparison remains open even on the families
 whose onset is now controlled.
