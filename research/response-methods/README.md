@@ -17,6 +17,7 @@ separate from the Lean-verified exact theorem.
 | Tool | Useful consequence | Read and reproduce |
 | --- | --- | --- |
 | Circle averaging at a homogeneous polynomial zero | Convert a polynomial norm bound into a sharp derivative bound on its zero set. For hafnians this yields a universal factor-two W-design guarantee and explicit higher-response losses. | [Lemma and application](../../notes/w-state-universal-factor-two-2026-09-27.md), [illustrated guide](../../explainers/W-GLOBAL-GUARANTEE.md), [replay](../../computations/w-universal-factor-two-2026-09-27/README.md) |
+| Equality along the derivative circle and a transverse Hessian | Classify every maximum-response ground source at even sizes from six onward, quantify ground/cofactor overlap, and exclude high-efficiency competitors through a local scalar inequality. | [Proof](../../notes/w-cofactor-rigidity-2026-09-27.md), [replay](../../computations/w-cofactor-rigidity-2026-09-27/README.md) |
 | Response Gram matrices and exact dual certificates | Optimize a fixed core; bound two output requirements at once; account for core uncertainty. | [Proof](../../notes/reusable-response-certificates-2026-09-26.md), [method replay](../../computations/method-utility-2026-09-26/README.md), [fixed-core replay](../../computations/rate-design-frontier-2026-09-26/README.md) |
 | Symmetry decompositions and higher-order feasibility constraints | Prove unrestricted local W optimality at every even size; at four sites, higher equations eliminate negative Hessian modes that no feasible path can follow to first order. | [All-even quadratic forms](../../notes/w-state-all-even-local-optimum-2026-09-27.md), [four-site obstruction](../../notes/w-state-four-site-local-obstruction-2026-09-27.md), [replay](../../computations/w-all-even-local-optimum-2026-09-27/README.md) |
 | Positive site scaling | Preserve the entire output while reducing source strength; reduce both global rate problems to balanced sources. | [Illustrated guide](../../explainers/SITE-BALANCING.md), [proof](../../notes/site-balancing-rate-reduction-2026-09-26.md), [replay](../../computations/site-balancing-2026-09-26/README.md) |
@@ -114,4 +115,4 @@ flowchart LR
 The [GHZ project](../ghz-rates/README.md) and
 [W-state project](../w-state-design/README.md) state the unresolved targets.
 The [shared replay](../README.md#reproduce-the-follow-up-checks) checks the
-25 rate and design packages without numerical optimization dependencies.
+26 rate and design packages without numerical optimization dependencies.

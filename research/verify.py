@@ -35,6 +35,7 @@ PACKAGES = (
     "four-arm-ghz-boundary-2026-09-27",
     "four-core-attachments-2026-09-27",
     "w-universal-factor-two-2026-09-27",
+    "w-cofactor-rigidity-2026-09-27",
 )
 
 

@@ -99,7 +99,7 @@ $e^{ij\theta}$ are orthogonal, so (3) implies
 
 $$
 t^2\|g(z)\|^2
-\sum_{j=2}^m|a_j|^2t^{2j}
++\sum_{j=2}^m|a_j|^2t^{2j}
 \le B(1+t^2)^m.
 \tag{5}
 $$

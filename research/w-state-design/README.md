@@ -52,6 +52,7 @@ $1/65\le R_{\rm opt}\le1/45$, and the guaranteed fraction is $9/13$.
 | Result | Why it helps | Read and reproduce |
 | --- | --- | --- |
 | Universal factor-two guarantee at every even count | Bound every unrestricted exact-W rate by $2B_n/n$. A sharp zero-hafnian cofactor bound also separates response strength, higher-order losses, and row imbalance. | [Illustrated guide](../../explainers/W-GLOBAL-GUARANTEE.md), [proof](../../notes/w-state-universal-factor-two-2026-09-27.md), [replay](../../computations/w-universal-factor-two-2026-09-27/README.md) |
+| Rigidity and optimality near maximum cofactor response | For every even $n\ge6$, maximum response forces a complete odd core and one isolated site. The sharp scalar W bound holds near this family, excluding every sufficiently high-efficiency ground source from improving the construction. | [Equality classification and local scalar proof](../../notes/w-cofactor-rigidity-2026-09-27.md), [replay](../../computations/w-cofactor-rigidity-2026-09-27/README.md) |
 | One-root optimum at every even count | Gives the explicit construction and its sharp rate. | [Proof](../../notes/w-state-optimal-design-2026-09-26.md), [replay](../../computations/method-utility-2026-09-26/README.md) |
 | Two-root optimum at every even count | Covers scalar cores with connected or disconnected cofactor graphs. | [Guide](../../explainers/BOUNDARY-STRUCTURE.md), [proof](../../notes/w-state-two-root-optimum-2026-09-26.md), [replay](../../computations/w-state-two-root-2026-09-26/README.md) |
 | Unrestricted local optimality at every even count | For every even $n\ge4$, all nearby complex colored exact-W designs have rate at most $R_*$. At fixed output, departures from the phase orbit have a quadratic source cost. | [Illustrated guide](../../explainers/W-LOCAL-OPTIMALITY.md), [all-even proof](../../notes/w-state-all-even-local-optimum-2026-09-27.md), [four-site obstruction](../../notes/w-state-four-site-local-obstruction-2026-09-27.md), [replay](../../computations/w-all-even-local-optimum-2026-09-27/README.md) |
@@ -85,6 +86,13 @@ improvement of the known optimum, with all complex colored entries free.
 Any better global design must lie outside the resulting neighborhood,
 after accounting for overall scaling and site phases. No explicit
 neighborhood radius has yet been supplied.
+
+The newer cofactor theorem makes a stronger statement about the ground
+source alone: for $n\ge6$, any better design must have cofactor efficiency
+bounded a definite amount below its sharp maximum. This permits every
+colored completion, even far from the known construction. The efficiency
+threshold is not explicit, so the numerical global upper bounds above
+are unchanged.
 
 At six sites the new unrestricted bound gives $R\le1/45$, while the
 construction attains $1/65$. One sufficient way to close this gap is

@@ -116,6 +116,43 @@ uneven response rows. Any better design would have to make those
 rows more uniform while retaining enough total response.
 The proof now quantifies both effects separately.
 
-This identifies the remaining tradeoff. Maximizing total response
-alone does not prove global W optimality, and equalizing the rows
-alone may weaken them too much. The full optimum remains open.
+## Maximum response now forces the known ground structure
+
+A [further theorem](../notes/w-cofactor-rigidity-2026-09-27.md) classifies
+the equality case for every even count from six onward.
+If the ground source reaches the largest possible total cofactor
+strength, it must be a complete equal-magnitude odd core with one
+isolated site, up to relabeling, scale, and site phases.
+
+The circle argument explains why. Equality forces every source around
+the circle to saturate the scalar hafnian bound. Their edge magnitudes
+must all agree. Rotating the phase then shows that a ground edge and
+its cofactor cannot both be nonzero.
+Every perfect matching must contain exactly one cofactor-supported
+edge. In a complete graph on at least six sites, the only edge set
+with that property is a full star. Its complement is the odd core.
+
+~~~mermaid
+flowchart TD
+    A["Maximum total cofactor response"] --> B["Every source on the derivative circle saturates the norm bound"]
+    B --> C["Ground and cofactor supports are disjoint"]
+    C --> D["Every perfect matching uses exactly one cofactor edge"]
+    D --> E["Cofactor edges form a star"]
+    E --> F["Ground edges form the known complete odd core"]
+~~~
+
+The next step is local stability. The scalar response cost increases
+to second order in every direction away from this family, after
+removing scaling and phases. This remains true when the ground
+perturbation is nonuniform and introduces cancelling perfect matchings.
+
+Together, these results show that **no design with sufficiently
+near-maximal cofactor efficiency can beat the known rate**.
+Only the ground source needs to be in this regime; all its colored
+completions are covered.
+
+The proof does not yet give a numerical meaning to “sufficiently near.”
+It therefore leaves the numerical interval in the table unchanged.
+A better global design, if one exists, must sacrifice a definite
+amount of total response while making the site responses more uniform.
+Establishing that this tradeoff can never pay is still the remaining task.
