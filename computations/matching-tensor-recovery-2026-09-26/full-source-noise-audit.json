@@ -1,0 +1,28 @@
+{
+  "sites": 7,
+  "every_clean_entry_rebuilt_by_scalar_matchings": true,
+  "exact_measurement_error_checked": true,
+  "exterior_columns_rebuilt_separately": true,
+  "every_local_jacobian_entry_checked_separately": true,
+  "curvature_checked_by_matching_enumeration_and_parameter_support_counts": true,
+  "all_saved_integer_preconditioners_and_fraction_bounds_replayed": true,
+  "response_multiplicities": [
+    {
+      "edge_factors": 1,
+      "maximum_row_multiplicity": 21,
+      "all_tensor_rows_checked": true
+    },
+    {
+      "edge_factors": 2,
+      "maximum_row_multiplicity": 210,
+      "all_tensor_rows_checked": true
+    },
+    {
+      "edge_factors": 3,
+      "maximum_row_multiplicity": 630,
+      "all_tensor_rows_checked": true
+    }
+  ],
+  "zero_containing_denominator_rejected": true,
+  "scope": "Exact acceptance replay with separate tensor, exterior, derivative and curvature construction. Shares the bound propagation code and integer matrix library; not an independent proof review."
+}

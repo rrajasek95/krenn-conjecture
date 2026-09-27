@@ -28,8 +28,12 @@ The later [observable noisy-mean certificate](observable-noisy-mean-recovery-202
 locates the local mean directions directly from noisy full-tensor data
 under checkable matrix conditions. Its bounds cover every compatible
 source in the data-error ball, without assuming parameter proximity.
-It does not yet supply covariance and mean scales, so reaching this
-note's full-source correction neighborhood remains a separate step.
+It supplies directions only. The subsequent
+[full-source initializer](certified-full-source-initialization-2026-09-27.md)
+now supplies covariance and mean-scale bounds and certifies entry into
+this neighborhood for every compatible single-observation source. Its
+exact seven-site example requires an extremely small error budget; useful
+noise thresholds and certified shared-source alignment remain open.
 
 There are `n` labelled sites, indexed by `0,...,n-1`, and `p` labelled
 observations. At first each site has three real coordinates. Observation

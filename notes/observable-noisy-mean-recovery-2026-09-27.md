@@ -354,10 +354,12 @@ The contribution here is the propagation from raw tensor errors and
 imperfect solves to observable bounds covering all nearby compression
 centers and mean tuples.
 
-The next unresolved step is a certified covariance and scale initializer
-that accepts these imperfect directions and reaches the existing local
-full-source correction neighborhood. Applying the exact covariance
-inverse to noisy data without bounding its residuals does not prove
-that step. The shared global mean span also requires consistent scales
-across observations, obtained through the common covariance.
-Compressed-data initialization and nongeneric classification remain open.
+The subsequent [full-source initialization note](certified-full-source-initialization-2026-09-27.md)
+now propagates direction errors through the covariance solves and scalar
+calibration and certifies entry into the existing local correction ball.
+It covers every compatible source under explicit acceptance conditions;
+the saved seven-site error budget is extremely small, about `3.4e-41`.
+Useful noise thresholds remain open. The shared global mean span also
+requires certified consistent scales across observations, obtained through
+the common covariance. Compressed-data initialization and nongeneric
+classification remain open.

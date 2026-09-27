@@ -47,6 +47,7 @@ separate from the Lean-verified exact theorem.
 | Source inverse given the local mean lines | Recover covariance and actual mean scales with quadratically many columns per linear system; exact nine-site examples align four outputs spanning four global mean directions in local dimension three. | [Smaller rank criterion and scope](../../notes/quadratic-size-source-inverse-2026-09-27.md), [inverse and replay](../../computations/matching-tensor-recovery-2026-09-26/restricted_source_inverse.py), [certificate](../../computations/matching-tensor-recovery-2026-09-26/restricted-source-inverse-certificate.json) |
 | Blind search and local conditioning | Search for mean lines from the tensor alone, then verify them exactly; complete rational source recovery on seven- and nine-site examples, mean-line recovery at eleven sites, and a retained failed search. | [Proofs, local noise bound, and limits](../../notes/blind-source-search-and-local-conditioning-2026-09-27.md), [search and exact verification](../../computations/matching-tensor-recovery-2026-09-26/blind_mean_search.py), [certificate](../../computations/matching-tensor-recovery-2026-09-26/blind-mean-search-certificate.json) |
 | Shared calibration and near-ambiguity | Prove all-orders seventh-order separation and fifth-order local covariance obstructions; shared cubic calibration has a sharp sensitivity formula and a classical tight-frame setting-design criterion. | [Theorems and scope](../../notes/shared-calibration-and-near-ambiguity-2026-09-27.md), [exact replay](../../computations/matching-tensor-recovery-2026-09-26/source_calibration_conditioning.py), [certificate](../../computations/matching-tensor-recovery-2026-09-26/source-calibration-conditioning-certificate.json) |
+| Certified full-source initialization | Bound every mean and covariance parameter compatible with noisy full-tensor data, then certify entry into the local correction neighborhood. A seven-site exact example passes at an extremely small error budget; practical thresholds remain open. | [Proof and limitations](../../notes/certified-full-source-initialization-2026-09-27.md), [certificate generator](../../computations/matching-tensor-recovery-2026-09-26/full_source_noise_recovery.py), [exact replay](../../computations/matching-tensor-recovery-2026-09-26/verify_full_source_noise.py), [saved certificate](../../computations/matching-tensor-recovery-2026-09-26/full-source-noise-certificate.json) |
 | Full-source local stability | Bound finite errors in all means and edge parameters, prove a local correction iteration converges, and control the observed mean span. Shared covariance information adds even with unknown means. | [Theorems and limits](../../notes/full-source-local-stability-2026-09-27.md), [certificate generator](../../computations/matching-tensor-recovery-2026-09-26/source_local_stability.py), [independent replay](../../computations/matching-tensor-recovery-2026-09-26/verify_source_local_stability.py), [exact witnesses](../../computations/matching-tensor-recovery-2026-09-26/source-local-stability-certificate.json) |
 | Products of local scalar measurements | Apply established structured-measurement theory to identify generic sources from `d+1` scalar data, where `d` is the source dimension; certify local source rank and finite noise bounds through eleven sites without constructing full tensors. | [Measurement counts, attribution, and limits](../../notes/product-measurement-source-recovery-2026-09-27.md), [direct scalar computation](../../computations/matching-tensor-recovery-2026-09-26/product_measurements.py), [independent replay](../../computations/matching-tensor-recovery-2026-09-26/verify_product_measurements.py), [certificate](../../computations/matching-tensor-recovery-2026-09-26/product-measurement-certificate.json) |
 
@@ -113,17 +114,25 @@ source. Its all-orders proof uses a fixed nine-dimensional calculation
 and tensor powers, and extends to generic compression centers beyond
 matching tensors. Combined with covariance recovery, it removes the
 nonlinear initialization step for generic exact full-tensor data from
-order seven. Full-source initialization with measurement noise, inversion from
-compressed scalar data, and nongeneric source classification remain open. These
-research results are not part of the Lean formalization of Krenn–Gu.
+order seven. The later certificate below addresses full-source initialization
+with measurement noise under explicit, conservative acceptance conditions.
+Inversion from compressed scalar data and nongeneric source classification remain
+open. These research results are not part of the Lean formalization of Krenn–Gu.
 
 The subsequent [noisy mean-direction certificate](../../notes/observable-noisy-mean-recovery-2026-09-27.md)
 now supplies the mean-line part of initialization from noisy full tensors.
 It accounts for solve and vector residuals and covers all matching
 representations compatible with a given data-error bound. It uses
 established singular-vector perturbation and verified-numerics principles
-with the new observable stack. Covariance and mean-scale initialization
-are still needed before the local full-source correction can be applied.
+with the new observable stack. The subsequent
+[full-source initializer](../../notes/certified-full-source-initialization-2026-09-27.md)
+propagates those errors through covariance recovery and scalar calibration,
+then checks that every compatible source lies in the local correction ball.
+Its seven-site example uses an error budget of about `3.4e-41`: it closes
+the logical single-observation initialization step on the stated open set,
+not the problem of useful noise thresholds. The saved numerical proposal
+effectively sees rounded clean data; acceptance uses the exact noisy data.
+Certified shared-source alignment and validated floating correction remain open.
 
 The [calibration-conditioning results](../../notes/shared-calibration-and-near-ambiguity-2026-09-27.md)
 give explicit obstructions to uniformly stable covariance recovery and
