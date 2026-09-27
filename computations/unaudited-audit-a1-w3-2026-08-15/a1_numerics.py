@@ -81,7 +81,9 @@ def balance(cellvals, n=N, iters=400):
 
 
 if __name__ == "__main__":
-    name = sys.argv[1] if len(sys.argv) > 1 else "candidate_n6_q3_seed2.npz"
+    name = sys.argv[1] if len(sys.argv) > 1 else (
+        "computations/archive/candidates/candidate_n6_q3_seed2.npz"
+    )
     path = os.path.join(REPO, name)
     d = np.load(path)
     mats = np.asarray(d["matrices"], dtype=complex)
