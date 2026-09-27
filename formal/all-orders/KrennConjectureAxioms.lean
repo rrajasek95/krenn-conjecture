@@ -1,0 +1,7 @@
+import KrennConjecture
+
+#print axioms KrennAllOrders.KrennConjecture.exists_retained_size
+#print axioms KrennAllOrders.KrennConjecture.complex_rotation_normalization
+#print axioms KrennAllOrders.KrennConjecture.supported_endpoint_of_diagonal_eqSystem
+#print axioms KrennAllOrders.KrennConjecture.not_eqSystemN_three
+#print axioms KrennAllOrders.KrennConjecture.not_exists_eqSystemN_three

@@ -1,0 +1,7 @@
+import PairingDerivative
+
+#print axioms KrennAllOrders.PairingDerivative.map_sign
+#print axioms KrennAllOrders.PairingDerivative.map_pairing
+#print axioms KrennAllOrders.PairingDerivative.pderiv_pairing
+#print axioms KrennAllOrders.PairingDerivative.pderiv_pairing_self_even
+#print axioms KrennAllOrders.PairingDerivative.differentiated_norm_two_rotation

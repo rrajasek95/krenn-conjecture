@@ -1,0 +1,11 @@
+import WickReplicaBridge
+
+#print axioms KrennAllOrders.WickReplicaBridge.replicaMean
+#print axioms KrennAllOrders.WickReplicaBridge.replicaMean_apply
+#print axioms KrennAllOrders.WickReplicaBridge.complementSumEquiv
+#print axioms KrennAllOrders.WickReplicaBridge.centered_complement_independent
+#print axioms KrennAllOrders.WickReplicaBridge.shiftedTerm_independent_replicas
+#print axioms KrennAllOrders.WickReplicaBridge.shiftedMoment_independent_replicas
+#print axioms KrennAllOrders.WickReplicaBridge.linearPolynomial_rename_equiv
+#print axioms KrennAllOrders.WickReplicaBridge.shiftedMoment_relabel
+#print axioms KrennAllOrders.WickReplicaBridge.shiftedMoment_permute

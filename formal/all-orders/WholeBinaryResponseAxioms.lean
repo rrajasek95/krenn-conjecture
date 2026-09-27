@@ -1,0 +1,26 @@
+import WholeBinaryResponse
+
+#print axioms KrennAllOrders.WholeBinaryResponse.rootVector
+#print axioms KrennAllOrders.WholeBinaryResponse.rootMean
+#print axioms KrennAllOrders.WholeBinaryResponse.rootMean_apply
+#print axioms KrennAllOrders.WholeBinaryResponse.wordExponent_congr_list
+#print axioms KrennAllOrders.WholeBinaryResponse.oddResponsePolynomial_congr
+#print axioms KrennAllOrders.WholeBinaryResponse.meanSlice_eq_isotropic_root_moment
+#print axioms KrennAllOrders.WholeBinaryResponse.shiftedMoment_eq_oddResponse_sum
+#print axioms KrennAllOrders.WholeBinaryResponse.binaryWord
+#print axioms KrennAllOrders.WholeBinaryResponse.binaryWord_retained
+#print axioms KrennAllOrders.WholeBinaryResponse.responseTensor_eq_oddResponse_sum
+#print axioms KrennAllOrders.WholeBinaryResponse.oddResponsePolynomial_binary_const
+#print axioms KrennAllOrders.WholeBinaryResponse.actual_binary_factorization
+#print axioms KrennAllOrders.WholeBinaryResponse.exists_third_colour
+#print axioms KrennAllOrders.WholeBinaryResponse.binaryWord_nonconstant
+#print axioms KrennAllOrders.WholeBinaryResponse.binary_mixed_response_zero
+#print axioms KrennAllOrders.WholeBinaryResponse.exists_actual_pure_factors
+#print axioms KrennAllOrders.WholeBinaryResponse.pure_response_zero_of_rotation
+#print axioms KrennAllOrders.WholeBinaryResponse.mixed_response_zero
+#print axioms KrennAllOrders.WholeBinaryResponse.whole_binary_response_zero_of_rotation
+#print axioms KrennAllOrders.WholeBinaryResponse.halfRotation
+#print axioms KrennAllOrders.WholeBinaryResponse.halfRotation_normalized
+#print axioms KrennAllOrders.WholeBinaryResponse.whole_binary_response_zero
+#print axioms KrennAllOrders.WholeBinaryResponse.pure_response_zero
+#print axioms KrennAllOrders.WholeBinaryResponse.whole_binary_coefficient_zero

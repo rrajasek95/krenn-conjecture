@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check the literal adapter against a fixed formal-conjectures checkout."""
+"""Check the full proof against the exact pinned formal-conjectures definitions."""
 
 import argparse
 import hashlib
@@ -7,6 +7,7 @@ import importlib.util
 import json
 import os
 from pathlib import Path
+import re
 import subprocess
 import sys
 
@@ -39,15 +40,30 @@ def main() -> None:
     print(run(["lake", "--wfail", "build"], LOCAL), end="")
     print(run(["lake", "--wfail", "build",
                "FormalConjectures.Paper.MonochromaticQuantumGraph"], upstream), end="")
-    env = os.environ.copy()
-    env["LEAN_PATH"] = str(LOCAL / ".lake/build/lib/lean") + (
-        os.pathsep + env["LEAN_PATH"] if env.get("LEAN_PATH") else "")
-    source = ROOT / "UpstreamAdapter.lean"
-    output = run(["lake", "env", "lean", "-DwarningAsError=true", str(source)], upstream, env)
     spec = importlib.util.spec_from_file_location("local_verify", LOCAL / "verify.py")
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
-    declarations = module.audit(output, source.read_text())
+    sources = [ROOT / name for name in
+               ["UpstreamAdapter.lean", "FullProof.lean", "FullProofAxioms.lean"]]
+    for source in sources:
+        if re.search(r"\bsorry\b|\badmit\b|^\s*(?:axiom|unsafe)\b",
+                     module.without_comments(source.read_text()), re.MULTILINE):
+            raise RuntimeError(f"Unaccepted proof construct in {source.name}")
+    adapter_lib = ROOT / ".lake/build/lib/lean"
+    adapter_lib.mkdir(parents=True, exist_ok=True)
+    env = os.environ.copy()
+    paths = [str(adapter_lib), str(LOCAL / ".lake/build/lib/lean")]
+    if env.get("LEAN_PATH"):
+        paths.append(env["LEAN_PATH"])
+    env["LEAN_PATH"] = os.pathsep.join(paths)
+    lean = ["lake", "env", "lean", "-DwarningAsError=true", "--root", str(ROOT)]
+    adapter_output = run(lean + ["-o", str(adapter_lib / "UpstreamAdapter.olean"),
+                                str(sources[0])], upstream, env)
+    run(lean + ["-o", str(adapter_lib / "FullProof.olean"), str(sources[1])], upstream, env)
+    proof_output = run(lean + [str(sources[2])], upstream, env)
+    declarations = module.audit(adapter_output, sources[0].read_text())
+    declarations += module.audit(proof_output, sources[2].read_text())
+    output = adapter_output + proof_output
     (ROOT / "axioms.txt").write_text(output)
     metadata = {
         "status": "PASS",
@@ -55,15 +71,16 @@ def main() -> None:
         "upstream_revision": REVISION,
         "upstream_source": UPSTREAM_SOURCE,
         "upstream_source_sha256": hashlib.sha256((upstream / UPSTREAM_SOURCE).read_bytes()).hexdigest(),
-        "adapter_sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
+        "source_hashes": {source.name: hashlib.sha256(source.read_bytes()).hexdigest()
+                          for source in sources},
         "matching_model_sha256": hashlib.sha256((LOCAL / "MatchingModel.lean").read_bytes()).hexdigest(),
         "declarations_checked": len(declarations),
         "checked_declarations": declarations,
         "allowed_axioms": sorted(module.ALLOWED),
-        "scope": "Exact equivalence of local and upstream solutions; no nonexistence theorem is asserted.",
+        "scope": "Full complex nonexistence for every even N >= 6 and D >= 3, using the exact upstream definitions.",
     }
     (ROOT / "verification.json").write_text(json.dumps(metadata, indent=2) + "\n")
-    print(f"PASS: literal upstream adapter; {len(declarations)} declarations axiom-checked.")
+    print(f"PASS: exact upstream all-orders theorem; {len(declarations)} declarations axiom-checked.")
 
 
 if __name__ == "__main__":

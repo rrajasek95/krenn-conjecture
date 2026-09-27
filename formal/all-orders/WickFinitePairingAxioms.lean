@@ -1,0 +1,11 @@
+import WickFinitePairing
+
+#print axioms KrennAllOrders.WickFinitePairing.wordEquiv
+#print axioms KrennAllOrders.WickFinitePairing.sign_wordEquiv
+#print axioms KrennAllOrders.WickFinitePairing.complement_wordEquiv
+#print axioms KrennAllOrders.WickFinitePairing.pairing_reindex
+#print axioms KrennAllOrders.WickFinitePairing.responseTensor
+#print axioms KrennAllOrders.WickFinitePairing.responseTensor_reindex
+#print axioms KrennAllOrders.WickFinitePairing.response_pairing_rotation
+#print axioms KrennAllOrders.WickFinitePairing.response_pairing_diagonal
+#print axioms KrennAllOrders.WickFinitePairing.response_pairing_diagonal_line

@@ -1,0 +1,19 @@
+import OddRotation
+
+#print axioms KrennAllOrders.OddRotation.alternatingFactor
+#print axioms KrennAllOrders.OddRotation.leftCopy
+#print axioms KrennAllOrders.OddRotation.rightCopy
+#print axioms KrennAllOrders.OddRotation.rotatedLeft
+#print axioms KrennAllOrders.OddRotation.rotatedRight
+#print axioms KrennAllOrders.OddRotation.eval_leftCopy
+#print axioms KrennAllOrders.OddRotation.eval_rightCopy
+#print axioms KrennAllOrders.OddRotation.eval_rotatedLeft
+#print axioms KrennAllOrders.OddRotation.eval_rotatedRight
+#print axioms KrennAllOrders.OddRotation.alternatingFactor_ne_zero
+#print axioms KrennAllOrders.OddRotation.cancel_alternating_rotation
+#print axioms KrennAllOrders.OddRotation.rescaling_square_of_alternating_rotation
+#print axioms KrennAllOrders.OddRotation.pairing_factored_response
+#print axioms KrennAllOrders.OddRotation.actual_alternating_rotation
+#print axioms KrennAllOrders.OddRotation.actual_scalar_factor_eq_one
+#print axioms KrennAllOrders.OddRotation.higher_factors_zero_of_actual_rotation
+#print axioms KrennAllOrders.OddRotation.actual_response_eq_linear

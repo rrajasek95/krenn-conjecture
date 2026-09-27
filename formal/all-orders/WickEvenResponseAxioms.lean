@@ -1,0 +1,7 @@
+import WickEvenResponse
+
+#print axioms KrennAllOrders.WickEvenResponse.sum_range_pairs
+#print axioms KrennAllOrders.WickEvenResponse.meanSlice_odd_eq_zero
+#print axioms KrennAllOrders.WickEvenResponse.meanSlice_even_eq_zero
+#print axioms KrennAllOrders.WickEvenResponse.shiftedMoment_eq_evenResponse
+#print axioms KrennAllOrders.WickEvenResponse.shiftedMoment_eq_oddResponse

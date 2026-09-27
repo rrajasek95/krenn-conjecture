@@ -1,0 +1,10 @@
+import EndpointCovariance
+
+#print axioms KrennAllOrders.EndpointCovariance.coreRow_endpointPoints
+#print axioms KrennAllOrders.EndpointCovariance.eval_meanCopy
+#print axioms KrennAllOrders.EndpointCovariance.eval_endpointKernel
+#print axioms KrennAllOrders.EndpointCovariance.eval_replicaFramePullback
+#print axioms KrennAllOrders.EndpointCovariance.eval_endpointTensor_eq_responseTensor
+#print axioms KrennAllOrders.EndpointCovariance.meanFunctional_pair_transform
+#print axioms KrennAllOrders.EndpointCovariance.endpoint_kernel_invariant
+#print axioms KrennAllOrders.EndpointCovariance.supported_endpoint_from_original_binary_responses

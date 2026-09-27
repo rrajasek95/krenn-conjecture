@@ -1,0 +1,8 @@
+import RetainedMeanWick
+
+#print axioms KrennAllOrders.RetainedMeanWick.coreRow_left
+#print axioms KrennAllOrders.RetainedMeanWick.coreRow_right
+#print axioms KrennAllOrders.RetainedMeanWick.erased_meanRow
+#print axioms KrennAllOrders.RetainedMeanWick.coeff_evenResponse_core
+#print axioms KrennAllOrders.RetainedMeanWick.shiftedMoment_retained_even
+#print axioms KrennAllOrders.RetainedMeanWick.eval_coefficientTensor

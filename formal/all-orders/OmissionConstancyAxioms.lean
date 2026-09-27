@@ -1,0 +1,11 @@
+import OmissionConstancy
+
+#print axioms KrennAllOrders.OmissionConstancy.scaleVariables_X
+#print axioms KrennAllOrders.OmissionConstancy.scaleVariables_C
+#print axioms KrennAllOrders.OmissionConstancy.pderiv_scaleVariables
+#print axioms KrennAllOrders.OmissionConstancy.directionZero_scaleVariables
+#print axioms KrennAllOrders.OmissionConstancy.scale_directPolynomial
+#print axioms KrennAllOrders.OmissionConstancy.map_pure
+#print axioms KrennAllOrders.OmissionConstancy.pure_tensor_constancy
+#print axioms KrennAllOrders.OmissionConstancy.pure_even_constancy
+#print axioms KrennAllOrders.OmissionConstancy.pure_even_constancy_of_eqSystem

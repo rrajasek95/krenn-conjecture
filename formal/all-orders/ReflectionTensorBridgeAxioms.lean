@@ -1,0 +1,20 @@
+import ReflectionTensorBridge
+
+#print axioms KrennAllOrders.ReflectionTensorBridge.wordSign
+#print axioms KrennAllOrders.ReflectionTensorBridge.wordInputs
+#print axioms KrennAllOrders.ReflectionTensorBridge.contractSites_expansion
+#print axioms KrennAllOrders.ReflectionTensorBridge.wordsEquiv
+#print axioms KrennAllOrders.ReflectionTensorBridge.wordSign_eq_sign
+#print axioms KrennAllOrders.ReflectionTensorBridge.prependSlot
+#print axioms KrennAllOrders.ReflectionTensorBridge.splitSlotsEquiv
+#print axioms KrennAllOrders.ReflectionTensorBridge.leftWord
+#print axioms KrennAllOrders.ReflectionTensorBridge.rightWord
+#print axioms KrennAllOrders.ReflectionTensorBridge.splitReplicaInputs
+#print axioms KrennAllOrders.ReflectionTensorBridge.wordInputs_eq_split
+#print axioms KrennAllOrders.ReflectionTensorBridge.centeredMoment_wordInputs_factor
+#print axioms KrennAllOrders.ReflectionTensorBridge.reflectedMoment_factor_sum
+#print axioms KrennAllOrders.ReflectionTensorBridge.momentTensor
+#print axioms KrennAllOrders.ReflectionTensorBridge.reflectedMoment_eq_pairing
+#print axioms KrennAllOrders.ReflectionTensorBridge.pairing_momentTensor_roots_eq_zero
+#print axioms KrennAllOrders.ReflectionTensorBridge.Words
+#print axioms KrennAllOrders.ReflectionTensorBridge.wordsFintype

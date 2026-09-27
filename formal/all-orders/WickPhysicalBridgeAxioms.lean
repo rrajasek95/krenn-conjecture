@@ -1,0 +1,31 @@
+import WickPhysicalBridge
+
+#print axioms KrennAllOrders.WickPhysicalBridge.PhysicalSpace
+#print axioms KrennAllOrders.WickPhysicalBridge.physicalBasis
+#print axioms KrennAllOrders.WickPhysicalBridge.physicalCovariance
+#print axioms KrennAllOrders.WickPhysicalBridge.physicalCovariance_basis
+#print axioms KrennAllOrders.WickPhysicalBridge.physicalRoot
+#print axioms KrennAllOrders.WickPhysicalBridge.physicalCovariance_root_basis
+#print axioms KrennAllOrders.WickPhysicalBridge.physicalCovariance_basis_root
+#print axioms KrennAllOrders.WickPhysicalBridge.physicalRoot_isotropic
+#print axioms KrennAllOrders.WickPhysicalBridge.sum_of_supported_injection
+#print axioms KrennAllOrders.WickPhysicalBridge.killCompl_X_image
+#print axioms KrennAllOrders.WickPhysicalBridge.killCompl_X_outside
+#print axioms KrennAllOrders.WickPhysicalBridge.killCompl_linearPolynomial
+#print axioms KrennAllOrders.WickPhysicalBridge.killCompl_symmetricQuadratic
+#print axioms KrennAllOrders.WickPhysicalBridge.selectedInput
+#print axioms KrennAllOrders.WickPhysicalBridge.selectedInput_injective
+#print axioms KrennAllOrders.WickPhysicalBridge.selectedRestriction
+#print axioms KrennAllOrders.WickPhysicalBridge.topExponent_map_selectedInput
+#print axioms KrennAllOrders.WickPhysicalBridge.coeff_selectedRestriction
+#print axioms KrennAllOrders.WickPhysicalBridge.wordExponent_eq_list_sum
+#print axioms KrennAllOrders.WickPhysicalBridge.wordExponent_eq_finset_sum
+#print axioms KrennAllOrders.WickPhysicalBridge.coeff_selectedRestriction_list
+#print axioms KrennAllOrders.WickPhysicalBridge.selectedRestriction_eraseSite
+#print axioms KrennAllOrders.WickPhysicalBridge.selectedRestriction_rowAt
+#print axioms KrennAllOrders.WickPhysicalBridge.selectedRestriction_deletedQuadratic
+#print axioms KrennAllOrders.WickPhysicalBridge.centeredMoment_selected_roots
+#print axioms KrennAllOrders.WickPhysicalBridge.retainedSites
+#print axioms KrennAllOrders.WickPhysicalBridge.root_not_mem_retainedSites
+#print axioms KrennAllOrders.WickPhysicalBridge.retainedSites_card
+#print axioms KrennAllOrders.WickPhysicalBridge.centeredMoment_eq_eval_oddResponsePolynomial

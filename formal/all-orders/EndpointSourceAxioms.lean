@@ -1,0 +1,32 @@
+import EndpointSource
+
+#print axioms KrennAllOrders.EndpointSource.wordExponent_update_not_mem
+#print axioms KrennAllOrders.EndpointSource.retainedExponent_update
+#print axioms KrennAllOrders.EndpointSource.onPalette_update
+#print axioms KrennAllOrders.EndpointSource.scalar_boundary
+#print axioms KrennAllOrders.EndpointSource.mixed_boundary
+#print axioms KrennAllOrders.EndpointSource.v_boundary
+#print axioms KrennAllOrders.EndpointSource.retainedQuadratic_symm
+#print axioms KrennAllOrders.EndpointSource.retainedVertices_symm
+#print axioms KrennAllOrders.EndpointSource.eval_meanYAxis
+#print axioms KrennAllOrders.EndpointSource.u_boundary
+#print axioms KrennAllOrders.EndpointSource.eraseSite_idempotent
+#print axioms KrennAllOrders.EndpointSource.coeff_erased_row_mul
+#print axioms KrennAllOrders.EndpointSource.coeff_retainedRow_pure_other
+#print axioms KrennAllOrders.EndpointSource.pure_second_response_pderiv_zero
+#print axioms KrennAllOrders.EndpointSource.coeff_zero_of_pderiv_zero
+#print axioms KrennAllOrders.EndpointSource.binaryMean_constant_of_pderiv_zero
+#print axioms KrennAllOrders.EndpointSource.pure_second_cap_binaryMean
+#print axioms KrennAllOrders.EndpointSource.cap_origin
+#print axioms KrennAllOrders.EndpointSource.pure_second_cap
+#print axioms KrennAllOrders.EndpointSource.evenResponse_zero_mean
+#print axioms KrennAllOrders.EndpointSource.response_origin_eq_pureCofactor
+#print axioms KrennAllOrders.EndpointSource.receivingWord_onPalette
+#print axioms KrennAllOrders.EndpointSource.C_binarySign
+#print axioms KrennAllOrders.EndpointSource.contraction_eq_binaryPairing
+#print axioms KrennAllOrders.EndpointSource.scalarContraction_eq_binaryPairing
+#print axioms KrennAllOrders.EndpointSource.tensor_cap
+#print axioms KrennAllOrders.EndpointSource.tensor_cap_origin
+#print axioms KrennAllOrders.EndpointSource.receivingExponent_false
+#print axioms KrennAllOrders.EndpointSource.tensor_origin
+#print axioms KrennAllOrders.EndpointSource.endpoint_of_original_source

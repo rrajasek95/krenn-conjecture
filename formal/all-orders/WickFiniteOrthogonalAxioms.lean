@@ -1,0 +1,4 @@
+import WickFiniteOrthogonal
+
+#print axioms KrennAllOrders.WickFiniteOrthogonal.response_pairing_linear
+#print axioms KrennAllOrders.WickFiniteOrthogonal.response_pairing_orthogonal_even

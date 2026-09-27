@@ -94,10 +94,13 @@ def main() -> None:
             for name in sources + ["lakefile.toml", "lake-manifest.json", "lean-toolchain"]
         },
         "scope": (
-            "Physical quotient/divided-power bridge, O(2) invariant-ring theorem, "
-            "finite Wick covariance, conditional endpoint and response algebra, "
-            "complete graph obstruction and conditional weighted contradiction. "
-            "The full conjecture and physical-source-to-endpoint identities are not formalized."
+            "Full complex ternary nonexistence for every even N >= 6, derived "
+            "from the original weighted matching equations. The exact upstream "
+            "all-palette theorem is checked in ../upstream-adapter."
+            if "KrennConjecture" in modules else
+            "Checked original-source response and endpoint reductions, actual "
+            "replica identities, and complete matching obstruction. See README.md "
+            "for the remaining assembly obligations."
         ),
     }
     (ROOT / "verification.json").write_text(json.dumps(metadata, indent=2) + "\n")

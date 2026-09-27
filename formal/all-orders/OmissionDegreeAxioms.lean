@@ -1,0 +1,9 @@
+import OmissionDegree
+
+#print axioms KrennAllOrders.OmissionDegree.quadratic_coefficient_zero_of_constant_even_series
+#print axioms KrennAllOrders.OmissionDegree.dividedPower_C_mul
+#print axioms KrennAllOrders.OmissionDegree.squared_row_coefficient_zero
+#print axioms KrennAllOrders.OmissionDegree.two_row_coefficient_zero
+#print axioms KrennAllOrders.OmissionDegree.omittedRowLinear_single
+#print axioms KrennAllOrders.OmissionDegree.omitted_two_row_zero_of_pure_even_constancy
+#print axioms KrennAllOrders.OmissionDegree.omittedRowLinear

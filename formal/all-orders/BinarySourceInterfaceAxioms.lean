@@ -1,0 +1,6 @@
+import BinarySourceInterface
+
+#print axioms KrennAllOrders.BinarySourceInterface.originalHigherZeroOnPalette
+#print axioms KrennAllOrders.BinarySourceInterface.receivingWord_onPalette
+#print axioms KrennAllOrders.BinarySourceInterface.omitted_higher_zero
+#print axioms KrennAllOrders.BinarySourceInterface.normTwo_sq

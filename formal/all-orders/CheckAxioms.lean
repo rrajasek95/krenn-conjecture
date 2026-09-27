@@ -1,3 +1,28 @@
+import KrennConjecture
+import DiagonalSource
+import OmissionConstancy
+import BinarySourceInterface
+import OmissionRotation
+import WholeBinaryResponse
+import EndpointCovariance
+import WickFiniteOrthogonal
+import PhysicalReflection
+import EndpointSource
+import RetainedMeanWick
+import PhysicalMeanWick
+import OddRotation
+import OmissionTensor
+import RetainedBinary
+import WickPhysicalBridge
+import WickFinitePairing
+import WickEvenResponse
+import PhysicalEndpoint
+import WickPairing
+import PairingDerivative
+import ReflectionTensorBridge
+import OmissionDegree
+import WickReplicaBridge
+import OmittedResponse
 import WickShiftedBridge
 import ReflectionResponses
 import EvenResponse
@@ -680,3 +705,321 @@ import EndpointDegree
 #print axioms KrennAllOrders.WickShiftedBridge.shiftedMoment_eq_sum_meanSlice
 #print axioms KrennAllOrders.WickShiftedBridge.meanSlice_eq_zero_of_odd
 #print axioms KrennAllOrders.WickShiftedBridge.shiftedMoment_eq_coeff_sum
+
+#print axioms KrennAllOrders.OmittedResponse.oddResponse_term
+#print axioms KrennAllOrders.OmittedResponse.coeff_oddResponse_eq_linear_of_higher_zero
+#print axioms KrennAllOrders.OmittedResponse.raw_coefficient_zero_of_response_zero
+#print axioms KrennAllOrders.OmittedResponse.coeff_source_oddResponse
+#print axioms KrennAllOrders.OmittedResponse.coeff_rootExtract
+#print axioms KrennAllOrders.OmittedResponse.coeff_retained_rootExtract
+#print axioms KrennAllOrders.OmittedResponse.coeff_omitted_source
+
+#print axioms KrennAllOrders.WickReplicaBridge.replicaMean
+#print axioms KrennAllOrders.WickReplicaBridge.replicaMean_apply
+#print axioms KrennAllOrders.WickReplicaBridge.complementSumEquiv
+#print axioms KrennAllOrders.WickReplicaBridge.centered_complement_independent
+#print axioms KrennAllOrders.WickReplicaBridge.shiftedTerm_independent_replicas
+#print axioms KrennAllOrders.WickReplicaBridge.shiftedMoment_independent_replicas
+#print axioms KrennAllOrders.WickReplicaBridge.linearPolynomial_rename_equiv
+#print axioms KrennAllOrders.WickReplicaBridge.shiftedMoment_relabel
+#print axioms KrennAllOrders.WickReplicaBridge.shiftedMoment_permute
+
+#print axioms KrennAllOrders.OmissionDegree.quadratic_coefficient_zero_of_constant_even_series
+#print axioms KrennAllOrders.OmissionDegree.dividedPower_C_mul
+#print axioms KrennAllOrders.OmissionDegree.squared_row_coefficient_zero
+#print axioms KrennAllOrders.OmissionDegree.two_row_coefficient_zero
+#print axioms KrennAllOrders.OmissionDegree.omittedRowLinear_single
+#print axioms KrennAllOrders.OmissionDegree.omitted_two_row_zero_of_pure_even_constancy
+#print axioms KrennAllOrders.OmissionDegree.omittedRowLinear
+
+#print axioms KrennAllOrders.ReflectionTensorBridge.wordSign
+#print axioms KrennAllOrders.ReflectionTensorBridge.wordInputs
+#print axioms KrennAllOrders.ReflectionTensorBridge.contractSites_expansion
+#print axioms KrennAllOrders.ReflectionTensorBridge.wordsEquiv
+#print axioms KrennAllOrders.ReflectionTensorBridge.wordSign_eq_sign
+#print axioms KrennAllOrders.ReflectionTensorBridge.prependSlot
+#print axioms KrennAllOrders.ReflectionTensorBridge.splitSlotsEquiv
+#print axioms KrennAllOrders.ReflectionTensorBridge.leftWord
+#print axioms KrennAllOrders.ReflectionTensorBridge.rightWord
+#print axioms KrennAllOrders.ReflectionTensorBridge.splitReplicaInputs
+#print axioms KrennAllOrders.ReflectionTensorBridge.wordInputs_eq_split
+#print axioms KrennAllOrders.ReflectionTensorBridge.centeredMoment_wordInputs_factor
+#print axioms KrennAllOrders.ReflectionTensorBridge.reflectedMoment_factor_sum
+#print axioms KrennAllOrders.ReflectionTensorBridge.momentTensor
+#print axioms KrennAllOrders.ReflectionTensorBridge.reflectedMoment_eq_pairing
+#print axioms KrennAllOrders.ReflectionTensorBridge.pairing_momentTensor_roots_eq_zero
+#print axioms KrennAllOrders.ReflectionTensorBridge.Words
+#print axioms KrennAllOrders.ReflectionTensorBridge.wordsFintype
+
+#print axioms KrennAllOrders.PairingDerivative.map_sign
+#print axioms KrennAllOrders.PairingDerivative.map_pairing
+#print axioms KrennAllOrders.PairingDerivative.pderiv_pairing
+#print axioms KrennAllOrders.PairingDerivative.pderiv_pairing_self_even
+#print axioms KrennAllOrders.PairingDerivative.differentiated_norm_two_rotation
+
+#print axioms KrennAllOrders.WickPairing.responseTensor
+#print axioms KrennAllOrders.WickPairing.NoAux
+#print axioms KrennAllOrders.WickPairing.noAuxValues
+#print axioms KrennAllOrders.WickPairing.contractedShifted
+#print axioms KrennAllOrders.WickPairing.replicaMean_comp_linear
+#print axioms KrennAllOrders.WickPairing.contractedShifted_linear
+#print axioms KrennAllOrders.WickPairing.contractedShifted_rotation
+#print axioms KrennAllOrders.WickPairing.contractedShifted_diagonal
+#print axioms KrennAllOrders.WickPairing.shiftedMoment_sum_fin_zero
+#print axioms KrennAllOrders.WickPairing.contractedShifted_eq_pairing
+#print axioms KrennAllOrders.WickPairing.response_pairing_rotation
+#print axioms KrennAllOrders.WickPairing.response_pairing_diagonal
+#print axioms KrennAllOrders.WickPairing.response_pairing_diagonal_line
+
+#print axioms KrennAllOrders.PhysicalEndpoint.coeff_receivingPolynomial
+#print axioms KrennAllOrders.PhysicalEndpoint.receivingPolynomial_add
+#print axioms KrennAllOrders.PhysicalEndpoint.receivingPolynomial_zero
+#print axioms KrennAllOrders.PhysicalEndpoint.receivingPolynomial_pderiv
+#print axioms KrennAllOrders.PhysicalEndpoint.receivingPolynomial_C
+#print axioms KrennAllOrders.PhysicalEndpoint.eval_receivingPolynomial
+#print axioms KrennAllOrders.PhysicalEndpoint.pderiv_meanRow
+#print axioms KrennAllOrders.PhysicalEndpoint.eval_meanRow
+#print axioms KrennAllOrders.PhysicalEndpoint.eval_physicalEvenResponse
+#print axioms KrennAllOrders.PhysicalEndpoint.pderiv_physicalEvenResponse
+#print axioms KrennAllOrders.PhysicalEndpoint.eval_pderiv_receivingEvenResponse
+#print axioms KrennAllOrders.PhysicalEndpoint.eval_endpointResponse
+#print axioms KrennAllOrders.PhysicalEndpoint.eval_pderiv_endpointResponse
+#print axioms KrennAllOrders.PhysicalEndpoint.eraseSite_commute
+#print axioms KrennAllOrders.PhysicalEndpoint.extractedQuadratic_eq_retainedRow
+#print axioms KrennAllOrders.PhysicalEndpoint.rowAt_twoColorParameters
+#print axioms KrennAllOrders.PhysicalEndpoint.eraseSite_rowAt_twoColorParameters
+#print axioms KrennAllOrders.PhysicalEndpoint.rootExtract_rowAt_twoColorParameters
+#print axioms KrennAllOrders.PhysicalEndpoint.coeff_pureRootWord_wrong_color
+#print axioms KrennAllOrders.PhysicalEndpoint.eval_meanPplane
+#print axioms KrennAllOrders.PhysicalEndpoint.numerical_source_boundary
+#print axioms KrennAllOrders.PhysicalEndpoint.mean_source_boundary
+#print axioms KrennAllOrders.PhysicalEndpoint.mean_pderiv_commute
+#print axioms KrennAllOrders.PhysicalEndpoint.pderiv_meanPplane_two
+#print axioms KrennAllOrders.PhysicalEndpoint.meanXAxis_meanPplane
+#print axioms KrennAllOrders.PhysicalEndpoint.mean_mixed_boundary
+#print axioms KrennAllOrders.PhysicalEndpoint.mean_scalar_boundary
+#print axioms KrennAllOrders.PhysicalEndpoint.numerical_second_source_boundary
+#print axioms KrennAllOrders.PhysicalEndpoint.mean_second_source_boundary
+#print axioms KrennAllOrders.PhysicalEndpoint.mean_v_boundary
+#print axioms KrennAllOrders.PhysicalEndpoint.rootExtract_pureRootWord
+#print axioms KrennAllOrders.PhysicalEndpoint.coeff_pureRootWord_eq_retained
+
+#print axioms KrennAllOrders.WickEvenResponse.sum_range_pairs
+#print axioms KrennAllOrders.WickEvenResponse.meanSlice_odd_eq_zero
+#print axioms KrennAllOrders.WickEvenResponse.meanSlice_even_eq_zero
+#print axioms KrennAllOrders.WickEvenResponse.shiftedMoment_eq_evenResponse
+#print axioms KrennAllOrders.WickEvenResponse.shiftedMoment_eq_oddResponse
+
+#print axioms KrennAllOrders.WickFinitePairing.wordEquiv
+#print axioms KrennAllOrders.WickFinitePairing.sign_wordEquiv
+#print axioms KrennAllOrders.WickFinitePairing.complement_wordEquiv
+#print axioms KrennAllOrders.WickFinitePairing.pairing_reindex
+#print axioms KrennAllOrders.WickFinitePairing.responseTensor
+#print axioms KrennAllOrders.WickFinitePairing.responseTensor_reindex
+#print axioms KrennAllOrders.WickFinitePairing.response_pairing_rotation
+#print axioms KrennAllOrders.WickFinitePairing.response_pairing_diagonal
+#print axioms KrennAllOrders.WickFinitePairing.response_pairing_diagonal_line
+
+#print axioms KrennAllOrders.WickPhysicalBridge.PhysicalSpace
+#print axioms KrennAllOrders.WickPhysicalBridge.physicalBasis
+#print axioms KrennAllOrders.WickPhysicalBridge.physicalCovariance
+#print axioms KrennAllOrders.WickPhysicalBridge.physicalCovariance_basis
+#print axioms KrennAllOrders.WickPhysicalBridge.physicalRoot
+#print axioms KrennAllOrders.WickPhysicalBridge.physicalCovariance_root_basis
+#print axioms KrennAllOrders.WickPhysicalBridge.physicalCovariance_basis_root
+#print axioms KrennAllOrders.WickPhysicalBridge.physicalRoot_isotropic
+#print axioms KrennAllOrders.WickPhysicalBridge.sum_of_supported_injection
+#print axioms KrennAllOrders.WickPhysicalBridge.killCompl_X_image
+#print axioms KrennAllOrders.WickPhysicalBridge.killCompl_X_outside
+#print axioms KrennAllOrders.WickPhysicalBridge.killCompl_linearPolynomial
+#print axioms KrennAllOrders.WickPhysicalBridge.killCompl_symmetricQuadratic
+#print axioms KrennAllOrders.WickPhysicalBridge.selectedInput
+#print axioms KrennAllOrders.WickPhysicalBridge.selectedInput_injective
+#print axioms KrennAllOrders.WickPhysicalBridge.selectedRestriction
+#print axioms KrennAllOrders.WickPhysicalBridge.topExponent_map_selectedInput
+#print axioms KrennAllOrders.WickPhysicalBridge.coeff_selectedRestriction
+#print axioms KrennAllOrders.WickPhysicalBridge.wordExponent_eq_list_sum
+#print axioms KrennAllOrders.WickPhysicalBridge.wordExponent_eq_finset_sum
+#print axioms KrennAllOrders.WickPhysicalBridge.coeff_selectedRestriction_list
+#print axioms KrennAllOrders.WickPhysicalBridge.selectedRestriction_eraseSite
+#print axioms KrennAllOrders.WickPhysicalBridge.selectedRestriction_rowAt
+#print axioms KrennAllOrders.WickPhysicalBridge.selectedRestriction_deletedQuadratic
+#print axioms KrennAllOrders.WickPhysicalBridge.centeredMoment_selected_roots
+#print axioms KrennAllOrders.WickPhysicalBridge.retainedSites
+#print axioms KrennAllOrders.WickPhysicalBridge.root_not_mem_retainedSites
+#print axioms KrennAllOrders.WickPhysicalBridge.retainedSites_card
+#print axioms KrennAllOrders.WickPhysicalBridge.centeredMoment_eq_eval_oddResponsePolynomial
+
+#print axioms KrennAllOrders.RetainedBinary.receivingWord_at_q
+#print axioms KrennAllOrders.RetainedBinary.receivingWord_at_retained
+#print axioms KrennAllOrders.RetainedBinary.receivingWord_true
+#print axioms KrennAllOrders.RetainedBinary.coeff_pureRetainedWord
+#print axioms KrennAllOrders.RetainedBinary.card_retainedSites
+#print axioms KrennAllOrders.RetainedBinary.even_card_retainedSites
+#print axioms KrennAllOrders.RetainedBinary.wordExponent_congr_on_list
+#print axioms KrennAllOrders.RetainedBinary.coeff_pureRetainedWord_false
+#print axioms KrennAllOrders.RetainedBinary.retainedListEquiv
+
+#print axioms KrennAllOrders.OmissionTensor.directionZero_C
+#print axioms KrennAllOrders.OmissionTensor.directionZero_X
+#print axioms KrennAllOrders.OmissionTensor.eval_directionZero
+#print axioms KrennAllOrders.OmissionTensor.omissionRows_castSucc
+#print axioms KrennAllOrders.OmissionTensor.omissionRows_three
+#print axioms KrennAllOrders.OmissionTensor.mean_omissionRows_directionZero
+#print axioms KrennAllOrders.OmissionTensor.eval_directionZero_responseTensor
+#print axioms KrennAllOrders.OmissionTensor.eval_directionZero_pderiv_responseTensor
+#print axioms KrennAllOrders.OmissionTensor.eval_directPolynomial
+#print axioms KrennAllOrders.OmissionTensor.rootExtract_rowAt
+#print axioms KrennAllOrders.OmissionTensor.omitted_source_polynomial
+
+#print axioms KrennAllOrders.OddRotation.alternatingFactor
+#print axioms KrennAllOrders.OddRotation.leftCopy
+#print axioms KrennAllOrders.OddRotation.rightCopy
+#print axioms KrennAllOrders.OddRotation.rotatedLeft
+#print axioms KrennAllOrders.OddRotation.rotatedRight
+#print axioms KrennAllOrders.OddRotation.eval_leftCopy
+#print axioms KrennAllOrders.OddRotation.eval_rightCopy
+#print axioms KrennAllOrders.OddRotation.eval_rotatedLeft
+#print axioms KrennAllOrders.OddRotation.eval_rotatedRight
+#print axioms KrennAllOrders.OddRotation.alternatingFactor_ne_zero
+#print axioms KrennAllOrders.OddRotation.cancel_alternating_rotation
+#print axioms KrennAllOrders.OddRotation.rescaling_square_of_alternating_rotation
+#print axioms KrennAllOrders.OddRotation.pairing_factored_response
+#print axioms KrennAllOrders.OddRotation.actual_alternating_rotation
+#print axioms KrennAllOrders.OddRotation.actual_scalar_factor_eq_one
+#print axioms KrennAllOrders.OddRotation.higher_factors_zero_of_actual_rotation
+#print axioms KrennAllOrders.OddRotation.actual_response_eq_linear
+
+#print axioms KrennAllOrders.PhysicalMeanWick.meanFunctional_basis
+#print axioms KrennAllOrders.PhysicalMeanWick.selectedRestriction_meanRow
+#print axioms KrennAllOrders.PhysicalMeanWick.selectedRestriction_sourceQuadratic
+#print axioms KrennAllOrders.PhysicalMeanWick.shiftedMoment_even_selected
+#print axioms KrennAllOrders.PhysicalMeanWick.meanFunctionalLinear
+
+#print axioms KrennAllOrders.RetainedMeanWick.coreRow_left
+#print axioms KrennAllOrders.RetainedMeanWick.coreRow_right
+#print axioms KrennAllOrders.RetainedMeanWick.erased_meanRow
+#print axioms KrennAllOrders.RetainedMeanWick.coeff_evenResponse_core
+#print axioms KrennAllOrders.RetainedMeanWick.shiftedMoment_retained_even
+#print axioms KrennAllOrders.RetainedMeanWick.eval_coefficientTensor
+
+#print axioms KrennAllOrders.EndpointSource.wordExponent_update_not_mem
+#print axioms KrennAllOrders.EndpointSource.retainedExponent_update
+#print axioms KrennAllOrders.EndpointSource.onPalette_update
+#print axioms KrennAllOrders.EndpointSource.scalar_boundary
+#print axioms KrennAllOrders.EndpointSource.mixed_boundary
+#print axioms KrennAllOrders.EndpointSource.v_boundary
+#print axioms KrennAllOrders.EndpointSource.retainedQuadratic_symm
+#print axioms KrennAllOrders.EndpointSource.retainedVertices_symm
+#print axioms KrennAllOrders.EndpointSource.eval_meanYAxis
+#print axioms KrennAllOrders.EndpointSource.u_boundary
+#print axioms KrennAllOrders.EndpointSource.eraseSite_idempotent
+#print axioms KrennAllOrders.EndpointSource.coeff_erased_row_mul
+#print axioms KrennAllOrders.EndpointSource.coeff_retainedRow_pure_other
+#print axioms KrennAllOrders.EndpointSource.pure_second_response_pderiv_zero
+#print axioms KrennAllOrders.EndpointSource.coeff_zero_of_pderiv_zero
+#print axioms KrennAllOrders.EndpointSource.binaryMean_constant_of_pderiv_zero
+#print axioms KrennAllOrders.EndpointSource.pure_second_cap_binaryMean
+#print axioms KrennAllOrders.EndpointSource.cap_origin
+#print axioms KrennAllOrders.EndpointSource.pure_second_cap
+#print axioms KrennAllOrders.EndpointSource.evenResponse_zero_mean
+#print axioms KrennAllOrders.EndpointSource.response_origin_eq_pureCofactor
+#print axioms KrennAllOrders.EndpointSource.receivingWord_onPalette
+#print axioms KrennAllOrders.EndpointSource.C_binarySign
+#print axioms KrennAllOrders.EndpointSource.contraction_eq_binaryPairing
+#print axioms KrennAllOrders.EndpointSource.scalarContraction_eq_binaryPairing
+#print axioms KrennAllOrders.EndpointSource.tensor_cap
+#print axioms KrennAllOrders.EndpointSource.tensor_cap_origin
+#print axioms KrennAllOrders.EndpointSource.receivingExponent_false
+#print axioms KrennAllOrders.EndpointSource.tensor_origin
+#print axioms KrennAllOrders.EndpointSource.endpoint_of_original_source
+
+#print axioms KrennAllOrders.PhysicalReflection.reindexWord
+#print axioms KrennAllOrders.PhysicalReflection.sign_reindexWord
+#print axioms KrennAllOrders.PhysicalReflection.pairing_reindex
+#print axioms KrennAllOrders.PhysicalReflection.indexedMomentTensor
+#print axioms KrennAllOrders.PhysicalReflection.indexedMomentTensor_reindex
+#print axioms KrennAllOrders.PhysicalReflection.pairing_indexedMoment_roots_eq_zero
+#print axioms KrennAllOrders.PhysicalReflection.receivingWord
+#print axioms KrennAllOrders.PhysicalReflection.receivingWord_at
+#print axioms KrennAllOrders.PhysicalReflection.originalResponseTensor
+#print axioms KrennAllOrders.PhysicalReflection.originalResponseTensor_eq_moments
+#print axioms KrennAllOrders.PhysicalReflection.originalResponseTensor_reflection
+#print axioms KrennAllOrders.PhysicalReflection.wordExponent_eq_constant_iff
+#print axioms KrennAllOrders.PhysicalReflection.retainedCoefficient_pureRootWord_word
+#print axioms KrennAllOrders.PhysicalReflection.original_linear_response
+#print axioms KrennAllOrders.PhysicalReflection.wordExponent_congr_list
+#print axioms KrennAllOrders.PhysicalReflection.oddResponsePolynomial_congr_word
+#print axioms KrennAllOrders.PhysicalReflection.original_linear_response_of_constant
+#print axioms KrennAllOrders.PhysicalReflection.retainedSites_nonempty
+#print axioms KrennAllOrders.PhysicalReflection.originalResponseTensor_linear_pair
+#print axioms KrennAllOrders.PhysicalReflection.originalResponseTensor_false
+#print axioms KrennAllOrders.PhysicalReflection.originalResponseTensor_true
+#print axioms KrennAllOrders.PhysicalReflection.pure_response_cross
+#print axioms KrennAllOrders.PhysicalReflection.originalResponseTensor_linear_mixed
+#print axioms KrennAllOrders.PhysicalReflection.mixed_response_cross
+
+#print axioms KrennAllOrders.WickFiniteOrthogonal.response_pairing_linear
+#print axioms KrennAllOrders.WickFiniteOrthogonal.response_pairing_orthogonal_even
+
+#print axioms KrennAllOrders.EndpointCovariance.coreRow_endpointPoints
+#print axioms KrennAllOrders.EndpointCovariance.eval_meanCopy
+#print axioms KrennAllOrders.EndpointCovariance.eval_endpointKernel
+#print axioms KrennAllOrders.EndpointCovariance.eval_replicaFramePullback
+#print axioms KrennAllOrders.EndpointCovariance.eval_endpointTensor_eq_responseTensor
+#print axioms KrennAllOrders.EndpointCovariance.meanFunctional_pair_transform
+#print axioms KrennAllOrders.EndpointCovariance.endpoint_kernel_invariant
+#print axioms KrennAllOrders.EndpointCovariance.supported_endpoint_from_original_binary_responses
+
+#print axioms KrennAllOrders.WholeBinaryResponse.rootVector
+#print axioms KrennAllOrders.WholeBinaryResponse.rootMean
+#print axioms KrennAllOrders.WholeBinaryResponse.rootMean_apply
+#print axioms KrennAllOrders.WholeBinaryResponse.wordExponent_congr_list
+#print axioms KrennAllOrders.WholeBinaryResponse.oddResponsePolynomial_congr
+#print axioms KrennAllOrders.WholeBinaryResponse.meanSlice_eq_isotropic_root_moment
+#print axioms KrennAllOrders.WholeBinaryResponse.shiftedMoment_eq_oddResponse_sum
+#print axioms KrennAllOrders.WholeBinaryResponse.binaryWord
+#print axioms KrennAllOrders.WholeBinaryResponse.binaryWord_retained
+#print axioms KrennAllOrders.WholeBinaryResponse.responseTensor_eq_oddResponse_sum
+#print axioms KrennAllOrders.WholeBinaryResponse.oddResponsePolynomial_binary_const
+#print axioms KrennAllOrders.WholeBinaryResponse.actual_binary_factorization
+#print axioms KrennAllOrders.WholeBinaryResponse.exists_third_colour
+#print axioms KrennAllOrders.WholeBinaryResponse.binaryWord_nonconstant
+#print axioms KrennAllOrders.WholeBinaryResponse.binary_mixed_response_zero
+#print axioms KrennAllOrders.WholeBinaryResponse.exists_actual_pure_factors
+#print axioms KrennAllOrders.WholeBinaryResponse.pure_response_zero_of_rotation
+#print axioms KrennAllOrders.WholeBinaryResponse.mixed_response_zero
+#print axioms KrennAllOrders.WholeBinaryResponse.whole_binary_response_zero_of_rotation
+#print axioms KrennAllOrders.WholeBinaryResponse.halfRotation
+#print axioms KrennAllOrders.WholeBinaryResponse.halfRotation_normalized
+#print axioms KrennAllOrders.WholeBinaryResponse.whole_binary_response_zero
+#print axioms KrennAllOrders.WholeBinaryResponse.pure_response_zero
+#print axioms KrennAllOrders.WholeBinaryResponse.whole_binary_coefficient_zero
+
+#print axioms KrennAllOrders.OmissionRotation.eval_scaleVariables
+#print axioms KrennAllOrders.OmissionRotation.coefficientTensor_rotation
+#print axioms KrennAllOrders.OmissionRotation.coefficientTensor_omission
+#print axioms KrennAllOrders.OmissionRotation.omitted_tensor_rotation
+
+#print axioms KrennAllOrders.BinarySourceInterface.originalHigherZeroOnPalette
+#print axioms KrennAllOrders.BinarySourceInterface.receivingWord_onPalette
+#print axioms KrennAllOrders.BinarySourceInterface.omitted_higher_zero
+#print axioms KrennAllOrders.BinarySourceInterface.normTwo_sq
+
+#print axioms KrennAllOrders.OmissionConstancy.scaleVariables_X
+#print axioms KrennAllOrders.OmissionConstancy.scaleVariables_C
+#print axioms KrennAllOrders.OmissionConstancy.pderiv_scaleVariables
+#print axioms KrennAllOrders.OmissionConstancy.directionZero_scaleVariables
+#print axioms KrennAllOrders.OmissionConstancy.scale_directPolynomial
+#print axioms KrennAllOrders.OmissionConstancy.map_pure
+#print axioms KrennAllOrders.OmissionConstancy.pure_tensor_constancy
+#print axioms KrennAllOrders.OmissionConstancy.pure_even_constancy
+#print axioms KrennAllOrders.OmissionConstancy.pure_even_constancy_of_eqSystem
+
+#print axioms KrennAllOrders.DiagonalSource.diagonal_of_eqSystem
+
+#print axioms KrennAllOrders.KrennConjecture.exists_retained_size
+#print axioms KrennAllOrders.KrennConjecture.complex_rotation_normalization
+#print axioms KrennAllOrders.KrennConjecture.supported_endpoint_of_diagonal_eqSystem
+#print axioms KrennAllOrders.KrennConjecture.not_eqSystemN_three
+#print axioms KrennAllOrders.KrennConjecture.not_exists_eqSystemN_three

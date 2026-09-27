@@ -1,0 +1,7 @@
+import PhysicalMeanWick
+
+#print axioms KrennAllOrders.PhysicalMeanWick.meanFunctional_basis
+#print axioms KrennAllOrders.PhysicalMeanWick.selectedRestriction_meanRow
+#print axioms KrennAllOrders.PhysicalMeanWick.selectedRestriction_sourceQuadratic
+#print axioms KrennAllOrders.PhysicalMeanWick.shiftedMoment_even_selected
+#print axioms KrennAllOrders.PhysicalMeanWick.meanFunctionalLinear

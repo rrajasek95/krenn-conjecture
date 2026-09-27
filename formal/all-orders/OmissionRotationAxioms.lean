@@ -1,0 +1,6 @@
+import OmissionRotation
+
+#print axioms KrennAllOrders.OmissionRotation.eval_scaleVariables
+#print axioms KrennAllOrders.OmissionRotation.coefficientTensor_rotation
+#print axioms KrennAllOrders.OmissionRotation.coefficientTensor_omission
+#print axioms KrennAllOrders.OmissionRotation.omitted_tensor_rotation

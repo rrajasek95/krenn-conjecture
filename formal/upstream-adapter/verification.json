@@ -4,9 +4,13 @@
   "upstream_revision": "e2c4441f9545b85790aebcfaa445e194fcab9d5b",
   "upstream_source": "FormalConjectures/Paper/MonochromaticQuantumGraph.lean",
   "upstream_source_sha256": "5d9cef7216c064f7de260c83c5662891820c7ef1c249691b5cf7d071f7036cdb",
-  "adapter_sha256": "286e0608edff7c100e0758b25b083988e776d9e332164d1ffdddbfe7240c4a14",
+  "source_hashes": {
+    "UpstreamAdapter.lean": "286e0608edff7c100e0758b25b083988e776d9e332164d1ffdddbfe7240c4a14",
+    "FullProof.lean": "c6c538e156ada6e4c859b9676c8973ded8018ac2a408d3361ce4f9e4e82fbd18",
+    "FullProofAxioms.lean": "62976352f36a8bc2261f9d6f03021e852c3c1f1e1c6214fc9b9fd5e8d9f7bbaa"
+  },
   "matching_model_sha256": "9819244f8183902620938cc1f75c68e29091d487447640f13e8a5d6f9f11eba3",
-  "declarations_checked": 8,
+  "declarations_checked": 11,
   "checked_declarations": [
     "KrennAllOrders.UpstreamAdapter.toLocal_toUpstream",
     "KrennAllOrders.UpstreamAdapter.toUpstream_toLocal",
@@ -15,12 +19,15 @@
     "KrennAllOrders.UpstreamAdapter.pmSumListAux_eq",
     "KrennAllOrders.UpstreamAdapter.pmSumN_eq",
     "KrennAllOrders.UpstreamAdapter.eqSystemN_iff",
-    "KrennAllOrders.UpstreamAdapter.exists_solution_iff"
+    "KrennAllOrders.UpstreamAdapter.exists_solution_iff",
+    "KrennAllOrders.UpstreamFullProof.no_solution_three",
+    "KrennAllOrders.UpstreamFullProof.eqSystem_no_solution_ge6_ge3",
+    "KrennAllOrders.UpstreamFullProof.answer_true_eqSystem_no_solution_ge6_ge3"
   ],
   "allowed_axioms": [
     "Classical.choice",
     "Quot.sound",
     "propext"
   ],
-  "scope": "Exact equivalence of local and upstream solutions; no nonexistence theorem is asserted."
+  "scope": "Full complex nonexistence for every even N >= 6 and D >= 3, using the exact upstream definitions."
 }

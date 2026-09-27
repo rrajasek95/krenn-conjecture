@@ -1,0 +1,15 @@
+import WickPairing
+
+#print axioms KrennAllOrders.WickPairing.responseTensor
+#print axioms KrennAllOrders.WickPairing.NoAux
+#print axioms KrennAllOrders.WickPairing.noAuxValues
+#print axioms KrennAllOrders.WickPairing.contractedShifted
+#print axioms KrennAllOrders.WickPairing.replicaMean_comp_linear
+#print axioms KrennAllOrders.WickPairing.contractedShifted_linear
+#print axioms KrennAllOrders.WickPairing.contractedShifted_rotation
+#print axioms KrennAllOrders.WickPairing.contractedShifted_diagonal
+#print axioms KrennAllOrders.WickPairing.shiftedMoment_sum_fin_zero
+#print axioms KrennAllOrders.WickPairing.contractedShifted_eq_pairing
+#print axioms KrennAllOrders.WickPairing.response_pairing_rotation
+#print axioms KrennAllOrders.WickPairing.response_pairing_diagonal
+#print axioms KrennAllOrders.WickPairing.response_pairing_diagonal_line

@@ -1,0 +1,11 @@
+import RetainedBinary
+
+#print axioms KrennAllOrders.RetainedBinary.receivingWord_at_q
+#print axioms KrennAllOrders.RetainedBinary.receivingWord_at_retained
+#print axioms KrennAllOrders.RetainedBinary.receivingWord_true
+#print axioms KrennAllOrders.RetainedBinary.coeff_pureRetainedWord
+#print axioms KrennAllOrders.RetainedBinary.card_retainedSites
+#print axioms KrennAllOrders.RetainedBinary.even_card_retainedSites
+#print axioms KrennAllOrders.RetainedBinary.wordExponent_congr_on_list
+#print axioms KrennAllOrders.RetainedBinary.coeff_pureRetainedWord_false
+#print axioms KrennAllOrders.RetainedBinary.retainedListEquiv

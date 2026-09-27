@@ -1,0 +1,34 @@
+import PhysicalEndpoint
+
+#print axioms KrennAllOrders.PhysicalEndpoint.coeff_receivingPolynomial
+#print axioms KrennAllOrders.PhysicalEndpoint.receivingPolynomial_add
+#print axioms KrennAllOrders.PhysicalEndpoint.receivingPolynomial_zero
+#print axioms KrennAllOrders.PhysicalEndpoint.receivingPolynomial_pderiv
+#print axioms KrennAllOrders.PhysicalEndpoint.receivingPolynomial_C
+#print axioms KrennAllOrders.PhysicalEndpoint.eval_receivingPolynomial
+#print axioms KrennAllOrders.PhysicalEndpoint.pderiv_meanRow
+#print axioms KrennAllOrders.PhysicalEndpoint.eval_meanRow
+#print axioms KrennAllOrders.PhysicalEndpoint.eval_physicalEvenResponse
+#print axioms KrennAllOrders.PhysicalEndpoint.pderiv_physicalEvenResponse
+#print axioms KrennAllOrders.PhysicalEndpoint.eval_pderiv_receivingEvenResponse
+#print axioms KrennAllOrders.PhysicalEndpoint.eval_endpointResponse
+#print axioms KrennAllOrders.PhysicalEndpoint.eval_pderiv_endpointResponse
+#print axioms KrennAllOrders.PhysicalEndpoint.eraseSite_commute
+#print axioms KrennAllOrders.PhysicalEndpoint.extractedQuadratic_eq_retainedRow
+#print axioms KrennAllOrders.PhysicalEndpoint.rowAt_twoColorParameters
+#print axioms KrennAllOrders.PhysicalEndpoint.eraseSite_rowAt_twoColorParameters
+#print axioms KrennAllOrders.PhysicalEndpoint.rootExtract_rowAt_twoColorParameters
+#print axioms KrennAllOrders.PhysicalEndpoint.coeff_pureRootWord_wrong_color
+#print axioms KrennAllOrders.PhysicalEndpoint.eval_meanPplane
+#print axioms KrennAllOrders.PhysicalEndpoint.numerical_source_boundary
+#print axioms KrennAllOrders.PhysicalEndpoint.mean_source_boundary
+#print axioms KrennAllOrders.PhysicalEndpoint.mean_pderiv_commute
+#print axioms KrennAllOrders.PhysicalEndpoint.pderiv_meanPplane_two
+#print axioms KrennAllOrders.PhysicalEndpoint.meanXAxis_meanPplane
+#print axioms KrennAllOrders.PhysicalEndpoint.mean_mixed_boundary
+#print axioms KrennAllOrders.PhysicalEndpoint.mean_scalar_boundary
+#print axioms KrennAllOrders.PhysicalEndpoint.numerical_second_source_boundary
+#print axioms KrennAllOrders.PhysicalEndpoint.mean_second_source_boundary
+#print axioms KrennAllOrders.PhysicalEndpoint.mean_v_boundary
+#print axioms KrennAllOrders.PhysicalEndpoint.rootExtract_pureRootWord
+#print axioms KrennAllOrders.PhysicalEndpoint.coeff_pureRootWord_eq_retained
