@@ -6,7 +6,7 @@ Lean-verified exact theorem.
 
 | Project | Main question | Current frontier |
 | --- | --- | --- |
-| [GHZ fidelity and rate](ghz-rates/README.md) | How quickly must production rate vanish as GHZ fidelity approaches one? | An unrestricted six-site exponent of $1/15$, local square-root laws, and reductions of the remaining singular cases. The unrestricted square-root law is open. |
+| [GHZ fidelity and rate](ghz-rates/README.md) | How quickly must production rate vanish as GHZ fidelity approaches one? | An unrestricted six-site exponent of $1/15$, local square-root laws, and star-based fidelity gaps excluding full-support single-color limits. The unrestricted square-root law is open. |
 | [Optimal W-state design](w-state-design/README.md) | What is the best exact W-state rate at every even site count? | A universal factor-two guarantee, all-even local optimality, and exact optima for broad support and core classes. The exact unrestricted optimum is open. |
 | [Response identities and reconstruction](response-methods/README.md) | Which proof tools help with design, stability, and source recovery? | Exact optimization certificates, balancing and response identities, and separate source-reconstruction results. |
 
@@ -30,7 +30,7 @@ From the repository root, with Python 3.11 or later:
 python3 research/verify.py
 ~~~
 
-This runs the 39 rate, design, and shared-method packages in normal and
+This runs the 40 rate, design, and shared-method packages in normal and
 optimized Python, compares their JSON outputs with the saved receipts, and
 checks their recorded repository-file hashes. It uses the standard library
 and does not run the optional numerical searches or rebuild the Lean proof.

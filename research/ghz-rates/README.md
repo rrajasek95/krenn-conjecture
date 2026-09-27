@@ -25,6 +25,7 @@ into a laboratory count rate requires a physical source model.
 
 | Result | What it establishes | Read and reproduce |
 | --- | --- | --- |
+| Star fidelity gaps and necessary support zeros | A nonzero same-color star forces a local fidelity ceiling, excluding every full-support single-color zero at every even size $n\ge4$. More generally, each root and receiving color pair needs an incident block with both columns zero at any high-fidelity limit. | [Illustrated guide](../../explainers/GHZ-STAR-FIDELITY-GAP.md), [proof and explicit constant](../../notes/ghz-star-fidelity-gap-2026-09-27.md), [replay](../../computations/ghz-star-fidelity-gap-2026-09-27/README.md) |
 | Explicit unrestricted rate bound | A six-site exponent of $1/15$; the diagonal model has exponent $1/5$. | [Rate follow-ups](../../explainers/RATE-FOLLOWUPS.md), [proof](../../notes/rate-sharpness-followup-2026-09-26.md), [replay](../../computations/rate-sharpness-followup-2026-09-26/README.md) |
 | Square-root laws in controlled settings | A cancellation hypothesis gives exponent $1/2$. The prism also has a full complex neighborhood bound and an optimal leading coefficient. | [Design guide](../../explainers/RATE-DESIGN-FRONTIER.md), [prism proof](../../notes/prism-optimal-rate-2026-09-26.md), [replay](../../computations/rate-design-frontier-2026-09-26/README.md) |
 | Uniform onset at every full-support single-color zero | Fifth-power source-distance onset holds in every nearby direction, with no matrix-rank, arm-size, or non-ground support condition. A balanced four-cycle response isometry and an outside-edge projection close the last two anchor configurations. | [Focused illustrated guide](../../explainers/FULL-SUPPORT-ONSET.md), [complete theorem](../../notes/full-support-ghz-onset-2026-09-27.md), [replay](../../computations/full-support-ghz-onset-2026-09-27/README.md) |
@@ -47,25 +48,28 @@ into a laboratory count rate requires a physical source model.
 | Reduction to two final anchor configurations | Four anchored arms or a six-cycle of anchors settles every nearby source direction. The cofactor-graph classification reduced the full-support onset problem to two configurations, both with exact ground examples. The uniform onset theorem above now covers them. | [Classification and analytic rules](../../notes/cofactor-graph-ghz-frontier-2026-09-27.md), [complete graph replay](../../computations/cofactor-graph-frontier-2026-09-27/README.md) |
 
 The earlier higher-order identities concern an analytic path parameter.
-The full-support distance theorem now covers every non-ground direction;
+The full-support distance theorem covers every non-ground direction;
 the earlier packages preserve the intermediate family and arm-size
-criteria. None establishes the unrestricted square-root law.
+criteria. The newer star certificate gives the stronger error-versus-signal
+bound at these limits and excludes them from the high-fidelity boundary.
+None establishes the unrestricted square-root law.
 
 ## What remains
 
-Balancing narrows the possible zero-output limits:
+Balancing and the necessary support test narrow the possible zero-output limits:
 
 ~~~mermaid
 flowchart TD
-    A["Balanced six-site zero-output limit"] --> B{"Support has a perfect matching?"}
+    A["Balanced six-site zero-output limit"] --> Z{"Required two-column zeros present?"}
+    Z -->|No| X["Excluded: local fidelity ceiling"]
+    X --> Y["Includes every full-support single-color zero"]
+    Z -->|Yes| B{"Support has a perfect matching?"}
     B -->|No| C["Two triangles"]
     C --> D{"Both responses have full rank?"}
     D -->|Yes| E["Fidelity gap or local square-root law"]
     D -->|No| F["Open: compare higher-order error with signal"]
-    B -->|Yes| G["Open: matching terms cancel"]
-    G --> H["Full-support single-color identities constrain initial orders"]
-    H --> J["Uniform fifth-power onset in every nearby direction"]
-    J --> L["Still open: error-versus-signal estimate"]
+    B -->|Yes| G["Other cancelling configurations"]
+    G --> L["Open: error-versus-signal estimate"]
 ~~~
 
 At six sites write $H=\lambda\Delta+E$, where $\Delta$ is the sum of the
@@ -74,14 +78,20 @@ $S=1$, the missing estimate is $\lVert E\rVert\ge c|\lambda|^3$, uniformly
 through the remaining singular limits. A large response in some direction
 does not yet control the GHZ direction.
 
-At a full-support single-color zero, the
+At every full-support single-color zero, the
+[star certificate](../../notes/ghz-star-fidelity-gap-2026-09-27.md)
+now gives $\varepsilon\ge c|\lambda|$ throughout a neighborhood.
+This is stronger than the previously sought source-distance estimate
+and rules out fidelity tending to one near that fixed source.
+The constant depends on its normalized star product and can degenerate
+as ground edges vanish. The remaining rate problem concerns limits
+that pass the necessary two-column support test; passing that test
+does not establish that high fidelity is attainable.
+
+The earlier
 [complete onset theorem](../../notes/full-support-ghz-onset-2026-09-27.md)
-gives $|\lambda|\le C_1\varepsilon+C_2\|A-A_0\|^5$ in every
-nearby source direction. Its constants may depend on the fixed ground
-source. No singular non-ground directions remain for that theorem.
-The missing step in this branch is now the error-versus-signal
-comparison itself: the source-distance bound does not eliminate
-$\|A-A_0\|$ to give $\varepsilon\ge c|\lambda|^3$.
+and its intermediate packages retain their source-geometry results.
+They are no longer needed to exclude this boundary class.
 
 Earlier higher-order analyses are preserved in the
 [critical-cone](../../computations/critical-cone-2026-09-26/README.md),

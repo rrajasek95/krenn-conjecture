@@ -1,0 +1,120 @@
+{
+  "conclusions": [
+    "A nonzero same-color star forces a local GHZ fidelity ceiling",
+    "All full-support single-color zeros are excluded at every even size at least four",
+    "High-fidelity limits require a zero two-column block at every root and palette"
+  ],
+  "constants": {
+    "10": "1/379691451566265686721571929600",
+    "12": "1/5392364764509302518195991494473000960",
+    "4": "1/1525330440",
+    "6": "1/5573412701337888",
+    "8": "1/37241485686921177866880"
+  },
+  "dependencies": {
+    "computations/boundary-structure-2026-09-26/exact.py": "8485e81a23c6a067d9c211ba19d985360b631455f1ed097c8ab803227e0853cc",
+    "computations/general-complex-rate-2026-09-26/verify.py": "cc21b69ff629ae68b965d309fa0f7e8cec8dc132a806f44c8b1ef99386411fe3",
+    "computations/quantitative-proof-identities-2026-09-26/verify.py": "7a0e789928e10f5321b01de46055a28d149a1300eda64c0c8e6761db7c57c327",
+    "notes/general-complex-rate-bound-2026-09-26.md": "0acfccf598fe1e98f2e4c7c6a34a8112e4edacd96684c726139fc4ddcae1c7b5",
+    "proofs/krenn-gu-all-orders-two-replica-proof.md": "fb0fa1e9447d8044981692d6e9bbbeff8e6a2cfc90119b6a296cbf506b9a3c9d"
+  },
+  "evidence_status": "Written proof with exact supporting checks; independent audit pending",
+  "exact_source_inequalities": [
+    {
+      "name": "allowed_four_site_with_tiny_off_color",
+      "nonzero_star": false
+    },
+    {
+      "name": "complex_off_color_four_site",
+      "nonzero_star": false
+    },
+    {
+      "name": "six_site_prism_with_diagonal_and_off_color_errors",
+      "nonzero_star": false
+    },
+    {
+      "name": "dense_complex_six_site",
+      "nonzero_star": true
+    }
+  ],
+  "full_support_rank25_ground": {
+    "normalized_max_squared_star": "1/472392",
+    "squared_source_norm": 18,
+    "star_products": [
+      1,
+      1,
+      1,
+      1,
+      -2,
+      -2
+    ]
+  },
+  "limitations": [
+    "Unrestricted square-root rate law remains open",
+    "Necessary support conditions are not sufficient",
+    "Arbitrary-size inequalities and limiting arguments rely on the written proof",
+    "Constants are conservative; no practical fidelity guarantee is claimed",
+    "Independent audit is pending"
+  ],
+  "literal_star_coefficients": [
+    {
+      "root_color_checks": 12,
+      "sites": 4
+    },
+    {
+      "root_color_checks": 18,
+      "sites": 6
+    },
+    {
+      "root_color_checks": 24,
+      "sites": 8
+    }
+  ],
+  "negative_controls": [
+    "Wrong rotation factor rejected",
+    "Wrong complex denominator rejected",
+    "Uncanceled singleton factorial rejected",
+    "Diagonal-only test misses an off-color star"
+  ],
+  "scalar_highest_degree": [
+    {
+      "highest_degree": 4,
+      "highest_monomials": 12,
+      "sites": 4
+    },
+    {
+      "highest_degree": 8,
+      "highest_monomials": 14,
+      "sites": 6
+    },
+    {
+      "highest_degree": 12,
+      "highest_monomials": 14,
+      "sites": 8
+    },
+    {
+      "highest_degree": 16,
+      "highest_monomials": 14,
+      "sites": 10
+    },
+    {
+      "highest_degree": 20,
+      "highest_monomials": 14,
+      "sites": 12
+    }
+  ],
+  "sha256": {
+    "computations/ghz-star-fidelity-gap-2026-09-27/README.md": "7473806c229acadfa73e0cb1416fc5d34aadbe215d4b17aee1c4422598752178",
+    "computations/ghz-star-fidelity-gap-2026-09-27/dependencies.json": "f637766aa66b8f1510860d4070de31797006c1947c10d045e5ff0db79e7fcc81",
+    "computations/ghz-star-fidelity-gap-2026-09-27/verify.py": "82ce323e6596037870073cbb41383e5f4244a4ed8faf46f5dbd92eabab8600cb",
+    "notes/ghz-star-fidelity-gap-2026-09-27.md": "857a3ddc9d5bcb333746803cbfdd13d65ff2c76b60b9512deec46d5415b35f4e"
+  },
+  "status": "PASS",
+  "support_tests": {
+    "absent_edge_control": "PASSES_NECESSARY_TEST",
+    "allowed_four_site_perfect_GHZ": "PASSES",
+    "binary_palette_checks": 21,
+    "off_color_star_with_all_diagonal_cells_zero": "EXCLUDED_BY_COLUMN_TEST",
+    "sufficiency_claim": false
+  }
+}

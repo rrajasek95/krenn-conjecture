@@ -10,6 +10,10 @@ explains the final argument.
 This longer guide develops the support classifications, response
 geometry, and progressively stronger criteria that lead to it.
 
+The subsequent [star fidelity certificate](GHZ-STAR-FIDELITY-GAP.md)
+now excludes these full-support single-color zeros as high-fidelity
+limits. The geometry developed here remains a separate useful result.
+
 **Evidence:** written proofs with exact supporting checks; independent
 audit pending. These are follow-ups to the completed Krenn–Gu proof.
 The unrestricted GHZ square-root rate law remains open.
@@ -864,8 +868,9 @@ non-ground jet at these full-support limits.
 
 To finish the universal square-root law, we still need
 $\varepsilon\ge c|\lambda|^3$ across every relevant boundary.
-The source-distance theorem now covers the whole full-support
-single-color branch. A bound involving $\delta$ still does not
-give the required error-versus-signal comparison. That comparison,
-and the other zero-output boundary types, remain open parts of
-the unrestricted rate-law problem.
+The source-distance theorem covers the whole full-support
+single-color branch. The subsequent
+[star certificate](GHZ-STAR-FIDELITY-GAP.md) goes further, giving
+$\varepsilon\ge c|\lambda|$ and a local fidelity ceiling at every
+such zero. The error-versus-signal comparison remains open through
+other zero-output limits that pass its necessary support test.

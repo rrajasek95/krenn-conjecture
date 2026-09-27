@@ -11,6 +11,11 @@ included, even when edge matrices lose rank.
 **Evidence:** written proof with exact supporting checks; independent
 audit pending. The unrestricted square-root rate law remains open.
 
+**Subsequent result:** the [star fidelity certificate](GHZ-STAR-FIDELITY-GAP.md)
+now excludes every such zero as a high-fidelity limit, giving the stronger
+local bound $\varepsilon\ge c|\lambda|$. This guide preserves the onset
+argument and its reusable response geometry.
+
 ## What the statement means
 
 Start with a source $A_0$ that uses only one color, $a$.
@@ -163,7 +168,9 @@ $$
 \varepsilon\ge c|\lambda|^3
 $$
 
-after source normalization. The onset theorem bounds the signal
-using source distance; it does not yet eliminate that distance
-to give the required lower bound on error. Other kinds of
-zero-output limits also remain relevant.
+after source normalization at the remaining relevant limits.
+The onset theorem by itself bounds the signal using source distance.
+The subsequent [star certificate](GHZ-STAR-FIDELITY-GAP.md) supplies
+a stronger direct error bound near every full-support single-color zero
+and excludes this entire class. Other zero-output limits that pass
+the new support test remain relevant.
