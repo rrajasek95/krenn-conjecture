@@ -438,16 +438,23 @@ observation, proving optimality. QED.
 ## 7. The remaining all-orders question
 
 The span-reconstruction theorem now covers one mean direction as well
-as the previously treated two and many directions. The unresolved step
-for recovery from one actual output is the generic completion (10) at
+as the previously treated two and many directions. A remaining route
+to recovery from one actual output is the generic completion (10) at
 arbitrary odd orders.
 
 The universal copy identity and the monomer constraint always give the
-inclusion in (10). Once equality and unique mean-line recovery are
-established at an odd `n>=7`, Theorem 1 and the calibration formulas
-give full single-output source recovery at that order. No new covariance
-uniqueness argument is needed. The five- and seven-site computations
-do not prove those kernel conditions at larger orders.
+inclusion in (10). The subsequent
+[all-orders mean-direction theorem](mean-direction-recovery-all-orders-2026-09-27.md)
+now proves unique mean-line recovery at every odd `n>=5`, by a two-site
+attachment argument. Once equality in (10) is also established at an
+odd `n>=7`, Theorem 1 and the calibration formulas give full single-output
+source recovery at that order. No new covariance uniqueness argument is
+needed. The five- and seven-site computations do not prove that linear
+kernel equality at larger orders. The subsequent
+[restricted-kernel criterion](single-output-covariance-low-degree-2026-09-27.md)
+bypasses that equality, proves covariance rigidity from a smaller map,
+and gives full generic single-output recovery at nine sites. The general
+single-output question is now open from eleven sites onward.
 
 ## 8. Exact certificates and reproduction
 

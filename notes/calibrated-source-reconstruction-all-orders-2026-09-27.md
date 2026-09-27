@@ -37,8 +37,9 @@ $$
 d=\sum_{\substack{k\le n\\k\ \mathrm{odd}}}\binom{k+r-1}{r-1}.
 $$
 
-**Theorem 1 (calibrated all-orders reconstruction).** Assume either:
+**Theorem 1 (calibrated all-orders reconstruction).** Assume one of:
 
+* `r=1`, odd `n>=5`, and every local dimension is at least three;
 * `r=2`, odd `n>=5`, and every local dimension is at least three; or
 * `r>=3`, odd `n>=3`, and every local dimension is at least `r+1`.
 
@@ -63,7 +64,8 @@ suffice to span `W`. The theorem makes no claim about alternatives with
 more than `r` mean directions, noisy estimation, or within-site covariance
 blocks, which never occur in these data.
 
-The existing
+The
+[one-direction theorem](one-direction-source-reconstruction-2026-09-27.md),
 [two-direction theorem](two-direction-source-reconstruction-2026-09-26.md)
 and [many-direction theorem](many-direction-source-reconstruction-2026-09-27.md)
 recover `E` and the covariance class
@@ -182,6 +184,8 @@ factors are `1` and `a^(-mn)=beta^m`. The edge factors are
 (5). The root `a` is used only in the proof, not by the algorithm. QED.
 
 **Proof of Theorem 1.** Let an alternative have mean rank `r'<=r`.
+Mean rank zero makes every odd output zero and cannot span the observed
+space. Thus `r'>=1`.
 Its response span contains all the observed tensors, hence has dimension
 at least `d`. The response count is strictly increasing with `r`, so
 `r'<r` is impossible. For `r'=r`, the alternative has at most `d`
@@ -192,7 +196,11 @@ exclude local degeneracies of the alternative source.
 
 The coordinate matrix of the spanning observations has row rank `d`.
 Its `r` rows of degree one have rank `r`, so for `r>=2` two of its
-nonzero columns are independent. Lemma 3 uniquely determines the common
+nonzero columns are independent. If `r=1`, there must instead be two
+nonzero degree-one scalars with different squares: otherwise all nonzero
+mean settings differ only by sign, and all observed tensors are signed
+copies of one tensor, contradicting `dim W=(n+1)/2>=3`.
+Lemma 3 uniquely determines the common
 `beta,K`. Lemma 4 then identifies every alternative with the same normal
 form. All operations used are rational in a suitable nonzero-minor chart.
 The only remaining freedom is (1), which always preserves each tensor.
@@ -308,8 +316,8 @@ homogeneous moment data would constrain them as well; that is a different
 identifiability question.
 
 **Corollary 7 (two observations are optimal at five sites).** For five
-sites with local dimensions at least four, the
-[two-observation theorem](two-observation-source-reconstruction-2026-09-27.md)
+sites with local dimensions at least three, the
+[improved two-observation theorem](one-direction-source-reconstruction-2026-09-27.md#6-larger-local-spaces-and-two-five-site-observations)
 uses the minimum possible number of separately observed full cross-moment
 tensors for generic recovery of unrestricted shared cross-site covariances.
 
@@ -396,9 +404,16 @@ The unresolved observation-count question is now more focused. Generic
 response spans are reconstructible at all the orders in Theorem 1, and
 their covariance ambiguity can be removed. What remains is to recover
 the span itself from a small number of outputs at arbitrary odd orders.
-At five sites the answer is exactly two; above five sites a corresponding
-small-data completion theorem is still open. Numerical conditioning and
-statistical sample complexity are also not established.
+At five sites the answer is exactly two. The
+[single-output result](one-direction-source-reconstruction-2026-09-27.md)
+now completes the span from one seven-site tensor, and the
+[mean-direction induction](mean-direction-recovery-all-orders-2026-09-27.md)
+recovers the local mean lines from one tensor at every odd order at least
+five. A [restricted-kernel argument](single-output-covariance-low-degree-2026-09-27.md)
+now gives full source recovery at nine sites without completing the full
+exterior kernel. The general single-output question starts at eleven
+sites. Numerical conditioning and statistical sample complexity are also
+not established.
 
 For further work on the matrix rank, the
 [structured-source experiment](../computations/matching-tensor-recovery-2026-09-26/structured_pair.py)

@@ -29,6 +29,8 @@ separate from the Lean-verified exact theorem.
 | Two observed Gaussian cross moments | Generically recover both mean rows and all cross-site covariance blocks at five sites of local dimension at least four, up to product-one site scalings. | [Theorem and proof](../../notes/two-observation-source-reconstruction-2026-09-27.md), [reconstruction](../../computations/matching-tensor-recovery-2026-09-26/pair_observation.py), [independent matrix audit](../../computations/matching-tensor-recovery-2026-09-26/audit_pair_observation.py) |
 | Calibrated response spans at all odd orders | Retaining actual output coefficients removes the covariance ambiguity in the all-orders span theorems; one calibrated output suffices from order seven once the span is known. | [Theorem, calibration thresholds, and fifth-order involution](../../notes/calibrated-source-reconstruction-all-orders-2026-09-27.md), [exact replay](../../computations/matching-tensor-recovery-2026-09-26/calibrated_span.py) |
 | One observed Gaussian cross moment | At local dimensions at least three, generically recover the full source from one seven-site tensor; classify the two five-site possibilities and recover a shared source from two five-site tensors. | [Written proofs and scope](../../notes/one-direction-source-reconstruction-2026-09-27.md), [reconstruction](../../computations/matching-tensor-recovery-2026-09-26/single_source.py), [independent matrix audit](../../computations/matching-tensor-recovery-2026-09-26/audit_single_source.py) |
+| Mean directions from one tensor at every odd order | Generically identify every local mean line for all odd orders at least five, using a two-site attachment induction; also covers generic unknown response coefficients. | [Written proof and limits](../../notes/mean-direction-recovery-all-orders-2026-09-27.md), [symbolic and exact checks](../../computations/matching-tensor-recovery-2026-09-26/mean_direction_induction.py) |
+| Covariance recovery from a restricted exterior kernel | Replace full-kernel completion by a map with cubically many columns; an exact nine-site rank certificate gives full generic source recovery from one nine-site tensor. | [Criterion and nine-site theorem](../../notes/single-output-covariance-low-degree-2026-09-27.md), [rank-certificate replay](../../computations/matching-tensor-recovery-2026-09-26/three_outside_certificate.py) |
 
 The matching-tensor reconstruction programs are
 [verify.py](../../computations/matching-tensor-recovery-2026-09-26/verify.py),
@@ -62,11 +64,17 @@ order at least five. These are written research results with exact
 certificates, separate from the Lean formalization of Krenn–Gu.
 
 The [calibration theorem](../../notes/calibrated-source-reconstruction-all-orders-2026-09-27.md)
-already upgrades the existing all-orders span results to recovery of the
-actual means and covariance blocks. It also proves that two observations
-are necessary at five sites. The unresolved all-orders step concerns
-recovering the entire span from only a few outputs at odd orders at least
-nine; single-output recovery at seven sites is covered by the new result.
+upgrades the all-orders span results, including one mean direction, to
+recovery of the actual means and covariance blocks. It also proves that
+two observations are necessary at five sites.
+The [mean-direction induction](../../notes/mean-direction-recovery-all-orders-2026-09-27.md)
+now recovers the local mean lines at all odd orders at least five without
+assuming span completion. The
+[restricted-kernel theorem](../../notes/single-output-covariance-low-degree-2026-09-27.md)
+then recovers the covariance directly at nine sites. Its replay certifies
+the required rank, while the written argument proves global uniqueness;
+it is not a full blind reconstruction implementation. Full single-output
+source recovery at arbitrary odd orders at least eleven remains open.
 
 ## How the projects connect
 
