@@ -517,7 +517,7 @@ remove that restriction.
 
 ## Two controlled attachments close the shared-center case
 
-The [latest theorem](../notes/coherent-two-arm-ghz-onset-2026-09-27.md)
+The [two-arm theorem](../notes/coherent-two-arm-ghz-onset-2026-09-27.md)
 proves fifth-power onset whenever two arms at a common center each
 have size at least a fixed fraction of $t$. Their matrix ranks do
 not matter. This reduces the remaining onset directions to single
@@ -633,8 +633,59 @@ An exact rearrangement of the matching sum cancels the term using
 both potentially large outside edges; the remaining terms obey the
 fifth-power bound.
 
-The remaining onset directions are now single **rank-one** edges:
-one edge carrying a product of two local color vectors.
+This reduces the remaining onset directions to single **rank-one**
+edges: one edge carrying a product of two local color vectors.
+The next step uses which colors that product contains.
+
+## A same-color entry reduces the remaining cases to thirty directions
+
+The [adjugate criterion](../notes/binary-adjugate-ghz-onset-2026-09-27.md)
+handles an edge with a substantial $bb$ or $cc$ entry, even when its
+matrix has rank one. It applies the determinant method from the
+repository's earlier cap-adjugate work.
+
+For a fixed edge matrix $G$, take the following combination of the
+four slices of the six-site output:
+
+$$
+G_{bb}H_{cc}+G_{cc}H_{bb}-G_{bc}H_{cb}-G_{cb}H_{bc}.
+$$
+
+An exact identity expresses it as products of four-site responses.
+The terms using four attachments cancel between the two determinant
+products. There is no need to invert $G$.
+
+For the GHZ target, this combination detects exactly the same-color
+entries. The resulting norm certificate is
+
+$$
+|\lambda|\sqrt{|G_{bb}|^2+|G_{cc}|^2}
+\le \|G\|\varepsilon+\tfrac12 f_G^2,
+$$
+
+where $f_G$ is the combined four-site response norm for quartets
+containing the selected edge. Its coefficient $1/2$ is sharp.
+If the same-color strength on the left is a fixed fraction of the
+non-ground source norm, the mixed-output bounds give fifth-power onset.
+
+~~~mermaid
+flowchart TD
+    A["One nonzero binary edge"] --> B{"Any same-color entry?"}
+    B -->|Yes| C["Adjugate response criterion"]
+    B -->|No| D{"Both different-color entries nonzero?"}
+    D -->|Yes| E["Invertible-edge theorem"]
+    D -->|No| F["One cell: b at one endpoint, c at the other"]
+    C --> G["Fifth-power onset in a neighborhood"]
+    E --> G
+    F --> H["Remaining: 15 site pairs × 2 color orientations"]
+~~~
+
+Thus the unresolved onset shapes are just thirty projective directions.
+Each pattern still allows any complex weight; “thirty” counts the
+choice of sites and color orientation, not the possible amplitudes.
+All these single-cell sources have zero six-site output. They are
+the directions where further perturbation analysis is needed, not
+counterexamples to the rate law.
 
 ## From a shape theorem to a GHZ estimate
 
@@ -662,7 +713,7 @@ $$
 
 If two non-ground arms have size at least a fixed fraction of the
 non-ground source norm, or one edge has its smaller singular value
-bounded below by such a fraction, the latest results give
+or same-color strength bounded below by such a fraction, the latest results give
 
 $$
 |\lambda|\le C_1\varepsilon+C_2\delta^5.
@@ -679,12 +730,13 @@ $\varepsilon\ge c|\lambda|^3$ across every relevant boundary.
 The new results identify and control several difficult families, but a
 bound involving $\delta$ does not by itself give that error-versus-signal
 comparison. Within the full-support single-color branch, the remaining
-critical shapes for this onset argument are single rank-one edges.
+critical shapes for this onset argument are the thirty single-cell,
+different-color directions above.
 The combined estimate is uniform when the normalized non-ground
 direction stays a fixed positive distance from those sources.
 Indeed, a flat source with no two adjacent edges can have only one
 edge: two disjoint edges would give a nonzero four-site tensor product,
-with nothing to cancel it. The single-edge theorem then handles
-the rank-two case.
+with nothing to cancel it. The same-color and invertible-edge criteria
+then leave just the stated different-color cells.
 The error-versus-signal comparison remains open even on the families
 whose onset is now controlled.

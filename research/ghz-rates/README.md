@@ -41,6 +41,7 @@ into a laboratory count rate requires a physical source model.
 | Two-arm onset beyond invertibility | An injective attachment map suffices, uniformly away from rank loss. This removes the endpoint-cofactor condition for one invertible arm and covers rank-one arms with different center lines. At shared-center pairs, an explicit residual bound isolates the closing-edge contribution. | [Rescaled-triangle proof and residual estimate](../../notes/transverse-two-arm-ghz-onset-2026-09-27.md), [replay](../../computations/transverse-two-arm-ghz-2026-09-27/README.md) |
 | Two comparable arms suffice at every matrix rank | Retaining individual outside-arm sizes and using two ground-selected anchors closes the shared-center rank-one case. The fifth-power onset estimate is now uniform away from single-edge directions. | [Two-anchor theorem and corollary](../../notes/coherent-two-arm-ghz-onset-2026-09-27.md), [replay](../../computations/coherent-two-arm-ghz-2026-09-27/README.md) |
 | A single uniformly invertible edge suffices for onset | A bilinear response lemma and a sharp determinant-tangent projection handle the decay of every other edge. The combined estimate is uniform away from single rank-one edge directions. | [Single-edge theorem and projection gap](../../notes/single-invertible-edge-ghz-onset-2026-09-27.md), [replay](../../computations/single-invertible-edge-ghz-2026-09-27/README.md) |
+| A same-color edge component suffices for onset | A binary adjugate identity gives a sharp quadratic response certificate without matrix-rank assumptions. The combined estimate is uniform away from thirty projective directions, each supported on one different-color cell. | [Identity, norm certificate, and onset theorem](../../notes/binary-adjugate-ghz-onset-2026-09-27.md), [replay](../../computations/binary-adjugate-ghz-2026-09-27/README.md) |
 
 The earlier higher-order identities concern an analytic path parameter.
 The new distance bounds are uniform under their stated family or arm-size
@@ -60,8 +61,8 @@ flowchart TD
     B -->|Yes| G["Open: matching terms cancel"]
     G --> H["Full-support single-color identities constrain initial orders"]
     H --> I["Every such limit: first critical support uses at most four sites or is a star"]
-    I --> J["Fifth-power onset: two comparable arms or one uniformly invertible edge"]
-    I --> K["Remaining onset shapes: single rank-one edges"]
+    I --> J["Fifth-power onset: two comparable arms, an invertible edge, or a same-color edge component"]
+    I --> K["Remaining onset shapes: one different-color cell; thirty projective directions"]
     J --> L["Still open: error-versus-signal estimate"]
     K --> L
 ~~~
@@ -73,11 +74,11 @@ through the remaining singular limits. A large response in some direction
 does not yet control the GHZ direction.
 
 At a full-support single-color zero, the
-[latest onset estimate](../../notes/single-invertible-edge-ghz-onset-2026-09-27.md)
-is uniform away from single rank-one edge directions. It includes
-every two-arm matrix-rank loss and every single invertible edge.
-The new projection removes a large product term while retaining
-at least one quarter of the binary GHZ target's squared norm.
+[latest onset estimate](../../notes/binary-adjugate-ghz-onset-2026-09-27.md)
+is uniform away from thirty projective directions: a source with just
+one cell joining pure $b$ to pure $c$, or the reverse.
+The binary adjugate certificate handles a same-color component in any
+edge, complementing the two-arm and invertible-edge theorems.
 The error-versus-signal bound remains open even in the families whose
 onset is now controlled.
 
