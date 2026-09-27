@@ -30,7 +30,7 @@ From the repository root, with Python 3.11 or later:
 python3 research/verify.py
 ~~~
 
-This runs the 38 rate, design, and shared-method packages in normal and
+This runs the 39 rate, design, and shared-method packages in normal and
 optimized Python, compares their JSON outputs with the saved receipts, and
 checks their recorded repository-file hashes. It uses the standard library
 and does not run the optional numerical searches or rebuild the Lean proof.

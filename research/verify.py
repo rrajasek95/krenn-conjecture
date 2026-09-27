@@ -48,6 +48,7 @@ PACKAGES = (
     "binary-adjugate-ghz-2026-09-27",
     "balanced-response-ghz-2026-09-27",
     "cofactor-graph-frontier-2026-09-27",
+    "full-support-ghz-onset-2026-09-27",
 )
 
 

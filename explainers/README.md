@@ -15,7 +15,8 @@ provide a shared replay command.
 | The complete proof, from cancellation to the all-size contradiction | [All-orders proof guide](ALL-ORDERS-PROOF.md) | [Seven diagrams and offline equations](ALL-ORDERS-PROOF.html) |
 | A universal W guarantee, response rigidity, and exact bounds for competing ground families | [Global W guarantee](W-GLOBAL-GUARANTEE.md) | — |
 | Unrestricted local W optimality at every even size, including the four-site exception | [All-even local W optimality](W-LOCAL-OPTIMALITY.md) | — |
-| Flat supports, triangle projections, and GHZ onset with three arms or two invertible arms | [Critical-direction geometry](CRITICAL-DIRECTION-GEOMETRY.md) | — |
+| Uniform GHZ onset at every full-support single-color zero | [Complete onset argument](FULL-SUPPORT-ONSET.md) | — |
+| Flat supports, critical directions, and the intermediate GHZ onset criteria | [Critical-direction geometry](CRITICAL-DIRECTION-GEOMETRY.md) | — |
 | All-even W optimality and a strict six-site gap with cancelling ground matchings | [W ground cancellation](W-GROUND-CANCELLATION.md) | — |
 | Classification of triangle rank loss and unrestricted W response bounds | [The balanced frontier](BALANCED-FRONTIER.md) | — |
 | Global source balancing and a sharp response bound for both research paths | [Site balancing](SITE-BALANCING.md) | — |

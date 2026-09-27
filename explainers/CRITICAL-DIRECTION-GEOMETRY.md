@@ -3,13 +3,12 @@
 [All explainers](README.md) · [GHZ project](../research/ghz-rates/README.md) ·
 [Proofs and exact replay](../computations/flat-core-rigidity-2026-09-27/README.md)
 
-We can now classify all support graphs whose four-site responses vanish,
-and control distance to several of the resulting families. This reduces
-the possible first critical directions at every full-support single-color
-GHZ boundary. Quantitative star estimates survive matrix rank loss, and
-the GHZ onset bound now allows one star arm to disappear. A separate
-attachment argument handles every four-site core that is not a star,
-including those with singular internal response.
+The fifth-power GHZ onset bound now holds at every full-support
+single-color zero, in every nearby source direction. The
+[focused guide to the complete theorem](FULL-SUPPORT-ONSET.md)
+explains the final argument.
+This longer guide develops the support classifications, response
+geometry, and progressively stronger criteria that lead to it.
 
 **Evidence:** written proofs with exact supporting checks; independent
 audit pending. These are follow-ups to the completed Krenn–Gu proof.
@@ -740,7 +739,7 @@ The candidates left depend on the ground source. For the exact
 example whose cofactor edges are $02,03,12,13$, only sixteen of
 the thirty projective directions remain.
 
-## Only two anchor configurations remain
+## The reduction to two final anchor configurations
 
 The [cofactor-graph classification](../notes/cofactor-graph-ghz-frontier-2026-09-27.md)
 turns the preceding tests into a short list of remaining cases.
@@ -758,8 +757,8 @@ four-cycle needed by the previous theorem.
 The exact checker examines all 32,768 six-vertex graphs.
 It tests the zero-row-sum condition in two ways: incidence-matrix
 ranks and explicit integer weight patterns. After applying the
-analytic rules, only the following two anchor configurations need
-new onset arguments:
+analytic rules, the following two anchor configurations were the
+last cases needing new onset arguments:
 
 ~~~mermaid
 flowchart LR
@@ -785,22 +784,44 @@ flowchart LR
 ~~~
 
 Solid edges are ground-cofactor anchors. The dashed edge is a
-representative binary source direction still needing analysis,
+representative binary source direction left by that reduction,
 with $b$ at one endpoint and $c$ at the other.
 A complete four-vertex cofactor graph with two isolated sites is
 also possible in the graph classification, but its extra anchors
-make it a subcase of the first remaining problem.
+make it a subcase of the first configuration.
 
-The bound of sixteen remaining projective directions is now
-**universal within the full-support single-color onset problem**.
-With no zero cofactor rows, at most eight directions remain.
-With exactly one zero row, onset is already proved in every direction.
+That reduction left at most sixteen projective directions at any
+full-support single-color zero. With no zero cofactor rows it left
+at most eight, and with exactly one zero row it left none.
 Both pictured configurations have exact full-support ground
 examples; the bridge example can be chosen real.
 
 “Two configurations” still means two continuous families of
 sources and perturbations. It does not mean that checking two
 source matrices would finish the proof.
+
+## Both final configurations are now controlled
+
+The [complete onset theorem](../notes/full-support-ghz-onset-2026-09-27.md)
+closes both families. In the four-cycle case, the output equations
+force the opposite edge to the largest outside edge to be small.
+A projection at the large outside edge removes its entire product
+term while retaining a fixed amount of GHZ signal.
+
+For the two-triangle bridge, site scaling exposes a nearly flat
+four-cycle with balanced edge norms. At an exactly flat cycle
+whose four edge norms are one, the attachment response satisfies
+
+$$
+\|\mathcal M_C X\|^2=2\|X\|^2.
+$$
+
+This leaves no hidden attachment direction, in any finite local
+color dimensions. Scaling each original mixed-output equation
+correctly then gives the needed attachment bounds.
+The [focused illustrated guide](FULL-SUPPORT-ONSET.md) explains
+the two arguments and how the four possible minimal cofactor
+patterns exhaust the proof.
 
 ## From a shape theorem to a GHZ estimate
 
@@ -826,20 +847,14 @@ H(A)=\lambda(a^6+b^6+c^6)+E,\quad
 \varepsilon=\|E\|,\quad \delta=\|A-A_0\|.
 $$
 
-If two non-ground arms have size at least a fixed fraction of the
-non-ground source norm, or one edge has its smaller singular value
-or same-color strength bounded below by such a fraction, we obtain
+For every nearby source direction, the complete theorem gives
 
 $$
 |\lambda|\le C_1\varepsilon+C_2\delta^5.
 $$
 
-The same estimate now holds for an edge whose norm is a fixed
-fraction of the source norm and passes either ground-cofactor test
-above, without a matrix-rank assumption.
-The graph classification now supplies this estimate in every
-nearby direction except the explicitly listed singular directions
-in the two remaining anchor configurations.
+There is no matrix-rank, arm-size, or non-ground support condition.
+The constants may depend on the fixed full-support ground source.
 
 This uses actual source distance. Unlike an order statement for a path
 parameter, it is unaffected by describing the same path with a slower
@@ -849,16 +864,8 @@ non-ground jet at these full-support limits.
 
 To finish the universal square-root law, we still need
 $\varepsilon\ge c|\lambda|^3$ across every relevant boundary.
-The new results identify and control several difficult families, but a
-bound involving $\delta$ does not by itself give that error-versus-signal
-comparison. Within the full-support single-color branch, the remaining
-critical shapes for this onset argument are the single-cell,
-different-color directions in those two anchor configurations.
-The combined estimate is uniform when the normalized non-ground
-direction stays a fixed positive distance from those sources.
-Indeed, a flat source with no two adjacent edges can have only one
-edge: two disjoint edges would give a nonzero four-site tensor product,
-with nothing to cancel it. The same-color and invertible-edge criteria
-then leave just the stated different-color cells.
-The error-versus-signal comparison remains open even on the families
-whose onset is now controlled.
+The source-distance theorem now covers the whole full-support
+single-color branch. A bound involving $\delta$ still does not
+give the required error-versus-signal comparison. That comparison,
+and the other zero-output boundary types, remain open parts of
+the unrestricted rate-law problem.

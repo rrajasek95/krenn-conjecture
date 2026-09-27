@@ -117,7 +117,7 @@ independent audit is pending. The unrestricted targets below remain open.
 
 | Subproject | Results so far and next question |
 | --- | --- |
-| [GHZ fidelity and rate](research/ghz-rates/README.md) | Explicit rate bounds, local square-root laws, and stronger control of singular limits; pursuing the unrestricted square-root law. |
+| [GHZ fidelity and rate](research/ghz-rates/README.md) | Explicit rate bounds, local square-root laws, and uniform onset at full-support single-color limits; pursuing the unrestricted square-root law. |
 | [Optimal W-state design](research/w-state-design/README.md) | A universal factor-two guarantee, all-even local optimality, and exact optima for broad classes; pursuing the exact global optimum. |
 | [Response identities and reconstruction](research/response-methods/README.md) | Reusable optimization certificates, source balancing, stability estimates, and source-reconstruction methods. |
 

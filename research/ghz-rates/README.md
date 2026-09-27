@@ -27,6 +27,7 @@ into a laboratory count rate requires a physical source model.
 | --- | --- | --- |
 | Explicit unrestricted rate bound | A six-site exponent of $1/15$; the diagonal model has exponent $1/5$. | [Rate follow-ups](../../explainers/RATE-FOLLOWUPS.md), [proof](../../notes/rate-sharpness-followup-2026-09-26.md), [replay](../../computations/rate-sharpness-followup-2026-09-26/README.md) |
 | Square-root laws in controlled settings | A cancellation hypothesis gives exponent $1/2$. The prism also has a full complex neighborhood bound and an optimal leading coefficient. | [Design guide](../../explainers/RATE-DESIGN-FRONTIER.md), [prism proof](../../notes/prism-optimal-rate-2026-09-26.md), [replay](../../computations/rate-design-frontier-2026-09-26/README.md) |
+| Uniform onset at every full-support single-color zero | Fifth-power source-distance onset holds in every nearby direction, with no matrix-rank, arm-size, or non-ground support condition. A balanced four-cycle response isometry and an outside-edge projection close the last two anchor configurations. | [Focused illustrated guide](../../explainers/FULL-SUPPORT-ONSET.md), [complete theorem](../../notes/full-support-ghz-onset-2026-09-27.md), [replay](../../computations/full-support-ghz-onset-2026-09-27/README.md) |
 | Regular two-triangle limits | Full-rank triangle responses lead to a fidelity gap or a local square-root bound. | [Boundary guide](../../explainers/BOUNDARY-STRUCTURE.md), [classification](../../notes/regular-triangle-rate-classification-2026-09-26.md), [replay](../../computations/boundary-structure-2026-09-26/README.md) |
 | Reduction to balanced sources | Site scaling preserves output and improves rate. A sharp response identity excludes complete derivative collapse at a balanced six-site limit. | [Balancing guide](../../explainers/SITE-BALANCING.md), [proof](../../notes/site-balancing-rate-reduction-2026-09-26.md), [replay](../../computations/site-balancing-2026-09-26/README.md) |
 | Classification of triangle rank loss | Triangle ranks are 7, 8, or 9; the two-triangle derivative has rank at least 49. A separate balanced, full-support example has rank 25. | [Frontier guide](../../explainers/BALANCED-FRONTIER.md), [proof](../../notes/triangle-response-rank-classification-2026-09-27.md), [replay](../../computations/balanced-frontier-2026-09-27/README.md) |
@@ -43,11 +44,12 @@ into a laboratory count rate requires a physical source model.
 | A single uniformly invertible edge suffices for onset | A bilinear response lemma and a sharp determinant-tangent projection handle the decay of every other edge. The combined estimate is uniform away from single rank-one edge directions. | [Single-edge theorem and projection gap](../../notes/single-invertible-edge-ghz-onset-2026-09-27.md), [replay](../../computations/single-invertible-edge-ghz-2026-09-27/README.md) |
 | A same-color edge component suffices for onset | A binary adjugate identity gives a sharp quadratic response certificate without matrix-rank assumptions. The combined estimate is uniform away from thirty projective directions, each supported on one different-color cell. | [Identity, norm certificate, and onset theorem](../../notes/binary-adjugate-ghz-onset-2026-09-27.md), [replay](../../computations/binary-adjugate-ghz-2026-09-27/README.md) |
 | Ground-cofactor tests through single-edge rank loss | A common anchored neighbor or an outside anchored four-cycle suffices at every matrix rank. This covers both zero endpoint cofactor rows and reduces the thirty candidates according to the ground source; the exact sparse fixture leaves sixteen. | [Balanced-response proof and cofactor criteria](../../notes/balanced-response-ghz-onset-2026-09-27.md), [replay](../../computations/balanced-response-ghz-2026-09-27/README.md) |
-| Two anchor configurations contain the remaining full-support onset problem | Four anchored arms or a six-cycle of anchors settles every nearby source direction. An exhaustive cofactor-graph classification leaves only a four-cycle with isolated sites, its complete-four-vertex extension, or two triangles joined by a bridge. At most sixteen projective directions remain, and both residual anchor configurations have exact ground examples. | [Classification and analytic rules](../../notes/cofactor-graph-ghz-frontier-2026-09-27.md), [complete graph replay](../../computations/cofactor-graph-frontier-2026-09-27/README.md) |
+| Reduction to two final anchor configurations | Four anchored arms or a six-cycle of anchors settles every nearby source direction. The cofactor-graph classification reduced the full-support onset problem to two configurations, both with exact ground examples. The uniform onset theorem above now covers them. | [Classification and analytic rules](../../notes/cofactor-graph-ghz-frontier-2026-09-27.md), [complete graph replay](../../computations/cofactor-graph-frontier-2026-09-27/README.md) |
 
 The earlier higher-order identities concern an analytic path parameter.
-The new distance bounds are uniform under their stated family or arm-size
-hypotheses. None establishes the unrestricted square-root law.
+The full-support distance theorem now covers every non-ground direction;
+the earlier packages preserve the intermediate family and arm-size
+criteria. None establishes the unrestricted square-root law.
 
 ## What remains
 
@@ -62,11 +64,8 @@ flowchart TD
     D -->|No| F["Open: compare higher-order error with signal"]
     B -->|Yes| G["Open: matching terms cancel"]
     G --> H["Full-support single-color identities constrain initial orders"]
-    H --> I["Every such limit: first critical support uses at most four sites or is a star"]
-    I --> J["Fifth-power onset: arm, edge, and ground-cofactor criteria"]
-    I --> K["Remaining onset: different-color cells in two anchor configurations"]
+    H --> J["Uniform fifth-power onset in every nearby direction"]
     J --> L["Still open: error-versus-signal estimate"]
-    K --> L
 ~~~
 
 At six sites write $H=\lambda\Delta+E$, where $\Delta$ is the sum of the
@@ -76,19 +75,13 @@ through the remaining singular limits. A large response in some direction
 does not yet control the GHZ direction.
 
 At a full-support single-color zero, the
-[latest classification](../../notes/cofactor-graph-ghz-frontier-2026-09-27.md)
-leaves at most sixteen projective directions. All are pure different-color
-single cells in two remaining anchor configurations: an edge from a
-four-cycle to an isolated cofactor vertex, or an edge between the
-non-bridge vertices of two triangles joined by a bridge.
-An anchored edge has nonzero ground hafnian cofactor.
-The complete-four-vertex cofactor case is covered by the same
-remaining four-cycle problem.
-All other cofactor graphs already give fifth-power onset in every
-nearby source direction. With exactly one zero cofactor row, no onset
-directions remain; with no zero rows, at most eight remain.
-The error-versus-signal bound remains open even in the families whose
-onset is now controlled.
+[complete onset theorem](../../notes/full-support-ghz-onset-2026-09-27.md)
+gives $|\lambda|\le C_1\varepsilon+C_2\|A-A_0\|^5$ in every
+nearby source direction. Its constants may depend on the fixed ground
+source. No singular non-ground directions remain for that theorem.
+The missing step in this branch is now the error-versus-signal
+comparison itself: the source-distance bound does not eliminate
+$\|A-A_0\|$ to give $\varepsilon\ge c|\lambda|^3$.
 
 Earlier higher-order analyses are preserved in the
 [critical-cone](../../computations/critical-cone-2026-09-26/README.md),

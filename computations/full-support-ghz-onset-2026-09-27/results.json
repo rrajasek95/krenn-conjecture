@@ -1,0 +1,233 @@
+{
+  "checks": {
+    "bridge_choices": {
+      "bridge_in_other_matching": 8,
+      "choices": 12,
+      "largest_edge_opposite_bridge": 4
+    },
+    "formal_phase_gram": {
+      "diagonal_blocks": 4,
+      "nontrivial_phase_cancellations": 2,
+      "off_diagonal_blocks": 6,
+      "scope": "Formal identities in arbitrary unit edge phases"
+    },
+    "outside_edge_projection": {
+      "fixtures": [
+        {
+          "complementary_edge_zero": false,
+          "fixture": 0,
+          "retained_target_norm_squared": "189/125"
+        },
+        {
+          "complementary_edge_zero": true,
+          "fixture": 1,
+          "retained_target_norm_squared": "189/125"
+        },
+        {
+          "complementary_edge_zero": false,
+          "fixture": 2,
+          "retained_target_norm_squared": "1"
+        },
+        {
+          "complementary_edge_zero": false,
+          "fixture": 3,
+          "retained_target_norm_squared": "27/16"
+        }
+      ],
+      "formal_matching_identities": {
+        "determinant_tangent_lines": 2,
+        "edge_removal_identities": 64,
+        "norm_selection_identity": true,
+        "opposite_determinant_identity": true,
+        "opposite_pair_cancellations": 64,
+        "output_monomials": 960,
+        "sharp_quarter_certificate": true
+      },
+      "wrong_projection_cut_negative_control": true
+    },
+    "response_isometry": {
+      "fixtures": [
+        {
+          "gram_factor": "2",
+          "input_dimension": 4,
+          "palette": 1,
+          "phase_fixture": 0,
+          "response_rows": 4
+        },
+        {
+          "gram_factor": "2",
+          "input_dimension": 4,
+          "palette": 1,
+          "phase_fixture": 1,
+          "response_rows": 4
+        },
+        {
+          "gram_factor": "2",
+          "input_dimension": 4,
+          "palette": 1,
+          "phase_fixture": 2,
+          "response_rows": 4
+        },
+        {
+          "gram_factor": "2",
+          "input_dimension": 8,
+          "palette": 2,
+          "phase_fixture": 0,
+          "response_rows": 32
+        },
+        {
+          "gram_factor": "2",
+          "input_dimension": 8,
+          "palette": 2,
+          "phase_fixture": 1,
+          "response_rows": 32
+        },
+        {
+          "gram_factor": "2",
+          "input_dimension": 8,
+          "palette": 2,
+          "phase_fixture": 2,
+          "response_rows": 32
+        },
+        {
+          "gram_factor": "2",
+          "input_dimension": 12,
+          "palette": 3,
+          "phase_fixture": 0,
+          "response_rows": 108
+        },
+        {
+          "gram_factor": "2",
+          "input_dimension": 12,
+          "palette": 3,
+          "phase_fixture": 1,
+          "response_rows": 108
+        },
+        {
+          "gram_factor": "2",
+          "input_dimension": 12,
+          "palette": 3,
+          "phase_fixture": 2,
+          "response_rows": 108
+        }
+      ],
+      "gram_entries": 672,
+      "unbalanced_negative_controls": [
+        {
+          "squared_norm_ratio": "1/2",
+          "tau": "1/2"
+        },
+        {
+          "squared_norm_ratio": "1/8",
+          "tau": "1/4"
+        },
+        {
+          "squared_norm_ratio": "1/32",
+          "tau": "1/8"
+        }
+      ],
+      "wrong_sign_negative_control_rank": 6
+    },
+    "scalar_absorption": {
+      "certificates": [
+        {
+          "name": "large error dominates the projected output",
+          "nonnegative_factors": [
+            "eps >= d*u",
+            "t <= 1",
+            "d,u >= 0"
+          ]
+        },
+        {
+          "name": "lower bound for the cancelling core product",
+          "nonnegative_factors": [
+            "b*c >= g*u-k*t*d",
+            "g >= eta*t",
+            "eta*u >= 2*k*d",
+            "u,t >= 0"
+          ]
+        },
+        {
+          "name": "each attachment edge dominates the outside scale",
+          "nonnegative_factors": [
+            "c <= t",
+            "2*b*c >= g*u",
+            "g >= eta*t",
+            "b,u >= 0"
+          ]
+        },
+        {
+          "name": "absorb the rescaled attachment",
+          "nonnegative_factors": [
+            "x*u <= a*d*u+k*d*x",
+            "u >= 2*k*d",
+            "x >= 0"
+          ]
+        },
+        {
+          "name": "the opposite outside edge is small",
+          "nonnegative_factors": [
+            "u*x <= k*(eps+d*u+d^2)",
+            "eps <= d*u",
+            "u >= d",
+            "k,d >= 0"
+          ]
+        }
+      ],
+      "weighted_attachment_coefficients": 2
+    },
+    "site_scaling_and_output": {
+      "dense_complex_scaling_fixtures": 3,
+      "edge_scale_identities": 11,
+      "formal_output_splits": 64,
+      "invariant_matching_monomials": 15,
+      "quartet_scale_identities": 5
+    }
+  },
+  "conclusions": [
+    "Every full-support single-color six-site zero has a uniform fifth-power GHZ onset bound in all source directions",
+    "A balanced flat four-cycle has attachment response Gram equal to twice the identity in arbitrary finite local dimensions",
+    "Two anchored triangles joined by an anchored bridge give fifth-power GHZ onset in every nearby source direction",
+    "Site scaling and quartet-specific bounds control attachments without matrix-rank assumptions",
+    "Any anchored four-cycle suffices for onset by projection at a large outside edge",
+    "No critical non-ground directions remain for the full-support single-color source-distance onset theorem"
+  ],
+  "dependencies": {
+    "computations/boundary-structure-2026-09-26/exact.py": "8485e81a23c6a067d9c211ba19d985360b631455f1ed097c8ab803227e0853cc",
+    "computations/cofactor-graph-frontier-2026-09-27/cofactor_graphs.py": "82a6740bd691f3c39e380d50e969921cc7fed471b8b2ffbd1a8ab2675b4c7ae3",
+    "computations/cofactor-graph-frontier-2026-09-27/results.json": "dd2fbd83c8b795b0c1f7d0d870e9fe615970fbb1bb4440ed5d5a5289ebea36f2",
+    "computations/coherent-two-arm-ghz-2026-09-27/coherent_arms.py": "ac7fb42fff348e34ff50ffb163805e32c1602f33042ac9b7ada17059948be012",
+    "computations/flat-core-rigidity-2026-09-27/algebra.py": "16460c359fb4b44a713de90e8f91c5288cb7d7b4186f9217ea1a460a849fafae",
+    "computations/single-invertible-edge-ghz-2026-09-27/edge_projection.py": "a68cc1cd8b963911a2fae3d458491cb7a684f949470bd47c4ed2713ef10c8c5e",
+    "computations/transverse-two-arm-ghz-2026-09-27/transverse_arms.py": "7232cb93fa290e729a07f90af1796241630114db99d71b2702b6d29270bdea59",
+    "notes/balanced-response-ghz-onset-2026-09-27.md": "4da36b7729b2bf73acdd3202c851d721adeea3d77df18482b3b6327cca3af9ac",
+    "notes/binary-adjugate-ghz-onset-2026-09-27.md": "faca76a7869ea404934ab7b2989a3ce55d4a92c3c7c85ce41e3253d7d5cdebd8",
+    "notes/cofactor-graph-ghz-frontier-2026-09-27.md": "9ec1af4dd0c51b2a689c80f9bdb6e238250ecd948dcc82ef214de85feee82c83",
+    "notes/coherent-two-arm-ghz-onset-2026-09-27.md": "057106ebaea1137e89249f8875e64323c01eb53f16b817a12a0dfb77b69f5d14",
+    "notes/four-arm-ghz-distance-bound-2026-09-27.md": "c5538333987b5bbf67b6d27d60d9278ed7fe665992c930c700054df340f0cd91",
+    "notes/four-core-attachment-ghz-bound-2026-09-27.md": "d2b9d7a80bf8a88b88fc9efa7c6d05d77ba58486e4cd75ebcdfdf4519ced52ec",
+    "notes/four-site-flat-support-classification-2026-09-27.md": "8d06ad053738d6540902ac08cefe38de0eac19e86a9ca5fab153458da6038aad",
+    "notes/ghz-critical-direction-normal-form-2026-09-27.md": "1b1169dd06e05d34d09331a1d2b90c558fcac80f099c01eeefee0137d1523c6f",
+    "notes/single-invertible-edge-ghz-onset-2026-09-27.md": "ad5f6bab7b5a58cabdd2ab0d5fb687df966042f7207d9a8bb3ba8c6438486e2a",
+    "notes/three-arm-ghz-distance-bound-2026-09-27.md": "7a1f6b711103b35eb297319d8f30c5a1ad56bf45905bb9d2a59ea735dd7a1d36",
+    "notes/transverse-two-arm-ghz-onset-2026-09-27.md": "864e691d39122c3312c70b035eab7282cd633ad1a9f21dd252deb245fc7bb547",
+    "notes/triangle-attachment-ghz-bound-2026-09-27.md": "c8871a6459b0d43678fe44cabc193380a2c3d24b8205421e8db8fb1022f86dab",
+    "notes/two-invertible-arm-ghz-bound-2026-09-27.md": "8d52c40474391163ad18d43384c685bd9cdcb993838a03dc600a0b1a1cd9cf69"
+  },
+  "evidence_status": "Written proof with exact supporting checks; independent audit pending",
+  "limitations": [
+    "Unrestricted square-root rate law remains open",
+    "Other zero-output boundary types remain relevant to the unrestricted rate law",
+    "Source-distance onset does not prove the required error-versus-signal inequality",
+    "Compactness and absorption use the written proof; finite fixtures alone do not prove the theorem",
+    "Independent audit is pending"
+  ],
+  "sha256": {
+    "computations/full-support-ghz-onset-2026-09-27/README.md": "2f99b4ebf100319c2b913a3eb5e2615d12dfb7aa5ad895f15c98bb855fba31ce",
+    "computations/full-support-ghz-onset-2026-09-27/cycle_balance.py": "70ff9d0322d656dcb84f80da19fb1f98dadcc2af01ac23792504c7d309dd43ae",
+    "computations/full-support-ghz-onset-2026-09-27/dependencies.json": "613a1d869fef097be436d7e9264b873feab880001536646040216e64c10ddb90",
+    "computations/full-support-ghz-onset-2026-09-27/verify.py": "a33a09c2f0a9cc0f57d6462d62dca62640ed2202ec03b8a4a5491caf68f4fade",
+    "notes/full-support-ghz-onset-2026-09-27.md": "3ffbd53ce84fc72e90e4d8453d1b6383fca49cc69da62c70f7edf9859bf41225"
+  },
+  "status": "PASS"
+}
