@@ -33,6 +33,7 @@ separate from the Lean-verified exact theorem.
 | One observed Gaussian cross moment | At local dimensions at least three, generically recover means and cross-site covariance from one tensor at every odd order at least seven; five sites have exactly two classes, resolved by two shared-source outputs. | [All-orders theorem and shared-source corollary](../../notes/single-cross-moment-all-orders-2026-09-27.md), [five- and seven-site inverse](../../computations/matching-tensor-recovery-2026-09-26/single_source.py) |
 | Mean directions from one tensor at every odd order | Generically identify every local mean line for all odd orders at least five, using a two-site attachment induction; also covers generic unknown response coefficients. | [Written proof and limits](../../notes/mean-direction-recovery-all-orders-2026-09-27.md), [symbolic and exact checks](../../computations/matching-tensor-recovery-2026-09-26/mean_direction_induction.py) |
 | Covariance recovery from a restricted exterior kernel | Replace full-kernel completion by a map with cubically many columns; a two-site induction proves the necessary rank at every odd order at least seven. | [Rigidity criterion](../../notes/single-output-covariance-low-degree-2026-09-27.md), [all-orders rank proof](../../notes/single-cross-moment-all-orders-2026-09-27.md), [exact induction checks](../../computations/matching-tensor-recovery-2026-09-26/covariance_induction.py) |
+| Source inverse given the local mean lines | Recover covariance and actual mean scales with quadratically many columns per linear system; exact nine-site examples align four outputs spanning four global mean directions in local dimension three. | [Smaller rank criterion and scope](../../notes/quadratic-size-source-inverse-2026-09-27.md), [inverse and replay](../../computations/matching-tensor-recovery-2026-09-26/restricted_source_inverse.py), [certificate](../../computations/matching-tensor-recovery-2026-09-26/restricted-source-inverse-certificate.json) |
 
 The matching-tensor reconstruction programs are
 [verify.py](../../computations/matching-tensor-recovery-2026-09-26/verify.py),
@@ -77,9 +78,13 @@ now completes full generic recovery at every odd order at least seven,
 including alignment of any finite family with a shared covariance.
 These are written all-orders proofs supported by exact base and deformation
 certificates. The existing blind inverse implementation covers five and
-seven sites; efficient all-orders implementation, noise conditioning, and
-nongeneric source classification remain open. These research results are
-not part of the Lean formalization of Krenn–Gu.
+seven sites. With local mean lines supplied, the
+[smaller inverse](../../notes/quadratic-size-source-inverse-2026-09-27.md)
+now recovers covariance and mean scales at nine sites, including a shared
+source with four observed mean directions. Efficient blind mean-line
+extraction at arbitrary orders, noise conditioning, and nongeneric source
+classification remain open. These research results are not part of the
+Lean formalization of Krenn–Gu.
 
 With generic unknown response coefficients instead of the calibrated
 Gaussian coefficients, [Corollary 10](../../notes/single-cross-moment-all-orders-2026-09-27.md#7-completing-the-theorem-and-shared-source-recovery)

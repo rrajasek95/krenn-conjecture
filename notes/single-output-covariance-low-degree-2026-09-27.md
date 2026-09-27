@@ -273,9 +273,13 @@ comes from the source, and uniqueness is Lemma 4; the added mean-square
 and pure-mean terms in `Q_1` do not affect that injectivity. Then
 `Q_1+D_0` is the required representative. QED.
 
-These systems give a reconstruction procedure in principle. The
-certificate program below verifies the rank hypotheses; an optimized
-end-to-end implementation of (7)–(8) at nine sites is separate work.
+The subsequent [quadratic-size inverse](quadratic-size-source-inverse-2026-09-27.md)
+implements (7)–(8) at seven and nine sites, with the local mean lines
+supplied. It verifies every recovered tensor entry and aligns four
+nine-site outputs with a shared covariance. Its observable rank
+certificate checks smaller correction matrices directly, without
+constructing the `F_3` matrix. A fully blind nine-site implementation
+still needs the mean-line extraction step.
 
 ## 6. Exact rank witnesses and the nine-site corollary
 

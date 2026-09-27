@@ -546,6 +546,12 @@ gives this formula. It then aligns their mean rows. QED.
 
 This corollary recovers the span actually sampled. It does not identify
 additional unobserved directions in a larger postulated mean space.
+The subsequent [quadratic-size inverse](quadratic-size-source-inverse-2026-09-27.md)
+implements the covariance and calibration steps at nine sites given
+the local mean lines. Its exact certificate aligns four shared-source
+outputs whose global mean span has dimension four, although every local
+space has dimension three. Blind extraction of the mean lines is still
+a separate implementation task.
 
 **Corollary 10 (one generic response determines its response space).**
 At every odd `n>=5`, for a generic one-direction source and generic
