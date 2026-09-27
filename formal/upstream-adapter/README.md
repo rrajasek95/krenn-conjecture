@@ -26,6 +26,19 @@ The upstream revision is pinned to
 [the formal-conjectures fork](https://github.com/rrajasek95/formal-conjectures/tree/e2c4441f9545b85790aebcfaa445e194fcab9d5b).
 The proof does not use an upstream conjecture with a placeholder proof.
 
+## Real-weight corollaries
+
+[RealCorollaries.lean](RealCorollaries.lean) proves that mapping weights
+through a semiring homomorphism preserves every branch of the matching
+recursion and the normalized equation system. The map `Complex.ofRealHom`
+therefore takes any real solution to a complex solution.
+
+The complex nonexistence theorem yields exact affirmative-answer wrappers
+for the five upstream real questions: the general even `N ≥ 6, D ≥ 3`
+statement; `N = 6, D = 3`; `N = 6, D ≥ 3`; `N = 8, D = 3`; and
+`N = 10, D = 3`. [RealCorollariesAxioms.lean](RealCorollariesAxioms.lean)
+audits all ten transfer and corollary declarations.
+
 ## Reproduce
 
 With Lean installed through `elan`, first follow the local package's build
@@ -41,7 +54,7 @@ python3 verify.py --upstream /tmp/krenn-upstream
 ```
 
 The script checks the exact upstream revision and source state, builds the
-local package and upstream target, compiles the adapter and full proof with
+local package and upstream target, compiles the adapter, full proof, and real corollaries with
 warnings treated as errors, and audits all final declarations. It rejects
 axiom dependencies other than `propext`, `Classical.choice`, and `Quot.sound`.
 Source hashes and the checked declarations are recorded in

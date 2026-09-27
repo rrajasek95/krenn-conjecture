@@ -1,0 +1,14 @@
+import RealCorollaries
+
+/-! # Axiom audit of coefficient transfer and the exact real corollaries -/
+
+#print axioms KrennAllOrders.UpstreamRealProof.pmSumListAux_map
+#print axioms KrennAllOrders.UpstreamRealProof.pmSumN_map
+#print axioms KrennAllOrders.UpstreamRealProof.eqSystemN_map
+#print axioms KrennAllOrders.UpstreamRealProof.eqSystemN_ofReal
+#print axioms KrennAllOrders.UpstreamRealProof.no_solution_real
+#print axioms KrennAllOrders.UpstreamRealProof.answer_true_eqSystem_no_solution_ge6_ge3_real
+#print axioms KrennAllOrders.UpstreamRealProof.answer_true_eqSystem6_no_solution_d3_real
+#print axioms KrennAllOrders.UpstreamRealProof.answer_true_eqSystem6_no_solution_ge3_real
+#print axioms KrennAllOrders.UpstreamRealProof.answer_true_eqSystem8_no_solution_d3_real
+#print axioms KrennAllOrders.UpstreamRealProof.answer_true_eqSystem10_no_solution_d3_real

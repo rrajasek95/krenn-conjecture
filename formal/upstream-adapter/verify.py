@@ -44,7 +44,8 @@ def main() -> None:
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     sources = [ROOT / name for name in
-               ["UpstreamAdapter.lean", "FullProof.lean", "FullProofAxioms.lean"]]
+               ["UpstreamAdapter.lean", "FullProof.lean", "FullProofAxioms.lean",
+                "RealCorollaries.lean", "RealCorollariesAxioms.lean"]]
     for source in sources:
         if re.search(r"\bsorry\b|\badmit\b|^\s*(?:axiom|unsafe)\b",
                      module.without_comments(source.read_text()), re.MULTILINE):
@@ -61,9 +62,12 @@ def main() -> None:
                                 str(sources[0])], upstream, env)
     run(lean + ["-o", str(adapter_lib / "FullProof.olean"), str(sources[1])], upstream, env)
     proof_output = run(lean + [str(sources[2])], upstream, env)
+    run(lean + ["-o", str(adapter_lib / "RealCorollaries.olean"), str(sources[3])], upstream, env)
+    real_output = run(lean + [str(sources[4])], upstream, env)
     declarations = module.audit(adapter_output, sources[0].read_text())
     declarations += module.audit(proof_output, sources[2].read_text())
-    output = adapter_output + proof_output
+    declarations += module.audit(real_output, sources[4].read_text())
+    output = adapter_output + proof_output + real_output
     (ROOT / "axioms.txt").write_text(output)
     metadata = {
         "status": "PASS",
@@ -77,7 +81,7 @@ def main() -> None:
         "declarations_checked": len(declarations),
         "checked_declarations": declarations,
         "allowed_axioms": sorted(module.ALLOWED),
-        "scope": "Full complex nonexistence for every even N >= 6 and D >= 3, using the exact upstream definitions.",
+        "scope": "Full complex and real nonexistence for every even N >= 6 and D >= 3, including the exact upstream real special cases, using the exact upstream definitions.",
     }
     (ROOT / "verification.json").write_text(json.dumps(metadata, indent=2) + "\n")
     print(f"PASS: exact upstream all-orders theorem; {len(declarations)} declarations axiom-checked.")
