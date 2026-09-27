@@ -529,3 +529,13 @@ classification of singular or nongeneric sources. Uniform global
 conditioning is already excluded by the prior near-ambiguity examples.
 The written all-orders proofs and these local certificates remain
 separate from the Lean formalization of the original conjecture.
+
+The subsequent [product-measurement result](product-measurement-source-recovery-2026-09-27.md)
+applies established algebraic measurement theory to reduce the exact
+scalar data requirement to a quantity quadratic in the number of sites
+at fixed local dimension. Direct scalar matching responses give local
+certificates through eleven sites without constructing the full tensor.
+The finite-error theorem here applies to that compressed forward map as
+well, with its own certified Jacobian and curvature bounds. Global
+initialization and certification of specific probe lists remain separate
+problems.

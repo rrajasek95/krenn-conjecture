@@ -42,6 +42,7 @@ separate from the Lean-verified exact theorem.
 | Blind search and local conditioning | Search for mean lines from the tensor alone, then verify them exactly; complete rational source recovery on seven- and nine-site examples, mean-line recovery at eleven sites, and a retained failed search. | [Proofs, local noise bound, and limits](../../notes/blind-source-search-and-local-conditioning-2026-09-27.md), [search and exact verification](../../computations/matching-tensor-recovery-2026-09-26/blind_mean_search.py), [certificate](../../computations/matching-tensor-recovery-2026-09-26/blind-mean-search-certificate.json) |
 | Shared calibration and near-ambiguity | Prove all-orders seventh-order separation and fifth-order local covariance obstructions; shared cubic calibration has a sharp sensitivity formula and a classical tight-frame setting-design criterion. | [Theorems and scope](../../notes/shared-calibration-and-near-ambiguity-2026-09-27.md), [exact replay](../../computations/matching-tensor-recovery-2026-09-26/source_calibration_conditioning.py), [certificate](../../computations/matching-tensor-recovery-2026-09-26/source-calibration-conditioning-certificate.json) |
 | Full-source local stability | Bound finite errors in all means and edge parameters, prove a local correction iteration converges, and control the observed mean span. Shared covariance information adds even with unknown means. | [Theorems and limits](../../notes/full-source-local-stability-2026-09-27.md), [certificate generator](../../computations/matching-tensor-recovery-2026-09-26/source_local_stability.py), [independent replay](../../computations/matching-tensor-recovery-2026-09-26/verify_source_local_stability.py), [exact witnesses](../../computations/matching-tensor-recovery-2026-09-26/source-local-stability-certificate.json) |
+| Products of local scalar measurements | Apply established structured-measurement theory to identify generic sources from `d+1` scalar data, where `d` is the source dimension; certify local source rank and finite noise bounds through eleven sites without constructing full tensors. | [Measurement counts, attribution, and limits](../../notes/product-measurement-source-recovery-2026-09-27.md), [direct scalar computation](../../computations/matching-tensor-recovery-2026-09-26/product_measurements.py), [independent replay](../../computations/matching-tensor-recovery-2026-09-26/verify_product_measurements.py), [certificate](../../computations/matching-tensor-recovery-2026-09-26/product-measurement-certificate.json) |
 
 The matching-tensor reconstruction programs are
 [verify.py](../../computations/matching-tensor-recovery-2026-09-26/verify.py),
@@ -112,6 +113,20 @@ observed mean vectors and quantify shared covariance information after
 eliminating the unknown means. Their source neighborhoods and noise
 thresholds are explicit and conservative; they do not give uniform
 global recovery or resolve the earlier blind-search failure.
+
+The [product-measurement application](../../notes/product-measurement-source-recovery-2026-09-27.md)
+separates the number of scalar data from the full tensor's exponential
+size. An existing theorem of Gesmundo–Grosdos–Uschmajew gives generic
+source identifiability from one more product measurement than the source
+dimension. Shared covariance and a known bound on global mean rank reduce
+that dimension further. Twice the dimension generically preserves every
+distinction between model tensors. Exact local checks cover seven, nine,
+and eleven sites; their particular finite probe lists are not certified
+globally injective. These counts do not give a sample-complexity bound or
+an efficient global reconstruction algorithm. A classical degree bound
+also forces exponentially many complex candidates when enumerating all
+solutions of a generic square subsystem; this favors using the extra
+measurements directly instead of enumerating and filtering every candidate.
 
 With generic unknown response coefficients instead of the calibrated
 Gaussian coefficients, [Corollary 10](../../notes/single-cross-moment-all-orders-2026-09-27.md#7-completing-the-theorem-and-shared-source-recovery)
