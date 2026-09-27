@@ -53,6 +53,7 @@ $1/65\le R_{\rm opt}\le1/45$, and the guaranteed fraction is $9/13$.
 | --- | --- | --- |
 | Universal factor-two guarantee at every even count | Bound every unrestricted exact-W rate by $2B_n/n$. A sharp zero-hafnian cofactor bound also separates response strength, higher-order losses, and row imbalance. | [Illustrated guide](../../explainers/W-GLOBAL-GUARANTEE.md), [proof](../../notes/w-state-universal-factor-two-2026-09-27.md), [replay](../../computations/w-universal-factor-two-2026-09-27/README.md) |
 | Rigidity and optimality near maximum cofactor response | For every even $n\ge6$, maximum response forces a complete odd core and one isolated site. The sharp scalar W bound holds near this family, excluding every sufficiently high-efficiency ground source from improving the construction. | [Equality classification and local scalar proof](../../notes/w-cofactor-rigidity-2026-09-27.md), [replay](../../computations/w-cofactor-rigidity-2026-09-27/README.md) |
+| A balanced competing scalar minimum at six sites | A symmetric two-triple cancellation family has sharp scalar cost $117/2$, only 1.25% above the one-root cost, and a strict rate gap $R<(80/81)R_*$. Its balanced source is another local scalar minimum under all complex ground perturbations. | [Family bound and full constrained Hessian](../../notes/w-state-balanced-three-plus-three-2026-09-27.md), [replay](../../computations/w-balanced-cancellation-2026-09-27/README.md) |
 | One-root optimum at every even count | Gives the explicit construction and its sharp rate. | [Proof](../../notes/w-state-optimal-design-2026-09-26.md), [replay](../../computations/method-utility-2026-09-26/README.md) |
 | Two-root optimum at every even count | Covers scalar cores with connected or disconnected cofactor graphs. | [Guide](../../explainers/BOUNDARY-STRUCTURE.md), [proof](../../notes/w-state-two-root-optimum-2026-09-26.md), [replay](../../computations/w-state-two-root-2026-09-26/README.md) |
 | Unrestricted local optimality at every even count | For every even $n\ge4$, all nearby complex colored exact-W designs have rate at most $R_*$. At fixed output, departures from the phase orbit have a quadratic source cost. | [Illustrated guide](../../explainers/W-LOCAL-OPTIMALITY.md), [all-even proof](../../notes/w-state-all-even-local-optimum-2026-09-27.md), [four-site obstruction](../../notes/w-state-four-site-local-obstruction-2026-09-27.md), [replay](../../computations/w-all-even-local-optimum-2026-09-27/README.md) |
@@ -73,6 +74,7 @@ flowchart TD
     E --> F{"Ground-core structure"}
     F --> G["Uniform odd core: settled for n ≥ 6"]
     F --> H["Six-site octahedral family: strict gap"]
+    F --> J["Symmetric two-triple cancellation and its balanced neighborhood: strict gap"]
     F --> I["Other nonuniform cores: open"]
 ~~~
 
@@ -93,6 +95,14 @@ bounded a definite amount below its sharp maximum. This permits every
 colored completion, even far from the known construction. The efficiency
 threshold is not explicit, so the numerical global upper bounds above
 are unchanged.
+
+The six-site scalar landscape now has a second proved local minimum:
+the balanced two-triple cancellation source has cost $117/2$, compared
+with $520/9$ for the known design. It is strictly worse, and every
+nearby colored exact-W completion has rate below $(80/81)R_*$.
+This prevents a global proof based on every scalar local minimum being
+the one-root family. The scalar minimum is not a demonstrated local
+optimum among exact W designs.
 
 At six sites the new unrestricted bound gives $R\le1/45$, while the
 construction attains $1/65$. One sufficient way to close this gap is

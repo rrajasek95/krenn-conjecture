@@ -156,3 +156,53 @@ It therefore leaves the numerical interval in the table unchanged.
 A better global design, if one exists, must sacrifice a definite
 amount of total response while making the site responses more uniform.
 Establishing that this tradeoff can never pay is still the remaining task.
+
+## A balanced competitor is another local minimum
+
+At six sites we have found and proved a second local minimum of the
+scalar response cost. It has no isolated site: all fifteen ground edges
+are present, and their matching contributions cancel.
+
+~~~mermaid
+flowchart LR
+    A["Triple A: all three internal weights are +√(2/3)"]
+    B["Triple B: all three internal weights are −√(2/3)"]
+    A ---|"All nine cross edges have weight 1"| B
+~~~
+
+The ground matching sum is $9abc+6c^3$, where $a,b$ are the
+within-triple weights and $c$ is the cross weight. Here $ab=-2/3$
+and $c=1$, so the sum is zero.
+Unlike the one-root ground, this source has equal response strength
+at every site. That perfect balance costs some total response.
+
+The scalar cost measures the ground strength together with the
+minimum excitation strength needed for the six desired coefficients.
+Lower cost gives a better upper bound on rate.
+
+| Ground source | Scalar cost | Consequence for exact W rate |
+| --- | ---: | --- |
+| Known one-root family | $520/9\approx57.778$ | $1/65$ is attained |
+| Balanced cancellation family | $117/2=58.5$ | Strictly below $(80/81)(1/65)$ |
+
+The difference in scalar cost is only **1.25%**.
+Nevertheless, the balanced source cannot improve the known design.
+The [new proof](../notes/w-state-balanced-three-plus-three-2026-09-27.md)
+establishes this throughout the symmetric three-weight family.
+It also checks every complex perturbation of the balanced source,
+including changes that break all its visible symmetry.
+After removing scaling and phases, all 21 remaining directions
+increase the scalar cost to second order.
+
+This explains a concrete hurdle for the global proof. Local descent
+in the scalar problem can settle near this second minimum instead
+of the lower one-root minimum. A proof that every local minimum is
+the known construction would therefore be false.
+We now exclude a neighborhood of this competitor as well.
+
+The scalar relaxation only enforces the desired single-excitation
+coefficients. At its minimum-row completion, the unwanted
+two-excitation coefficients have nonzero sum. The balanced scalar
+minimum is therefore **not a proved local optimum of exact W design**,
+and its scalar rate bound cannot be attained by an exact W source.
+The unrestricted global optimum remains open.
