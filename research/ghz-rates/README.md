@@ -33,10 +33,11 @@ into a laboratory count rate requires a physical source model.
 | Higher-order identities at full-support single-color limits | An analytic path with leading GHZ output starts at parameter order at least $m+2$ on $2m$ sites, hence at least five on six sites. | [Proof and quantitative remainder bound](../../notes/full-support-single-color-jets-2026-09-27.md), [replay](../../computations/full-support-jets-2026-09-27/README.md) |
 | Critical directions and local distance bounds | Classify every support of the first non-ground critical direction at the rank-25 example. Smooth core and star families give a uniform fifth-power source-distance estimate; dense five-site directions give a sixth-power estimate. | [Illustrated guide](../../explainers/CRITICAL-DIRECTION-GEOMETRY.md), [support classification](../../notes/rank25-critical-directions-2026-09-27.md), [distance bounds](../../notes/ghz-critical-direction-normal-form-2026-09-27.md), [replay](../../computations/flat-core-rigidity-2026-09-27/README.md) |
 | All flat supports and stars through matrix rank loss | Every full-support single-color zero has only star or at-most-four-site first critical directions. A bound using arm norms extends the fifth-power estimate to spanning stars of any matrix rank. | [All-size support theorem](../../notes/four-site-flat-support-classification-2026-09-27.md), [rank-independent bound](../../notes/rank-free-star-response-bound-2026-09-27.md), [replay](../../computations/flat-support-structure-2026-09-27/README.md) |
+| Onset through the loss of one star arm | Four non-ground arms bounded below relative to the non-ground source norm suffice for a uniform fifth-power distance estimate. A complete four-arm kernel classification identifies the hidden directions and a sharp square-root response obstruction. | [Kernel geometry](../../notes/four-arm-star-response-2026-09-27.md), [GHZ distance theorem](../../notes/four-arm-ghz-distance-bound-2026-09-27.md), [replay](../../computations/four-arm-ghz-boundary-2026-09-27/README.md) |
 
 The earlier higher-order identities concern an analytic path parameter.
-The new distance bounds are uniform on their specified nondegenerate
-families. Neither result establishes the unrestricted square-root law.
+The new distance bounds are uniform under their stated family or arm-size
+hypotheses. None establishes the unrestricted square-root law.
 
 ## What remains
 
@@ -52,8 +53,8 @@ flowchart TD
     B -->|Yes| G["Open: matching terms cancel"]
     G --> H["Full-support single-color identities constrain initial orders"]
     H --> I["Every such limit: first critical support uses at most four sites or is a star"]
-    I --> J["Spanning stars remain controlled through matrix rank loss"]
-    I --> K["Open: disappearing arms, singular four-site cores, and later cancellations"]
+    I --> J["Four comparable arms suffice for a fifth-power onset bound"]
+    I --> K["Open: singular four-site cores and the error-versus-signal estimate"]
 ~~~
 
 At six sites write $H=\lambda\Delta+E$, where $\Delta$ is the sum of the

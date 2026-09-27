@@ -6,7 +6,8 @@
 We can now classify all support graphs whose four-site responses vanish,
 and control distance to several of the resulting families. This reduces
 the possible first critical directions at every full-support single-color
-GHZ boundary. A quantitative star estimate survives matrix rank loss.
+GHZ boundary. Quantitative star estimates survive matrix rank loss, and
+the GHZ onset bound now allows one star arm to disappear.
 
 **Evidence:** written proofs with exact supporting checks; independent
 audit pending. These are follow-ups to the completed Krenn–Gu proof.
@@ -187,10 +188,57 @@ at every full-support single-color zero. Its replay checks all 32768
 six-site graphs and constructs all 348 flat supports. The special
 rank-25 cofactor pattern adds the restriction on star centers.
 
-## From a shape theorem to a quantitative estimate
+## What changes when the fifth arm disappears?
 
-Near each nondegenerate family, the response controls distance to an
-exactly flat source:
+A four-arm star can hide changes between its leaves. The complete
+[kernel classification](../notes/four-arm-star-response-2026-09-27.md)
+depends on the center color directions used by the arms:
+
+| Four nonzero arms | Hidden leaf directions |
+| --- | ---: |
+| At least one arm has matrix rank two or more | 0 |
+| All rank one, with a common center direction | 2 |
+| All rank one, with two distinct center directions occurring twice each | 1 |
+| Every other rank-one pattern | 0 |
+
+In the two-pair case, put opposite signs on four leaf edges:
+
+~~~mermaid
+graph LR
+    r["Center 0"] ---|"center color b"| a["1"]
+    r ---|"center color b"| b["2"]
+    r ---|"center color c"| c["3"]
+    r ---|"center color c"| d["4"]
+    a ---|"τ"| c
+    b ---|"τ"| d
+    a ---|"-τ"| d
+    b ---|"-τ"| c
+    e["5: isolated"]
+~~~
+
+All responses containing the center cancel. The leaf-only response is
+quadratic: its norm is $2|\tau|^2$, while distance from the star is
+$2|\tau|$. Thus a linear response-to-distance estimate really fails
+here. A square-root estimate is the best possible.
+
+The common-direction case has two hidden parameters. Some combinations
+give actual five-site cube-root cores with zero response. Controlling
+one chosen leaf edge removes those branches.
+
+In the GHZ problem, we have more information than the four-site response
+alone. Outputs with the center grounded specifically measure the leaf
+response. Other mixed outputs control a leaf edge whose complementary
+ground cofactor is nonzero. These equations supply the missing control.
+
+The [new theorem](../notes/four-arm-ghz-distance-bound-2026-09-27.md)
+therefore permits **four arms bounded below by a fixed fraction of the
+non-ground source norm**. The fifth arm may be zero, all matrices may
+have rank one, and no prior closeness to a flat star is required.
+
+## From a shape theorem to a GHZ estimate
+
+In the smooth core families and five-arm stars, the response controls
+distance to an exactly flat source linearly:
 
 $$
 \operatorname{dist}(T,\{\mathcal F_4=0\})
@@ -212,7 +260,7 @@ H(A)=\lambda(a^6+b^6+c^6)+E,\quad
 $$
 
 If its non-ground direction is near one of the specified smooth
-families, the new estimate gives
+families, or it satisfies the new four-arm condition, the estimate gives
 
 $$
 |\lambda|\le C_1\varepsilon+C_2\delta^5.
@@ -228,5 +276,7 @@ To finish the universal square-root law, we still need
 $\varepsilon\ge c|\lambda|^3$ across every relevant boundary.
 The new results identify and control several difficult families, but a
 bound involving $\delta$ does not by itself give that error-versus-signal
-comparison. Disappearing star arms, singular four-site cores, and later
-cancellations remain substantive work.
+comparison. Within the full-support single-color branch, the remaining
+uncontrolled support patterns for this onset argument use at most four
+active sites. The error-versus-signal comparison remains open even on
+the star families controlled here.
