@@ -400,20 +400,17 @@ of those formulas. Their use after reconstructing an unknown response
 space is the application developed here. No exhaustive priority claim
 is made.
 
-The unresolved observation-count question is now more focused. Generic
-response spans are reconstructible at all the orders in Theorem 1, and
-their covariance ambiguity can be removed. What remains is to recover
-the span itself from a small number of outputs at arbitrary odd orders.
-At five sites the answer is exactly two. The
-[single-output result](one-direction-source-reconstruction-2026-09-27.md)
-now completes the span from one seven-site tensor, and the
-[mean-direction induction](mean-direction-recovery-all-orders-2026-09-27.md)
-recovers the local mean lines from one tensor at every odd order at least
-five. A [restricted-kernel argument](single-output-covariance-low-degree-2026-09-27.md)
-now gives full source recovery at nine sites without completing the full
-exterior kernel. The general single-output question starts at eleven
-sites. Numerical conditioning and statistical sample complexity are also
-not established.
+The generic observation-count question is now settled at odd orders at
+least five, for local dimensions at least three. Five sites require
+exactly two actual outputs for full
+shared-source recovery. The subsequent
+[all-orders single-output theorem](single-cross-moment-all-orders-2026-09-27.md)
+recovers the actual means and covariance from one tensor at every odd
+order at least seven, and aligns any finite generic family with shared
+covariance. It combines mean-direction recovery, a restricted-kernel rank
+induction, and the calibration formulas here. Numerical conditioning,
+statistical sample complexity, and efficient all-orders implementation
+are not established.
 
 For further work on the matrix rank, the
 [structured-source experiment](../computations/matching-tensor-recovery-2026-09-26/structured_pair.py)

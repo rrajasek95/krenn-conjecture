@@ -9,6 +9,9 @@ recovers the full seven-site source from one tensor and classifies the
 two five-site covariance possibilities. The
 [all-orders mean-direction proof](mean-direction-recovery-all-orders-2026-09-27.md)
 extends recovery of the mean lines to every odd order at least five.
+The [full all-orders theorem](single-cross-moment-all-orders-2026-09-27.md)
+now recovers means and covariance from one generic tensor at every odd
+order at least seven.
 The finite-order statements below record the original certificates.
 
 This follows [the exterior-rank note](matching-tensor-exterior-obstruction-2026-09-26.md). It develops three further uses of the response identities:

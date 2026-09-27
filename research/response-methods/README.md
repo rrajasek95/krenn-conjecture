@@ -29,9 +29,9 @@ separate from the Lean-verified exact theorem.
 | Matching-tensor source reconstruction | Recover source information under the stated response and direction hypotheses; distinguish single-copy from multiple-copy information. | [Matching tensors and copies](../../notes/matching-tensor-recovery-and-multiple-copies-2026-09-26.md), [two-direction reconstruction](../../notes/two-direction-source-reconstruction-2026-09-26.md) |
 | Two observed Gaussian cross moments | Generically recover both mean rows and all cross-site covariance blocks at five sites of local dimension at least four, up to product-one site scalings. | [Theorem and proof](../../notes/two-observation-source-reconstruction-2026-09-27.md), [reconstruction](../../computations/matching-tensor-recovery-2026-09-26/pair_observation.py), [independent matrix audit](../../computations/matching-tensor-recovery-2026-09-26/audit_pair_observation.py) |
 | Calibrated response spans at all odd orders | Retaining actual output coefficients removes the covariance ambiguity in the all-orders span theorems; one calibrated output suffices from order seven once the span is known. | [Theorem, calibration thresholds, and fifth-order involution](../../notes/calibrated-source-reconstruction-all-orders-2026-09-27.md), [exact replay](../../computations/matching-tensor-recovery-2026-09-26/calibrated_span.py) |
-| One observed Gaussian cross moment | At local dimensions at least three, generically recover the full source from one seven-site tensor; classify the two five-site possibilities and recover a shared source from two five-site tensors. | [Written proofs and scope](../../notes/one-direction-source-reconstruction-2026-09-27.md), [reconstruction](../../computations/matching-tensor-recovery-2026-09-26/single_source.py), [independent matrix audit](../../computations/matching-tensor-recovery-2026-09-26/audit_single_source.py) |
+| One observed Gaussian cross moment | At local dimensions at least three, generically recover means and cross-site covariance from one tensor at every odd order at least seven; five sites have exactly two classes, resolved by two shared-source outputs. | [All-orders theorem and shared-source corollary](../../notes/single-cross-moment-all-orders-2026-09-27.md), [five- and seven-site inverse](../../computations/matching-tensor-recovery-2026-09-26/single_source.py) |
 | Mean directions from one tensor at every odd order | Generically identify every local mean line for all odd orders at least five, using a two-site attachment induction; also covers generic unknown response coefficients. | [Written proof and limits](../../notes/mean-direction-recovery-all-orders-2026-09-27.md), [symbolic and exact checks](../../computations/matching-tensor-recovery-2026-09-26/mean_direction_induction.py) |
-| Covariance recovery from a restricted exterior kernel | Replace full-kernel completion by a map with cubically many columns; an exact nine-site rank certificate gives full generic source recovery from one nine-site tensor. | [Criterion and nine-site theorem](../../notes/single-output-covariance-low-degree-2026-09-27.md), [rank-certificate replay](../../computations/matching-tensor-recovery-2026-09-26/three_outside_certificate.py) |
+| Covariance recovery from a restricted exterior kernel | Replace full-kernel completion by a map with cubically many columns; a two-site induction proves the necessary rank at every odd order at least seven. | [Rigidity criterion](../../notes/single-output-covariance-low-degree-2026-09-27.md), [all-orders rank proof](../../notes/single-cross-moment-all-orders-2026-09-27.md), [exact induction checks](../../computations/matching-tensor-recovery-2026-09-26/covariance_induction.py) |
 
 The matching-tensor reconstruction programs are
 [verify.py](../../computations/matching-tensor-recovery-2026-09-26/verify.py),
@@ -71,11 +71,20 @@ two observations are necessary at five sites.
 The [mean-direction induction](../../notes/mean-direction-recovery-all-orders-2026-09-27.md)
 now recovers the local mean lines at all odd orders at least five without
 assuming span completion. The
-[restricted-kernel theorem](../../notes/single-output-covariance-low-degree-2026-09-27.md)
-then recovers the covariance directly at nine sites. Its replay certifies
-the required rank, while the written argument proves global uniqueness;
-it is not a full blind reconstruction implementation. Full single-output
-source recovery at arbitrary odd orders at least eleven remains open.
+[covariance induction](../../notes/single-cross-moment-all-orders-2026-09-27.md)
+now completes full generic recovery at every odd order at least seven,
+including alignment of any finite family with a shared covariance.
+These are written all-orders proofs supported by exact base and deformation
+certificates. The existing blind inverse implementation covers five and
+seven sites; efficient all-orders implementation, noise conditioning, and
+nongeneric source classification remain open. These research results are
+not part of the Lean formalization of Krenn–Gu.
+
+With generic unknown response coefficients instead of the calibrated
+Gaussian coefficients, [Corollary 10](../../notes/single-cross-moment-all-orders-2026-09-27.md#7-completing-the-theorem-and-shared-source-recovery)
+still recovers the complete one-direction response space from a single
+tensor at every odd order at least five. Covariance scale and mean-square
+addition then remain genuine ambiguities.
 
 ## How the projects connect
 

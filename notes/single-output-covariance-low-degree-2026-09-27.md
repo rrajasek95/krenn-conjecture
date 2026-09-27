@@ -4,6 +4,11 @@ Research note, 2026-09-27. Written proofs and exact modular rank
 certificates. Not Lean formalized or independently peer reviewed.
 The Krenn–Gu manuscript is unchanged.
 
+**Subsequent closure:** the [all-orders induction](single-cross-moment-all-orders-2026-09-27.md)
+now proves this note's rank hypothesis at every odd order at least seven.
+Thus the single-output source theorem holds at all those orders, while
+the nine-site certificate below remains a concrete finite witness.
+
 ## 1. Main result
 
 **Theorem 1 (one-output recovery at nine sites).** For nine sites of
@@ -313,10 +318,12 @@ The finitely many projected generic conditions hold simultaneously on
 a nonempty open set. This is the same projection argument as Corollary 9
 of the earlier one-direction note, now applied at nine sites. QED.
 
-The all-orders question has therefore narrowed to proving (1) at every
-odd `n>=11`, or finding another direct covariance argument. The full
-kernel-completion equality is a sufficient but stronger target. This
-note provides an alternative that requires far fewer columns.
+The subsequent [all-orders proof](single-cross-moment-all-orders-2026-09-27.md)
+establishes (1) by a two-site induction. It closes the generic
+single-output identifiability question at every odd order at least seven.
+The full kernel-completion equality is a stronger, unnecessary target;
+this restricted map requires far fewer columns. Efficient implementation
+and noise conditioning remain separate questions.
 
 ## 7. Structured probes and attribution
 

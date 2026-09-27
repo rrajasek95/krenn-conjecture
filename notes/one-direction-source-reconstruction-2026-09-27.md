@@ -452,9 +452,10 @@ source recovery at that order. No new covariance uniqueness argument is
 needed. The five- and seven-site computations do not prove that linear
 kernel equality at larger orders. The subsequent
 [restricted-kernel criterion](single-output-covariance-low-degree-2026-09-27.md)
-bypasses that equality, proves covariance rigidity from a smaller map,
-and gives full generic single-output recovery at nine sites. The general
-single-output question is now open from eleven sites onward.
+bypasses that equality and proves covariance rigidity from a smaller map.
+Its [all-orders induction](single-cross-moment-all-orders-2026-09-27.md)
+now gives full generic single-output recovery at every odd order at least
+seven. The larger kernel equality is no longer a prerequisite.
 
 ## 8. Exact certificates and reproduction
 

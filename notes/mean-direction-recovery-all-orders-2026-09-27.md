@@ -22,12 +22,11 @@ point. This statement is proved by induction, without a formula for the
 dimension of the entire exterior kernel.
 
 This extends the earlier five- and seven-site direction result to every
-odd order at least five. It removes one of the two outstanding steps in
+odd order at least five. It supplies the mean-direction part of
 single-output source recovery. It does **not** by itself recover the
 covariance from one output. The subsequent
-[restricted-kernel criterion](single-output-covariance-low-degree-2026-09-27.md)
-does this at nine sites as well; the unrestricted single-output question
-now starts at eleven sites. The existing
+[covariance-rank induction](single-cross-moment-all-orders-2026-09-27.md)
+now completes that recovery at every odd order at least seven. The existing
 [one-direction span theorem](one-direction-source-reconstruction-2026-09-27.md)
 recovers the covariance class once that space is supplied or recovered.
 
@@ -429,11 +428,12 @@ integer specialization. It does **not** compute the full exterior kernel
 or prove global uniqueness at that particular specialization. The
 all-orders global theorem follows from Proposition 6 and Lemma 7.
 
-The unresolved single-output step is now narrower. Given the recovered
-mean lines, determine the covariance at every odd order. The subsequent
+The covariance step has now been completed separately. Given the recovered
+mean lines, the subsequent
 [low-degree criterion](single-output-covariance-low-degree-2026-09-27.md)
-supplies a direct route and an exact nine-site rank witness. One stronger
-sufficient condition remains
+and its [all-orders induction](single-cross-moment-all-orders-2026-09-27.md)
+recover the covariance at every odd order at least seven. A stronger
+sufficient condition, not needed for that conclusion, would be
 
 $$
 \ker A(T)\cap\ker\!\left(\bigotimes_i q_{l_i}\right)=W(L,R).
@@ -441,7 +441,8 @@ $$
 
 The induction here deliberately makes no claim about this larger linear
 kernel. Its exact completion is still unproved at nine and higher sites,
-even though the covariance can now be recovered at nine without it.
+even though the covariance can now be recovered at every odd order at
+least seven without it.
 Small structured tests show that recovering its product point and
 saturating its response dimension are distinct problems.
 
