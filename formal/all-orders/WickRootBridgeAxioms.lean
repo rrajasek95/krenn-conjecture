@@ -1,0 +1,11 @@
+import WickRootBridge
+
+#print axioms KrennAllOrders.WickRootBridge.linearPolynomial
+#print axioms KrennAllOrders.WickRootBridge.linearPolynomial_isHomogeneous
+#print axioms KrennAllOrders.WickRootBridge.topExponent_multinomial
+#print axioms KrennAllOrders.WickRootBridge.coeff_top_sum_X_pow
+#print axioms KrennAllOrders.WickRootBridge.auxiliaryCovariance
+#print axioms KrennAllOrders.WickRootBridge.rawQuadratic_auxiliaryCovariance
+#print axioms KrennAllOrders.WickRootBridge.symmetricQuadratic_auxiliaryCovariance
+#print axioms KrennAllOrders.WickRootBridge.coeff_top_auxiliary_root
+#print axioms KrennAllOrders.WickRootBridge.centeredMoment_isotropic_roots

@@ -1,0 +1,26 @@
+import WickShiftedBridge
+
+#print axioms KrennAllOrders.WickShiftedBridge.subsetExponent
+#print axioms KrennAllOrders.WickShiftedBridge.subsetExponent_apply
+#print axioms KrennAllOrders.WickShiftedBridge.subsetExponent_support
+#print axioms KrennAllOrders.WickShiftedBridge.subsetExponent_sum_compl
+#print axioms KrennAllOrders.WickShiftedBridge.subsetExponent_injective
+#print axioms KrennAllOrders.WickShiftedBridge.subsetExponent_degree
+#print axioms KrennAllOrders.WickShiftedBridge.antidiagonal_top_eq
+#print axioms KrennAllOrders.WickShiftedBridge.coeff_top_mul
+#print axioms KrennAllOrders.WickShiftedBridge.subsetExponent_mapDomain
+#print axioms KrennAllOrders.WickShiftedBridge.coeff_subset_eq_restrict
+#print axioms KrennAllOrders.WickShiftedBridge.subsetExponent_multinomial
+#print axioms KrennAllOrders.WickShiftedBridge.coeff_subset_linearPolynomial_pow
+#print axioms KrennAllOrders.WickShiftedBridge.restrict_X_of_mem
+#print axioms KrennAllOrders.WickShiftedBridge.restrict_X_of_not_mem
+#print axioms KrennAllOrders.WickShiftedBridge.sum_restrict_support
+#print axioms KrennAllOrders.WickShiftedBridge.restrict_rawQuadratic
+#print axioms KrennAllOrders.WickShiftedBridge.restrict_dividedQuadratic
+#print axioms KrennAllOrders.WickShiftedBridge.coeff_subset_dividedQuadratic
+#print axioms KrennAllOrders.WickShiftedBridge.coeff_subset_dividedQuadratic_of_ne
+#print axioms KrennAllOrders.WickShiftedBridge.meanSlice
+#print axioms KrennAllOrders.WickShiftedBridge.meanSlice_eq_coeff
+#print axioms KrennAllOrders.WickShiftedBridge.shiftedMoment_eq_sum_meanSlice
+#print axioms KrennAllOrders.WickShiftedBridge.meanSlice_eq_zero_of_odd
+#print axioms KrennAllOrders.WickShiftedBridge.shiftedMoment_eq_coeff_sum

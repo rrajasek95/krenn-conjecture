@@ -1,0 +1,17 @@
+import EvenResponse
+
+#print axioms KrennAllOrders.EvenResponse.dividedPower_zero
+#print axioms KrennAllOrders.EvenResponse.factorial_inverse_succ
+#print axioms KrennAllOrders.EvenResponse.pderiv_dividedPower_succ
+#print axioms KrennAllOrders.EvenResponse.lowerOddResponse_succ
+#print axioms KrennAllOrders.EvenResponse.pderiv_oddResponse
+#print axioms KrennAllOrders.EvenResponse.pderiv_evenResponse_of_pderiv_quadratic_zero
+#print axioms KrennAllOrders.EvenResponse.map_dividedPower
+#print axioms KrennAllOrders.EvenResponse.map_oddResponse
+#print axioms KrennAllOrders.EvenResponse.map_evenResponse
+#print axioms KrennAllOrders.EvenResponse.map_lowerOddResponse
+#print axioms KrennAllOrders.EvenResponse.rootExtract_oddResponse
+#print axioms KrennAllOrders.EvenResponse.pderiv_eraseSite_of_ne
+#print axioms KrennAllOrders.EvenResponse.pderiv_rowPolynomial
+#print axioms KrennAllOrders.EvenResponse.rootExtract_rowPolynomial
+#print axioms KrennAllOrders.EvenResponse.rootExtract_deletedQuadratic

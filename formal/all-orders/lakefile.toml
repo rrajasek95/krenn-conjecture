@@ -1,6 +1,6 @@
 name = "krenn_all_orders"
 version = "0.1.0"
-defaultTargets = ["PolynomialODE", "EndpointDegree", "MatchingModel", "ReplicaCovariance", "ThreeMatching", "CycleCoordinates", "MatchingTransport", "ChordObstruction", "ThreeMatchingObstruction", "FiniteResponseRigidity", "SiteAlgebra", "ResponseFactor", "ForcedMatchingSum", "GramInvariants", "WickCovariance", "SupportMatching", "CofactorDiagonal", "RootResponse", "EndpointPDE", "BinaryPairing", "PhysicalClosure", "OmissionCancellation"]
+defaultTargets = ["PolynomialODE", "EndpointDegree", "MatchingModel", "ReplicaCovariance", "ThreeMatching", "CycleCoordinates", "MatchingTransport", "ChordObstruction", "ThreeMatchingObstruction", "FiniteResponseRigidity", "SiteAlgebra", "ResponseFactor", "ForcedMatchingSum", "GramInvariants", "WickCovariance", "SupportMatching", "CofactorDiagonal", "RootResponse", "EndpointPDE", "BinaryPairing", "PhysicalClosure", "OmissionCancellation", "WickCoefficientBridge", "OddResponseVanishing", "CofactorResponse", "ReplicaKernel", "WickRootBridge", "EvenResponse", "ReflectionResponses", "WickShiftedBridge"]
 
 [leanOptions]
 autoImplicit = false
@@ -75,3 +75,27 @@ name = "PhysicalClosure"
 
 [[lean_lib]]
 name = "OmissionCancellation"
+
+[[lean_lib]]
+name = "WickCoefficientBridge"
+
+[[lean_lib]]
+name = "OddResponseVanishing"
+
+[[lean_lib]]
+name = "CofactorResponse"
+
+[[lean_lib]]
+name = "ReplicaKernel"
+
+[[lean_lib]]
+name = "WickRootBridge"
+
+[[lean_lib]]
+name = "EvenResponse"
+
+[[lean_lib]]
+name = "ReflectionResponses"
+
+[[lean_lib]]
+name = "WickShiftedBridge"

@@ -16,28 +16,23 @@ upstream changes are coordinated by the root agent.
 
 ## Integrated milestones and current work
 
-- `MatchingModel.lean` and `SiteAlgebra.lean`: checked the complete physical
-  quotient/divided-power bridge. `RootResponse.lean` derives the actual root
-  response and arbitrary-root cofactor expansion. `audit_det_bridge` is
-  working on the whole higher-response tower in `OddResponseVanishing.lean`.
-- `ReplicaCovariance.lean` and `GramInvariants.lean`: checked polynomial normal
-  form, full invariant-ring representation, and injective axis restriction.
-  `EndpointPDE.lean` derives the Gram differential equations from Cartesian
-  boundaries and proves the endpoint consequence. `global_bridge` is
-  constructing the literal tensor kernel in `ReplicaKernel.lean`.
-- `ThreeMatching.lean`, `ChordObstruction.lean`, and
-  `ThreeMatchingObstruction.lean`: the complete unconditional graph obstruction
-  is checked. `WickCovariance.lean` also constructs and proves covariance for
-  actual finite pairing moments. `routing_author` is connecting them to the
-  physical quadratic coefficients in `WickCoefficientBridge.lean`.
-- Root: checked `CycleCoordinates.lean` and the literal upstream adapter, and
-  checked matching transport, finite response rigidity, common response
-  factors, cofactor matrix cancellation, binary tensor pairing, omission
-  cancellation, and the exact final weighted contradiction. Root is deriving
-  actual cofactor sums from retained coefficients in `CofactorResponse.lean`,
-  and handling reproducible integration and the remaining
-  physical-source chain. New in-progress files are excluded from default
-  build targets until they are accepted.
+- `audit_det_bridge`: the literal matching model, physical-site quotient, root
+  response, and higher-response algebra are checked. The current module
+  `ReflectionResponses.lean` derives determinant reflection from actual finite
+  moments and connects it to the higher-response tower.
+- `global_bridge`: polynomial covariance, the full invariant-ring theorem,
+  boundary differential equations, and finite tensor-kernel reduction are
+  checked. The current module `PhysicalEndpoint.lean` constructs the retained
+  source and proves the remaining physical endpoint inputs.
+- `routing_author`: the complete graph obstruction, finite Wick covariance,
+  quadratic coefficient bridge, independent centered replicas, and repeated
+  isotropic-root bridge are checked. Current work connects shifted means to
+  actual finite response coefficients and proves their rotation identities.
+- Root: the exact upstream adapter, support-to-graph contradiction, cofactor
+  matrix cancellation, and literal cofactor coefficient identities are checked.
+  Current work derives finite even-response and omission identities, integrates
+  each accepted module, and maintains the reproducible build and axiom audit.
+  In-progress modules remain excluded from default build targets until accepted.
 
 ## Exact target
 

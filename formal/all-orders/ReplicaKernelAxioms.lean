@@ -1,0 +1,54 @@
+import ReplicaKernel
+
+/-! Axiom audit of every public theorem in ReplicaKernel. -/
+
+#print axioms KrennAllOrders.ReplicaKernel.pderiv_substitution
+#print axioms KrennAllOrders.ReplicaKernel.zeroAuxiliary_meanCopy
+#print axioms KrennAllOrders.ReplicaKernel.pderiv_meanCopy
+#print axioms KrennAllOrders.ReplicaKernel.pderiv_contraction
+#print axioms KrennAllOrders.ReplicaKernel.map_contraction
+#print axioms KrennAllOrders.ReplicaKernel.contraction_zero_left
+#print axioms KrennAllOrders.ReplicaKernel.contraction_zero_right
+#print axioms KrennAllOrders.ReplicaKernel.zeroAuxiliary_C
+#print axioms KrennAllOrders.ReplicaKernel.kernelMatrix_zero_one
+#print axioms KrennAllOrders.ReplicaKernel.kernelMatrix_one_one
+#print axioms KrennAllOrders.ReplicaKernel.scalarKernel_eq
+#print axioms KrennAllOrders.ReplicaKernel.contraction_add_left
+#print axioms KrennAllOrders.ReplicaKernel.contraction_add_right
+#print axioms KrennAllOrders.ReplicaKernel.contraction_mul_left
+#print axioms KrennAllOrders.ReplicaKernel.contraction_mul_right
+#print axioms KrennAllOrders.ReplicaKernel.correctedMatrix_zero_one
+#print axioms KrennAllOrders.ReplicaKernel.correctedMatrix_one_one
+#print axioms KrennAllOrders.ReplicaKernel.pderiv_replicaFrameAssignment
+#print axioms KrennAllOrders.ReplicaKernel.pderiv_replicaFramePullback
+#print axioms KrennAllOrders.ReplicaKernel.zeroAuxiliary_replicaFramePullback
+#print axioms KrennAllOrders.ReplicaKernel.auxiliaryMatrix_framePullback
+#print axioms KrennAllOrders.ReplicaKernel.auxiliaryMatrix_covariant
+#print axioms KrennAllOrders.ReplicaKernel.zeroAuxiliary_invariant
+#print axioms KrennAllOrders.ReplicaKernel.evalAtColumns_add
+#print axioms KrennAllOrders.ReplicaKernel.evalAtColumns_scalar
+#print axioms KrennAllOrders.ReplicaKernel.covariant_add_scalar
+#print axioms KrennAllOrders.ReplicaKernel.correctedMatrix_covariant
+#print axioms KrennAllOrders.ReplicaKernel.X_dvd_sub_zeroVariable
+#print axioms KrennAllOrders.ReplicaKernel.X_dvd_of_zeroVariable_eq_zero
+#print axioms KrennAllOrders.ReplicaKernel.zeroVariable_binaryProjection_zero
+#print axioms KrennAllOrders.ReplicaKernel.zeroVariable_binaryProjection_one
+#print axioms KrennAllOrders.ReplicaKernel.binaryMean_binaryProjection
+#print axioms KrennAllOrders.ReplicaKernel.parameterP_dvd_binaryMean
+#print axioms KrennAllOrders.ReplicaKernel.parameterQ_dvd_binaryMean
+#print axioms KrennAllOrders.ReplicaKernel.mul_dvd_contraction
+#print axioms KrennAllOrders.ReplicaKernel.kernelMatrix_one_zero
+#print axioms KrennAllOrders.ReplicaKernel.correctedMatrix_offDiagonal_divisibility
+#print axioms KrennAllOrders.ReplicaKernel.pderiv_binaryMean_zero
+#print axioms KrennAllOrders.ReplicaKernel.pderiv_binaryMean_one
+#print axioms KrennAllOrders.ReplicaKernel.axisRestriction_binaryMean_zero_Xaxis
+#print axioms KrennAllOrders.ReplicaKernel.eval_contraction
+#print axioms KrennAllOrders.ReplicaKernel.eval_zero_binaryMean
+#print axioms KrennAllOrders.ReplicaKernel.correctedMatrix_origin
+#print axioms KrennAllOrders.ReplicaKernel.binaryMean_C
+#print axioms KrennAllOrders.ReplicaKernel.binaryMean_X
+#print axioms KrennAllOrders.ReplicaKernel.axis_drift_of_mean_identity
+#print axioms KrennAllOrders.ReplicaKernel.drift_contraction
+#print axioms KrennAllOrders.ReplicaKernel.correctedMatrix_offDiagonalBoundary
+#print axioms KrennAllOrders.ReplicaKernel.correctedMatrix_scalarBoundary
+#print axioms KrennAllOrders.ReplicaKernel.endpoint_of_tensor_kernel
