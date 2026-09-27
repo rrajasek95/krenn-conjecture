@@ -39,6 +39,7 @@ separate from the Lean-verified exact theorem.
 | Calibrated response spans at all odd orders | Retaining actual output coefficients removes the covariance ambiguity in the all-orders span theorems; one calibrated output suffices from order seven once the span is known. | [Theorem, calibration thresholds, and fifth-order involution](../../notes/calibrated-source-reconstruction-all-orders-2026-09-27.md), [exact replay](../../computations/matching-tensor-recovery-2026-09-26/calibrated_span.py) |
 | One observed Gaussian cross moment | At local dimensions at least three, generically recover means and cross-site covariance from one tensor at every odd order at least seven; five sites have exactly two classes, resolved by two shared-source outputs. | [All-orders theorem and shared-source corollary](../../notes/single-cross-moment-all-orders-2026-09-27.md), [five- and seven-site inverse](../../computations/matching-tensor-recovery-2026-09-26/single_source.py) |
 | Mean directions from one tensor at every odd order | Generically identify every local mean line for all odd orders at least five, using a two-site attachment induction; also covers generic unknown response coefficients. | [Written proof and limits](../../notes/mean-direction-recovery-all-orders-2026-09-27.md), [symbolic and exact checks](../../computations/matching-tensor-recovery-2026-09-26/mean_direction_induction.py) |
+| Mean directions from two commutator kernel conditions | Recover generic mean lines by exact linear algebra at every odd order from three onward; the same criterion identifies generic compression centers beyond matching tensors. Complete the retained nine-site failed-search source. | [All-orders witness, broader theorem, and limits](../../notes/slice-commutator-mean-recovery-2026-09-27.md), [inverse](../../computations/matching-tensor-recovery-2026-09-26/slice_mean_recovery.py), [independent audit](../../computations/matching-tensor-recovery-2026-09-26/verify_slice_mean_recovery.py), [certificate](../../computations/matching-tensor-recovery-2026-09-26/slice-mean-recovery-certificate.json) |
 | Covariance recovery from a restricted exterior kernel | Replace full-kernel completion by a map with cubically many columns; a two-site induction proves the necessary rank at every odd order at least seven. | [Rigidity criterion](../../notes/single-output-covariance-low-degree-2026-09-27.md), [all-orders rank proof](../../notes/single-cross-moment-all-orders-2026-09-27.md), [exact induction checks](../../computations/matching-tensor-recovery-2026-09-26/covariance_induction.py) |
 | Source inverse given the local mean lines | Recover covariance and actual mean scales with quadratically many columns per linear system; exact nine-site examples align four outputs spanning four global mean directions in local dimension three. | [Smaller rank criterion and scope](../../notes/quadratic-size-source-inverse-2026-09-27.md), [inverse and replay](../../computations/matching-tensor-recovery-2026-09-26/restricted_source_inverse.py), [certificate](../../computations/matching-tensor-recovery-2026-09-26/restricted-source-inverse-certificate.json) |
 | Blind search and local conditioning | Search for mean lines from the tensor alone, then verify them exactly; complete rational source recovery on seven- and nine-site examples, mean-line recovery at eleven sites, and a retained failed search. | [Proofs, local noise bound, and limits](../../notes/blind-source-search-and-local-conditioning-2026-09-27.md), [search and exact verification](../../computations/matching-tensor-recovery-2026-09-26/blind_mean_search.py), [certificate](../../computations/matching-tensor-recovery-2026-09-26/blind-mean-search-certificate.json) |
@@ -90,7 +91,7 @@ assuming span completion. The
 now completes full generic recovery at every odd order at least seven,
 including alignment of any finite family with a shared covariance.
 These are written all-orders proofs supported by exact base and deformation
-certificates. The exact linear blind inverse implementation covers five
+certificates. The earlier exact linear blind inverse implementation covers five
 and seven sites. With local mean lines supplied, the
 [smaller inverse](../../notes/quadratic-size-source-inverse-2026-09-27.md)
 now recovers covariance and mean scales at nine sites, including a shared
@@ -101,8 +102,16 @@ tensors alone. It supplies local mean-line noise bounds and records a
 failed search. The later
 [full-source analysis](../../notes/full-source-local-stability-2026-09-27.md)
 gives finite local noise bounds for all source parameters and a certified
-convergence neighborhood for a separate correction iteration. Global
-initialization and nongeneric source classification remain open. These
+convergence neighborhood for a separate correction iteration. A later
+[slice-commutator algorithm](../../notes/slice-commutator-mean-recovery-2026-09-27.md)
+recovers generic mean lines by exact linear algebra at every odd order
+from three onward, and completes the retained nine-site failed-search
+source. Its all-orders proof uses a fixed nine-dimensional calculation
+and tensor powers, and extends to generic compression centers beyond
+matching tensors. Combined with covariance recovery, it removes the
+nonlinear initialization step for generic exact full-tensor data from
+order seven. Global initialization with measurement noise, inversion from
+compressed scalar data, and nongeneric source classification remain open. These
 research results are not part of the Lean formalization of Krenn–Gu.
 
 The [calibration-conditioning results](../../notes/shared-calibration-and-near-ambiguity-2026-09-27.md)
@@ -114,7 +123,8 @@ intermediate inverse steps are error-free. They also control the span of
 observed mean vectors and quantify shared covariance information after
 eliminating the unknown means. Their source neighborhoods and noise
 thresholds are explicit and conservative; they do not give uniform
-global recovery or resolve the earlier blind-search failure.
+global recovery. Recovery of the earlier failed-search input instead uses
+the subsequent exact slice algorithm.
 
 The [product-measurement application](../../notes/product-measurement-source-recovery-2026-09-27.md)
 separates the number of scalar data from the full tensor's exponential

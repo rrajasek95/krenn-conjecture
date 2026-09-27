@@ -31,6 +31,12 @@ exactly, and recovers a complete nine-site source over the rationals.
 Its search has no global convergence guarantee; the implementation in
 this note continues to take mean lines as input.
 
+The later [slice-commutator algorithm](slice-commutator-mean-recovery-2026-09-27.md)
+supplies those lines by exact linear algebra on a nonempty open set at
+every odd order from three onward. Combined with this note's inverse,
+it gives a generic full-source algorithm from order seven and completes
+the retained nine-site example where the earlier numerical search failed.
+
 ## 2. Definitions and the two ranks
 
 Let `n>=7` be odd, and let each local space have dimension three.

@@ -19,6 +19,14 @@ with larger covariance entries is also retained: the search fails to
 find a verified tuple within its budget. Thus this is a blind search
 with exact acceptance, not a globally convergent algorithm.
 
+**Subsequent result:** the [slice-commutator method](slice-commutator-mean-recovery-2026-09-27.md)
+recovers the retained nine-site input exactly, including all source
+parameters up to site scaling, and certifies global mean-line uniqueness
+for that input. Its written proof gives a rational mean-line algorithm
+on a nonempty open set at every odd order from three onward. This is a
+different method; the nonlinear-search failure and its certificate below
+remain unchanged. Global recovery with measurement noise is still open.
+
 The distinction matters. A small floating-point residual is not an exact
 solution, solver termination is not a zero residual, and a simple local
 zero need not be the only zero on a particular input. The

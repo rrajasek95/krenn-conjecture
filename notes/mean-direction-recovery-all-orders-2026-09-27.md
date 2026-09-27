@@ -41,6 +41,14 @@ eleven-site examples, and recovers complete rational sources in the
 first two cases. It also gives local conditioning bounds and retains
 a failed search. It does not supply global convergence guarantees.
 
+The later [slice-commutator proof](slice-commutator-mean-recovery-2026-09-27.md)
+now gives an explicit generic exact-data algorithm at every odd order
+from three onward: one fixed nine-dimensional witness shows that two
+observable kernel conditions recover the lines. It also recovers the
+retained nine-site failed-search input. The attachment proof below is
+preserved as an alternative argument; its elimination step is no longer
+needed for this generic exact-data recovery.
+
 ## 2. The observable zero set
 
 First take `V_i=C^3`. A local mean is a vector `l_i` and a cross-site
