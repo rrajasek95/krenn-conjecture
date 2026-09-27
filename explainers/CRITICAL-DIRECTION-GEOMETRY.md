@@ -511,9 +511,66 @@ $$
 
 Thus we recover fifth-power onset if the closing edge has size
 $O(\delta^2)$, or if its squared size is controlled by the output
-error. In general, $t\beta^2$ is the remaining contribution.
-The proof identifies that term without yet controlling it in every
-shared-center configuration.
+error. This first bound left $t\beta^2$ uncontrolled in general.
+The next step uses more of the individual attachment equations to
+remove that restriction.
+
+## Two controlled attachments close the shared-center case
+
+The [latest theorem](../notes/coherent-two-arm-ghz-onset-2026-09-27.md)
+proves fifth-power onset whenever two arms at a common center each
+have size at least a fixed fraction of $t$. Their matrix ranks do
+not matter. The remaining onset directions are now single edges.
+
+The improvement comes from retaining information in the estimates.
+Let $h_r$ be the size of the center arm to outside site $r$.
+The error in its hidden leaf attachment is bounded by
+
+$$
+C\left(\delta^2+\frac{\beta}{t}h_r\right).
+$$
+
+Replacing $h_r$ by $t$ would give the earlier, coarser bound.
+Keeping it allows the ground equations to help: they select two
+outside sites whose attachments at the same core vertex are small.
+
+~~~mermaid
+flowchart TD
+    A["Two arms share a center color direction"] --> B["Ground equations select two controlled attachments"]
+    B --> C{"At which core vertex?"}
+    C -->|Center| D["Two outside center arms are small"]
+    D --> E["Pair equations control the products in the output"]
+    C -->|Leaf| F{"Is the third hidden attachment large compared with beta?"}
+    F -->|No| G["All leaf attachments are small enough for triangle rescaling"]
+    F -->|Yes| H["Pair equations force the other two center arms to shrink"]
+    H --> E
+    E --> I["Projected GHZ output has fifth-power size"]
+    G --> I
+~~~
+
+The large-attachment case is especially useful. If its size is $w$,
+one pair equation has the form
+
+$$
+h_rw\le Ct\delta^2+C\beta h_r.
+$$
+
+When $w$ is sufficiently larger than $\beta$, move the last term
+to the left. It follows that
+
+$$
+h_r\le C'\frac{t\delta^2}{w}.
+$$
+
+Thus a larger hidden attachment forces the other center arm to be
+smaller. The same argument applies at the second controlled site.
+Every term left after the projection then contains enough small
+factors to give the fifth-power bound.
+
+If the hidden attachment is not large, all leaf attachments are
+$O(\beta)$ and the earlier triangle rescaling applies directly.
+These two alternatives cover every size. The argument does not
+need to make each hidden component small separately.
 
 ## From a shape theorem to a GHZ estimate
 
@@ -539,10 +596,8 @@ H(A)=\lambda(a^6+b^6+c^6)+E,\quad
 \varepsilon=\|E\|,\quad \delta=\|A-A_0\|.
 $$
 
-If its non-ground direction is near one of the specified smooth
-families, satisfies the three-arm or uniformly injective two-arm condition,
-is near any non-star four-active-site flat core, or is near a full
-triangle, the estimates give
+If two non-ground arms have size at least a fixed fraction of the
+non-ground source norm, the latest theorem gives
 
 $$
 |\lambda|\le C_1\varepsilon+C_2\delta^5.
@@ -559,8 +614,11 @@ $\varepsilon\ge c|\lambda|^3$ across every relevant boundary.
 The new results identify and control several difficult families, but a
 bound involving $\delta$ does not by itself give that error-versus-signal
 comparison. Within the full-support single-color branch, the remaining
-critical shapes for this onset argument are single edges and pairs of
-rank-one arms sharing a center line. The combined estimate is uniform when the normalized
-non-ground direction stays a fixed positive distance from those shapes.
+critical shapes for this onset argument are single edges.
+The combined estimate is uniform when the normalized non-ground
+direction stays a fixed positive distance from all single-edge sources.
+Indeed, a flat source with no two adjacent edges can have only one
+edge: two disjoint edges would give a nonzero four-site tensor product,
+with nothing to cancel it.
 The error-versus-signal comparison remains open even on the families
 whose onset is now controlled.

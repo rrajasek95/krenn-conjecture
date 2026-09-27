@@ -43,6 +43,7 @@ PACKAGES = (
     "w-equal-split-legendre-2026-09-27",
     "w-two-group-reduction-2026-09-27",
     "transverse-two-arm-ghz-2026-09-27",
+    "coherent-two-arm-ghz-2026-09-27",
 )
 
 
