@@ -1,0 +1,8 @@
+import FiniteResponseRigidity
+
+#print axioms KrennAllOrders.FiniteResponseRigidity.polynomial_eq_one_of_rescaling_square
+#print axioms KrennAllOrders.FiniteResponseRigidity.lineMap
+#print axioms KrennAllOrders.FiniteResponseRigidity.scaleVariables
+#print axioms KrennAllOrders.FiniteResponseRigidity.lineMap_scaleVariables
+#print axioms KrennAllOrders.FiniteResponseRigidity.eval_lineMap
+#print axioms KrennAllOrders.FiniteResponseRigidity.eq_one_of_rescaling_square

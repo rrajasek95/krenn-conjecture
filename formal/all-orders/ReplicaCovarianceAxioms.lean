@@ -1,0 +1,28 @@
+import ReplicaCovariance
+
+/-! Axiom inventory for every theorem delivered by `ReplicaCovariance`. -/
+
+#print axioms KrennAllOrders.ReplicaCovariance.normal_form_entries
+#print axioms KrennAllOrders.ReplicaCovariance.normal_form_of_wedges_and_divisibility
+#print axioms KrennAllOrders.ReplicaCovariance.normal_form_of_eigenvectors_and_divisibility
+#print axioms KrennAllOrders.ReplicaCovariance.scalar_outer_coefficients_unique
+#print axioms KrennAllOrders.ReplicaCovariance.adaptedFrame_orthogonal
+#print axioms KrennAllOrders.ReplicaCovariance.adaptedFrame_first_coordinate
+#print axioms KrennAllOrders.ReplicaCovariance.cross₂_eq_zero_of_adapted_frame
+#print axioms KrennAllOrders.ReplicaCovariance.parameterP_product_ne_zero
+#print axioms KrennAllOrders.ReplicaCovariance.parameterQ_product_ne_zero
+#print axioms KrennAllOrders.ReplicaCovariance.parameter_dot_ne_zero
+#print axioms KrennAllOrders.ReplicaCovariance.parameterP_norm_ne_zero
+#print axioms KrennAllOrders.ReplicaCovariance.parameterQ_norm_ne_zero
+#print axioms KrennAllOrders.ReplicaCovariance.polynomial_normal_form
+#print axioms KrennAllOrders.ReplicaCovariance.polynomial_normal_form_unique
+#print axioms KrennAllOrders.ReplicaCovariance.columnAssignment_recover
+#print axioms KrennAllOrders.ReplicaCovariance.eval_right_wedge
+#print axioms KrennAllOrders.ReplicaCovariance.eval_left_wedge
+#print axioms KrennAllOrders.ReplicaCovariance.evalAtColumns_transverse_right_zero
+#print axioms KrennAllOrders.ReplicaCovariance.evalAtColumns_transverse_left_zero
+#print axioms KrennAllOrders.ReplicaCovariance.evaluated_right_wedge_zero
+#print axioms KrennAllOrders.ReplicaCovariance.evaluated_left_wedge_zero
+#print axioms KrennAllOrders.ReplicaCovariance.polynomial_right_wedge_zero
+#print axioms KrennAllOrders.ReplicaCovariance.polynomial_left_wedge_zero
+#print axioms KrennAllOrders.ReplicaCovariance.polynomial_normal_form_of_covariance

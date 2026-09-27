@@ -1,3 +1,11 @@
+import FiniteResponseRigidity
+import ThreeMatchingObstruction
+import ChordObstruction
+import MatchingModel
+import ReplicaCovariance
+import ThreeMatching
+import CycleCoordinates
+import MatchingTransport
 import PolynomialODE
 import EndpointDegree
 
@@ -9,3 +17,153 @@ import EndpointDegree
 #print axioms KrennAllOrders.eq_C_div_of_derivative_add_C_mul_eq_C
 #print axioms KrennAllOrders.card_support_eq_one_of_endpoint_identities
 #print axioms KrennAllOrders.exists_unique_support_of_endpoint_identities
+
+#print axioms KrennAllOrders.MatchingModel.V
+#print axioms KrennAllOrders.MatchingModel.EdgeN
+#print axioms KrennAllOrders.MatchingModel.WeightsN
+#print axioms KrennAllOrders.MatchingModel.mkEdge
+#print axioms KrennAllOrders.MatchingModel.vertices
+#print axioms KrennAllOrders.MatchingModel.pmSumListAux
+#print axioms KrennAllOrders.MatchingModel.pmSumList
+#print axioms KrennAllOrders.MatchingModel.pmSumN
+#print axioms KrennAllOrders.MatchingModel.allEqualList
+#print axioms KrennAllOrders.MatchingModel.allEqual
+#print axioms KrennAllOrders.MatchingModel.EqSystemN
+#print axioms KrennAllOrders.MatchingModel.SiteVariable
+#print axioms KrennAllOrders.MatchingModel.MatchingPolynomial
+#print axioms KrennAllOrders.MatchingModel.edgePolynomial
+#print axioms KrennAllOrders.MatchingModel.matchingPolynomialAux
+#print axioms KrennAllOrders.MatchingModel.matchingPolynomialList
+#print axioms KrennAllOrders.MatchingModel.matchingPolynomialN
+#print axioms KrennAllOrders.MatchingModel.selector
+#print axioms KrennAllOrders.MatchingModel.eval_edgePolynomial
+#print axioms KrennAllOrders.MatchingModel.eval_matchingPolynomialAux
+#print axioms KrennAllOrders.MatchingModel.eval_matchingPolynomialN
+#print axioms KrennAllOrders.MatchingModel.matchingPolynomialList_nil
+#print axioms KrennAllOrders.MatchingModel.matchingPolynomialList_singleton
+#print axioms KrennAllOrders.MatchingModel.wordExponent
+#print axioms KrennAllOrders.MatchingModel.wordExponent_wrong_color
+#print axioms KrennAllOrders.MatchingModel.wordExponent_erase
+#print axioms KrennAllOrders.MatchingModel.coeff_edgePolynomial_mul
+#print axioms KrennAllOrders.MatchingModel.coeff_matchingPolynomialAux
+#print axioms KrennAllOrders.MatchingModel.coeff_matchingPolynomialList
+#print axioms KrennAllOrders.MatchingModel.coeff_matchingPolynomialN
+#print axioms KrennAllOrders.MatchingModel.coeff_matchingPolynomialList_eq_selector
+#print axioms KrennAllOrders.MatchingModel.siteWeight
+#print axioms KrennAllOrders.MatchingModel.siteProfile
+#print axioms KrennAllOrders.MatchingModel.siteWeight_apply
+#print axioms KrennAllOrders.MatchingModel.siteProfile_erase
+#print axioms KrennAllOrders.MatchingModel.siteProfile_apply
+#print axioms KrennAllOrders.MatchingModel.siteProfile_nodup
+#print axioms KrennAllOrders.MatchingModel.edgePolynomial_siteHomogeneous
+#print axioms KrennAllOrders.MatchingModel.matchingPolynomialAux_siteHomogeneous
+#print axioms KrennAllOrders.MatchingModel.matchingPolynomialList_siteHomogeneous
+#print axioms KrennAllOrders.MatchingModel.vertices_eq_finRange
+#print axioms KrennAllOrders.MatchingModel.vertices_nodup
+#print axioms KrennAllOrders.MatchingModel.vertices_pairwise_lt
+#print axioms KrennAllOrders.MatchingModel.mem_vertices
+#print axioms KrennAllOrders.MatchingModel.matchingPolynomialN_siteHomogeneous
+#print axioms KrennAllOrders.MatchingModel.matchingPolynomialN_siteDegree
+#print axioms KrennAllOrders.MatchingModel.matchingPolynomialN_localDegree
+#print axioms KrennAllOrders.MatchingModel.eqSystemN_iff_coefficients
+#print axioms KrennAllOrders.MatchingModel.edgePolynomial_add
+#print axioms KrennAllOrders.MatchingModel.reverseEdge
+#print axioms KrennAllOrders.MatchingModel.edgePolynomial_reverse
+#print axioms KrennAllOrders.MatchingModel.pmSumListAux_congr_ordered
+#print axioms KrennAllOrders.MatchingModel.pmSumN_congr_ordered
+#print axioms KrennAllOrders.ReplicaCovariance.normal_form_entries
+#print axioms KrennAllOrders.ReplicaCovariance.normal_form_of_wedges_and_divisibility
+#print axioms KrennAllOrders.ReplicaCovariance.normal_form_of_eigenvectors_and_divisibility
+#print axioms KrennAllOrders.ReplicaCovariance.scalar_outer_coefficients_unique
+#print axioms KrennAllOrders.ReplicaCovariance.adaptedFrame_orthogonal
+#print axioms KrennAllOrders.ReplicaCovariance.adaptedFrame_first_coordinate
+#print axioms KrennAllOrders.ReplicaCovariance.cross₂_eq_zero_of_adapted_frame
+#print axioms KrennAllOrders.ReplicaCovariance.parameterP_product_ne_zero
+#print axioms KrennAllOrders.ReplicaCovariance.parameterQ_product_ne_zero
+#print axioms KrennAllOrders.ReplicaCovariance.parameter_dot_ne_zero
+#print axioms KrennAllOrders.ReplicaCovariance.parameterP_norm_ne_zero
+#print axioms KrennAllOrders.ReplicaCovariance.parameterQ_norm_ne_zero
+#print axioms KrennAllOrders.ReplicaCovariance.polynomial_normal_form
+#print axioms KrennAllOrders.ReplicaCovariance.polynomial_normal_form_unique
+#print axioms KrennAllOrders.ReplicaCovariance.columnAssignment_recover
+#print axioms KrennAllOrders.ReplicaCovariance.eval_right_wedge
+#print axioms KrennAllOrders.ReplicaCovariance.eval_left_wedge
+#print axioms KrennAllOrders.ReplicaCovariance.evalAtColumns_transverse_right_zero
+#print axioms KrennAllOrders.ReplicaCovariance.evalAtColumns_transverse_left_zero
+#print axioms KrennAllOrders.ReplicaCovariance.evaluated_right_wedge_zero
+#print axioms KrennAllOrders.ReplicaCovariance.evaluated_left_wedge_zero
+#print axioms KrennAllOrders.ReplicaCovariance.polynomial_right_wedge_zero
+#print axioms KrennAllOrders.ReplicaCovariance.polynomial_left_wedge_zero
+#print axioms KrennAllOrders.ReplicaCovariance.polynomial_normal_form_of_covariance
+#print axioms KrennAllOrders.ThreeMatching.Matching.partner_injective
+#print axioms KrennAllOrders.ThreeMatching.Matching.toGraph_adj
+#print axioms KrennAllOrders.ThreeMatching.Matching.toSubgraph_isPerfectMatching
+#print axioms KrennAllOrders.ThreeMatching.Matching.even_card
+#print axioms KrennAllOrders.ThreeMatching.Matching.ofSubgraph_partner_adj
+#print axioms KrennAllOrders.ThreeMatching.Matching.ofSubgraph_partner_eq_iff
+#print axioms KrennAllOrders.ThreeMatching.Matching.Closed.partner_mem_iff
+#print axioms KrennAllOrders.ThreeMatching.Matching.switch_partner
+#print axioms KrennAllOrders.ThreeMatching.Matching.closed_pair
+#print axioms KrennAllOrders.ThreeMatching.realizes_unique
+#print axioms KrennAllOrders.ThreeMatching.realizes_switch
+#print axioms KrennAllOrders.ThreeMatching.hasMixedMatching_of_closed_cut
+#print axioms KrennAllOrders.ThreeMatching.hasMixedMatching_of_shared_edge
+#print axioms KrennAllOrders.ThreeMatching.pairGraph_other_step
+#print axioms KrennAllOrders.ThreeMatching.pairGraph_reachable_closed_left
+#print axioms KrennAllOrders.ThreeMatching.pairGraph_reachable_closed_right
+#print axioms KrennAllOrders.ThreeMatching.hasMixedMatching_of_not_reachable
+#print axioms KrennAllOrders.ThreeMatching.pairGraph_preconnected_of_no_mixed
+#print axioms KrennAllOrders.ThreeMatching.hasMixedMatching_of_shared_partner
+#print axioms KrennAllOrders.ThreeMatching.colour_partner_injective_of_no_mixed
+#print axioms KrennAllOrders.ThreeMatching.pairGraph_isCycles
+#print axioms KrennAllOrders.ThreeMatching.exists_spanning_cycle_of_no_mixed
+#print axioms KrennAllOrders.ThreeMatching.Matching.toGraph
+#print axioms KrennAllOrders.ThreeMatching.Matching.toSubgraph
+#print axioms KrennAllOrders.ThreeMatching.Matching.ofSubgraph
+#print axioms KrennAllOrders.ThreeMatching.Matching.switch
+#print axioms KrennAllOrders.ThreeMatching.Matching.ext
+#print axioms KrennAllOrders.ThreeMatching.exists_cycle_equiv_of_spanning
+#print axioms KrennAllOrders.ThreeMatching.exists_cycle_equiv_of_no_mixed
+
+#print axioms KrennAllOrders.ThreeMatching.Matching.map
+#print axioms KrennAllOrders.ThreeMatching.Matching.map_partner
+#print axioms KrennAllOrders.ThreeMatching.Realizes.map
+#print axioms KrennAllOrders.ThreeMatching.HasMixedMatching.map
+#print axioms KrennAllOrders.ThreeMatching.exists_realizes_of_partner_cover
+#print axioms KrennAllOrders.ThreeMatching.hasMixedMatching_of_partner_cover
+
+#print axioms KrennAllOrders.ThreeMatching.Chord.next_val
+#print axioms KrennAllOrders.ThreeMatching.Chord.prev_val
+#print axioms KrennAllOrders.ThreeMatching.Chord.next_adj
+#print axioms KrennAllOrders.ThreeMatching.Chord.prev_adj
+#print axioms KrennAllOrders.ThreeMatching.Chord.fill
+#print axioms KrennAllOrders.ThreeMatching.Chord.fill_at_hole
+#print axioms KrennAllOrders.ThreeMatching.Chord.fill_off_hole
+#print axioms KrennAllOrders.ThreeMatching.Chord.twoHoles
+#print axioms KrennAllOrders.ThreeMatching.Chord.twoForward
+#print axioms KrennAllOrders.ThreeMatching.Chord.two_next
+#print axioms KrennAllOrders.ThreeMatching.Chord.two_prev
+#print axioms KrennAllOrders.ThreeMatching.Chord.two_closed
+#print axioms KrennAllOrders.ThreeMatching.Chord.fillTwo
+#print axioms KrennAllOrders.ThreeMatching.Chord.fourHoles
+#print axioms KrennAllOrders.ThreeMatching.Chord.fourForward
+#print axioms KrennAllOrders.ThreeMatching.Chord.four_next
+#print axioms KrennAllOrders.ThreeMatching.Chord.four_prev
+#print axioms KrennAllOrders.ThreeMatching.Chord.four_closed
+#print axioms KrennAllOrders.ThreeMatching.Chord.fillFour
+#print axioms KrennAllOrders.ThreeMatching.Chord.exists_interlacing_of_parity_preserving
+#print axioms KrennAllOrders.ThreeMatching.Chord.exists_outside_four
+#print axioms KrennAllOrders.ThreeMatching.Chord.exists_hybrid_of_opposite_parity
+#print axioms KrennAllOrders.ThreeMatching.Chord.exists_hybrid_of_interlacing
+#print axioms KrennAllOrders.ThreeMatching.Chord.exists_hybrid_matching
+
+#print axioms KrennAllOrders.ThreeMatching.hasMixedMatching_of_three_colours
+#print axioms KrennAllOrders.ThreeMatching.hasMixedMatching_three
+#print axioms KrennAllOrders.ThreeMatching.colour_eq_of_no_mixed
+
+#print axioms KrennAllOrders.FiniteResponseRigidity.polynomial_eq_one_of_rescaling_square
+#print axioms KrennAllOrders.FiniteResponseRigidity.lineMap
+#print axioms KrennAllOrders.FiniteResponseRigidity.scaleVariables
+#print axioms KrennAllOrders.FiniteResponseRigidity.lineMap_scaleVariables
+#print axioms KrennAllOrders.FiniteResponseRigidity.eval_lineMap
+#print axioms KrennAllOrders.FiniteResponseRigidity.eq_one_of_rescaling_square

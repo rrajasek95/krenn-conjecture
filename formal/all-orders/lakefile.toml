@@ -1,6 +1,6 @@
 name = "krenn_all_orders"
 version = "0.1.0"
-defaultTargets = ["PolynomialODE", "EndpointDegree"]
+defaultTargets = ["PolynomialODE", "EndpointDegree", "MatchingModel", "ReplicaCovariance", "ThreeMatching", "CycleCoordinates", "MatchingTransport", "ChordObstruction", "ThreeMatchingObstruction", "FiniteResponseRigidity"]
 
 [leanOptions]
 autoImplicit = false
@@ -15,3 +15,27 @@ name = "PolynomialODE"
 
 [[lean_lib]]
 name = "EndpointDegree"
+
+[[lean_lib]]
+name = "MatchingModel"
+
+[[lean_lib]]
+name = "ReplicaCovariance"
+
+[[lean_lib]]
+name = "ThreeMatching"
+
+[[lean_lib]]
+name = "CycleCoordinates"
+
+[[lean_lib]]
+name = "MatchingTransport"
+
+[[lean_lib]]
+name = "ChordObstruction"
+
+[[lean_lib]]
+name = "ThreeMatchingObstruction"
+
+[[lean_lib]]
+name = "FiniteResponseRigidity"
