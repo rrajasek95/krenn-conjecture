@@ -31,9 +31,8 @@ cancelling. Our argument forces a stronger structure: after parallel edges
 with the same endpoint colours are aggregated, every edge is monochromatic
 and every active colour forms a perfect matching. A vertex colouring then
 has at most one contributing matching, so a known combinatorial obstruction
-finishes the proof. The structural argument uses two formal symbol families
-with identical pairing coefficients to encode the matching sums. Their
-symmetries impose polynomial identities
+finishes the proof. The structural argument uses two identical formal copies
+of the matching polynomial. Their symmetries impose polynomial identities
 that force each supported edge to contribute the entire amplitude of its
 colour. Complex weights, parallel edges, and distinct colours at the two
 ends of an edge are all allowed. A Lean formalization verifies the normalized
@@ -62,12 +61,10 @@ We do this by deriving a structural restriction on the weighted graph itself.
 
 \subsection{Matching amplitudes and the conjecture}\label{sec:graphmodel}
 
-Let \(d\ge1\) and write \([d]=\{1,\ldots,d\}\) for the target palette.
 Let \(G=(V,E)\) be a finite loopless multigraph. Each edge \(e=uv\) has
-weight \(w(e)\in\mathbb C\) and two endpoint colours \(\chi_u(e),\chi_v(e)\)
-in \([d]\). A \emph{perfect matching} is a set of edges in which every
-vertex is incident to exactly one edge.
-We write \(\mathcal M(G)\) for the set of perfect matchings of \(G\).
+weight \(w(e)\in\mathbb C\) and two endpoint colours \(\chi_u(e),\chi_v(e)\).
+We write \([d]=\{1,\ldots,d\}\) for the target palette and
+\(\mathcal M(G)\) for the set of perfect matchings of \(G\).
 For \(M\in\mathcal M(G)\), let \(e_M(v)\) be its unique edge at \(v\).
 The matching induces the vertex colouring
 \(v\mapsto\chi_v(e_M(v))\). For a vertex colouring \(\kappa:V\to[d]\), define
@@ -135,9 +132,9 @@ the vanishing of \emph{every} mixed amplitude.
 \begin{tikzpicture}[x=1pt,y=1pt,line width=0.8pt]
 \path[use as bounding box] (0,0) rectangle (200,116);
 \draw[red!70!black] (45,85)--(145,85);
-\draw[blue!75!black,dashed] (45,25)--(145,25);
+\draw[blue!75!black] (45,25)--(145,25);
 \draw[red!70!black] (45,85)--(45,55) (145,85)--(145,55);
-\draw[blue!75!black,dashed] (45,55)--(45,25) (145,55)--(145,25);
+\draw[blue!75!black] (45,55)--(45,25) (145,55)--(145,25);
 \foreach \x in {45,145} \foreach \y in {25,85}
   \fill (\x,\y) circle (2pt);
 \node at (45,101) {\(1:a\)}; \node at (145,101) {\(2:a\)};
@@ -155,8 +152,8 @@ the vanishing of \emph{every} mixed amplitude.
 \begin{tikzpicture}[x=1pt,y=1pt,line width=0.8pt]
 \path[use as bounding box] (0,0) rectangle (200,116);
 \draw[red!70!black] (45,85)--(145,85) (45,25)--(145,25);
-\draw[blue!75!black,dashed] (45,25)--(45,85) (145,25)--(145,85);
-\draw[green!45!black,densely dotted,line width=1.1pt] (45,25)--(145,85) (45,85)--(145,25);
+\draw[blue!75!black] (45,25)--(45,85) (145,25)--(145,85);
+\draw[green!45!black] (45,25)--(145,85) (45,85)--(145,25);
 \foreach \x in {45,145} \foreach \y in {25,85}
   \fill (\x,\y) circle (2pt);
 \node at (45,101) {\(1\)}; \node at (145,101) {\(2\)};
@@ -168,13 +165,11 @@ the vanishing of \emph{every} mixed amplitude.
 \small (b) The four-vertex GHZ construction:\\
 \(a:\{12,34\},\ b:\{13,24\},\ c:\{14,23\}\).
 \end{minipage}
-\caption{Cancellation and the four-vertex exception. Panel (a) illustrates
-cancellation only and does not satisfy the GHZ condition. Labels beside
+\caption{The obstruction and the exceptional case. In (a), labels beside
 edges are weights and labels at vertices give the inherited colours; the
 two vertical edges have different colours at their ends. In (b), all weights
 are one. Horizontal, vertical, and diagonal edges have colours \(a,b,c\),
-respectively. Solid, dashed, and dotted strokes also distinguish these
-colours. The diagonal crossing is not a vertex.}
+respectively. The diagonal crossing is not a vertex.}
 \label{fig:examples}
 \end{figure}
 
@@ -218,10 +213,7 @@ matching for each contributing colouring and then applies Bogdanov's
 obstruction~\cite[Section~2.3, Corollary~17]{cgi}. We use that same final
 strategy. The contribution here is the algebraic derivation of
 monochromatic aggregate edges and degree one in every active colour
-without a sparsity assumption. Further work by Chandran and Gajjala on
-connectivity bounds is accepted for FSTTCS 2026~\cite{cgconnect}; only
-the conference listing was available in the sources consulted, so we do
-not compare theorem statements or methods here.
+without a sparsity assumption.
 
 Recent formal work addresses further cases. A public Lean certificate
 artifact exports the complex six-vertex, three-colour statement~\cite{sixvertex}.
@@ -409,7 +401,7 @@ onto colours \(h,k\) by \(\pi_{hk}\).
 \subsection{Normalizing nonzero target amplitudes}\label{sec:normalization}
 
 \begin{lemma}[Normalization of pure amplitudes]\label{lem:normalization}
-A fixed half-edge-coloured graph with at least one vertex admits weights satisfying the generalized
+A fixed half-edge-coloured graph admits weights satisfying the generalized
 GHZ condition if and only if it admits weights satisfying the normalized
 condition with every pure amplitude equal to one. The rescaling between
 these assignments preserves which edge weights are nonzero.
@@ -586,7 +578,7 @@ matrix of determinant \(-1\), changes the sign of a product of
 \(\Delta_v\)'s on an odd set of vertices. If the remaining factors in
 a moment are fixed by that reflection, invariance of the moment forces it
 to vanish. Section~\ref{sec:higher} chooses those factors and the reflection
-to obtain identities for the original incident rows.
+to obtain identities for the original source rows.
 
 On an even set of vertices the product instead stays unchanged. This gives
 the invariant pairing used in Section~\ref{sec:endpoint}. Its polynomial
@@ -705,7 +697,7 @@ be a complex vector space of rows \(L\) such that
  \Phi(L)=L R^{[m]}=\sum_h f_h(L)h^\Omega.
  \tag{2}\label{eq:root}
 \end{equation}
-Here the linear function \(f_h:D\to\mathbb C\) extracts the pure colour coefficient of
+Here \(f_h:D\to\mathbb C\) extracts the pure colour coefficient of
 \(\Phi(L)\). Assume all three \(f_h\) are nonzero functions and at least
 two are linearly independent. For odd \(p\le2m+1\), define
 \[
@@ -728,7 +720,7 @@ in the site algebra, which has zero divisors.
 \emph{Pairing representation and reflection.}
 Give formal variables \(X_{i,h}\) their \(R\) covariances, zero covariances
 within a vertex, and give an auxiliary symbol \(\zeta\) covariance \(L_i(h)\) with
-\(X_{i,h}\) and zero covariance with itself. A Wick moment with \(p\) occurrences
+\(X_{i,h}\) and zero covariance with itself. A Wick moment with \(p\) copies
 of \(\zeta\) and one specified coordinate at each vertex is the corresponding
 coefficient of \(H_p(L)\). The \(p!\) assignments of auxiliary occurrences
 are precisely those of the raw power \(L^p\); the divided power of \(R\)
@@ -770,8 +762,7 @@ With constant local pair \(a,b\), \eqref{eq:reflection} says
 \[
  f_b[a^\Omega]H_p=f_a[b^\Omega]H_p.
 \]
-Two independent linear functions \(f\) are coprime in \(\mathbb C[D]\):
-they have no nonconstant common polynomial factor. Hence for
+Two independent \(f\)'s are coprime in \(\mathbb C[D]\), hence for
 \(p=2r+1\) there is a common homogeneous polynomial \(q_r\) of degree
 \(2r\) such that \([h^\Omega]H_p=f_hq_r\) for every \(h\); \(q_0=1\).
 For a mixed word \(w\) avoiding an active colour \(h\), choose
@@ -873,7 +864,7 @@ arguments are projected by \(\pi_{hk}\); no identity of the omitted
 three-colour coefficients is asserted.
 
 Because \(|S|\) is even, \(K\) is symmetric and \(K(Z,h^S)=[k^S]Z\).
-For any fixed row direction \(V\) on \(S\), the same two-replica rotation gives
+The same two-replica rotation gives
 \begin{equation}
  \begin{aligned}
  K(E(U),E(U))&=K(F,E(\sqrt2U)),\\
@@ -909,7 +900,7 @@ identity using the omission lemma. All matrices in the following proof have
 their rows and columns indexed by the original vertex set \(V\).
 
 \begin{lemma}[Global diagonal reduction]\label{lem:diagonal}
-For every pair of distinct vertices \(p,r\), the colour-indexed matrix
+For every pair of vertices \(p,r\), the colour-indexed matrix
 \((A_{pr}(i,h))_{i,h\in\{a,b,c\}}\) of a matching polynomial satisfying
 \eqref{eq:target} is diagonal: \(A_{pr}(i,h)=0\) whenever \(i\ne h\).
 \end{lemma}
@@ -1077,10 +1068,7 @@ Group eight independent scalar indeterminates into four two-component
 columns \(P,Q_c,R_c,S_c\). The subscript \(c\) labels a column; it is
 not a graph colour. The entries specify coefficients in copies 1 and 2.
 For \(i\in\{1,2\}\), define the shift row
-\[
- L_i=P_i x+(Q_c)_iy+(R_c)_iu+(S_c)_iv.
-\]
-The columns can later be
+\(L_i=P_i x+(Q_c)_iy+(R_c)_iu+(S_c)_iv\). The columns can later be
 specialized to any complex values, including zero; they are not assumed
 linearly independent. Define the scalar polynomials and matrices
 \[
@@ -1125,7 +1113,7 @@ and each other. The next lemma says that the insertion matrix has only two
 scalar polynomial coefficients to determine. The matrix \(PQ_c^T\) is an
 outer product and has rank at most one.
 
-\begin{lemma}[Polynomial form of the corrected insertion matrix]\label{lem:matrix}
+\begin{lemma}[Polynomial orthogonal kernel normal form]\label{lem:matrix}
 For the corrected insertion matrix just defined,
 \begin{equation}
  \begin{aligned}
@@ -1181,14 +1169,6 @@ We first eliminate the rank-one coefficient \(\psi\), then determine the
 identity coefficient \(\varphi\). A subscript \(\rho\) denotes formal
 partial differentiation in the Gram coordinate \(\rho\), with
 \(\sigma,\tau\) held fixed.
-For either Gram-polynomial coefficient \(\theta\), the chain rule gives
-\[
- \partial_{(Q_c)_1}\theta
-   =2(Q_c)_1\theta_\tau+P_1\theta_\rho.
-\]
-Thus on the slice \((Q_c)_1=0\), this derivative is \(P_1\theta_\rho\).
-This is how differentiation in a copy parameter yields the following
-equations in the Gram coordinate \(\rho\).
 
 \emph{The rank-one coefficient vanishes.}
 At \((Q_c)_1=0\), differentiate \(M_{12}\) in \((Q_c)_1\) and use
@@ -1255,30 +1235,26 @@ The ordinary hafnian expansion at a vertex \(p\) says
 \[
  \beta=\sum_{q\ne p}B_{pq}\operatorname{haf}\bigl(B[V\setminus\{p,q\}]\bigr).
 \]
-By \eqref{eq:endpoint}, each supported edge contributes \(\beta\), and
-unsupported edges contribute zero. Since
+By \eqref{eq:endpoint}, every nonzero summand equals \(\beta\). Since
 \(\beta\ne0\), the number of supported \(B\) neighbors of \(p\) is exactly
 one. This holds at every vertex, and for each of the three colours by choosing
 any other active colour as \(H\).
 \end{proof}
 
 \begin{corollary}[Disjoint colour matchings and unique contributions]\label{cor:unique}
-No unordered vertex pair belongs to two colour matchings. Every vertex colouring
+The three colour matchings are pairwise edge-disjoint. Every vertex colouring
 receives a contribution from at most one perfect matching.
 \end{corollary}
 
 \begin{proof}
-Every vertex has exactly one incident aggregate edge of each active colour.
-A prescribed vertex colouring therefore supports at most one matching.
-If a matching exists, its contribution is the product of its nonzero edge
-weights and cannot cancel.
-
-Two colour matchings cannot share a vertex pair \(pq\): choosing that edge
-in colour \(B\) and the other matching in colour \(H\) off \(p,q\)
-gives a mixed colouring with a unique, nonzero contribution. This contradicts
-\eqref{eq:target}. Their union is consequently a simple cubic graph with
-one edge of each colour at every vertex. Any mixed perfect matching in this
-union would likewise violate \eqref{eq:target}.
+Two such matchings cannot share an edge \(pq\): choosing that edge in colour
+\(B\) and the other matching in colour \(H\) off \(p,q\) gives a mixed word
+with nonzero coefficient, the product of nonzero matching weights.
+Consequently their union is a simple cubic graph properly coloured with three
+colours. Any prescribed vertex colouring supports at most one matching, because each
+vertex has exactly one incident edge of its requested colour. Therefore a
+mixed perfect matching would have a nonzero coefficient and violate
+\eqref{eq:target}.
 \end{proof}
 
 \section{The remaining graph lemma}\label{sec:graph}
@@ -1288,10 +1264,6 @@ The following lemma is a special case of Bogdanov's obstruction
 perfect matching, and no vertex colouring can receive cancelling matching
 contributions. We give an adapted version of Bogdanov's alternating-cycle
 and minimal-arc proof for this special case.
-
-Here a perfect matching is \emph{mixed} if it uses edges from at least two
-of the colour classes \(F,G,H\). Since every edge is monochromatic, this
-is equivalent to inducing a mixed vertex colouring.
 
 \begin{lemma}[Three-matching obstruction]\label{lem:graph}
 Three pairwise edge-disjoint perfect matchings \(F,G,H\) on \(n>4\) vertices
@@ -1375,11 +1347,11 @@ Theorem~\ref{thm:graphmain}.
 
 \section{Boundary cases and formal verification}\label{sec:scope}
 
-For \(n=4\), the three matchings of \(K_4\) give the permitted three-colour
-construction. In Section~\ref{sec:graph}, a pair of interlacing chords then exhausts
+For \(n=4\), the three matchings of \(K_4\) give the permitted ternary
+source. In Section~\ref{sec:graph}, a pair of interlacing chords then exhausts
 the vertices and gives the pure third matching, so no contradiction is asserted.
 Sections~\ref{sec:higher}--\ref{sec:matching} remain valid at \(n=4\), including
-their terminal response coefficients. For \(n=2\), Lemma~\ref{lem:higher} does not
+their terminal response coefficients. For \(n=2\), the odd-core lemma does not
 apply and arbitrary target dimension is possible. Odd \(n\) has no perfect
 matchings in this model.
 
@@ -1399,17 +1371,10 @@ Lemma~\ref{lem:matrix}. Every pairing and orthogonal frame below uses the
 complex bilinear dot product defined in Section~\ref{sec:endpoint}.
 
 \begin{proof}[Proof of Lemma~\ref{lem:matrix}]
-We first work where all five quantities
-\[
- \sigma,\quad\tau,\quad\rho,\quad\det[P\ Q_c],\quad P_1(Q_c)_2
-\]
-are nonzero. Here \([P\ Q_c]\) is the matrix with columns \(P,Q_c\).
-This restriction will be removed by polynomial divisibility below.
 In an orthonormal frame where \(P_1=0\), \(M_{12}=0\), so \(MP\) is parallel
 to \(P\). In a frame where \((Q_c)_2=0\), \(M_{12}=0\), so \(M^TQ_c\) is
-parallel to \(Q_c\). Such frames exist because the relevant bilinear squares
-\(\sigma,\tau\) are nonzero. Their eigenvalues agree because \(\rho\ne0\).
-For two independent
+parallel to \(Q_c\). Such frames exist when the relevant bilinear square is nonzero. We first
+work on the set where these squares and the required determinants are nonzero. Their eigenvalues agree when \(P\cdot Q_c\ne0\). For two independent
 columns in dimension two, these conditions force
 \[
  M=\varphi_0I+\psi PQ_c^T.
@@ -1472,7 +1437,7 @@ has no remaining source-reduction or structural hypothesis.
 
 The checked proof covers the complete chain: the matching model, copy
 symmetries, response and omission identities, diagonal reduction, the
-polynomial matrix argument, the supported-edge identity, and the graph
+polynomial kernel argument, the supported-edge identity, and the graph
 obstruction. The real-to-complex transfer and the corresponding real-weight
 corollaries are also formalized.
 
@@ -1516,8 +1481,6 @@ exposition independently of those historical records.
 \small
 \raggedright
 \begin{thebibliography}{99}
-\setlength{\itemsep}{0.25em}
-\setlength{\parskip}{0pt}
 
 \bibitem{kgz}
 Mario Krenn, Xuemei Gu, and Anton Zeilinger.
@@ -1532,29 +1495,6 @@ and state generation. \emph{Proceedings of the National Academy of Sciences},
 116:4147--4155, 2019.
 \href{https://doi.org/10.1073/pnas.1815884116}{doi:10.1073/pnas.1815884116}.
 
-\bibitem{kgs}
-Mario Krenn, Xuemei Gu, and D\'aniel Solt\'esz.
-Questions on the structure of perfect matchings inspired by quantum physics.
-In \emph{Proceedings of the 2nd Croatian Combinatorial Days}, pages 57--70, 2019.
-\href{https://doi.org/10.5592/CO/CCD.2018.05}{doi:10.5592/CO/CCD.2018.05}.
-\href{https://arxiv.org/abs/1902.06023v2}{arXiv:1902.06023v2}.
-
-\bibitem{logic}
-Alba Cervera-Lierta, Mario Krenn, and Al\'an Aspuru-Guzik.
-Design of quantum optical experiments with logic artificial intelligence.
-\emph{Quantum}, 6:836, 2022.
-\href{https://doi.org/10.22331/q-2022-10-13-836}{doi:10.22331/q-2022-10-13-836}.
-
-\bibitem{cgi}
-L. Sunil Chandran, Rishikesh Gajjala, and Abraham M. Illickan.
-Krenn--Gu conjecture for sparse graphs.
-In \emph{49th International Symposium on Mathematical Foundations of Computer
-Science (MFCS 2024)}, volume 306 of LIPIcs, pages 41:1--41:15.
-Schloss Dagstuhl--Leibniz-Zentrum f\"ur Informatik, 2024.
-\href{https://doi.org/10.4230/LIPIcs.MFCS.2024.41}{doi:10.4230/LIPIcs.MFCS.2024.41}.
-\href{https://arxiv.org/abs/2407.00303v1}{arXiv:2407.00303v1}.
-Theorem 7 records the obstruction attributed to Ilya Bogdanov.
-
 \bibitem{bogdanov}
 Ilya Bogdanov.
 Answer to ``Graphs with only disjoint perfect matchings.''
@@ -1568,24 +1508,10 @@ connection to quantum physics.
 \emph{Electronic Journal of Combinatorics}, 33(3):P3.21, 2026.
 \href{https://doi.org/10.37236/12573}{doi:10.37236/12573}.
 
-\bibitem{cg}
-L. Sunil Chandran and Rishikesh Gajjala.
-Graph-theoretic insights on the constructability of complex entangled states.
-\emph{Quantum}, 8:1396, 2024.
-\href{https://doi.org/10.22331/q-2024-07-03-1396}{doi:10.22331/q-2024-07-03-1396}.
-
-\bibitem{cgconnect}
-L. Sunil Chandran and Rishikesh Gajjala.
-Connectivity bounds for GHZ graphs.
-Accepted for \emph{46th IARCS Annual Conference on Foundations of Software
-Technology and Theoretical Computer Science (FSTTCS 2026)}, forthcoming.
-\href{https://www.fsttcs.org.in/2026/papers.php}{Official accepted-paper listing}.
-Accessed September 26, 2026; no manuscript was available in the sources consulted.
-
 \bibitem{sixvertex}
 Algal (repository maintainer).
 A Lean proof of the Krenn--Gu \((6,3)\) case. Public formal proof artifact, 2026.
-\href{https://github.com/algal/krenn-gu-6x3-certificate/tree/c04696e515e0c02be140353fb52ea60c62e827b1}{Source and verification documentation at revision c04696e}.
+\href{https://github.com/algal/krenn-gu-6x3-certificate}{Source and verification documentation}.
 Accessed September 26, 2026; this manuscript does not independently rebuild
 that external artifact.
 
@@ -1603,6 +1529,35 @@ arXiv:2605.22763v2, June 8, 2026.
 \href{https://arxiv.org/abs/2605.22763v2}{Primary preprint}.
 Reference 38 lists the related tensor-algebraic no-go manuscript as in preparation.
 
+\bibitem{kgs}
+Mario Krenn, Xuemei Gu, and D\'aniel Solt\'esz.
+Questions on the structure of perfect matchings inspired by quantum physics.
+In \emph{Proceedings of the 2nd Croatian Combinatorial Days}, pages 57--70, 2019.
+\href{https://doi.org/10.5592/CO/CCD.2018.05}{doi:10.5592/CO/CCD.2018.05}.
+\href{https://arxiv.org/abs/1902.06023v2}{arXiv:1902.06023v2}.
+
+\bibitem{cgi}
+L. Sunil Chandran, Rishikesh Gajjala, and Abraham M. Illickan.
+Krenn--Gu conjecture for sparse graphs.
+In \emph{49th International Symposium on Mathematical Foundations of Computer
+Science (MFCS 2024)}, volume 306 of LIPIcs, pages 41:1--41:15.
+Schloss Dagstuhl--Leibniz-Zentrum f\"ur Informatik, 2024.
+\href{https://doi.org/10.4230/LIPIcs.MFCS.2024.41}{doi:10.4230/LIPIcs.MFCS.2024.41}.
+\href{https://arxiv.org/abs/2407.00303v1}{arXiv:2407.00303v1}.
+Theorem 7 records the obstruction attributed to Ilya Bogdanov.
+
+\bibitem{cg}
+L. Sunil Chandran and Rishikesh Gajjala.
+Graph-theoretic insights on the constructability of complex entangled states.
+\emph{Quantum}, 8:1396, 2024.
+\href{https://doi.org/10.22331/q-2024-07-03-1396}{doi:10.22331/q-2024-07-03-1396}.
+
+\bibitem{logic}
+Alba Cervera-Lierta, Mario Krenn, and Al\'an Aspuru-Guzik.
+Design of quantum optical experiments with logic artificial intelligence.
+\emph{Quantum}, 6:836, 2022.
+\href{https://doi.org/10.22331/q-2022-10-13-836}{doi:10.22331/q-2022-10-13-836}.
+
 \bibitem{isserlis}
 L. Isserlis.
 On a formula for the product-moment coefficient of any order of a normal
@@ -1617,6 +1572,12 @@ Preliminary version, July 1996.
 Section 10.2(a), page 114: the first fundamental theorem for the orthogonal group.
 \href{https://dmi.unibas.ch/fileadmin/user_upload/dmi/Personen/Kraft_Hanspeter/Classical_Invariant_Theory.pdf}{Authors' manuscript}.
 
+\bibitem{review}
+Krenn--Gu research repository.
+Complete all-orders proof and internal review record, September 26, 2026.
+\href{https://github.com/rrajasek95/krenn-conjecture/blob/e66211d22978927f1c761997472fa9f5cf8f9421/proofs/krenn-gu-all-orders-two-replica-proof.md}{Frozen mathematical source} and
+\href{https://github.com/rrajasek95/krenn-conjecture/blob/e66211d22978927f1c761997472fa9f5cf8f9421/notes/all-orders-two-replica-review-2026-09-26.md}{internal review and provenance record}.
+
 \bibitem{lean}
 Krenn--Gu research repository.
 Complete Lean formalization of the normalized Krenn--Gu equation system.
@@ -1626,11 +1587,6 @@ Lean 4.33.1 source and verification records, September 26, 2026.
 \href{https://github.com/rrajasek95/krenn-conjecture/blob/5e7d0fe0b6058f4658ccc5dae5f148ea8e7bc248/formal/all-orders/README.md}{proof chain and reproduction instructions}, and
 \href{https://github.com/rrajasek95/krenn-conjecture/blob/5e7d0fe0b6058f4658ccc5dae5f148ea8e7bc248/formal/upstream-adapter/verification.json}{upstream verification metadata}.
 
-\bibitem{review}
-Krenn--Gu research repository.
-Complete all-orders proof and internal review record, September 26, 2026.
-\href{https://github.com/rrajasek95/krenn-conjecture/blob/e66211d22978927f1c761997472fa9f5cf8f9421/proofs/krenn-gu-all-orders-two-replica-proof.md}{Frozen mathematical source} and
-\href{https://github.com/rrajasek95/krenn-conjecture/blob/e66211d22978927f1c761997472fa9f5cf8f9421/notes/all-orders-two-replica-review-2026-09-26.md}{internal review and provenance record}.
 
 \end{thebibliography}
 \endgroup
