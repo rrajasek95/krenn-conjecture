@@ -44,9 +44,11 @@ copy-identity inverse, its global entry argument, and its checked constants.
 
 This remains a point-dependent certificate at a very small noise level.
 It does not establish experimental-noise robustness, a uniform inverse,
-or correctness of a floating-point correction iteration. The shared-source
-and arbitrary-candidate coordinate wrappers have not yet been combined
-with this improved implementation.
+or correctness of a floating-point correction iteration. This note's driver
+uses a unit-mean candidate. The later
+[shared-source integration](shared-source-recovery-visible-noise-2026-09-27.md)
+now verifies arbitrary-candidate coordinate changes and shared recovery
+with these bounds, also at visible data noise.
 
 ## 2. Model, coordinates, and norms
 
@@ -665,6 +667,7 @@ an independent mathematical review: it shares bound-propagation code
 and the integer matrix library with the generator. The finite perturbation
 tests supplement the proofs; they cannot prove estimates for all sources.
 The new driver still uses the full `3^n` tensor and a unit-mean candidate.
-Larger noise thresholds, propagation through shared-source alignment,
-validated numerical correction, compressed observations, and nongeneric
-classification remain open work.
+Propagation through candidate coordinates and shared-source alignment is
+now checked in the [follow-up certificate](shared-source-recovery-visible-noise-2026-09-27.md).
+Larger noise thresholds, validated numerical correction, compressed
+observations, and nongeneric classification remain open work.

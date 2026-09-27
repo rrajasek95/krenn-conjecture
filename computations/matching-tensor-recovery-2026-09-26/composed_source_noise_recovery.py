@@ -67,7 +67,11 @@ def certify(
     )
     delta = F(epsilon) + residual
     enclosure = new.propagate_affine(point, delta, mean, checked)
-    assert F(enclosure["total_source_error"]) < radius / 2
+    assert F(enclosure["total_source_error"]) < radius / 2, {
+        "failed_check": "global enclosure enters half the correction radius",
+        "outer_source_error": enclosure["total_source_error"],
+        "correction_radius": str(radius),
+    }
     assert inverse * residual < radius / 2
     comparisons = []
     strategies = [

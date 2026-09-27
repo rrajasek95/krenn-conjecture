@@ -31,6 +31,13 @@ previous error budget of about `3.4e-41`, and the other three use about
 sources. The result is an exact proof-chain certificate, not a practical
 noise threshold or a statistical accuracy claim.
 
+The later [visible-noise integration](shared-source-recovery-visible-noise-2026-09-27.md)
+uses the composed inverse bounds on the same four sources. Every noisy
+entry now differs from its clean value in binary64; the joint source-error
+bound is about `1.72e-11` and the mean-space angle-sine bound about
+`5.51e-11`. The earlier example and its certificates remain available
+for comparison.
+
 ## 2. Inputs, scaling freedom, and the shared reference
 
 There are `n=2m+1` labelled sites and `p` labelled observations.
