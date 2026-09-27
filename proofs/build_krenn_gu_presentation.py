@@ -52,7 +52,7 @@ def markdown_body(source):
         if re.fullmatch(r'\\end\{(?:theorem|lemma|corollary)\}', line):
             continue
         if line == r'\end{proof}':
-            lines.append(r'$\square$')
+            lines.append(r'\(\square\)')
             continue
         for match in re.finditer(r'\\tag\{([^{}]+)\}\\label\{([^{}]+)\}', line):
             references[match[2]] = match[1]
@@ -64,9 +64,14 @@ def markdown_body(source):
     text = re.sub(r'\\href\{([^{}]+)\}\{([^{}]+)\}', r'[\2](\1)', text)
     text = re.sub(r'\\textbf\{([^{}]+)\}', r'**\1**', text)
     text = re.sub(r'\\emph\{([^{}]+)\}', r'*\1*', text)
+    # GitHub's math renderer rejects \operatorname. The only operator in
+    # this document is the hafnian, whose upright name needs no custom macro.
+    text = text.replace(r'\operatorname{haf}', r'\mathrm{haf}')
     text = text.replace(r'\begin{equation}', '$$').replace(r'\end{equation}', '$$')
     text = text.replace(r'\[', '$$').replace(r'\]', '$$')
-    text = re.sub(r'\\\((.*?)\\\)', r'$\1$', text, flags=re.S)
+    # Protect TeX escapes and subscripts from Markdown parsing. Bare dollar
+    # delimiters let CommonMark consume \{, \\, and underscores before MathJax.
+    text = re.sub(r'\\\((.*?)\\\)', r'$`\1`$', text, flags=re.S)
     text = text.replace('~', ' ')
     text = text.replace('--', '–')
     text = re.sub(r'\n{3,}', '\n\n', text)
@@ -76,7 +81,7 @@ def markdown_body(source):
         if line.strip() == '$$':
             if not display and spaced and spaced[-1] != '':
                 spaced.append('')
-            spaced.append('$$')
+            spaced.append('```' if display else '```math')
             if display:
                 spaced.append('')
             display = not display
@@ -86,7 +91,8 @@ def markdown_body(source):
     text = '\n'.join(spaced)
     text = re.sub(r'\n{3,}', '\n\n', text)
     for forbidden in [r'\section', r'\label', r'\eqref', r'\ref{',
-                      r'\begin{theorem}', r'\begin{lemma}', r'\begin{proof}']:
+                      r'\begin{theorem}', r'\begin{lemma}', r'\begin{proof}',
+                      r'\operatorname']:
         assert forbidden not in text, forbidden
     title = '# An all-orders two-replica proof of the complex weighted Krenn–Gu conjecture\n\n'
     links = ('[PDF](krenn-gu-all-orders-two-replica.pdf) · '
