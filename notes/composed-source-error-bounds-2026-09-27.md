@@ -669,5 +669,7 @@ tests supplement the proofs; they cannot prove estimates for all sources.
 The new driver still uses the full `3^n` tensor and a unit-mean candidate.
 Propagation through candidate coordinates and shared-source alignment is
 now checked in the [follow-up certificate](shared-source-recovery-visible-noise-2026-09-27.md).
-Larger noise thresholds, validated numerical correction, compressed
-observations, and nongeneric classification remain open work.
+An additional [output certificate](validated-source-correction-2026-09-27.md)
+now validates stored binary64 corrections for that shared-source example.
+Larger noise thresholds, general floating-point trajectory guarantees,
+compressed observations, and nongeneric classification remain open work.

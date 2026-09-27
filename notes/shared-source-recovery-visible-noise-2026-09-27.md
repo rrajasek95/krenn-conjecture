@@ -35,6 +35,11 @@ Noise remains small and the certificate is point-dependent. This does
 not establish experimental-noise robustness, uniform stability, or a
 validated floating-point correction iteration. It uses all tensor entries.
 
+The subsequent [output-validation note](validated-source-correction-2026-09-27.md)
+now certifies the exact stored values of three numerical correction outputs.
+It bounds the selected binary64 output's distance to the exact fixed point
+by `4.29e-16`, without assuming that the floating trajectory is exact.
+
 ## 2. What is shared, and what is recovered
 
 There are `n=2m+1>=7` sites and `p` observations. Observation `s` has
@@ -374,9 +379,11 @@ Lean formalization are unchanged.
 ## 8. Remaining work
 
 The arbitrary-candidate coordinate wrapper and shared-source integration
-are now tested at visible noise. What remains includes useful larger
-noise budgets, validation of a numerical correction output or iteration,
-compressed measurements, and classification of nongeneric sources.
+are now tested at visible noise. A later
+[a posteriori certificate](validated-source-correction-2026-09-27.md)
+also validates a numerical correction output on this example. What remains
+includes useful larger noise budgets, guarantees for general floating-point
+trajectories, compressed measurements, and classification of nongeneric sources.
 The [known near-ambiguity families](shared-calibration-and-near-ambiguity-2026-09-27.md)
 still rule out uniform stability without additional restrictions. The
 [sparse complex alignment ambiguity](certified-shared-source-alignment-2026-09-27.md)
