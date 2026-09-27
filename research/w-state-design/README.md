@@ -55,6 +55,7 @@ $1/65\le R_{\rm opt}\le1/45$, and the guaranteed fraction is $9/13$.
 | Rigidity and optimality near maximum cofactor response | For every even $n\ge6$, maximum response forces a complete odd core and one isolated site. The sharp scalar W bound holds near this family, excluding every sufficiently high-efficiency ground source from improving the construction. | [Equality classification and local scalar proof](../../notes/w-cofactor-rigidity-2026-09-27.md), [replay](../../computations/w-cofactor-rigidity-2026-09-27/README.md) |
 | A balanced competing scalar minimum at six sites | A symmetric two-triple cancellation family has sharp scalar cost $117/2$, only 1.25% above the one-root cost, and a strict rate gap $R<(80/81)R_*$. Its balanced source is another local scalar minimum under all complex ground perturbations. | [Family bound and full constrained Hessian](../../notes/w-state-balanced-three-plus-three-2026-09-27.md), [replay](../../computations/w-balanced-cancellation-2026-09-27/README.md) |
 | Equal-size two-group cancellation gap at every even count | Every colored completion of a ground source constant within each group and across the groups has $R<(80/81)R_*$ for $n\ge6$. Legendre polynomials classify every branch and give a stronger geometric rate loss from 16 sites onward. | [All-even proof](../../notes/w-state-equal-split-legendre-2026-09-27.md), [replay](../../computations/w-equal-split-legendre-2026-09-27/README.md) |
+| Two-group optima through forty sites and an all-even two-site gap | The known rate is optimal among all two-group uniform ground sources for every even $6\le n\le40$. A two-site group versus the rest has $R<(5/6)R_*$ at every even $n\ge6$. For arbitrary group sizes, each scalar branch reduces to a sextic stationary equation. | [Proof, algebraic reduction, and scope](../../notes/w-state-two-group-reduction-2026-09-27.md), [615 exact branch certificates](../../computations/w-two-group-reduction-2026-09-27/README.md) |
 | One-root optimum at every even count | Gives the explicit construction and its sharp rate. | [Proof](../../notes/w-state-optimal-design-2026-09-26.md), [replay](../../computations/method-utility-2026-09-26/README.md) |
 | Two-root optimum at every even count | Covers scalar cores with connected or disconnected cofactor graphs. | [Guide](../../explainers/BOUNDARY-STRUCTURE.md), [proof](../../notes/w-state-two-root-optimum-2026-09-26.md), [replay](../../computations/w-state-two-root-2026-09-26/README.md) |
 | Unrestricted local optimality at every even count | For every even $n\ge4$, all nearby complex colored exact-W designs have rate at most $R_*$. At fixed output, departures from the phase orbit have a quadratic source cost. | [Illustrated guide](../../explainers/W-LOCAL-OPTIMALITY.md), [all-even proof](../../notes/w-state-all-even-local-optimum-2026-09-27.md), [four-site obstruction](../../notes/w-state-four-site-local-obstruction-2026-09-27.md), [replay](../../computations/w-all-even-local-optimum-2026-09-27/README.md) |
@@ -77,6 +78,8 @@ flowchart TD
     F --> H["Six-site octahedral family: strict gap"]
     F --> J["Equal-size two-group cancellation: strict gap for all even n ≥ 6"]
     J --> K["At six sites, its balanced neighborhood is also excluded"]
+    F --> L["Two-site group versus the rest: below 5/6 of the known rate for every even n ≥ 6"]
+    F --> M["All two-group cancellations through forty sites: strict gap"]
     F --> I["Other nonuniform cores: open"]
 ~~~
 
@@ -113,6 +116,16 @@ with every other colored entry free. The proof identifies the matching
 sum with a Legendre polynomial and its balanced scalar cost with a
 quadrature-weight expression. It does not extend the local-minimum
 classification or the neighborhood theorem to higher dimensions.
+
+Unequal group sizes now have an exact algebraic reduction as well:
+Gegenbauer roots list every cancellation branch, and a polynomial of
+degree six determines its possible scalar minima. An all-even argument,
+starting at six sites, excludes a two-site group versus the rest with the stronger bound
+$R<(5/6)R_*$. Exact interval certificates handle every remaining split
+through forty sites. Thus the known design is the attained optimum
+through that size **within the two-group uniform ground family**, with
+all colored completions allowed. General unequal splits beyond forty,
+and ground weights varying independently within the groups, remain open.
 
 At six sites the new unrestricted bound gives $R\le1/45$, while the
 construction attains $1/65$. One sufficient way to close this gap is

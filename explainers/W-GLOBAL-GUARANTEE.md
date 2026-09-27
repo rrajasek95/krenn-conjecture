@@ -255,3 +255,51 @@ balanced response rows do not by themselves improve W production.
 This whole symmetric alternative pays too much in total response
 cost. The unrestricted problem still allows independently varying
 ground edges and remains open.
+
+## Unequal groups give a small algebraic optimization problem
+
+The two groups need not have the same size. The matching count then
+becomes a **Gegenbauer polynomial**, a family that includes Legendre
+polynomials as a special case. Its roots again list every cancellation
+branch.
+
+Once a branch is fixed, scaling and phases leave just one positive
+real parameter. The scalar response cost is an explicit rational
+function of that parameter. Its derivative vanishes at roots of a
+polynomial of degree **six**, regardless of the number of sites.
+The lowest scalar cost must occur at one of those finitely many
+positive roots.
+
+This is useful because the source problem originally has many complex
+entries and exact cancellation constraints. Within the two-group
+ground family, we can work with one real variable and prove bounds
+for all its possible values. The other colored entries remain free.
+
+The [new results](../notes/w-state-two-group-reduction-2026-09-27.md) are:
+
+| Ground structure | What is proved |
+| --- | --- |
+| One site and a uniform odd core | The known rate is attained and optimal at every even size |
+| Two sites and the remaining sites | Rate is strictly below $5/6$ of the known rate at every even size from six onward |
+| Two equal groups | Rate is strictly below $80/81$ of the known rate at every even size from six onward |
+| Any two-group split, from six through forty sites | The known rate is optimal; every split with at least two sites in each group has a strict gap |
+
+~~~mermaid
+flowchart TD
+    A["Choose the two group sizes"] --> B["Polynomial roots list all ground cancellations"]
+    B --> C["One positive parameter remains on each branch"]
+    C --> D["A degree-six equation lists possible scalar minima"]
+    C --> E["Exact interval arithmetic proves a bound for the whole branch"]
+    E --> F["615 certified branches cover every unequal split through forty sites"]
+    F --> G["Together with the equal-split proof: the known rate is optimal in this ground family"]
+~~~
+
+The finite certificates cover every parameter value on every listed
+branch. They are stronger than checking many numerical examples.
+They use rational root intervals and positive polynomial coefficients
+on subdivisions of a fixed interval.
+
+Forty sites is the endpoint of the verified catalog, not a claim
+about all larger unequal splits. The general reduction remains valid
+there, but a uniform proof is still needed. These results also leave
+ground sources without two-group symmetry outside their scope.

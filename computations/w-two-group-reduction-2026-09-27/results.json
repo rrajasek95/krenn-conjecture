@@ -1,0 +1,126 @@
+{
+  "checks": {
+    "finite_catalog": {
+      "branches": 615,
+      "maximum_bernstein_depth": 2,
+      "maximum_sites": 40,
+      "splits": 171
+    },
+    "reductions": {
+      "exact_row_examples": 585,
+      "group_splits": 65,
+      "half_sizes": [
+        3,
+        12
+      ],
+      "stationary_degree": 6
+    },
+    "two_site_all_even_gap": {
+      "all_size_argument": "Written monotone prefactor, Bernoulli inequality, and positive quadratic",
+      "positive_shift_coefficients": [
+        "24534000",
+        "26516640",
+        "10456520",
+        "2111240",
+        "243352",
+        "16273",
+        "590",
+        "9"
+      ],
+      "scalar_cost_ratio": "6/5",
+      "small_core_sizes": [
+        {
+          "dyadic_cells": [
+            [
+              0,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "maximum_depth": 4,
+          "positive_intervals": 5,
+          "q": 4
+        },
+        {
+          "dyadic_cells": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "maximum_depth": 2,
+          "positive_intervals": 3,
+          "q": 6
+        },
+        {
+          "dyadic_cells": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "maximum_depth": 1,
+          "positive_intervals": 2,
+          "q": 8
+        }
+      ],
+      "strict_rate_ratio": "5/6",
+      "tail_core_size": 10
+    }
+  },
+  "conclusions": [
+    "Every two-group scalar cancellation branch reduces to a positive variable and a sextic stationary equation",
+    "For a two-site smaller group, every colored exact-W rate is strictly below (5/6) R_star at every even n>=6",
+    "For every even 6<=n<=40, R_star is the attained optimum among all two-group ground sources",
+    "Every proper split in that finite range has exact-W rate strictly below (80/81) R_star"
+  ],
+  "dependencies": {
+    "computations/w-equal-split-legendre-2026-09-27/algebra.py": "e606e03bc5254de5f7b8be80f70d5a226cee5d7c5f2b9d16e6e895d1cbe879a7",
+    "notes/w-state-equal-split-legendre-2026-09-27.md": "79794dd0b44ee61f1145a1d267b3f305a3823580cc5924e278531b4e5932e60a",
+    "notes/w-state-no-ground-matching-optimum-2026-09-27.md": "f44f8f88bd42a9c1a4d0c3f06da30e774d97ab93f66ee6bbafb141bdf4c1f3c9",
+    "notes/w-state-unrestricted-response-bound-2026-09-27.md": "8ec0f9855d6665967e1a8920f2b0369ed4cd7fd21828be000d7c040abb86c557"
+  },
+  "evidence_status": "Written proof with exact supporting checks; independent audit pending",
+  "limitations": [
+    "Unrestricted global W optimum remains open",
+    "The finite catalog is not an all-size theorem for arbitrary unequal splits",
+    "The ground weights are constant on the two groups and across them, up to site phases",
+    "Optimizing scalar response does not certify feasibility of the minimum-row colored completion"
+  ],
+  "sha256": {
+    "computations/w-two-group-reduction-2026-09-27/README.md": "6b1849b220d6aaf0ebbcf64837c8358f61958081d7112b5214aeb4ebeddabe82",
+    "computations/w-two-group-reduction-2026-09-27/certificates.json": "44c6e8eecf8a54d83a7133c8f45c23e35c1633bb080dd738d64035f35fbfb3e7",
+    "computations/w-two-group-reduction-2026-09-27/dependencies.json": "8d5f0dfe1c6b7c9872cb90806a4e3027663e7df480f8802eb95da5afc722e02d",
+    "computations/w-two-group-reduction-2026-09-27/two_group.py": "980f1df6b2fc14db6a62eb534a395598ef8c355e52c5ee0c4914138c8378ad6e",
+    "computations/w-two-group-reduction-2026-09-27/verify.py": "19f606f355cef8abf6e5b8fc28c6a264fc650307bb4bc02e25eca353b3354db0",
+    "notes/w-state-two-group-reduction-2026-09-27.md": "f748f76f2841413cd7e0d1479025a4c8d1ad2dacd9bc7b98e911df3e15350fbc"
+  },
+  "status": "PASS"
+}

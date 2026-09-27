@@ -13,7 +13,7 @@ provide a shared replay command.
 | Guide | Read on GitHub | Browser edition |
 |---|---|---|
 | The complete proof, from cancellation to the all-size contradiction | [All-orders proof guide](ALL-ORDERS-PROOF.md) | [Seven diagrams and offline equations](ALL-ORDERS-PROOF.html) |
-| A universal W-design guarantee, response rigidity, and a competing scalar minimum | [Global W guarantee](W-GLOBAL-GUARANTEE.md) | — |
+| A universal W guarantee, response rigidity, and exact bounds for competing ground families | [Global W guarantee](W-GLOBAL-GUARANTEE.md) | — |
 | Unrestricted local W optimality at every even size, including the four-site exception | [All-even local W optimality](W-LOCAL-OPTIMALITY.md) | — |
 | Flat supports, triangle projections, and GHZ onset with three arms or two invertible arms | [Critical-direction geometry](CRITICAL-DIRECTION-GEOMETRY.md) | — |
 | All-even W optimality and a strict six-site gap with cancelling ground matchings | [W ground cancellation](W-GROUND-CANCELLATION.md) | — |
