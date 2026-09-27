@@ -1,0 +1,113 @@
+{
+  "checks": {
+    "classical_identities": {
+      "arithmetic": "Fractions only",
+      "degrees": [
+        0,
+        16
+      ]
+    },
+    "cost_identity": {
+      "half_sizes": [
+        2,
+        12
+      ],
+      "method": "Polynomial remainder at every positive root"
+    },
+    "finite_degrees": [
+      {
+        "disconnected_cost_ratio": "81/65",
+        "m": 3,
+        "remainder": [
+          "0"
+        ]
+      },
+      {
+        "m": 4,
+        "remainder": [
+          "105829/280",
+          "-2953/56"
+        ]
+      },
+      {
+        "disconnected_cost_ratio": "765625/269001",
+        "m": 5,
+        "remainder": [
+          "2526393571/476280",
+          "3212873471/2857680"
+        ]
+      },
+      {
+        "m": 6,
+        "remainder": [
+          "35532440345/758912",
+          "3141644893/54208",
+          "-2694230881/108416"
+        ]
+      },
+      {
+        "disconnected_cost_ratio": "6277868289/788997625",
+        "m": 7,
+        "remainder": [
+          "3382235223538841/7895358900",
+          "30015935836239371/50530296960",
+          "-5622269916057679/34452475200"
+        ]
+      }
+    ],
+    "imbalance": {
+      "exact_formula_examples": 150,
+      "general_monotonicity": "Written two-case inequality for all m>=3, k>0"
+    },
+    "matching_counts": {
+      "cofactor_classes_per_size": 3,
+      "half_sizes": [
+        2,
+        12
+      ]
+    },
+    "tail": {
+      "Q8": "167518208/143015625",
+      "all_size_argument": "Written Bernoulli induction; not a finite extrapolation",
+      "base_half_size": 8,
+      "finite_ratio_identity_checks": [
+        3,
+        40
+      ],
+      "positive_shifted_coefficients": [
+        17,
+        18,
+        2
+      ],
+      "ratio_lower_bound": "3/2"
+    }
+  },
+  "conclusions": [
+    "Equal-size two-group ground family has scalar cost at least (81/80) F_star for all n=2m>=6",
+    "Every colored exact-W completion has rate strictly below (80/81) R_star",
+    "Explicit geometric rate loss for the family from n=16 onward",
+    "Exact family scalar minimum is a finite minimum of Legendre quadrature-weight expressions"
+  ],
+  "dependencies": {
+    "computations/w-balanced-cancellation-2026-09-27/balanced_hessian.py": "78cb03ac408a58d126bdf02eca0a3cb0e5f28027dcbecec0f7fd87ba74f94ae2",
+    "computations/w-balanced-cancellation-2026-09-27/quadratic_field.py": "854cbd282e3c0d354b9a81b6f8acd4d488fa3ac9ddda6916eb6b3718f988530d",
+    "computations/w-balanced-cancellation-2026-09-27/verify.py": "d85056a2ff511fdaa7a171f2c794b6106308ac89b1f51164e7ed2c52c962c5d6",
+    "notes/w-state-balanced-three-plus-three-2026-09-27.md": "969b682b47b72c0b736db6482c877dba3bfba5add61cbc3c8e46d3487bbfdc2f",
+    "notes/w-state-unrestricted-response-bound-2026-09-27.md": "8ec0f9855d6665967e1a8920f2b0369ed4cd7fd21828be000d7c040abb86c557"
+  },
+  "evidence_status": "Written proof with exact supporting checks; independent audit pending",
+  "limitations": [
+    "Unrestricted global W optimum remains open",
+    "Ground weights are constant within each group and across the groups, up to site phases",
+    "No higher-dimensional local-minimum classification",
+    "Rate upper bounds are not asserted attained"
+  ],
+  "sha256": {
+    "computations/w-equal-split-legendre-2026-09-27/README.md": "a59dfe6ac9a5ed8d08be2f258ca6db7fe9a322962571f2963d621f4aae178e5a",
+    "computations/w-equal-split-legendre-2026-09-27/algebra.py": "e606e03bc5254de5f7b8be80f70d5a226cee5d7c5f2b9d16e6e895d1cbe879a7",
+    "computations/w-equal-split-legendre-2026-09-27/dependencies.json": "f2f52a9237b6d0191a985471d3905cac786a7e4a07c74d2bbfd8011a0c343daa",
+    "computations/w-equal-split-legendre-2026-09-27/verify.py": "9a30690610d7530d4824115292bdcded4e84a33e127fc81eb633e637844bb472",
+    "notes/w-state-equal-split-legendre-2026-09-27.md": "79794dd0b44ee61f1145a1d267b3f305a3823580cc5924e278531b4e5932e60a"
+  },
+  "status": "PASS"
+}

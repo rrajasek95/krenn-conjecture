@@ -206,3 +206,52 @@ two-excitation coefficients have nonzero sum. The balanced scalar
 minimum is therefore **not a proved local optimum of exact W design**,
 and its scalar rate bound cannot be attained by an exact W source.
 The unrestricted global optimum remains open.
+
+## The same competitor can now be excluded at every even size
+
+The six-site calculation extends to two groups of $m$ sites each,
+with one weight inside each group and a third weight between them.
+The other colored source entries can be chosen freely.
+A [new all-even argument](../notes/w-state-equal-split-legendre-2026-09-27.md)
+proves that every exact W design with this ground structure has
+
+$$
+R<\frac{80}{81}R_*,\qquad n=2m\ge6.
+$$
+
+This settles the whole three-weight family, including unequal weight
+magnitudes, every way its ground matchings can cancel, and the cases
+where the two groups are disconnected.
+
+~~~mermaid
+flowchart TD
+    A["Two groups of m sites; three ground weights"] --> B["Count matchings by how many pairs stay inside each group"]
+    B --> C["The cancellation equation is a Legendre polynomial"]
+    C --> D["Its roots list every cancellation branch"]
+    D --> E["Unequal magnitudes increase the scalar cost"]
+    E --> F["At balance, a classical polynomial bound controls the cost"]
+    F --> G["Every colored completion has rate below 80/81 of the known design"]
+~~~
+
+Legendre polynomials are familiar from approximation and integration.
+Here they arise because the coefficients count the possible matchings.
+Their roots turn a complex cancellation problem into a finite list
+of real cases at each size.
+
+There is a second useful connection. Once the two groups have equal
+weight magnitudes, the scalar response cost can be written using
+the weights from **Gauss–Legendre quadrature**, a method for integrating
+polynomials exactly using finitely many sample points. A standard
+bound on these polynomials controls every sufficiently large size
+at once. Exact rational identities handle the five smaller cases.
+
+The penalty also grows with size. From 16 sites onward, a proved
+upper bound on this family's rate, relative to the known design,
+shrinks by a factor of $2/3$ for every extra pair of sites.
+This describes the bound, not the exact optimal rate of the family.
+
+The useful lesson is that complete ground support and perfectly
+balanced response rows do not by themselves improve W production.
+This whole symmetric alternative pays too much in total response
+cost. The unrestricted problem still allows independently varying
+ground edges and remains open.

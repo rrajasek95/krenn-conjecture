@@ -40,6 +40,7 @@ PACKAGES = (
     "three-arm-ghz-onset-2026-09-27",
     "two-arm-ghz-onset-2026-09-27",
     "w-balanced-cancellation-2026-09-27",
+    "w-equal-split-legendre-2026-09-27",
 )
 
 
