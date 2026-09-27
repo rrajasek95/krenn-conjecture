@@ -680,12 +680,65 @@ flowchart TD
     F --> H["Remaining: 15 site pairs × 2 color orientations"]
 ~~~
 
-Thus the unresolved onset shapes are just thirty projective directions.
+At this stage the candidate onset shapes are thirty projective directions.
 Each pattern still allows any complex weight; “thirty” counts the
 choice of sites and color orientation, not the possible amplitudes.
 All these single-cell sources have zero six-site output. They are
 the directions where further perturbation analysis is needed, not
 counterexamples to the rate law.
+
+## Ground cofactors remove more of the thirty directions
+
+The [balanced-response theorem](../notes/balanced-response-ghz-onset-2026-09-27.md)
+uses the ground source to test those candidates. A ground cofactor
+is the matching sum on the four sites left after deleting an edge.
+If it is nonzero, the output equations force the corresponding
+binary edge to be small. We call that edge **anchored**.
+
+For a substantial binary edge $01$, either pattern below suffices
+for fifth-power onset, regardless of its matrix rank:
+
+~~~mermaid
+flowchart LR
+    subgraph N["Common anchored neighbor"]
+        A0["0"] --- R["r"]
+        A1["1"] --- R
+    end
+    subgraph C["Anchored four-cycle outside 0 and 1"]
+        B2["2"] --- B4["4"]
+        B2 --- B5["5"]
+        B3["3"] --- B4
+        B3 --- B5
+    end
+~~~
+
+Every drawn edge is anchored. In the first pattern, the response
+equations force every edge at $r$ to be small, making the full
+output small. In the second, two opposite outside edges can remain
+large. The new lemma controls their attachment responses.
+
+Here is the useful linear algebra. Rescale the two endpoint rows
+in opposite directions until they have equal norm $a$. This preserves
+their pair products. The response map then has at most one weak
+input direction; on every perpendicular direction its singular
+value is at least $a/\sqrt2$. The statement works in any finite
+local dimensions, and the constant is sharp.
+
+~~~mermaid
+flowchart TD
+    A["Balance the two row norms"] --> B["All but one input direction are controlled"]
+    B --> C["Output = one product factor + bounded remainder"]
+    C --> D["Mixed-color equations bound the remaining attachments"]
+    D --> E["Project away one core factor"]
+    E --> F["At least half the binary GHZ squared norm remains"]
+    F --> G["Fifth-power onset, including rank-one edges"]
+~~~
+
+When both endpoint cofactor rows vanish, the outside anchored
+four-cycle is guaranteed. Thus those singular cases are now covered.
+The candidates left depend on the ground source. For the exact
+example whose cofactor edges are $02,03,12,13$, only sixteen of
+the thirty projective directions remain.
 
 ## From a shape theorem to a GHZ estimate
 
@@ -713,11 +766,15 @@ $$
 
 If two non-ground arms have size at least a fixed fraction of the
 non-ground source norm, or one edge has its smaller singular value
-or same-color strength bounded below by such a fraction, the latest results give
+or same-color strength bounded below by such a fraction, we obtain
 
 $$
 |\lambda|\le C_1\varepsilon+C_2\delta^5.
 $$
+
+The same estimate now holds for an edge whose norm is a fixed
+fraction of the source norm and passes either ground-cofactor test
+above, without a matrix-rank assumption.
 
 This uses actual source distance. Unlike an order statement for a path
 parameter, it is unaffected by describing the same path with a slower
@@ -730,8 +787,8 @@ $\varepsilon\ge c|\lambda|^3$ across every relevant boundary.
 The new results identify and control several difficult families, but a
 bound involving $\delta$ does not by itself give that error-versus-signal
 comparison. Within the full-support single-color branch, the remaining
-critical shapes for this onset argument are the thirty single-cell,
-different-color directions above.
+critical shapes for this onset argument are the single-cell,
+different-color directions that fail the ground-cofactor tests above.
 The combined estimate is uniform when the normalized non-ground
 direction stays a fixed positive distance from those sources.
 Indeed, a flat source with no two adjacent edges can have only one

@@ -42,6 +42,7 @@ into a laboratory count rate requires a physical source model.
 | Two comparable arms suffice at every matrix rank | Retaining individual outside-arm sizes and using two ground-selected anchors closes the shared-center rank-one case. The fifth-power onset estimate is now uniform away from single-edge directions. | [Two-anchor theorem and corollary](../../notes/coherent-two-arm-ghz-onset-2026-09-27.md), [replay](../../computations/coherent-two-arm-ghz-2026-09-27/README.md) |
 | A single uniformly invertible edge suffices for onset | A bilinear response lemma and a sharp determinant-tangent projection handle the decay of every other edge. The combined estimate is uniform away from single rank-one edge directions. | [Single-edge theorem and projection gap](../../notes/single-invertible-edge-ghz-onset-2026-09-27.md), [replay](../../computations/single-invertible-edge-ghz-2026-09-27/README.md) |
 | A same-color edge component suffices for onset | A binary adjugate identity gives a sharp quadratic response certificate without matrix-rank assumptions. The combined estimate is uniform away from thirty projective directions, each supported on one different-color cell. | [Identity, norm certificate, and onset theorem](../../notes/binary-adjugate-ghz-onset-2026-09-27.md), [replay](../../computations/binary-adjugate-ghz-2026-09-27/README.md) |
+| Ground-cofactor tests through single-edge rank loss | A common anchored neighbor or an outside anchored four-cycle suffices at every matrix rank. This covers both zero endpoint cofactor rows and reduces the thirty candidates according to the ground source; the exact sparse fixture leaves sixteen. | [Balanced-response proof and cofactor criteria](../../notes/balanced-response-ghz-onset-2026-09-27.md), [replay](../../computations/balanced-response-ghz-2026-09-27/README.md) |
 
 The earlier higher-order identities concern an analytic path parameter.
 The new distance bounds are uniform under their stated family or arm-size
@@ -61,8 +62,8 @@ flowchart TD
     B -->|Yes| G["Open: matching terms cancel"]
     G --> H["Full-support single-color identities constrain initial orders"]
     H --> I["Every such limit: first critical support uses at most four sites or is a star"]
-    I --> J["Fifth-power onset: two comparable arms, an invertible edge, or a same-color edge component"]
-    I --> K["Remaining onset shapes: one different-color cell; thirty projective directions"]
+    I --> J["Fifth-power onset: arm, edge, and ground-cofactor criteria"]
+    I --> K["Remaining onset shapes: different-color cells failing the cofactor tests"]
     J --> L["Still open: error-versus-signal estimate"]
     K --> L
 ~~~
@@ -74,11 +75,15 @@ through the remaining singular limits. A large response in some direction
 does not yet control the GHZ direction.
 
 At a full-support single-color zero, the
-[latest onset estimate](../../notes/binary-adjugate-ghz-onset-2026-09-27.md)
-is uniform away from thirty projective directions: a source with just
-one cell joining pure $b$ to pure $c$, or the reverse.
-The binary adjugate certificate handles a same-color component in any
-edge, complementing the two-arm and invertible-edge theorems.
+[latest onset estimate](../../notes/balanced-response-ghz-onset-2026-09-27.md)
+is uniform away from a ground-dependent subset of thirty projective
+directions: a source with just one different-color cell, on an edge
+that is unanchored, has no common anchored neighbor, and has no
+outside anchored four-cycle. Here an anchored edge has nonzero
+ground hafnian cofactor. Every remaining edge has at least one
+nonzero endpoint cofactor row.
+The sparse exact ground fixture leaves sixteen directions; that
+number is not a universal count.
 The error-versus-signal bound remains open even in the families whose
 onset is now controlled.
 
