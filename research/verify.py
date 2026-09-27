@@ -33,6 +33,7 @@ PACKAGES = (
     "flat-support-structure-2026-09-27",
     "w-all-even-local-optimum-2026-09-27",
     "four-arm-ghz-boundary-2026-09-27",
+    "four-core-attachments-2026-09-27",
 )
 
 

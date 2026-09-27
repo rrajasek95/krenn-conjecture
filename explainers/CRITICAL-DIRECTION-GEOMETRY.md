@@ -7,7 +7,9 @@ We can now classify all support graphs whose four-site responses vanish,
 and control distance to several of the resulting families. This reduces
 the possible first critical directions at every full-support single-color
 GHZ boundary. Quantitative star estimates survive matrix rank loss, and
-the GHZ onset bound now allows one star arm to disappear.
+the GHZ onset bound now allows one star arm to disappear. A separate
+attachment argument handles every four-site core that is not a star,
+including those with singular internal response.
 
 **Evidence:** written proofs with exact supporting checks; independent
 audit pending. These are follow-ups to the completed Krenn–Gu proof.
@@ -169,8 +171,8 @@ flowchart TD
     C --> E["Support is a star centered at 4 or 5"]
     D --> F["All six binary core blocks invertible: classified and locally stable"]
     E --> G["All five arms nonzero: rank-independent star estimate"]
-    D --> H["Open: singular four-site cores and sparse stars"]
-    E --> H
+    D --> H["All non-star four-site cores: attachment control gives an onset bound"]
+    E --> I["Four arms: onset bound; three or fewer: still open"]
 ~~~
 
 The proof uses a short cancellation obstruction. If three leaves each
@@ -235,6 +237,56 @@ therefore permits **four arms bounded below by a fixed fraction of the
 non-ground source norm**. The fifth arm may be zero, all matrices may
 have rank one, and no prior closeness to a flat star is required.
 
+## A singular core can still have well-controlled attachments
+
+Suppose four active sites form a flat source that is not a star.
+Two more sites are isolated. The internal four-site equations can be
+singular, making it difficult to measure distance to the exact solution
+set. The [attachment theorem](../notes/four-core-attachment-ghz-bound-2026-09-27.md)
+avoids needing that distance.
+
+Connect a fifth site to the four-site core. Each new four-site
+response consists of one new edge times one old core edge, summed
+over three choices. This is linear in the new attachments.
+
+~~~mermaid
+flowchart TD
+    A["Flat four-site core, not a star"] --> B["Add edges from a fifth site"]
+    B --> C{"Can every new four-site response stay zero?"}
+    C -->|No| D["Responses bound all attachments linearly"]
+    C -->|Yes| E["The five-site source must be the cube-root core"]
+    E --> F["One attachment block detects the entire hidden kernel"]
+    F --> G["A GHZ output with nonzero ground cofactor controls that block"]
+    D --> H["Both outside sites have small attachments"]
+    G --> H
+~~~
+
+The earlier support classification makes this conclusion possible.
+Any nonzero hidden extension would be an exactly flat source on five
+active sites, and the cube-root core is the only such source that is
+not a star. This works for any number of colors and does not require
+invertible edge matrices.
+
+Now return to six sites. Call the four-site core $B$, the two attachment
+collections $X_r,X_s$, and the edge between the outside sites $Z$.
+Every perfect matching takes one of two forms:
+
+| How the outside sites are matched | Contribution |
+| --- | --- |
+| They join each other | $Z$ times the four-site output of $B$ |
+| They join two different core sites | One edge from $X_r$, one from $X_s$, and the remaining core edge |
+
+In the nontrivial regime of the proof, the GHZ constraints bound
+$X_r$, $X_s$, and $Z$ by a constant times $\delta^2$, where $\delta$
+is distance from the single-color source.
+The core has size at most $\delta$. The second row therefore has size
+at most a constant times $\delta^2\delta^2\delta=\delta^5$.
+The measured four-site response controls the first row.
+
+Thus internal singularities do not obstruct this particular onset
+estimate. Constants are uniform over compact families of these cores;
+they may deteriorate when the core approaches a triangle or a star.
+
 ## From a shape theorem to a GHZ estimate
 
 In the smooth core families and five-arm stars, the response controls
@@ -260,7 +312,8 @@ H(A)=\lambda(a^6+b^6+c^6)+E,\quad
 $$
 
 If its non-ground direction is near one of the specified smooth
-families, or it satisfies the new four-arm condition, the estimate gives
+families, satisfies the four-arm condition, or is near any non-star
+four-active-site flat core, the estimates give
 
 $$
 |\lambda|\le C_1\varepsilon+C_2\delta^5.
@@ -277,6 +330,8 @@ $\varepsilon\ge c|\lambda|^3$ across every relevant boundary.
 The new results identify and control several difficult families, but a
 bound involving $\delta$ does not by itself give that error-versus-signal
 comparison. Within the full-support single-color branch, the remaining
-uncontrolled support patterns for this onset argument use at most four
-active sites. The error-versus-signal comparison remains open even on
-the star families controlled here.
+critical shapes for this onset argument are triangles and stars with
+at most three arms. The combined estimate is uniform when the normalized
+non-ground direction stays a fixed positive distance from those shapes.
+The error-versus-signal comparison remains open even on the families
+whose onset is now controlled.
