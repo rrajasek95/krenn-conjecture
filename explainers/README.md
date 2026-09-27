@@ -15,7 +15,7 @@ provide a shared replay command.
 | The complete proof, from cancellation to the all-size contradiction | [All-orders proof guide](ALL-ORDERS-PROOF.md) | [Seven diagrams and offline equations](ALL-ORDERS-PROOF.html) |
 | A universal factor-two guarantee for W design at every even site count | [Global W guarantee](W-GLOBAL-GUARANTEE.md) | — |
 | Unrestricted local W optimality at every even size, including the four-site exception | [All-even local W optimality](W-LOCAL-OPTIMALITY.md) | — |
-| All flat supports, singular-core attachments, triangle projections, and GHZ distance bounds | [Critical-direction geometry](CRITICAL-DIRECTION-GEOMETRY.md) | — |
+| All flat supports, triangle projections, and GHZ onset with only three arms | [Critical-direction geometry](CRITICAL-DIRECTION-GEOMETRY.md) | — |
 | All-even W optimality and a strict six-site gap with cancelling ground matchings | [W ground cancellation](W-GROUND-CANCELLATION.md) | — |
 | Classification of triangle rank loss and unrestricted W response bounds | [The balanced frontier](BALANCED-FRONTIER.md) | — |
 | Global source balancing and a sharp response bound for both research paths | [Site balancing](SITE-BALANCING.md) | — |

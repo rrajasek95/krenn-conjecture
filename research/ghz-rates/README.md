@@ -36,6 +36,7 @@ into a laboratory count rate requires a physical source model.
 | Onset through the loss of one star arm | Four non-ground arms bounded below relative to the non-ground source norm suffice for a uniform fifth-power distance estimate. A complete four-arm kernel classification identifies the hidden directions and a sharp square-root response obstruction. | [Kernel geometry](../../notes/four-arm-star-response-2026-09-27.md), [GHZ distance theorem](../../notes/four-arm-ghz-distance-bound-2026-09-27.md), [replay](../../computations/four-arm-ghz-boundary-2026-09-27/README.md) |
 | Onset at every non-star four-site core | Control the two outside sites without resolving internal singularities. Only a cube-root core can hide an attachment, and a ground-cofactor constraint removes that kernel. The fifth-power estimate is uniform away from triangles and stars with at most three arms. | [Attachment theorem and GHZ application](../../notes/four-core-attachment-ghz-bound-2026-09-27.md), [replay](../../computations/four-core-attachments-2026-09-27/README.md) |
 | Onset at every full triangle through rank loss | Pairwise attachment control and a local GHZ projection extend the fifth-power estimate to all triangles. The combined estimate is uniform away from stars with at most three arms. | [Triangle theorem](../../notes/triangle-attachment-ghz-bound-2026-09-27.md), [replay](../../computations/triangle-ghz-onset-2026-09-27/README.md) |
+| Three comparable arms suffice for onset | A weighted extension estimate handles every three-arm pattern, including zero center cofactor rows. The fifth-power estimate is now uniform away from stars with at most two arms. | [Three-arm theorem and reusable extension lemma](../../notes/three-arm-ghz-distance-bound-2026-09-27.md), [replay](../../computations/three-arm-ghz-onset-2026-09-27/README.md) |
 
 The earlier higher-order identities concern an analytic path parameter.
 The new distance bounds are uniform under their stated family or arm-size
@@ -55,8 +56,8 @@ flowchart TD
     B -->|Yes| G["Open: matching terms cancel"]
     G --> H["Full-support single-color identities constrain initial orders"]
     H --> I["Every such limit: first critical support uses at most four sites or is a star"]
-    I --> J["Fifth-power onset: triangles, non-star four-site cores, and stars with four comparable arms"]
-    I --> K["Remaining onset shapes: stars with at most three arms"]
+    I --> J["Fifth-power onset: triangles, non-star four-site cores, and three comparable arms"]
+    I --> K["Remaining onset shapes: single edges and two-arm stars"]
     J --> L["Still open: error-versus-signal estimate"]
     K --> L
 ~~~

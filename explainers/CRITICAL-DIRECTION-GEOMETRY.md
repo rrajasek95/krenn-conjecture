@@ -334,6 +334,56 @@ The projection removes the product output exactly. We can bound the
 GHZ signal even though these auxiliary constraints do not give the
 same bound on the entire output.
 
+## Three arms: control products instead of every individual edge
+
+The [three-arm theorem](../notes/three-arm-ghz-distance-bound-2026-09-27.md)
+removes one more arm from the hypothesis. Three edges at a common
+center, each at least a fixed fraction of the non-ground source norm,
+now suffice. The other two arms may vanish. All matrices may have
+rank one, and no assumption about a nonzero center cofactor is needed.
+
+To see the new difficulty, take the center and its three active leaves
+as a four-site core. Let $b$ measure the edges between those leaves.
+An outside site has an arm of size $h$ to the center, and attachments
+of combined size $y$ to the three leaves. Neither $b$ nor $h$ needs
+to be small enough individually. The matching output, however, uses
+their **product**.
+
+Normalize the three strong arms. If both $b$ and $h$ are nonzero,
+divide the leaf perturbation by $b$, the new arm by $h$, and the
+remaining attachments by $bh$. All equations then compare objects
+of controlled size. A completely hidden configuration would be an
+exactly flat source on five active sites.
+
+~~~mermaid
+flowchart TD
+    A["Three strong arms and internal leaf edges of size b"] --> B["Add one outside arm of size h and leaf attachments of size y"]
+    B --> C["Rescale the two changes separately"]
+    C --> D["If every response vanishes, the five-site support must be complete"]
+    D --> E["A ground-cofactor equation requires a small edge"]
+    E --> F["Control bh and y together"]
+    F --> G["Repeat for the second outside site"]
+    G --> H["Every six-site matching has fifth-power size, up to the measured error"]
+~~~
+
+The existing support theorem makes this useful: a non-star flat
+source on five active sites must contain every edge. A cofactor
+constraint supplies the edge that prevents such an extension.
+Compactness then turns this impossibility into a quantitative bound.
+
+The weights matter. If the internal perturbation is multiplied by
+$u$ and the outside arm by $v$, the hidden attachments scale by $uv$,
+while the response involving only leaves scales by $u^2v$.
+Dividing that last response by $b$ puts it at the right scale.
+The actual mixed GHZ outputs bound it by the error plus a term
+depending only on the relevant leaf edges.
+
+Two exact examples explain why the ingredients cannot be dropped.
+A two-pair color pattern hides every center-containing response but
+has a nonzero leaf-only response. A complete cube-root source hides
+all responses but violates the required small-edge constraint.
+Together, the leaf response and the cofactor equation exclude both.
+
 ## From a shape theorem to a GHZ estimate
 
 In the smooth core families and five-arm stars, the response controls
@@ -359,7 +409,7 @@ H(A)=\lambda(a^6+b^6+c^6)+E,\quad
 $$
 
 If its non-ground direction is near one of the specified smooth
-families, satisfies the four-arm condition, is near any non-star
+families, satisfies the three-arm condition, is near any non-star
 four-active-site flat core, or is near a full triangle, the estimates give
 
 $$
@@ -377,8 +427,8 @@ $\varepsilon\ge c|\lambda|^3$ across every relevant boundary.
 The new results identify and control several difficult families, but a
 bound involving $\delta$ does not by itself give that error-versus-signal
 comparison. Within the full-support single-color branch, the remaining
-critical shapes for this onset argument are stars with at most three
-arms. The combined estimate is uniform when the normalized
+critical shapes for this onset argument are single edges and two-arm
+stars. The combined estimate is uniform when the normalized
 non-ground direction stays a fixed positive distance from those shapes.
 The error-versus-signal comparison remains open even on the families
 whose onset is now controlled.
