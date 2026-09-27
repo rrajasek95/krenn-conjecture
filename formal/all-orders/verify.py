@@ -94,8 +94,9 @@ def main() -> None:
             for name in sources + ["lakefile.toml", "lake-manifest.json", "lean-toolchain"]
         },
         "scope": (
-            "Matching-polynomial model, conditional O(2) matrix normal form, "
-            "conditional endpoint algebra and response rigidity, complete three-matching obstruction. "
+            "Physical quotient/divided-power bridge, O(2) invariant-ring theorem, "
+            "finite Wick covariance, conditional endpoint and response algebra, "
+            "complete graph obstruction and conditional weighted contradiction. "
             "The full conjecture and physical-source-to-endpoint identities are not formalized."
         ),
     }

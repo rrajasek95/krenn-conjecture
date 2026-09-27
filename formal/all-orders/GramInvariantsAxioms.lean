@@ -1,0 +1,43 @@
+import GramInvariants
+
+/-! Axiom inventory for every public theorem delivered by `GramInvariants`. -/
+
+#print axioms KrennAllOrders.GramInvariants.scalar_outer_unique_of_nonzero
+#print axioms KrennAllOrders.GramInvariants.conjugate_scalar_outer
+#print axioms KrennAllOrders.GramInvariants.eval_framePullback
+#print axioms KrennAllOrders.GramInvariants.eval_normal_form
+#print axioms KrennAllOrders.GramInvariants.evaluated_coefficients_invariant
+#print axioms KrennAllOrders.GramInvariants.normal_form_coefficients_invariant
+#print axioms KrennAllOrders.GramInvariants.axisRestriction_comp_gramMap
+#print axioms KrennAllOrders.GramInvariants.eval_axisGramMap
+#print axioms KrennAllOrders.GramInvariants.exists_axis_gram_preimage
+#print axioms KrennAllOrders.GramInvariants.axisGramMap_injective
+#print axioms KrennAllOrders.GramInvariants.gramMap_injective
+#print axioms KrennAllOrders.GramInvariants.power_sum_mem_range
+#print axioms KrennAllOrders.GramInvariants.lightScaling_C
+#print axioms KrennAllOrders.GramInvariants.lightScaling_X
+#print axioms KrennAllOrders.GramInvariants.lightReflection_C
+#print axioms KrennAllOrders.GramInvariants.lightReflection_X
+#print axioms KrennAllOrders.GramInvariants.lightScaling_monomial
+#print axioms KrennAllOrders.GramInvariants.coeff_lightScaling
+#print axioms KrennAllOrders.GramInvariants.balanced_monomial_symmetrization_mem
+#print axioms KrennAllOrders.GramInvariants.balanced_of_lightScaling_two
+#print axioms KrennAllOrders.GramInvariants.light_gram_representation_of_balanced_reflection
+#print axioms KrennAllOrders.GramInvariants.eval_toLightCone
+#print axioms KrennAllOrders.GramInvariants.eval_fromLightCone
+#print axioms KrennAllOrders.GramInvariants.cartesian_light_inverse
+#print axioms KrennAllOrders.GramInvariants.fromLightCone_toLightCone
+#print axioms KrennAllOrders.GramInvariants.scalingFrame_orthogonal
+#print axioms KrennAllOrders.GramInvariants.eval_lightScaling
+#print axioms KrennAllOrders.GramInvariants.eval_lightReflection
+#print axioms KrennAllOrders.GramInvariants.cartesian_scalingFrame
+#print axioms KrennAllOrders.GramInvariants.reflectionFrame_orthogonal
+#print axioms KrennAllOrders.GramInvariants.cartesian_reflectionFrame
+#print axioms KrennAllOrders.GramInvariants.lightScaling_toLightCone
+#print axioms KrennAllOrders.GramInvariants.lightReflection_toLightCone
+#print axioms KrennAllOrders.GramInvariants.light_gram_representation_of_orthogonalInvariant
+#print axioms KrennAllOrders.GramInvariants.fromLightCone_comp_lightGramMap
+#print axioms KrennAllOrders.GramInvariants.gram_representation_of_orthogonalInvariant
+#print axioms KrennAllOrders.GramInvariants.normal_form_coefficients_gram_representation
+#print axioms KrennAllOrders.GramInvariants.orthogonal_covariant_gram_normal_form
+#print axioms KrennAllOrders.GramInvariants.orthogonal_covariant_gram_normal_form_unique

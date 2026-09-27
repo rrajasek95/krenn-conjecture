@@ -1,0 +1,5 @@
+import ResponseFactor
+
+#print axioms KrennAllOrders.ResponseFactor.exists_common_factor
+#print axioms KrennAllOrders.ResponseFactor.common_factor_unique
+#print axioms KrennAllOrders.ResponseFactor.mixed_response_eq_zero

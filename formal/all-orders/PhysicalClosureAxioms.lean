@@ -1,0 +1,3 @@
+import PhysicalClosure
+
+#print axioms KrennAllOrders.PhysicalClosure.not_eqSystemN_of_diagonal_and_endpoint

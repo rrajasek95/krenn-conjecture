@@ -1,0 +1,9 @@
+import SupportMatching
+
+#print axioms KrennAllOrders.SupportMatching.matchingOfUniqueSupport
+#print axioms KrennAllOrders.SupportMatching.matchingOfUniqueSupport_partner_iff
+#print axioms KrennAllOrders.SupportMatching.monochromaticWeight
+#print axioms KrennAllOrders.SupportMatching.colourMatchings
+#print axioms KrennAllOrders.SupportMatching.hasMatchingSupport_of_diagonal_unique
+#print axioms KrennAllOrders.SupportMatching.not_eqSystemN_three_of_diagonal_unique
+#print axioms KrennAllOrders.SupportMatching.not_eqSystemN_three_of_endpoint_identities

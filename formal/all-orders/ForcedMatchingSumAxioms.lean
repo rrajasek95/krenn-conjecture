@@ -1,0 +1,10 @@
+import ForcedMatchingSum
+
+#print axioms KrennAllOrders.ForcedMatchingSum.pmSumListAux_ne_zero_of_forced
+#print axioms KrennAllOrders.ForcedMatchingSum.pmSumN_ne_zero_of_forced
+#print axioms KrennAllOrders.ForcedMatchingSum.allEqualList_eq
+#print axioms KrennAllOrders.ForcedMatchingSum.not_allEqual_of_distinct
+#print axioms KrennAllOrders.ForcedMatchingSum.HasMatchingSupport
+#print axioms KrennAllOrders.ForcedMatchingSum.pmSumN_ne_zero_of_realizes
+#print axioms KrennAllOrders.ForcedMatchingSum.no_mixed_of_eqSystem_and_support
+#print axioms KrennAllOrders.ForcedMatchingSum.not_eqSystemN_three_of_matching_support

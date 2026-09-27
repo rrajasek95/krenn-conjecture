@@ -16,19 +16,26 @@ upstream changes are coordinated by the root agent.
 
 ## Integrated milestones and current work
 
-- `MatchingModel.lean`: checked matching coefficients and site degrees;
-  `audit_det_bridge` is extending this to the physical quotient and divided powers
-  in `SiteAlgebra.lean`.
-- `ReplicaCovariance.lean`: checked polynomial matrix normal form from explicit
-  covariance and divisibility hypotheses; `global_bridge` is proving invariant
-  coefficient and Gram-coordinate theorems in `GramInvariants.lean`.
+- `MatchingModel.lean` and `SiteAlgebra.lean`: checked the complete physical
+  quotient/divided-power bridge. `RootResponse.lean` derives the actual root
+  response and arbitrary-root cofactor expansion. `audit_det_bridge` is
+  working on the whole higher-response tower in `OddResponseVanishing.lean`.
+- `ReplicaCovariance.lean` and `GramInvariants.lean`: checked polynomial normal
+  form, full invariant-ring representation, and injective axis restriction.
+  `EndpointPDE.lean` derives the Gram differential equations from Cartesian
+  boundaries and proves the endpoint consequence. `global_bridge` is
+  constructing the literal tensor kernel in `ReplicaKernel.lean`.
 - `ThreeMatching.lean`, `ChordObstruction.lean`, and
   `ThreeMatchingObstruction.lean`: the complete unconditional graph obstruction
-  is checked. `routing_author` is now constructing actual finite Wick moments
-  and proving their linear covariance in `WickCovariance.lean`.
+  is checked. `WickCovariance.lean` also constructs and proves covariance for
+  actual finite pairing moments. `routing_author` is connecting them to the
+  physical quadratic coefficients in `WickCoefficientBridge.lean`.
 - Root: checked `CycleCoordinates.lean` and the literal upstream adapter, and
-  checked matching transport and finite polynomial response rigidity, and is
-  handling reproducible integration and the remaining
+  checked matching transport, finite response rigidity, common response
+  factors, cofactor matrix cancellation, binary tensor pairing, omission
+  cancellation, and the exact final weighted contradiction. Root is deriving
+  actual cofactor sums from retained coefficients in `CofactorResponse.lean`,
+  and handling reproducible integration and the remaining
   physical-source chain. New in-progress files are excluded from default
   build targets until they are accepted.
 

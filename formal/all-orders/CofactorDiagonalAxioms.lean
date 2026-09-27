@@ -1,0 +1,6 @@
+import CofactorDiagonal
+
+#print axioms KrennAllOrders.CofactorDiagonal.block_eq_zero_of_cofactor_identity
+#print axioms KrennAllOrders.CofactorDiagonal.offDiagonal_eq_zero
+#print axioms KrennAllOrders.CofactorDiagonal.sourceBlock
+#print axioms KrennAllOrders.CofactorDiagonal.source_diagonal_of_cofactor_sums

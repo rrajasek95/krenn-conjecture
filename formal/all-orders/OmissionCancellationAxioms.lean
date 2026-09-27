@@ -1,0 +1,5 @@
+import OmissionCancellation
+
+#print axioms KrennAllOrders.OmissionCancellation.pairing_eq_of_response_and_rotation
+#print axioms KrennAllOrders.OmissionCancellation.pure_coefficient_eq_of_response_and_rotation
+#print axioms KrennAllOrders.OmissionCancellation.polarized_quadratic_coefficient_eq_zero

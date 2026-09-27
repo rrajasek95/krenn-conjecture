@@ -1,3 +1,15 @@
+import OmissionCancellation
+import PhysicalClosure
+import BinaryPairing
+import EndpointPDE
+import RootResponse
+import CofactorDiagonal
+import SupportMatching
+import WickCovariance
+import GramInvariants
+import ForcedMatchingSum
+import ResponseFactor
+import SiteAlgebra
 import FiniteResponseRigidity
 import ThreeMatchingObstruction
 import ChordObstruction
@@ -167,3 +179,250 @@ import EndpointDegree
 #print axioms KrennAllOrders.FiniteResponseRigidity.lineMap_scaleVariables
 #print axioms KrennAllOrders.FiniteResponseRigidity.eval_lineMap
 #print axioms KrennAllOrders.FiniteResponseRigidity.eq_one_of_rescaling_square
+
+#print axioms KrennAllOrders.SiteAlgebra.siteRelations
+#print axioms KrennAllOrders.SiteAlgebra.siteIdeal
+#print axioms KrennAllOrders.SiteAlgebra.SiteRing
+#print axioms KrennAllOrders.SiteAlgebra.project
+#print axioms KrennAllOrders.SiteAlgebra.siteX
+#print axioms KrennAllOrders.SiteAlgebra.siteX_mul_same
+#print axioms KrennAllOrders.SiteAlgebra.siteX_sq
+#print axioms KrennAllOrders.SiteAlgebra.edgeMatrix
+#print axioms KrennAllOrders.SiteAlgebra.edgeMatrix_symm
+#print axioms KrennAllOrders.SiteAlgebra.edgeMatrix_same_site
+#print axioms KrennAllOrders.SiteAlgebra.edgeMatrix_ordered
+#print axioms KrennAllOrders.SiteAlgebra.symmetricQuadratic
+#print axioms KrennAllOrders.SiteAlgebra.rowPolynomial
+#print axioms KrennAllOrders.SiteAlgebra.pderiv_symmetricQuadratic
+#print axioms KrennAllOrders.SiteAlgebra.sourceQuadratic
+#print axioms KrennAllOrders.SiteAlgebra.pderiv_sourceQuadratic
+#print axioms KrennAllOrders.SiteAlgebra.wordExponent_not_mem
+#print axioms KrennAllOrders.SiteAlgebra.coeff_rowPolynomial_mul
+#print axioms KrennAllOrders.SiteAlgebra.coeff_root_pderiv
+#print axioms KrennAllOrders.SiteAlgebra.coeff_sourceQuadratic_pow_succ
+#print axioms KrennAllOrders.SiteAlgebra.coeff_sourceQuadratic_pow
+#print axioms KrennAllOrders.SiteAlgebra.coeff_sourceQuadratic_pow_full
+#print axioms KrennAllOrders.SiteAlgebra.dividedSourcePower
+#print axioms KrennAllOrders.SiteAlgebra.coeff_dividedSourcePower_full
+#print axioms KrennAllOrders.SiteAlgebra.wordExponent_selected
+#print axioms KrennAllOrders.SiteAlgebra.siteDegree
+#print axioms KrennAllOrders.SiteAlgebra.exponentDegree
+#print axioms KrennAllOrders.SiteAlgebra.weight_one_eq_exponentDegree
+#print axioms KrennAllOrders.SiteAlgebra.exists_same_site_pair_le
+#print axioms KrennAllOrders.SiteAlgebra.monomial_mem_siteIdeal_of_doubled
+#print axioms KrennAllOrders.SiteAlgebra.exists_word_of_full_squarefree
+#print axioms KrennAllOrders.SiteAlgebra.project_eq_of_full_coefficients
+#print axioms KrennAllOrders.SiteAlgebra.wordExponent_selected_le_one
+#print axioms KrennAllOrders.SiteAlgebra.coeff_siteRelation_mul
+#print axioms KrennAllOrders.SiteAlgebra.coeff_siteIdeal_zero
+#print axioms KrennAllOrders.SiteAlgebra.coeff_eq_of_project_eq
+#print axioms KrennAllOrders.SiteAlgebra.siteCoefficient
+#print axioms KrennAllOrders.SiteAlgebra.siteCoefficient_project
+#print axioms KrennAllOrders.SiteAlgebra.siteCoefficientHom
+#print axioms KrennAllOrders.SiteAlgebra.siteCoefficient_project_mul_C
+#print axioms KrennAllOrders.SiteAlgebra.sourceQuadratic_totalHomogeneous
+#print axioms KrennAllOrders.SiteAlgebra.matchingPolynomialN_totalHomogeneous
+#print axioms KrennAllOrders.SiteAlgebra.project_sourceQuadratic_pow_full
+#print axioms KrennAllOrders.SiteAlgebra.project_dividedSourcePower_full
+#print axioms KrennAllOrders.SiteAlgebra.siteCoefficient_dividedSourcePower
+
+#print axioms KrennAllOrders.ResponseFactor.exists_common_factor
+#print axioms KrennAllOrders.ResponseFactor.common_factor_unique
+#print axioms KrennAllOrders.ResponseFactor.mixed_response_eq_zero
+
+#print axioms KrennAllOrders.ForcedMatchingSum.pmSumListAux_ne_zero_of_forced
+#print axioms KrennAllOrders.ForcedMatchingSum.pmSumN_ne_zero_of_forced
+#print axioms KrennAllOrders.ForcedMatchingSum.allEqualList_eq
+#print axioms KrennAllOrders.ForcedMatchingSum.not_allEqual_of_distinct
+#print axioms KrennAllOrders.ForcedMatchingSum.HasMatchingSupport
+#print axioms KrennAllOrders.ForcedMatchingSum.pmSumN_ne_zero_of_realizes
+#print axioms KrennAllOrders.ForcedMatchingSum.no_mixed_of_eqSystem_and_support
+#print axioms KrennAllOrders.ForcedMatchingSum.not_eqSystemN_three_of_matching_support
+
+#print axioms KrennAllOrders.GramInvariants.scalar_outer_unique_of_nonzero
+#print axioms KrennAllOrders.GramInvariants.conjugate_scalar_outer
+#print axioms KrennAllOrders.GramInvariants.eval_framePullback
+#print axioms KrennAllOrders.GramInvariants.eval_normal_form
+#print axioms KrennAllOrders.GramInvariants.evaluated_coefficients_invariant
+#print axioms KrennAllOrders.GramInvariants.normal_form_coefficients_invariant
+#print axioms KrennAllOrders.GramInvariants.axisRestriction_comp_gramMap
+#print axioms KrennAllOrders.GramInvariants.eval_axisGramMap
+#print axioms KrennAllOrders.GramInvariants.exists_axis_gram_preimage
+#print axioms KrennAllOrders.GramInvariants.axisGramMap_injective
+#print axioms KrennAllOrders.GramInvariants.gramMap_injective
+#print axioms KrennAllOrders.GramInvariants.power_sum_mem_range
+#print axioms KrennAllOrders.GramInvariants.lightScaling_C
+#print axioms KrennAllOrders.GramInvariants.lightScaling_X
+#print axioms KrennAllOrders.GramInvariants.lightReflection_C
+#print axioms KrennAllOrders.GramInvariants.lightReflection_X
+#print axioms KrennAllOrders.GramInvariants.lightScaling_monomial
+#print axioms KrennAllOrders.GramInvariants.coeff_lightScaling
+#print axioms KrennAllOrders.GramInvariants.balanced_monomial_symmetrization_mem
+#print axioms KrennAllOrders.GramInvariants.balanced_of_lightScaling_two
+#print axioms KrennAllOrders.GramInvariants.light_gram_representation_of_balanced_reflection
+#print axioms KrennAllOrders.GramInvariants.eval_toLightCone
+#print axioms KrennAllOrders.GramInvariants.eval_fromLightCone
+#print axioms KrennAllOrders.GramInvariants.cartesian_light_inverse
+#print axioms KrennAllOrders.GramInvariants.fromLightCone_toLightCone
+#print axioms KrennAllOrders.GramInvariants.scalingFrame_orthogonal
+#print axioms KrennAllOrders.GramInvariants.eval_lightScaling
+#print axioms KrennAllOrders.GramInvariants.eval_lightReflection
+#print axioms KrennAllOrders.GramInvariants.cartesian_scalingFrame
+#print axioms KrennAllOrders.GramInvariants.reflectionFrame_orthogonal
+#print axioms KrennAllOrders.GramInvariants.cartesian_reflectionFrame
+#print axioms KrennAllOrders.GramInvariants.lightScaling_toLightCone
+#print axioms KrennAllOrders.GramInvariants.lightReflection_toLightCone
+#print axioms KrennAllOrders.GramInvariants.light_gram_representation_of_orthogonalInvariant
+#print axioms KrennAllOrders.GramInvariants.fromLightCone_comp_lightGramMap
+#print axioms KrennAllOrders.GramInvariants.gram_representation_of_orthogonalInvariant
+#print axioms KrennAllOrders.GramInvariants.normal_form_coefficients_gram_representation
+#print axioms KrennAllOrders.GramInvariants.orthogonal_covariant_gram_normal_form
+#print axioms KrennAllOrders.GramInvariants.orthogonal_covariant_gram_normal_form_unique
+
+#print axioms KrennAllOrders.WickCovariance.covariancePair
+#print axioms KrennAllOrders.WickCovariance.covariancePair_apply
+#print axioms KrennAllOrders.WickCovariance.pairingProduct
+#print axioms KrennAllOrders.WickCovariance.pairingProduct_apply
+#print axioms KrennAllOrders.WickCovariance.wickMoment
+#print axioms KrennAllOrders.WickCovariance.wickMoment_apply
+#print axioms KrennAllOrders.WickCovariance.wickMoment_zero
+#print axioms KrennAllOrders.WickCovariance.wickMoment_permute
+#print axioms KrennAllOrders.WickCovariance.wickMoment_const
+#print axioms KrennAllOrders.WickCovariance.slots_one_cases
+#print axioms KrennAllOrders.WickCovariance.wickMoment_one
+#print axioms KrennAllOrders.WickCovariance.wickMoment_update_add
+#print axioms KrennAllOrders.WickCovariance.wickMoment_update_smul
+#print axioms KrennAllOrders.WickCovariance.wickMoment_linear_expansion
+#print axioms KrennAllOrders.WickCovariance.wickMoment_naturality
+#print axioms KrennAllOrders.WickCovariance.wickMoment_invariant
+#print axioms KrennAllOrders.WickCovariance.evenSlotsEquiv
+#print axioms KrennAllOrders.WickCovariance.centeredMoment
+#print axioms KrennAllOrders.WickCovariance.centeredMoment_of_even
+#print axioms KrennAllOrders.WickCovariance.centeredMoment_of_not_even
+#print axioms KrennAllOrders.WickCovariance.centeredMoment_naturality
+#print axioms KrennAllOrders.WickCovariance.centeredMoment_permute
+#print axioms KrennAllOrders.WickCovariance.meanProduct
+#print axioms KrennAllOrders.WickCovariance.meanProduct_apply
+#print axioms KrennAllOrders.WickCovariance.shiftedTerm
+#print axioms KrennAllOrders.WickCovariance.shiftedTerm_apply
+#print axioms KrennAllOrders.WickCovariance.shiftedMoment
+#print axioms KrennAllOrders.WickCovariance.shiftedMoment_apply
+#print axioms KrennAllOrders.WickCovariance.shiftedMoment_linear_expansion
+#print axioms KrennAllOrders.WickCovariance.shiftedMoment_naturality
+#print axioms KrennAllOrders.WickCovariance.shiftedMoment_invariant
+#print axioms KrennAllOrders.WickCovariance.replicaCovariance
+#print axioms KrennAllOrders.WickCovariance.replicaCovariance_apply
+#print axioms KrennAllOrders.WickCovariance.replicaLinear
+#print axioms KrennAllOrders.WickCovariance.replicaLinear_apply
+#print axioms KrennAllOrders.WickCovariance.replicaLinear_covariance
+#print axioms KrennAllOrders.WickCovariance.alternatingProduct
+#print axioms KrennAllOrders.WickCovariance.alternatingProduct_replicaLinear
+#print axioms KrennAllOrders.WickCovariance.replicaRotation
+#print axioms KrennAllOrders.WickCovariance.replicaRotation_apply
+#print axioms KrennAllOrders.WickCovariance.replicaRotation_covariance
+#print axioms KrennAllOrders.WickCovariance.wickMoment_replicaRotation
+#print axioms KrennAllOrders.WickCovariance.shiftedMoment_replicaRotation
+#print axioms KrennAllOrders.WickCovariance.shiftedMoment_replicaLinear
+
+#print axioms KrennAllOrders.SupportMatching.matchingOfUniqueSupport
+#print axioms KrennAllOrders.SupportMatching.matchingOfUniqueSupport_partner_iff
+#print axioms KrennAllOrders.SupportMatching.monochromaticWeight
+#print axioms KrennAllOrders.SupportMatching.colourMatchings
+#print axioms KrennAllOrders.SupportMatching.hasMatchingSupport_of_diagonal_unique
+#print axioms KrennAllOrders.SupportMatching.not_eqSystemN_three_of_diagonal_unique
+#print axioms KrennAllOrders.SupportMatching.not_eqSystemN_three_of_endpoint_identities
+
+#print axioms KrennAllOrders.CofactorDiagonal.block_eq_zero_of_cofactor_identity
+#print axioms KrennAllOrders.CofactorDiagonal.offDiagonal_eq_zero
+#print axioms KrennAllOrders.CofactorDiagonal.sourceBlock
+#print axioms KrennAllOrders.CofactorDiagonal.source_diagonal_of_cofactor_sums
+
+#print axioms KrennAllOrders.RootResponse.eraseSite
+#print axioms KrennAllOrders.RootResponse.eraseSite_C
+#print axioms KrennAllOrders.RootResponse.eraseSite_X
+#print axioms KrennAllOrders.RootResponse.rootExtract
+#print axioms KrennAllOrders.RootResponse.rootExtract_add
+#print axioms KrennAllOrders.RootResponse.rootExtract_C
+#print axioms KrennAllOrders.RootResponse.rootExtract_mul
+#print axioms KrennAllOrders.RootResponse.eraseSite_mem_siteIdeal
+#print axioms KrennAllOrders.RootResponse.rootExtract_mem_siteIdeal
+#print axioms KrennAllOrders.RootResponse.project_rootExtract_eq
+#print axioms KrennAllOrders.RootResponse.eraseSite_rowPolynomial
+#print axioms KrennAllOrders.RootResponse.deletedQuadratic
+#print axioms KrennAllOrders.RootResponse.quadraticRootResponse
+#print axioms KrennAllOrders.RootResponse.rootExtract_dividedSourcePower
+#print axioms KrennAllOrders.RootResponse.project_rootExtract_matchingPolynomial
+#print axioms KrennAllOrders.RootResponse.pmSumN_rootExpansion
+#print axioms KrennAllOrders.RootResponse.pureCofactor
+#print axioms KrennAllOrders.RootResponse.pureCofactor_self
+#print axioms KrennAllOrders.RootResponse.pureCofactor_symm
+#print axioms KrennAllOrders.RootResponse.pureCofactor_rowSum_eq_one
+#print axioms KrennAllOrders.RootResponse.allEqual_constant
+#print axioms KrennAllOrders.RootResponse.allEqual_iff_constant_at
+#print axioms KrennAllOrders.RootResponse.wordExponent_full_injective
+#print axioms KrennAllOrders.RootResponse.diagonalPolynomial
+#print axioms KrennAllOrders.RootResponse.coeff_diagonalPolynomial
+#print axioms KrennAllOrders.RootResponse.wordExponent_full_degree
+#print axioms KrennAllOrders.RootResponse.diagonalPolynomial_totalHomogeneous
+#print axioms KrennAllOrders.RootResponse.project_matchingPolynomial_eq_diagonal
+#print axioms KrennAllOrders.RootResponse.eraseSite_wordMonomial
+#print axioms KrennAllOrders.RootResponse.pureRootWord
+#print axioms KrennAllOrders.RootResponse.rootExtract_pureWord
+#print axioms KrennAllOrders.RootResponse.rootExtract_diagonalPolynomial
+#print axioms KrennAllOrders.RootResponse.quadraticRootResponse_eq_pure
+#print axioms KrennAllOrders.RootResponse.rootFamilyRow
+#print axioms KrennAllOrders.RootResponse.rootFamily_response_eq_pure
+
+#print axioms KrennAllOrders.EndpointPDE.axisRestriction_gramMap
+#print axioms KrennAllOrders.EndpointPDE.eval_zero_gramMap
+#print axioms KrennAllOrders.EndpointPDE.axisRestriction_C
+#print axioms KrennAllOrders.EndpointPDE.axisRestriction_X
+#print axioms KrennAllOrders.EndpointPDE.axisGramMap_C
+#print axioms KrennAllOrders.EndpointPDE.axisRestriction_pderiv_gramMap
+#print axioms KrennAllOrders.EndpointPDE.axisRestriction_offDiagonal_derivative
+#print axioms KrennAllOrders.EndpointPDE.cPolynomialEquiv_C
+#print axioms KrennAllOrders.EndpointPDE.cPolynomialEquiv_X
+#print axioms KrennAllOrders.EndpointPDE.cPolynomialEquiv_pderiv
+#print axioms KrennAllOrders.EndpointPDE.eq_zero_of_c_ode
+#print axioms KrennAllOrders.EndpointPDE.eq_C_div_of_c_ode
+#print axioms KrennAllOrders.EndpointPDE.c_ode_of_offDiagonalBoundary
+#print axioms KrennAllOrders.EndpointPDE.offDiagonal_eq_zero
+#print axioms KrennAllOrders.EndpointPDE.c_ode_of_scalarBoundary
+#print axioms KrennAllOrders.EndpointPDE.scalar_eq_constant
+#print axioms KrennAllOrders.EndpointPDE.endpoint_of_scalarBoundary
+#print axioms KrennAllOrders.EndpointPDE.offDiagonalBoundary_of_matrix_normal_form
+#print axioms KrennAllOrders.EndpointPDE.scalarBoundary_of_matrix_normal_form
+#print axioms KrennAllOrders.EndpointPDE.endpoint_of_covariant_matrix_boundaries
+
+#print axioms KrennAllOrders.BinaryPairing.Tensor
+#print axioms KrennAllOrders.BinaryPairing.complement
+#print axioms KrennAllOrders.BinaryPairing.complement_complement
+#print axioms KrennAllOrders.BinaryPairing.complementEquiv
+#print axioms KrennAllOrders.BinaryPairing.sign
+#print axioms KrennAllOrders.BinaryPairing.pairing
+#print axioms KrennAllOrders.BinaryPairing.sign_false
+#print axioms KrennAllOrders.BinaryPairing.sign_true
+#print axioms KrennAllOrders.BinaryPairing.sign_complement
+#print axioms KrennAllOrders.BinaryPairing.pairing_swap
+#print axioms KrennAllOrders.BinaryPairing.pairing_add_left
+#print axioms KrennAllOrders.BinaryPairing.pairing_add_right
+#print axioms KrennAllOrders.BinaryPairing.pairing_smul_left
+#print axioms KrennAllOrders.BinaryPairing.pairing_smul_right
+#print axioms KrennAllOrders.BinaryPairing.pure
+#print axioms KrennAllOrders.BinaryPairing.pairing_pure_left
+#print axioms KrennAllOrders.BinaryPairing.pairing_pure_false
+#print axioms KrennAllOrders.BinaryPairing.pairing_pure_true
+#print axioms KrennAllOrders.BinaryPairing.complement_eq_constant_iff
+#print axioms KrennAllOrders.BinaryPairing.pairing_pure_right
+#print axioms KrennAllOrders.BinaryPairing.pairing_right_pure_true
+#print axioms KrennAllOrders.BinaryPairing.pairing_right_pure_false
+#print axioms KrennAllOrders.BinaryPairing.bilinearPairing
+#print axioms KrennAllOrders.BinaryPairing.pairing_pure_combinations
+#print axioms KrennAllOrders.BinaryPairing.pairing_pure_combinations_odd
+#print axioms KrennAllOrders.BinaryPairing.pairing_symmetric_of_even
+
+#print axioms KrennAllOrders.PhysicalClosure.not_eqSystemN_of_diagonal_and_endpoint
+
+#print axioms KrennAllOrders.OmissionCancellation.pairing_eq_of_response_and_rotation
+#print axioms KrennAllOrders.OmissionCancellation.pure_coefficient_eq_of_response_and_rotation
+#print axioms KrennAllOrders.OmissionCancellation.polarized_quadratic_coefficient_eq_zero

@@ -1,0 +1,37 @@
+import RootResponse
+
+#print axioms KrennAllOrders.RootResponse.eraseSite
+#print axioms KrennAllOrders.RootResponse.eraseSite_C
+#print axioms KrennAllOrders.RootResponse.eraseSite_X
+#print axioms KrennAllOrders.RootResponse.rootExtract
+#print axioms KrennAllOrders.RootResponse.rootExtract_add
+#print axioms KrennAllOrders.RootResponse.rootExtract_C
+#print axioms KrennAllOrders.RootResponse.rootExtract_mul
+#print axioms KrennAllOrders.RootResponse.eraseSite_mem_siteIdeal
+#print axioms KrennAllOrders.RootResponse.rootExtract_mem_siteIdeal
+#print axioms KrennAllOrders.RootResponse.project_rootExtract_eq
+#print axioms KrennAllOrders.RootResponse.eraseSite_rowPolynomial
+#print axioms KrennAllOrders.RootResponse.deletedQuadratic
+#print axioms KrennAllOrders.RootResponse.quadraticRootResponse
+#print axioms KrennAllOrders.RootResponse.rootExtract_dividedSourcePower
+#print axioms KrennAllOrders.RootResponse.project_rootExtract_matchingPolynomial
+#print axioms KrennAllOrders.RootResponse.pmSumN_rootExpansion
+#print axioms KrennAllOrders.RootResponse.pureCofactor
+#print axioms KrennAllOrders.RootResponse.pureCofactor_self
+#print axioms KrennAllOrders.RootResponse.pureCofactor_symm
+#print axioms KrennAllOrders.RootResponse.pureCofactor_rowSum_eq_one
+#print axioms KrennAllOrders.RootResponse.allEqual_constant
+#print axioms KrennAllOrders.RootResponse.allEqual_iff_constant_at
+#print axioms KrennAllOrders.RootResponse.wordExponent_full_injective
+#print axioms KrennAllOrders.RootResponse.diagonalPolynomial
+#print axioms KrennAllOrders.RootResponse.coeff_diagonalPolynomial
+#print axioms KrennAllOrders.RootResponse.wordExponent_full_degree
+#print axioms KrennAllOrders.RootResponse.diagonalPolynomial_totalHomogeneous
+#print axioms KrennAllOrders.RootResponse.project_matchingPolynomial_eq_diagonal
+#print axioms KrennAllOrders.RootResponse.eraseSite_wordMonomial
+#print axioms KrennAllOrders.RootResponse.pureRootWord
+#print axioms KrennAllOrders.RootResponse.rootExtract_pureWord
+#print axioms KrennAllOrders.RootResponse.rootExtract_diagonalPolynomial
+#print axioms KrennAllOrders.RootResponse.quadraticRootResponse_eq_pure
+#print axioms KrennAllOrders.RootResponse.rootFamilyRow
+#print axioms KrennAllOrders.RootResponse.rootFamily_response_eq_pure
