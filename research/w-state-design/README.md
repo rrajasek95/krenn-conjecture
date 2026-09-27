@@ -35,10 +35,23 @@ Within this class, $R_*$ is the exact optimum at every even site count.
 These are proved optima in the stated classes, not claims of unrestricted
 global optimality.
 
+There is now also a [global approximation guarantee](../../explainers/W-GLOBAL-GUARANTEE.md)
+with no architecture restriction:
+
+$$
+R_*\le R_{\rm opt}\le\frac{2B_n}{n}
+=\frac{2((n-1)^2+1)}{n^2}R_*<2R_*.
+$$
+
+The known construction therefore achieves more than half the best possible
+rate at every even count. At six sites the unrestricted interval is
+$1/65\le R_{\rm opt}\le1/45$, and the guaranteed fraction is $9/13$.
+
 ## Results and proof packages
 
 | Result | Why it helps | Read and reproduce |
 | --- | --- | --- |
+| Universal factor-two guarantee at every even count | Bound every unrestricted exact-W rate by $2B_n/n$. A sharp zero-hafnian cofactor bound also separates response strength, higher-order losses, and row imbalance. | [Illustrated guide](../../explainers/W-GLOBAL-GUARANTEE.md), [proof](../../notes/w-state-universal-factor-two-2026-09-27.md), [replay](../../computations/w-universal-factor-two-2026-09-27/README.md) |
 | One-root optimum at every even count | Gives the explicit construction and its sharp rate. | [Proof](../../notes/w-state-optimal-design-2026-09-26.md), [replay](../../computations/method-utility-2026-09-26/README.md) |
 | Two-root optimum at every even count | Covers scalar cores with connected or disconnected cofactor graphs. | [Guide](../../explainers/BOUNDARY-STRUCTURE.md), [proof](../../notes/w-state-two-root-optimum-2026-09-26.md), [replay](../../computations/w-state-two-root-2026-09-26/README.md) |
 | Unrestricted local optimality at every even count | For every even $n\ge4$, all nearby complex colored exact-W designs have rate at most $R_*$. At fixed output, departures from the phase orbit have a quadratic source cost. | [Illustrated guide](../../explainers/W-LOCAL-OPTIMALITY.md), [all-even proof](../../notes/w-state-all-even-local-optimum-2026-09-27.md), [four-site obstruction](../../notes/w-state-four-site-local-obstruction-2026-09-27.md), [replay](../../computations/w-all-even-local-optimum-2026-09-27/README.md) |
@@ -73,8 +86,8 @@ Any better global design must lie outside the resulting neighborhood,
 after accounting for overall scaling and site phases. No explicit
 neighborhood radius has yet been supplied.
 
-At six sites the unrestricted response bound gives $R\le4/135$, while
-the construction attains $1/65$. One sufficient way to close this gap is
+At six sites the new unrestricted bound gives $R\le1/45$, while the
+construction attains $1/65$. One sufficient way to close this gap is
 the following **open** scalar inequality. Let $D$ be the ground-color
 matrix, $a_0=\sum_{i<j}|D_{ij}|^2$, and
 $r_i^2=\sum_{j\ne i}|\operatorname{haf}(D\setminus\{i,j\})|^2$. For
@@ -84,7 +97,9 @@ $$
 a_0^2\sum_i r_i^{-2}\ \ge\ \frac{520}{9}.
 $$
 
-Numerical searches support this candidate but do not prove it. At four
+The new proof establishes the weaker threshold $40$ in place of $520/9$,
+and identifies the additional strength-versus-imbalance tradeoff needed.
+Numerical searches support the sharp candidate but do not prove it. At four
 sites the analogous response-only route is insufficient: the equations
 removing multiple excitations must also be used. The
 [shear obstruction](../../notes/w-state-shear-normalization-obstruction-2026-09-27.md)

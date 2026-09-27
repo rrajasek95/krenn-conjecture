@@ -13,6 +13,7 @@ provide a shared replay command.
 | Guide | Read on GitHub | Browser edition |
 |---|---|---|
 | The complete proof, from cancellation to the all-size contradiction | [All-orders proof guide](ALL-ORDERS-PROOF.md) | [Seven diagrams and offline equations](ALL-ORDERS-PROOF.html) |
+| A universal factor-two guarantee for W design at every even site count | [Global W guarantee](W-GLOBAL-GUARANTEE.md) | — |
 | Unrestricted local W optimality at every even size, including the four-site exception | [All-even local W optimality](W-LOCAL-OPTIMALITY.md) | — |
 | All flat supports, singular-core attachments, and GHZ source-distance bounds | [Critical-direction geometry](CRITICAL-DIRECTION-GEOMETRY.md) | — |
 | All-even W optimality and a strict six-site gap with cancelling ground matchings | [W ground cancellation](W-GROUND-CANCELLATION.md) | — |

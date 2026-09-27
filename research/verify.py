@@ -34,6 +34,7 @@ PACKAGES = (
     "w-all-even-local-optimum-2026-09-27",
     "four-arm-ghz-boundary-2026-09-27",
     "four-core-attachments-2026-09-27",
+    "w-universal-factor-two-2026-09-27",
 )
 
 
