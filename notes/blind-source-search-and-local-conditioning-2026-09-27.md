@@ -282,11 +282,10 @@ keep the practical search separate from the generic uniqueness theorem.
 No exhaustive priority claim is made.
 
 The remaining computational problem is a reliable global mean-line
-algorithm or a proved useful basin of attraction. It should explain the
-failure with stronger covariance and extend the local analysis to the
-complete covariance inverse and noisy observations. Arbitrary-order
-identifiability, an exact successful reconstruction, and uniform numerical
-reliability are different claims.
+algorithm or a proved useful basin for this optimizer. It should explain
+the failure with stronger covariance. Arbitrary-order identifiability,
+an exact successful reconstruction, and uniform numerical reliability
+are different claims.
 
 The subsequent [shared-calibration analysis](shared-calibration-and-near-ambiguity-2026-09-27.md)
 now gives explicit gauge-invariant obstructions for full covariance
@@ -294,3 +293,11 @@ recovery and sharp conditional bounds for shared calibration. It also
 connects mean-setting design to classical tight frames. It does not
 resolve the failed nonlinear search or propagate noise through every
 stage of the blind inverse.
+
+The later [full-source stability note](full-source-local-stability-2026-09-27.md)
+now gives finite local error bounds for all means and covariance entries
+using the joint forward derivative. It proves a convergence neighborhood
+for a separate frozen left-inverse iteration and controls the observed
+mean span. Exact seven- and nine-site certificates verify those bounds.
+The neighborhoods are conservative and do not supply global initialization
+or a convergence proof for the blind search used here.

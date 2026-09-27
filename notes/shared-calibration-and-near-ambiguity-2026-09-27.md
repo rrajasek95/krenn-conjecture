@@ -390,8 +390,13 @@ model; see [Agostini–Améndola–Ranestad](https://arxiv.org/abs/1905.05141).
 The data here are labelled multilinear cross moments of individual mean
 settings, rather than a mixture's full moment sequence.
 
-The next step is to propagate errors through common-frame and covariance-
-class recovery, or develop a joint estimator that avoids poorly conditioned
-intermediate coordinates. The earlier nonlinear search failure also remains
-unresolved. Algebraic uniqueness does not remove the explicit information-
-loss mechanisms above.
+The subsequent [full-source stability note](full-source-local-stability-2026-09-27.md)
+uses the joint forward derivative to give finite local bounds for every
+mean and covariance parameter, with explicit neighborhood certificates.
+It also proves additive covariance information after eliminating unknown
+means, a local correction iteration, and stability of the observed mean
+span. These results avoid conditioning the bound on an exactly recovered
+intermediate frame or covariance class. Their constants depend on the
+source and do not remove the information-loss mechanisms proved here.
+Global initialization and the earlier nonlinear search failure remain
+unresolved.

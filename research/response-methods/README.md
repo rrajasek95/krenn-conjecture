@@ -40,6 +40,7 @@ separate from the Lean-verified exact theorem.
 | Source inverse given the local mean lines | Recover covariance and actual mean scales with quadratically many columns per linear system; exact nine-site examples align four outputs spanning four global mean directions in local dimension three. | [Smaller rank criterion and scope](../../notes/quadratic-size-source-inverse-2026-09-27.md), [inverse and replay](../../computations/matching-tensor-recovery-2026-09-26/restricted_source_inverse.py), [certificate](../../computations/matching-tensor-recovery-2026-09-26/restricted-source-inverse-certificate.json) |
 | Blind search and local conditioning | Search for mean lines from the tensor alone, then verify them exactly; complete rational source recovery on seven- and nine-site examples, mean-line recovery at eleven sites, and a retained failed search. | [Proofs, local noise bound, and limits](../../notes/blind-source-search-and-local-conditioning-2026-09-27.md), [search and exact verification](../../computations/matching-tensor-recovery-2026-09-26/blind_mean_search.py), [certificate](../../computations/matching-tensor-recovery-2026-09-26/blind-mean-search-certificate.json) |
 | Shared calibration and near-ambiguity | Prove all-orders seventh-order separation and fifth-order local covariance obstructions; shared cubic calibration has a sharp sensitivity formula and a classical tight-frame setting-design criterion. | [Theorems and scope](../../notes/shared-calibration-and-near-ambiguity-2026-09-27.md), [exact replay](../../computations/matching-tensor-recovery-2026-09-26/source_calibration_conditioning.py), [certificate](../../computations/matching-tensor-recovery-2026-09-26/source-calibration-conditioning-certificate.json) |
+| Full-source local stability | Bound finite errors in all means and edge parameters, prove a local correction iteration converges, and control the observed mean span. Shared covariance information adds even with unknown means. | [Theorems and limits](../../notes/full-source-local-stability-2026-09-27.md), [certificate generator](../../computations/matching-tensor-recovery-2026-09-26/source_local_stability.py), [independent replay](../../computations/matching-tensor-recovery-2026-09-26/verify_source_local_stability.py), [exact witnesses](../../computations/matching-tensor-recovery-2026-09-26/source-local-stability-certificate.json) |
 
 The matching-tensor reconstruction programs are
 [verify.py](../../computations/matching-tensor-recovery-2026-09-26/verify.py),
@@ -54,8 +55,10 @@ treats three or more independent mean directions. The
 [support-graph extension](../../notes/sparse-source-graph-reconstruction-2026-09-27.md)
 recovers a generic connected source graph under the stated matching and
 local-independence hypotheses, and removes the mean-quadratic ambiguity when
-the graph is not complete. These use spans of outputs; measurement-noise
-stability remains open. Their reproduction commands are in the linked notes.
+the graph is not complete. These use spans of outputs; their specific
+span-based algorithms have no measurement-noise guarantees. The local
+joint-source bounds below concern a different estimator. Reproduction
+commands are in the linked notes.
 
 The [two-observation result](../../notes/two-observation-source-reconstruction-2026-09-27.md)
 uses a three-copy exterior identity to recover the unobserved response
@@ -91,15 +94,23 @@ source with four observed mean directions. A subsequent
 [blind search](../../notes/blind-source-search-and-local-conditioning-2026-09-27.md)
 now verifies complete rational sources at seven and nine sites from raw
 tensors alone. It supplies local mean-line noise bounds and records a
-failed search; global convergence and full-source noise guarantees remain
-open, as does nongeneric source classification. These research results
-are not part of the Lean formalization of Krenn–Gu.
+failed search. The later
+[full-source analysis](../../notes/full-source-local-stability-2026-09-27.md)
+gives finite local noise bounds for all source parameters and a certified
+convergence neighborhood for a separate correction iteration. Global
+initialization and nongeneric source classification remain open. These
+research results are not part of the Lean formalization of Krenn–Gu.
 
 The [calibration-conditioning results](../../notes/shared-calibration-and-near-ambiguity-2026-09-27.md)
 give explicit obstructions to uniformly stable covariance recovery and
 show how shared observations improve the remaining scale calibration
-once the response frame and covariance class are fixed. Full-source
-upper noise bounds still require control of the preceding recovery steps.
+once the response frame and covariance class are fixed. The full-source
+local bounds use the joint forward derivative, without assuming that
+intermediate inverse steps are error-free. They also control the span of
+observed mean vectors and quantify shared covariance information after
+eliminating the unknown means. Their source neighborhoods and noise
+thresholds are explicit and conservative; they do not give uniform
+global recovery or resolve the earlier blind-search failure.
 
 With generic unknown response coefficients instead of the calibrated
 Gaussian coefficients, [Corollary 10](../../notes/single-cross-moment-all-orders-2026-09-27.md#7-completing-the-theorem-and-shared-source-recovery)
