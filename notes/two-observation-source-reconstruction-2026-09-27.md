@@ -56,6 +56,12 @@ means and ten `4 by 4` covariance blocks. The ambiguity (1) has dimension
 four and acts freely on this generic set. Thus the generic image of this
 two-observation model has dimension `196`.
 
+The subsequent [calibration note](calibrated-source-reconstruction-all-orders-2026-09-27.md#5-a-universal-fifth-order-ambiguity-and-optimality-of-two-observations)
+proves that two observations are optimal here. The exact involution
+`R_ik -> -R_ik-(2/3)mu_i tensor mu_k` preserves a single fifth-order
+cross moment with its mean unchanged, so one observation cannot
+generically identify the quadratic.
+
 ## 2. Matching expansion and the missing response space
 
 For the arguments that do not depend on the number five, let `n=2m+1` be
@@ -555,6 +561,7 @@ their coefficients to remove the response-span ambiguity.
 
 This is a targeted comparison, not an exhaustive priority claim. The
 remaining questions are an analytic all-orders kernel-rank proof,
-identifiability from fewer observations or smaller local dimensions,
-and numerical stability near the exceptional rank loci. None is settled
-by the five-site certificate.
+identifiability in smaller local dimensions, and numerical stability near
+the exceptional rank loci. None is settled by the five-site certificate.
+The later calibration note settles the minimum observation count at five
+sites by proving the above involution.

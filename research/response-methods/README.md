@@ -24,6 +24,7 @@ separate from the Lean-verified exact theorem.
 | Full-support higher-order identities | Relate higher GHZ coefficients to lower mixed coefficients; restrict when a leading GHZ output can appear. | [Proof](../../notes/full-support-single-color-jets-2026-09-27.md), [replay](../../computations/full-support-jets-2026-09-27/README.md) |
 | Matching-tensor source reconstruction | Recover source information under the stated response and direction hypotheses; distinguish single-copy from multiple-copy information. | [Matching tensors and copies](../../notes/matching-tensor-recovery-and-multiple-copies-2026-09-26.md), [two-direction reconstruction](../../notes/two-direction-source-reconstruction-2026-09-26.md) |
 | Two observed Gaussian cross moments | Generically recover both mean rows and all cross-site covariance blocks at five sites of local dimension at least four, up to product-one site scalings. | [Theorem and proof](../../notes/two-observation-source-reconstruction-2026-09-27.md), [reconstruction](../../computations/matching-tensor-recovery-2026-09-26/pair_observation.py), [independent matrix audit](../../computations/matching-tensor-recovery-2026-09-26/audit_pair_observation.py) |
+| Calibrated response spans at all odd orders | Retaining actual output coefficients removes the covariance ambiguity in the all-orders span theorems; one calibrated output suffices from order seven once the span is known. | [Theorem, calibration thresholds, and fifth-order involution](../../notes/calibrated-source-reconstruction-all-orders-2026-09-27.md), [exact replay](../../computations/matching-tensor-recovery-2026-09-26/calibrated_span.py) |
 
 The matching-tensor reconstruction programs are
 [verify.py](../../computations/matching-tensor-recovery-2026-09-26/verify.py),
@@ -49,6 +50,12 @@ alternative mean pairs and is supported by exact reconstruction and an
 independent Pfaffian calculation. The pair-matrix rank is established at
 five sites; overlapping coordinate projections extend recovery to arbitrary
 local dimensions at least four. The all-orders extension remains open.
+
+The [calibration theorem](../../notes/calibrated-source-reconstruction-all-orders-2026-09-27.md)
+already upgrades the existing all-orders span results to recovery of the
+actual means and covariance blocks. It also proves that two observations
+are necessary at five sites. The unresolved all-orders step concerns
+recovering the entire span from only a few outputs.
 
 ## How the projects connect
 

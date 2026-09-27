@@ -8,6 +8,11 @@ The [two-direction reconstruction theorem](two-direction-source-reconstruction-2
 
 With three or more independent local mean directions, the circulation space disappears. A third direction isolates every edge coefficient directly. This yields a simpler reconstruction theorem, valid already at three sites.
 
+The later [calibration theorem](calibrated-source-reconstruction-all-orders-2026-09-27.md)
+uses the actual output values to remove the covariance class ambiguity at
+every odd order covered here. It determines all observed mean rows and
+cross-site blocks up to product-one site scalings.
+
 Fix an odd integer `n >= 3` and an integer `r >= 3`. At each site let `V_i = C^(r+1)`. Use the commutative site algebra
 
 $$

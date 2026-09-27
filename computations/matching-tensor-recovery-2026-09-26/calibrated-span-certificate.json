@@ -1,0 +1,355 @@
+{
+  "prime": 1009,
+  "symbolic_identities": {
+    "odd_moments_divided_by_Z_after_substitution": {
+      "3": [
+        {
+          "u_degree": 0,
+          "S_degree": 1,
+          "coefficient": "3"
+        }
+      ],
+      "5": [
+        {
+          "u_degree": 0,
+          "S_degree": 2,
+          "coefficient": "15"
+        },
+        {
+          "u_degree": 2,
+          "S_degree": 0,
+          "coefficient": "-2/3"
+        }
+      ],
+      "7": [
+        {
+          "u_degree": 0,
+          "S_degree": 3,
+          "coefficient": "105"
+        },
+        {
+          "u_degree": 2,
+          "S_degree": 1,
+          "coefficient": "-14"
+        },
+        {
+          "u_degree": 3,
+          "S_degree": 0,
+          "coefficient": "16/9"
+        }
+      ]
+    },
+    "fifth_order_covariance_involution_checked_over_Q": true
+  },
+  "cases": [
+    {
+      "sites": 5,
+      "directions": 2,
+      "local_dimension": 3,
+      "observed_outputs": 12,
+      "prior_certificate": "two-direction-certificate.json",
+      "prior_case_index": null,
+      "prior_certificate_sha256": "998f2f95e0f46e678eb1d4a10351e927e2ead3d7ad933f5acea9873596e944c5",
+      "two_output_calibration": {
+        "selected_outputs": [
+          0,
+          1
+        ],
+        "calibration_minor": {
+          "rank": 4,
+          "rows": [
+            0,
+            1,
+            2,
+            4
+          ],
+          "columns": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "determinant": 620
+        }
+      },
+      "beta": 715,
+      "covariance_coefficients": [
+        703,
+        706,
+        755
+      ],
+      "all_observed_tensors_reproduced": true,
+      "source_comparison_site_scalars": [
+        761,
+        757,
+        246,
+        408,
+        764
+      ],
+      "site_scalar_product": 1,
+      "fifth_order_involution": {
+        "first_output_preserved": true,
+        "second_output_changed": true,
+        "mean_unchanged": true,
+        "covariance_changed": true
+      }
+    },
+    {
+      "sites": 7,
+      "directions": 2,
+      "local_dimension": 3,
+      "observed_outputs": 20,
+      "prior_certificate": "two-direction-seven-certificate.json",
+      "prior_case_index": null,
+      "prior_certificate_sha256": "7aa5f4e6a3cbaf512500c266bf4676bc47b9bce06e4429669e277739e70c929f",
+      "two_output_calibration": {
+        "selected_outputs": [
+          0,
+          1
+        ],
+        "calibration_minor": {
+          "rank": 4,
+          "rows": [
+            0,
+            1,
+            2,
+            4
+          ],
+          "columns": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "determinant": 119
+        }
+      },
+      "beta": 35,
+      "covariance_coefficients": [
+        667,
+        48,
+        85
+      ],
+      "all_observed_tensors_reproduced": true,
+      "source_comparison_site_scalars": [
+        50,
+        447,
+        417,
+        533,
+        107,
+        147,
+        918
+      ],
+      "site_scalar_product": 1,
+      "one_output_calibration": {
+        "selected_output": 0,
+        "scalar_coordinate": 0,
+        "cubic_division_minor": {
+          "rank": 3,
+          "rows": [
+            0,
+            1,
+            2
+          ],
+          "columns": [
+            0,
+            1,
+            2
+          ],
+          "determinant": 484
+        },
+        "beta_squared": 216,
+        "beta_cubed": 497,
+        "beta": 35
+      },
+      "one_output_equals_two_output_calibration": true
+    },
+    {
+      "sites": 3,
+      "directions": 3,
+      "local_dimension": 4,
+      "observed_outputs": 13,
+      "prior_certificate": "many-direction-certificate.json",
+      "prior_case_index": 0,
+      "prior_certificate_sha256": "0a44b14714e24f8dab812e960a44a30e727a5dde84c9a9109f4f060d21741344",
+      "two_output_calibration": {
+        "selected_outputs": [
+          0,
+          1
+        ],
+        "calibration_minor": {
+          "rank": 7,
+          "rows": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            7,
+            10
+          ],
+          "columns": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "determinant": 914
+        }
+      },
+      "beta": 176,
+      "covariance_coefficients": [
+        35,
+        401,
+        981,
+        713,
+        76,
+        524
+      ],
+      "all_observed_tensors_reproduced": true,
+      "source_comparison_site_scalars": [
+        233,
+        245,
+        521
+      ],
+      "site_scalar_product": 1,
+      "third_order_free_calibration": {
+        "alternative_beta": 1,
+        "first_output_preserved": true
+      }
+    },
+    {
+      "sites": 3,
+      "directions": 4,
+      "local_dimension": 5,
+      "observed_outputs": 24,
+      "prior_certificate": "many-direction-certificate.json",
+      "prior_case_index": 1,
+      "prior_certificate_sha256": "0a44b14714e24f8dab812e960a44a30e727a5dde84c9a9109f4f060d21741344",
+      "two_output_calibration": {
+        "selected_outputs": [
+          0,
+          1
+        ],
+        "calibration_minor": {
+          "rank": 11,
+          "rows": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            7,
+            10,
+            11,
+            13,
+            16,
+            20
+          ],
+          "columns": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "determinant": 230
+        }
+      },
+      "beta": 856,
+      "covariance_coefficients": [
+        327,
+        768,
+        733,
+        667,
+        563,
+        340,
+        858,
+        779,
+        433,
+        198
+      ],
+      "all_observed_tensors_reproduced": true,
+      "source_comparison_site_scalars": [
+        229,
+        488,
+        817
+      ],
+      "site_scalar_product": 1,
+      "third_order_free_calibration": {
+        "alternative_beta": 1,
+        "first_output_preserved": true
+      }
+    },
+    {
+      "sites": 5,
+      "directions": 3,
+      "local_dimension": 4,
+      "observed_outputs": 34,
+      "prior_certificate": "many-direction-certificate.json",
+      "prior_case_index": 2,
+      "prior_certificate_sha256": "0a44b14714e24f8dab812e960a44a30e727a5dde84c9a9109f4f060d21741344",
+      "two_output_calibration": {
+        "selected_outputs": [
+          0,
+          1
+        ],
+        "calibration_minor": {
+          "rank": 7,
+          "rows": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            7,
+            10
+          ],
+          "columns": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "determinant": 895
+        }
+      },
+      "beta": 916,
+      "covariance_coefficients": [
+        957,
+        696,
+        816,
+        997,
+        483,
+        276
+      ],
+      "all_observed_tensors_reproduced": true,
+      "source_comparison_site_scalars": [
+        435,
+        341,
+        757,
+        408,
+        474
+      ],
+      "site_scalar_product": 1,
+      "fifth_order_involution": {
+        "first_output_preserved": true,
+        "second_output_changed": true,
+        "mean_unchanged": true,
+        "covariance_changed": true
+      }
+    }
+  ]
+}

@@ -8,6 +8,11 @@ The preceding [response-space note](matching-tensor-recovery-and-multiple-copies
 
 A subsequent [many-direction theorem](many-direction-source-reconstruction-2026-09-27.md) treats three or more mean directions and explains why their one-edge equations have no circulation kernel.
 
+The [calibrated all-orders theorem](calibrated-source-reconstruction-all-orders-2026-09-27.md)
+shows that retaining the actual output coefficients removes the covariance
+ambiguity below. A spanning family of actual Gaussian outputs determines
+its means and cross-site blocks up to product-one site scalings.
+
 The data here are a **linear span of outputs**, not one output tensor. The mean settings producing the outputs need not be known. This loss of the settings and their individual response labels creates specific, unavoidable ambiguities, which are included in the theorem.
 
 Let `n >= 5` be odd, write `n = 2m+1`, and put `V_i = C^3`. We use the commutative site algebra
