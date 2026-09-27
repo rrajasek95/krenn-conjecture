@@ -31,9 +31,11 @@ into a laboratory count rate requires a physical source model.
 | Reduction to balanced sources | Site scaling preserves output and improves rate. A sharp response identity excludes complete derivative collapse at a balanced six-site limit. | [Balancing guide](../../explainers/SITE-BALANCING.md), [proof](../../notes/site-balancing-rate-reduction-2026-09-26.md), [replay](../../computations/site-balancing-2026-09-26/README.md) |
 | Classification of triangle rank loss | Triangle ranks are 7, 8, or 9; the two-triangle derivative has rank at least 49. A separate balanced, full-support example has rank 25. | [Frontier guide](../../explainers/BALANCED-FRONTIER.md), [proof](../../notes/triangle-response-rank-classification-2026-09-27.md), [replay](../../computations/balanced-frontier-2026-09-27/README.md) |
 | Higher-order identities at full-support single-color limits | An analytic path with leading GHZ output starts at parameter order at least $m+2$ on $2m$ sites, hence at least five on six sites. | [Proof and quantitative remainder bound](../../notes/full-support-single-color-jets-2026-09-27.md), [replay](../../computations/full-support-jets-2026-09-27/README.md) |
+| Critical directions and local distance bounds | Classify every support of the first non-ground critical direction at the rank-25 example. Smooth core and star families give a uniform fifth-power source-distance estimate; dense five-site directions give a sixth-power estimate. | [Illustrated guide](../../explainers/CRITICAL-DIRECTION-GEOMETRY.md), [support classification](../../notes/rank25-critical-directions-2026-09-27.md), [distance bounds](../../notes/ghz-critical-direction-normal-form-2026-09-27.md), [replay](../../computations/flat-core-rigidity-2026-09-27/README.md) |
 
-The last result concerns powers of an analytic path parameter. It does not
-give a uniform fifth-power bound in distance, or establish the square-root law.
+The earlier higher-order identities concern an analytic path parameter.
+The new distance bounds are uniform on their specified nondegenerate
+families. Neither result establishes the unrestricted square-root law.
 
 ## What remains
 
@@ -48,6 +50,9 @@ flowchart TD
     D -->|No| F["Open: compare higher-order error with signal"]
     B -->|Yes| G["Open: matching terms cancel"]
     G --> H["Full-support single-color identities constrain initial orders"]
+    H --> I["Rank-25 example: first critical support is a four-site core or a star"]
+    I --> J["Invertible branches have quantitative local normal forms"]
+    I --> K["Open: rank-degenerate branches and later cancellations"]
 ~~~
 
 At six sites write $H=\lambda\Delta+E$, where $\Delta$ is the sum of the
