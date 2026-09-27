@@ -28,6 +28,7 @@ PACKAGES = (
     "site-balancing-2026-09-26",
     "balanced-frontier-2026-09-27",
     "full-support-jets-2026-09-27",
+    "w-ground-cancellation-2026-09-27",
 )
 
 

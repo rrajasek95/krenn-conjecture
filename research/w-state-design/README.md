@@ -43,6 +43,8 @@ global optimality.
 | Two-root optimum at every even count | Covers scalar cores with connected or disconnected cofactor graphs. | [Guide](../../explainers/BOUNDARY-STRUCTURE.md), [proof](../../notes/w-state-two-root-optimum-2026-09-26.md), [replay](../../computations/w-state-two-root-2026-09-26/README.md) |
 | Unrestricted local optimality at six sites | The construction is a local optimum under complex colored-edge perturbations, modulo phase symmetries. | [Proof](../../notes/w-state-unrestricted-local-optimum-2026-09-26.md), [replay](../../computations/w-state-local-optimum-2026-09-26/README.md) |
 | All-even optimum without ground perfect matchings | Fully colored completions cannot improve $R_*$ in this larger class. | [Frontier guide](../../explainers/BALANCED-FRONTIER.md), [proof](../../notes/w-state-no-ground-matching-optimum-2026-09-27.md), [replay](../../computations/balanced-frontier-2026-09-27/README.md) |
+| Optimum with a uniform odd ground core and cancelling root couplings | At every even $n\ge6$, arbitrary complex root ground couplings cannot improve $R_*$; nonzero root strength gives a strict loss. Other colored entries remain unrestricted. | [Illustrated guide](../../explainers/W-GROUND-CANCELLATION.md), [proof](../../notes/w-state-coherent-odd-core-2026-09-27.md), [replay](../../computations/w-ground-cancellation-2026-09-27/README.md) |
+| Six-site octahedral ground-core gap | Arbitrary complex cycle and root weights, with every colored completion, give $R<2/135<1/65$. | [Proof](../../notes/w-state-octahedral-ground-gap-2026-09-27.md), [replay](../../computations/w-ground-cancellation-2026-09-27/README.md) |
 | Unrestricted response bound | Gives a bound for every colored architecture and isolates a possible six-site scalar proof target. | [Proof](../../notes/w-state-unrestricted-response-bound-2026-09-27.md), [replay](../../computations/balanced-frontier-2026-09-27/README.md) |
 | Obstruction to normalization by local shears | An exact example shows that ground-site isolation by W-preserving shears can increase source strength. This proposed shortcut needs more than shears alone. | [Proof](../../notes/w-state-shear-normalization-obstruction-2026-09-27.md), [replay](../../computations/full-support-jets-2026-09-27/README.md) |
 
@@ -54,12 +56,16 @@ flowchart TD
     B -->|No| C["Exactly two odd components"]
     C --> D["Known optimum proved for all even counts"]
     B -->|Yes| E["Ground matching terms cancel"]
-    E --> F["Open unrestricted optimization"]
+    E --> F{"Ground-core structure"}
+    F --> G["Uniform odd core: settled for n ≥ 6"]
+    F --> H["Six-site octahedral family: strict gap"]
+    F --> I["Other nonuniform cores: open"]
 ~~~
 
 Every design exceeding $R_*$ must therefore use cancellation among
-supported ground-color perfect matchings. Merely allowing more colored
-entries does not bypass the theorem.
+supported ground-color perfect matchings outside the newly settled core
+families. Merely allowing more colored entries does not bypass these
+theorems.
 
 At six sites the unrestricted response bound gives $R\le4/135$, while
 the construction attains $1/65$. One sufficient way to close this gap is

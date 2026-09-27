@@ -114,7 +114,7 @@ $$
 \boxed{
 |\lambda|\le
 \left(1+\frac{2\delta}{3d}\right)\varepsilon
-\frac{120}{d}\delta^4.
++\frac{120}{d}\delta^4.
 }
 \tag{4}
 $$

@@ -57,4 +57,4 @@ flowchart LR
 The [GHZ project](../ghz-rates/README.md) and
 [W-state project](../w-state-design/README.md) state the unresolved targets.
 The [shared replay](../README.md#reproduce-the-follow-up-checks) checks the
-18 rate and design packages without numerical optimization dependencies.
+19 rate and design packages without numerical optimization dependencies.
