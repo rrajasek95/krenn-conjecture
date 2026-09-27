@@ -35,6 +35,7 @@ separate from the Lean-verified exact theorem.
 | Mean directions from one tensor at every odd order | Generically identify every local mean line for all odd orders at least five, using a two-site attachment induction; also covers generic unknown response coefficients. | [Written proof and limits](../../notes/mean-direction-recovery-all-orders-2026-09-27.md), [symbolic and exact checks](../../computations/matching-tensor-recovery-2026-09-26/mean_direction_induction.py) |
 | Covariance recovery from a restricted exterior kernel | Replace full-kernel completion by a map with cubically many columns; a two-site induction proves the necessary rank at every odd order at least seven. | [Rigidity criterion](../../notes/single-output-covariance-low-degree-2026-09-27.md), [all-orders rank proof](../../notes/single-cross-moment-all-orders-2026-09-27.md), [exact induction checks](../../computations/matching-tensor-recovery-2026-09-26/covariance_induction.py) |
 | Source inverse given the local mean lines | Recover covariance and actual mean scales with quadratically many columns per linear system; exact nine-site examples align four outputs spanning four global mean directions in local dimension three. | [Smaller rank criterion and scope](../../notes/quadratic-size-source-inverse-2026-09-27.md), [inverse and replay](../../computations/matching-tensor-recovery-2026-09-26/restricted_source_inverse.py), [certificate](../../computations/matching-tensor-recovery-2026-09-26/restricted-source-inverse-certificate.json) |
+| Blind search and local conditioning | Search for mean lines from the tensor alone, then verify them exactly; complete rational source recovery on seven- and nine-site examples, mean-line recovery at eleven sites, and a retained failed search. | [Proofs, local noise bound, and limits](../../notes/blind-source-search-and-local-conditioning-2026-09-27.md), [search and exact verification](../../computations/matching-tensor-recovery-2026-09-26/blind_mean_search.py), [certificate](../../computations/matching-tensor-recovery-2026-09-26/blind-mean-search-certificate.json) |
 
 The matching-tensor reconstruction programs are
 [verify.py](../../computations/matching-tensor-recovery-2026-09-26/verify.py),
@@ -78,14 +79,17 @@ assuming span completion. The
 now completes full generic recovery at every odd order at least seven,
 including alignment of any finite family with a shared covariance.
 These are written all-orders proofs supported by exact base and deformation
-certificates. The existing blind inverse implementation covers five and
-seven sites. With local mean lines supplied, the
+certificates. The exact linear blind inverse implementation covers five
+and seven sites. With local mean lines supplied, the
 [smaller inverse](../../notes/quadratic-size-source-inverse-2026-09-27.md)
 now recovers covariance and mean scales at nine sites, including a shared
-source with four observed mean directions. Efficient blind mean-line
-extraction at arbitrary orders, noise conditioning, and nongeneric source
-classification remain open. These research results are not part of the
-Lean formalization of Krenn–Gu.
+source with four observed mean directions. A subsequent
+[blind search](../../notes/blind-source-search-and-local-conditioning-2026-09-27.md)
+now verifies complete rational sources at seven and nine sites from raw
+tensors alone. It supplies local mean-line noise bounds and records a
+failed search; global convergence and full-source noise guarantees remain
+open, as does nongeneric source classification. These research results
+are not part of the Lean formalization of Krenn–Gu.
 
 With generic unknown response coefficients instead of the calibrated
 Gaussian coefficients, [Corollary 10](../../notes/single-cross-moment-all-orders-2026-09-27.md#7-completing-the-theorem-and-shared-source-recovery)

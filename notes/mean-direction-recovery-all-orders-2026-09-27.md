@@ -35,6 +35,12 @@ elimination. It does not give an all-orders algorithm using only the two
 linear systems in the earlier finite-dimensional recovery programs, nor
 a complexity or statistical-stability bound.
 
+The subsequent [blind-search implementation](blind-source-search-and-local-conditioning-2026-09-27.md)
+now finds and exactly verifies mean lines on seven-, nine-, and
+eleven-site examples, and recovers complete rational sources in the
+first two cases. It also gives local conditioning bounds and retains
+a failed search. It does not supply global convergence guarantees.
+
 ## 2. The observable zero set
 
 First take `V_i=C^3`. A local mean is a vector `l_i` and a cross-site

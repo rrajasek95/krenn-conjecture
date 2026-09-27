@@ -278,8 +278,11 @@ implements (7)–(8) at seven and nine sites, with the local mean lines
 supplied. It verifies every recovered tensor entry and aligns four
 nine-site outputs with a shared covariance. Its observable rank
 certificate checks smaller correction matrices directly, without
-constructing the `F_3` matrix. A fully blind nine-site implementation
-still needs the mean-line extraction step.
+constructing the `F_3` matrix. A subsequent
+[blind search](blind-source-search-and-local-conditioning-2026-09-27.md)
+supplies the mean lines on examples and verifies complete seven- and
+nine-site sources over the rationals; it has no global convergence
+guarantee.
 
 ## 6. Exact rank witnesses and the nine-site corollary
 

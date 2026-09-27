@@ -25,6 +25,12 @@ The new observation is that its linear systems need only quadratically
 many columns, rather than the cubically many columns of the sufficient
 rank condition in the all-orders proof.
 
+The subsequent [blind-search program](blind-source-search-and-local-conditioning-2026-09-27.md)
+supplies the missing mean lines numerically on examples, verifies them
+exactly, and recovers a complete nine-site source over the rationals.
+Its search has no global convergence guarantee; the implementation in
+this note continues to take mean lines as input.
+
 ## 2. Definitions and the two ranks
 
 Let `n>=7` be odd, and let each local space have dimension three.
@@ -314,8 +320,9 @@ execution beyond seven sites, and an exact shared-source example with
 more global mean directions than local coordinates. No exhaustive
 priority claim is made.
 
-The next unresolved algorithmic step is an efficient, certified blind
-mean-line inverse at arbitrary odd orders. The generic rational
-identifiability theorem does not by itself provide that implementation.
-Noise conditioning, statistical sample complexity, and nongeneric
-source classification also remain separate tasks.
+The unresolved algorithmic step is a reliable global mean-line inverse
+at arbitrary odd orders. The subsequent numerical search verifies its
+successful outputs exactly and provides local mean-line conditioning
+bounds, but also records a failed search. Global convergence, full-source
+noise bounds, statistical sample complexity, and nongeneric source
+classification remain separate tasks.

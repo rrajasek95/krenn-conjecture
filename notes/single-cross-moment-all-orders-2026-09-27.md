@@ -550,8 +550,11 @@ The subsequent [quadratic-size inverse](quadratic-size-source-inverse-2026-09-27
 implements the covariance and calibration steps at nine sites given
 the local mean lines. Its exact certificate aligns four shared-source
 outputs whose global mean span has dimension four, although every local
-space has dimension three. Blind extraction of the mean lines is still
-a separate implementation task.
+space has dimension three. The subsequent
+[blind search](blind-source-search-and-local-conditioning-2026-09-27.md)
+also extracts mean lines from raw tensors on examples and verifies
+complete rational sources at seven and nine sites. It does not establish
+reliable global convergence.
 
 **Corollary 10 (one generic response determines its response space).**
 At every odd `n>=5`, for a generic one-direction source and generic
