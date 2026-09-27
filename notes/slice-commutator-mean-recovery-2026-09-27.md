@@ -543,3 +543,11 @@ of nongeneric sources, an efficient inverse from compressed scalar data,
 or a globally initialized algorithm with measurement-noise guarantees.
 The existing [local stability bounds](full-source-local-stability-2026-09-27.md)
 remain relevant to a separate correction iteration near a known source.
+
+The subsequent [observable noisy-mean certificate](observable-noisy-mean-recovery-2026-09-27.md)
+now stacks the two kernel equations and bounds perturbations from tensor
+noise, approximate solves, and a proposed null vector. It certifies mean
+directions for every compatible tensor in the stated data-error ball,
+without a nearby source guess. Exact noisy-data certificates cover three,
+five, and seven sites. A certified covariance and scale initializer,
+and compressed-data inversion, remain unresolved.

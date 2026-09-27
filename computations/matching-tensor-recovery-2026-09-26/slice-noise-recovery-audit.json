@@ -1,0 +1,37 @@
+{
+  "cases": [
+    {
+      "sites": 3,
+      "all_exterior_entries_rebuilt_separately": true,
+      "clean_tensor_checked_by_scalar_matching_sums": true,
+      "actual_noise_norm_checked_exactly": true,
+      "augmented_gram_rebuilt_from_stacked_operator": true,
+      "exact_bounds_replayed_without_numerical_solvers": true,
+      "actual_local_line_errors_checked_exactly": true
+    },
+    {
+      "sites": 5,
+      "all_exterior_entries_rebuilt_separately": true,
+      "clean_tensor_checked_by_scalar_matching_sums": true,
+      "actual_noise_norm_checked_exactly": true,
+      "augmented_gram_rebuilt_from_stacked_operator": true,
+      "exact_bounds_replayed_without_numerical_solvers": true,
+      "actual_local_line_errors_checked_exactly": true
+    },
+    {
+      "sites": 7,
+      "all_exterior_entries_rebuilt_separately": true,
+      "clean_tensor_checked_by_scalar_matching_sums": true,
+      "actual_noise_norm_checked_exactly": true,
+      "augmented_gram_rebuilt_from_stacked_operator": true,
+      "exact_bounds_replayed_without_numerical_solvers": true,
+      "actual_local_line_errors_checked_exactly": true
+    }
+  ],
+  "invalid_proposals_rejected": [
+    "inverse",
+    "preconditioner",
+    "excessive_error_budget"
+  ],
+  "scope": "Independent tensor/matrix assembly and exact acceptance replay; shares the bound-acceptance function and integer matrix library with the generator."
+}

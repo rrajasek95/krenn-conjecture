@@ -24,6 +24,13 @@ alternatives. The earlier
 [near-ambiguity examples](shared-calibration-and-near-ambiguity-2026-09-27.md)
 remain obstructions to uniform global bounds.
 
+The later [observable noisy-mean certificate](observable-noisy-mean-recovery-2026-09-27.md)
+locates the local mean directions directly from noisy full-tensor data
+under checkable matrix conditions. Its bounds cover every compatible
+source in the data-error ball, without assuming parameter proximity.
+It does not yet supply covariance and mean scales, so reaching this
+note's full-source correction neighborhood remains a separate step.
+
 There are `n` labelled sites, indexed by `0,...,n-1`, and `p` labelled
 observations. At first each site has three real coordinates. Observation
 `s` has local mean vectors `mu_i^(s) in R^3`. Every observation uses the

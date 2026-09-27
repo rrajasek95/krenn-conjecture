@@ -40,6 +40,7 @@ separate from the Lean-verified exact theorem.
 | One observed Gaussian cross moment | At local dimensions at least three, generically recover means and cross-site covariance from one tensor at every odd order at least seven; five sites have exactly two classes, resolved by two shared-source outputs. | [All-orders theorem and shared-source corollary](../../notes/single-cross-moment-all-orders-2026-09-27.md), [five- and seven-site inverse](../../computations/matching-tensor-recovery-2026-09-26/single_source.py) |
 | Mean directions from one tensor at every odd order | Generically identify every local mean line for all odd orders at least five, using a two-site attachment induction; also covers generic unknown response coefficients. | [Written proof and limits](../../notes/mean-direction-recovery-all-orders-2026-09-27.md), [symbolic and exact checks](../../computations/matching-tensor-recovery-2026-09-26/mean_direction_induction.py) |
 | Mean directions from two commutator kernel conditions | Recover generic mean lines by exact linear algebra at every odd order from three onward; the same criterion identifies generic compression centers beyond matching tensors. Complete the retained nine-site failed-search source. | [All-orders witness, broader theorem, and limits](../../notes/slice-commutator-mean-recovery-2026-09-27.md), [inverse](../../computations/matching-tensor-recovery-2026-09-26/slice_mean_recovery.py), [independent audit](../../computations/matching-tensor-recovery-2026-09-26/verify_slice_mean_recovery.py), [certificate](../../computations/matching-tensor-recovery-2026-09-26/slice-mean-recovery-certificate.json) |
+| Observable noisy mean-direction certificates | Use the stacked commutator equations and exact residual checks to constrain the local means of every source in a stated data-error ball, without a nearby source guess. Certified examples cover three, five, and seven sites. | [Finite-error theorem and limits](../../notes/observable-noisy-mean-recovery-2026-09-27.md), [proposal and exact acceptance](../../computations/matching-tensor-recovery-2026-09-26/slice_noise_recovery.py), [replay with separate matrix assembly](../../computations/matching-tensor-recovery-2026-09-26/verify_slice_noise_recovery.py), [certificate](../../computations/matching-tensor-recovery-2026-09-26/slice-noise-recovery-certificate.json) |
 | Covariance recovery from a restricted exterior kernel | Replace full-kernel completion by a map with cubically many columns; a two-site induction proves the necessary rank at every odd order at least seven. | [Rigidity criterion](../../notes/single-output-covariance-low-degree-2026-09-27.md), [all-orders rank proof](../../notes/single-cross-moment-all-orders-2026-09-27.md), [exact induction checks](../../computations/matching-tensor-recovery-2026-09-26/covariance_induction.py) |
 | Source inverse given the local mean lines | Recover covariance and actual mean scales with quadratically many columns per linear system; exact nine-site examples align four outputs spanning four global mean directions in local dimension three. | [Smaller rank criterion and scope](../../notes/quadratic-size-source-inverse-2026-09-27.md), [inverse and replay](../../computations/matching-tensor-recovery-2026-09-26/restricted_source_inverse.py), [certificate](../../computations/matching-tensor-recovery-2026-09-26/restricted-source-inverse-certificate.json) |
 | Blind search and local conditioning | Search for mean lines from the tensor alone, then verify them exactly; complete rational source recovery on seven- and nine-site examples, mean-line recovery at eleven sites, and a retained failed search. | [Proofs, local noise bound, and limits](../../notes/blind-source-search-and-local-conditioning-2026-09-27.md), [search and exact verification](../../computations/matching-tensor-recovery-2026-09-26/blind_mean_search.py), [certificate](../../computations/matching-tensor-recovery-2026-09-26/blind-mean-search-certificate.json) |
@@ -110,9 +111,17 @@ source. Its all-orders proof uses a fixed nine-dimensional calculation
 and tensor powers, and extends to generic compression centers beyond
 matching tensors. Combined with covariance recovery, it removes the
 nonlinear initialization step for generic exact full-tensor data from
-order seven. Global initialization with measurement noise, inversion from
+order seven. Full-source initialization with measurement noise, inversion from
 compressed scalar data, and nongeneric source classification remain open. These
 research results are not part of the Lean formalization of Krenn–Gu.
+
+The subsequent [noisy mean-direction certificate](../../notes/observable-noisy-mean-recovery-2026-09-27.md)
+now supplies the mean-line part of initialization from noisy full tensors.
+It accounts for solve and vector residuals and covers all matching
+representations compatible with a given data-error bound. It uses
+established singular-vector perturbation and verified-numerics principles
+with the new observable stack. Covariance and mean-scale initialization
+are still needed before the local full-source correction can be applied.
 
 The [calibration-conditioning results](../../notes/shared-calibration-and-near-ambiguity-2026-09-27.md)
 give explicit obstructions to uniformly stable covariance recovery and
