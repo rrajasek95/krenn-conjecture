@@ -50,6 +50,7 @@ PACKAGES = (
     "cofactor-graph-frontier-2026-09-27",
     "full-support-ghz-onset-2026-09-27",
     "ghz-star-fidelity-gap-2026-09-27",
+    "cofactor-square-root-rate-2026-09-28",
 )
 
 

@@ -2,6 +2,11 @@
 
 An undergraduate guide · September 26, 2026.
 
+**September 28 update:** the [cofactor rate test](COFACTOR-RATE-TEST.md)
+improves the unrestricted exponent from $1/15$ to $1/14$ and proves
+local square-root bounds at every balanced single-color six-site zero.
+This guide preserves the earlier parity refinement and its constants.
+
 **Further progress:** the [design and rate guide](RATE-DESIGN-FRONTIER.md)
 extends the cancellation test, provides certified fixed-core optimization,
 proves the prism's optimal leading coefficient, and excludes a singular limit.

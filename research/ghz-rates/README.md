@@ -25,8 +25,9 @@ into a laboratory count rate requires a physical source model.
 
 | Result | What it establishes | Read and reproduce |
 | --- | --- | --- |
+| Cofactor test for local square-root bounds | A nonzero matrix–cofactor product at a zero-output limit gives a square-root bound without response-rank assumptions. An exact polynomial certificate covers every balanced single-color six-site zero and every colored zero with a monochromatic perfect matching in its support. | [Illustrated guide](../../explainers/COFACTOR-RATE-TEST.md), [proof and pointwise certificate](../../notes/cofactor-square-root-rate-2026-09-28.md), [replay](../../computations/cofactor-square-root-rate-2026-09-28/README.md) |
 | Star fidelity gaps and necessary support zeros | A nonzero same-color star forces a local fidelity ceiling, excluding every full-support single-color zero at every even size $n\ge4$. More generally, each root and receiving color pair needs an incident block with both columns zero at any high-fidelity limit. | [Illustrated guide](../../explainers/GHZ-STAR-FIDELITY-GAP.md), [proof and explicit constant](../../notes/ghz-star-fidelity-gap-2026-09-27.md), [replay](../../computations/ghz-star-fidelity-gap-2026-09-27/README.md) |
-| Explicit unrestricted rate bound | A six-site exponent of $1/15$; the diagonal model has exponent $1/5$. | [Rate follow-ups](../../explainers/RATE-FOLLOWUPS.md), [proof](../../notes/rate-sharpness-followup-2026-09-26.md), [replay](../../computations/rate-sharpness-followup-2026-09-26/README.md) |
+| Explicit unrestricted rate bound | A six-site exponent of $1/14$, improved from $1/15$ by bounding the auxiliary polynomial before rescaling it. The diagonal model retains exponent $1/5$. | [New bound and constants](../../notes/cofactor-square-root-rate-2026-09-28.md#5-improved-approximate-diagonality-and-the-global-exponent), [replay](../../computations/cofactor-square-root-rate-2026-09-28/README.md), [earlier parity refinement](../../notes/rate-sharpness-followup-2026-09-26.md) |
 | Square-root laws in controlled settings | A cancellation hypothesis gives exponent $1/2$. The prism also has a full complex neighborhood bound and an optimal leading coefficient. | [Design guide](../../explainers/RATE-DESIGN-FRONTIER.md), [prism proof](../../notes/prism-optimal-rate-2026-09-26.md), [replay](../../computations/rate-design-frontier-2026-09-26/README.md) |
 | Uniform onset at every full-support single-color zero | Fifth-power source-distance onset holds in every nearby direction, with no matrix-rank, arm-size, or non-ground support condition. A balanced four-cycle response isometry and an outside-edge projection close the last two anchor configurations. | [Focused illustrated guide](../../explainers/FULL-SUPPORT-ONSET.md), [complete theorem](../../notes/full-support-ghz-onset-2026-09-27.md), [replay](../../computations/full-support-ghz-onset-2026-09-27/README.md) |
 | Regular two-triangle limits | Full-rank triangle responses lead to a fidelity gap or a local square-root bound. | [Boundary guide](../../explainers/BOUNDARY-STRUCTURE.md), [classification](../../notes/regular-triangle-rate-classification-2026-09-26.md), [replay](../../computations/boundary-structure-2026-09-26/README.md) |
@@ -63,7 +64,9 @@ flowchart TD
     A["Balanced six-site zero-output limit"] --> Z{"Required two-column zeros present?"}
     Z -->|No| X["Excluded: local fidelity ceiling"]
     X --> Y["Includes every full-support single-color zero"]
-    Z -->|Yes| B{"Support has a perfect matching?"}
+    Z -->|Yes| K{"Any cofactor product nonzero?"}
+    K -->|Yes| Q["Local square-root law"]
+    K -->|No| B{"Support has a perfect matching?"}
     B -->|No| C["Two triangles"]
     C --> D{"Both responses have full rank?"}
     D -->|Yes| E["Fidelity gap or local square-root law"]
@@ -92,6 +95,16 @@ The earlier
 [complete onset theorem](../../notes/full-support-ghz-onset-2026-09-27.md)
 and its intermediate packages retain their source-geometry results.
 They are no longer needed to exclude this boundary class.
+
+The [cofactor criterion](../../notes/cofactor-square-root-rate-2026-09-28.md)
+now requires every possible square-root violation to approach a zero where
+all nine products $B_{ih}C_h$ vanish. All higher odd binary root responses
+must vanish there as well. The polynomial certificate excludes every
+balanced single-color limit, at every scalar matrix rank. More generally,
+none of the three same-color support graphs can have a perfect matching.
+These are necessary conditions, not counterexample certificates:
+the prism has zero cofactor products and is already known to obey the
+square-root law.
 
 Earlier higher-order analyses are preserved in the
 [critical-cone](../../computations/critical-cone-2026-09-26/README.md),

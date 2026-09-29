@@ -15,6 +15,7 @@ provide a shared replay command.
 | The complete proof, from cancellation to the all-size contradiction | [All-orders proof guide](ALL-ORDERS-PROOF.md) | [Seven diagrams and offline equations](ALL-ORDERS-PROOF.html) |
 | A universal W guarantee, response rigidity, and exact bounds for competing ground families | [Global W guarantee](W-GLOBAL-GUARANTEE.md) | — |
 | Unrestricted local W optimality at every even size, including the four-site exception | [All-even local W optimality](W-LOCAL-OPTIMALITY.md) | — |
+| Cofactor tests prove more local square-root laws and improve the unrestricted exponent to 1/14 | [Cofactor rate test](COFACTOR-RATE-TEST.md) | — |
 | Star fidelity gaps exclude full-support single-color zeros; a broader test constrains every high-fidelity limit | [Highest-response obstruction](GHZ-STAR-FIDELITY-GAP.md) | — |
 | Uniform GHZ onset at every full-support single-color zero | [Complete onset argument](FULL-SUPPORT-ONSET.md) | — |
 | Flat supports, critical directions, and the intermediate GHZ onset criteria | [Critical-direction geometry](CRITICAL-DIRECTION-GEOMETRY.md) | — |
